@@ -5,15 +5,10 @@ import { useSelector } from "react-redux";
 import { AiOutlineMail } from "react-icons/ai";
 import GoogleMapReact from "google-map-react";
 import { HiLocationMarker } from "react-icons/hi";
-import axios from "axios";
 import mapStyles from "../../utils/mapStyles";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
-  const [coords, setCoords] = useState({
-    lat: 65.56615126993924,
-    lng: 21.7915225295041,
-  });
-
+  console.log(customerData.weatherData);
   return (
     <div className="aboutUs">
       <div className="aboutUs-info">
@@ -60,9 +55,9 @@ const AboutUs = ({ query, oss, om }) => {
           bootstrapURLKeys={{
             key: process.env.REACT_APP_GOOGLEMAPS_API_KEY,
           }}
-          defaultCenter={coords}
-          center={coords}
-          defaultZoom={11}
+          defaultCenter={customerData.coords}
+          center={customerData.coords}
+          defaultZoom={9}
           margin={[50, 50, 50, 50]}
           options={{
             disableDefaultUI: true,
@@ -72,13 +67,22 @@ const AboutUs = ({ query, oss, om }) => {
         >
           <div
             className="user-position"
-            lat={Number(coords.lat)}
-            lng={Number(coords.lng)}
+            lat={Number(customerData.coords.lat)}
+            lng={Number(customerData.coords.lng)}
           >
             <HiLocationMarker
               style={{ fontSize: "0.8rem", color: "#f44336" }}
             />
           </div>
+          {customerData.weatherData?.list?.length &&
+            customerData.weatherData.list.map((data, i) => (
+              <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
+                <img
+                  src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
+                  height="70px"
+                />
+              </div>
+            ))}
         </GoogleMapReact>
       </div>
     </div>

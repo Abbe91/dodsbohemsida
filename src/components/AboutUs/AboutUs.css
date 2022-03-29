@@ -60,8 +60,8 @@
 .aboutUs-map {
   width: 100%;
 }
-.aboutUs-contact p {
-  font-size: 0.9rem;
+.aboutUs-contact div p {
+  font-size: 0.85rem;
 }
 @media screen and (min-width: 900px) {
   .aboutUs {

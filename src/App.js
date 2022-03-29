@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import SankaVarmekostanden from "./components/SankaVarmekostander/SankaVarmekostanden";
@@ -8,7 +8,23 @@ import Bergvarme from "./components/Bergvarme/Bergvarme";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 import Nav from "./components/Nav/Nav";
+import {
+  setWeatherData,
+  getCustomerData,
+} from "./redux-toolkit/customer/customerSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getWheaterData } from "./api/index";
+import axios from "axios";
 function App() {
+  const dispatch = useDispatch();
+  const customerData = useSelector(getCustomerData);
+  useEffect(() => {
+    getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
+      (data) => {
+        dispatch(setWeatherData(data));
+      }
+    );
+  }, []);
   return (
     <div className="App">
       <Router>
