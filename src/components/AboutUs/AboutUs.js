@@ -8,7 +8,6 @@ import { HiLocationMarker } from "react-icons/hi";
 import mapStyles from "../../utils/mapStyles";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
-  console.log(customerData.weatherData);
   return (
     <div className="aboutUs">
       <div className="aboutUs-info">

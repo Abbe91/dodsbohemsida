@@ -5,6 +5,7 @@ import { BsHouseDoor } from "react-icons/bs";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import AboutUs from "../AboutUs/AboutUs";
+import Tips from "../Tips/Tips";
 const SankaVarmekostanden = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "sänka dina värmekostander";
@@ -31,6 +32,7 @@ const SankaVarmekostanden = () => {
         oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig ${mainquery}?`}
         om={`Vi på Effect Energispar är din auktoriserade återförsäljare och installatör av Daikin värmepumpar. Effect Energispar är ett företag som finns i Luleå, men har försäljning i hela Norrbotten.`}
       />
+      <Tips />
     </div>
   );
 };

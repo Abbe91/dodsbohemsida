@@ -1,0 +1,22 @@
+.tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 1rem;
+}
+.tips h1 {
+  font-size: 1.8rem;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+.tips a {
+  color: #0369a1;
+  cursor: pointer;
+}
+.tips h4 {
+  opacity: 0.8;
+}
+.search-result {
+  margin: 0.5rem 0;
+}

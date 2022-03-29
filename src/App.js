@@ -8,22 +8,44 @@ import Bergvarme from "./components/Bergvarme/Bergvarme";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
 import {
   setWeatherData,
   getCustomerData,
 } from "./redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { getWheaterData } from "./api/index";
-import axios from "axios";
+import { addNews } from "./redux-toolkit/news/newsSlice";
 function App() {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Host": "google-web-search.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
+    },
+  };
+  const getTipsSearch = async () => {
+    try {
+      const resp = fetch(
+        "https://google-web-search.p.rapidapi.com/?query=s%C3%A4nka%20v%C3%A4rmekostaden&gl=SE&max=10",
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => dispatch(addNews(response.results)))
+        .catch((err) => console.error(err));
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
       (data) => {
         dispatch(setWeatherData(data));
       }
     );
+    getTipsSearch();
   }, []);
   return (
     <div className="App">
@@ -43,6 +65,7 @@ function App() {
           <Route path="/bergvarme" element={<Bergvarme />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
