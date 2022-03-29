@@ -61,7 +61,7 @@ input:focus {
   border: none;
   border-bottom: 1px solid gray;
   margin: 1rem 0;
-  width: 100px;
+  width: 100%;
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -127,7 +127,7 @@ input:focus {
 }
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 100%;
+    height: 1600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
