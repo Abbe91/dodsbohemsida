@@ -10,7 +10,7 @@
       no-repeat;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  height: 700px;
 }
 .mainComp form {
   margin-top: 2rem;
@@ -40,7 +40,6 @@
   flex-direction: column;
 }
 .mainComp h1 {
-  max-width: 300px;
   line-height: 30px;
   font-size: 2rem;
 }
@@ -80,18 +79,35 @@ input:focus {
 .main-content-container div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 .main-content-container p {
   max-width: 350px;
 }
+.main-content-container h2 {
+  max-width: 600px;
+}
+@media screen and (min-width: 900px) {
+  .main-content-container {
+    margin-left: 1rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .mainComp {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .mainComp form {
+    width: 80%;
+  }
+  .main-content-container div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .main-content-container {
+    width: 96%;
   }
 }

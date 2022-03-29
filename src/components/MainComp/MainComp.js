@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import "./MainComp.css";
-import image from "../../utils/images/värmepump.jpg";
-const MainComp = ({ query, formTitle, icon, subTitle, subTitle2 }) => {
+import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
+import { useSelector } from "react-redux";
+const MainComp = ({
+  query,
+  formTitle,
+  icon,
+  subTitle,
+  subTitle2,
+  subTitle3,
+  subTitle4,
+  text,
+  text1,
+}) => {
   const [accept, setAccept] = useState(false);
+  const customerData = useSelector(getCustomerData);
   return (
     <div className="mainComp">
       <div className="main-content-container">
@@ -20,6 +32,14 @@ const MainComp = ({ query, formTitle, icon, subTitle, subTitle2 }) => {
             <p> {icon}</p>
           </div>
           <h5 style={{ maxWidth: "400px" }}>{subTitle2}</h5>
+          <div>
+            <h2>{subTitle3}</h2>
+            <p style={{ maxWidth: "500px" }}>{text}</p>
+          </div>
+          <div>
+            <h2>{subTitle4}</h2>
+            <p style={{ maxWidth: "500px" }}>{text1}</p>
+          </div>
         </div>
       </div>
       <form>
@@ -69,7 +89,7 @@ const MainComp = ({ query, formTitle, icon, subTitle, subTitle2 }) => {
             <input type="checkbox" />
           </div>
         </div>
-        <a href={`tel:${""}`}></a>
+        <a href={`tel:${customerData.phone}`}>{customerData.phone}</a>
         <button type="submit">Skicka</button>
       </form>
     </div>

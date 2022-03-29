@@ -4,6 +4,10 @@
   margin: 0%;
   box-sizing: border-box;
 }
+.App {
+  height: 100%;
+  width: 100%;
+}
 :root {
   --mainColor: #f44336;
 }
