@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SankaVarmekostanden.css";
 import MainComp from "../MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
@@ -8,6 +8,7 @@ import AboutUs from "../AboutUs/AboutUs";
 const SankaVarmekostanden = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "sänka dina värmekostander";
+
   return (
     <div>
       <MainComp
@@ -28,7 +29,7 @@ const SankaVarmekostanden = () => {
       <AboutUs
         query={"SÄNKA DINA VÄRMEKOSTANDER"}
         oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig ${mainquery}?`}
-        om={"om oss text here"}
+        om={`Vi på Effect Energispar är din auktoriserade återförsäljare och installatör av Daikin värmepumpar. Effect Energispar är ett företag som finns i Luleå, men har försäljning i hela Norrbotten.`}
       />
     </div>
   );

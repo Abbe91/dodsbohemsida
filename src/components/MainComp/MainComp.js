@@ -64,17 +64,23 @@ const MainComp = ({
           <i style={{ fontSize: "1.5rem" }}>{icon}</i>
         </div>
         <h4>{formTitle}</h4>
-        <input type="text" placeholder="Ditt namn" />
-        <input type="text" placeholder="Din email" />
+        <input type="text" placeholder="Ditt namn" required />
+        <input type="text" placeholder="Din email" required />
 
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
           <label htmlFor="typ">Typ</label>
           <select>
-            <option value="bergvärme">Luftvärme</option>
+            <option value="Luftvärme">Luftvärme</option>
             <option value="bergvärme">Bergvärme</option>
-            <option value="bergvärme">Luft/Vatten</option>
+            <option value="luft/vatten">Luft/Vatten</option>
             <option value="ac">AC</option>
-            <option value="ac">Service</option>
+            <option value="service">Service</option>
           </select>
         </div>
         <div>
