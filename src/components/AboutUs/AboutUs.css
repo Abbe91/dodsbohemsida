@@ -60,7 +60,9 @@
 .aboutUs-map {
   width: 100%;
 }
-
+.aboutUs-contact p {
+  font-size: 0.9rem;
+}
 @media screen and (min-width: 900px) {
   .aboutUs {
     display: flex;
