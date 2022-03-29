@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
   color: #64748b;
 }
 .aboutUs h1 {
@@ -52,10 +53,19 @@
   justify-content: space-evenly;
   margin: 3rem 0;
 }
+.map-container {
+  margin: 0.5rem 1rem;
+  height: 400px;
+}
+.aboutUs-map {
+  width: 100%;
+}
 
 @media screen and (min-width: 900px) {
   .aboutUs {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }

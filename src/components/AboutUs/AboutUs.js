@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import { AiOutlineMail } from "react-icons/ai";
 import GoogleMapReact from "google-map-react";
 import { HiLocationMarker } from "react-icons/hi";
+import axios from "axios";
+import mapStyles from "../../utils/mapStyles";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
+  const [coords, setCoords] = useState({
+    lat: 65.56615126993924,
+    lng: 21.7915225295041,
+  });
+
   return (
     <div className="aboutUs">
       <div className="aboutUs-info">
@@ -47,7 +54,33 @@ const AboutUs = ({ query, oss, om }) => {
           </div>
         </div>
       </div>
-      <div className="asboutUs-map">karta och väder här</div>
+
+      <div className="map-container" style={{ height: "400px", width: "80%" }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: process.env.REACT_APP_GOOGLEMAPS_API_KEY,
+          }}
+          defaultCenter={coords}
+          center={coords}
+          defaultZoom={11}
+          margin={[50, 50, 50, 50]}
+          options={{
+            disableDefaultUI: true,
+            zoomControl: true,
+            styles: mapStyles,
+          }}
+        >
+          <div
+            className="user-position"
+            lat={Number(coords.lat)}
+            lng={Number(coords.lng)}
+          >
+            <HiLocationMarker
+              style={{ fontSize: "0.8rem", color: "#f44336" }}
+            />
+          </div>
+        </GoogleMapReact>
+      </div>
     </div>
   );
 };
