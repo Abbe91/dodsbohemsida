@@ -6,25 +6,27 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { AiTwotonePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import logo from "../../utils/images/effect.png";
+import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
+import { useSelector } from "react-redux";
 const Nav = () => {
+  const customerData = useSelector(getCustomerData);
   const [showNav, setShowNav] = useState(false);
-  const [userMail, setUserEmail] = useState("info@effectenergispar.se");
-  const [userPhone, setUserPhone] = useState("070-3424117");
+
   return (
     <>
       <section className="top-nav">
         <div className="user-contact">
           <div>
-            <a href={`tel:${userPhone}`}>
+            <a href={`tel:${customerData.phone}`}>
               <AiTwotonePhone />
             </a>
-            <p>{userPhone}</p>
+            <p>{customerData.phone}</p>
           </div>
           <div>
-            <a href={`mailto:${userMail}`}>
+            <a href={`mailto:${customerData.email}`}>
               <AiOutlineMail />
             </a>
-            <p>{userMail}</p>
+            <p>{customerData.email}</p>
           </div>
         </div>
       </section>
