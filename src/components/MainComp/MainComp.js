@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./MainComp.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
+import { AiFillCheckCircle } from "react-icons/ai";
 const MainComp = ({
   query,
   formTitle,
@@ -15,6 +16,10 @@ const MainComp = ({
 }) => {
   const [accept, setAccept] = useState(false);
   const customerData = useSelector(getCustomerData);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget.innerText);
+  };
   return (
     <div className="mainComp">
       <div className="main-content-container">
@@ -92,8 +97,67 @@ const MainComp = ({
             <input type="checkbox" />
           </div>
         </div>
-        <a href={`tel:${customerData.phone}`}>{customerData.phone}</a>
-        <button type="submit">Skicka</button>
+        <a
+          href={`tel:${customerData.phone}`}
+          className="main-form-btn"
+          style={{ marginTop: "1rem" }}
+        >
+          {customerData.phone}
+        </a>
+        {accept && (
+          <button
+            type="submit"
+            className="main-form-btn"
+            onClick={handleSubmit}
+          >
+            Skicka
+          </button>
+        )}
+        <div className="form-policy">
+          <p style={{ fontSize: "0.8rem", width: "90%", margin: "1rem 0" }}>
+            Genom att använda detta formulär accepterar du att{" "}
+            <strong style={{ marginRight: "0.15rem" }}>
+              {customerData.business}
+            </strong>
+            lagrar och hanterar dina uppgifter. Uppgifterna i fråga kommer att
+            användas för att återkoppla till dig som kund/besökare.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+              margin: ".5rem 0",
+              transition: "all 0.3s linear",
+            }}
+          >
+            <div
+              className="main-circle"
+              onClick={() => setAccept(!accept)}
+              style={{ border: accept && "none" }}
+            >
+              {accept && (
+                <AiFillCheckCircle
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    color: "black",
+                  }}
+                />
+              )}
+            </div>
+            <p
+              style={{
+                marginLeft: "0.5rem",
+                fontSize: "0.7rem",
+                fontWeight: "700",
+                color: "black",
+              }}
+            >
+              Jag godkänner
+            </p>
+          </div>
+        </div>
       </form>
     </div>
   );
