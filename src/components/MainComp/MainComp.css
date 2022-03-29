@@ -10,7 +10,7 @@
       no-repeat;
   background-position: center;
   background-size: cover;
-  height: 700px;
+  height: 800px;
 }
 .mainComp form {
   margin-top: 2rem;
@@ -58,10 +58,11 @@ input:focus {
 }
 .mainComp select {
   background: transparent;
-  border: none;
-  border-bottom: 1px solid gray;
+  border: 1px solid #0369a1;
   margin: 1rem 0;
   width: 100%;
+  padding: 0.3rem;
+  border-radius: 5px;
   font-size: 0.9rem;
   cursor: pointer;
 }
