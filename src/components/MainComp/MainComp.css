@@ -128,7 +128,7 @@ input:focus {
 }
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1600px;
+    height: 1700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
