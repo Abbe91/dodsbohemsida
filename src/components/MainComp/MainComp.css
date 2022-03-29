@@ -42,6 +42,7 @@
 .mainComp h1 {
   line-height: 30px;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .mainComp form h4 {
   max-width: 300px;

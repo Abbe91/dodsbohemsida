@@ -9,7 +9,7 @@ const SankaVarmekostanden = () => {
   return (
     <div>
       <MainComp
-        query={"Sänka dina värmekostander"}
+        query={"SÄNKA DINA VÄRMEKOSTANDER"}
         formTitle="Sänk din värmekostander med upp till 70%"
         icon={<BsHouseDoor />}
         subTitle={`Välkommen till ${customerData.business}`}

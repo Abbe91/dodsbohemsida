@@ -25,18 +25,20 @@ const MainComp = ({
               display: "flex",
               alignItems: "center",
               flexDirection: "row",
-              margin: "0.5rem 0",
+              marginBottom: "0.2rem",
             }}
           >
             <h4 style={{ marginRight: "0.5rem" }}>{subTitle}</h4>
             <p> {icon}</p>
           </div>
-          <h5 style={{ maxWidth: "400px" }}>{subTitle2}</h5>
+          <h5 style={{ maxWidth: "400px", marginBottom: "1.5rem" }}>
+            {subTitle2}
+          </h5>
           <div>
             <h2>{subTitle3}</h2>
             <p style={{ maxWidth: "500px" }}>{text}</p>
           </div>
-          <div>
+          <div style={{ marginTop: "1rem" }}>
             <h2>{subTitle4}</h2>
             <p style={{ maxWidth: "500px" }}>{text1}</p>
           </div>
@@ -50,6 +52,7 @@ const MainComp = ({
             alignItems: "center",
             marginBottom: "1rem",
             letterSpacing: "1px",
+            borderBottom: "1px solid gray",
           }}
         >
           <p style={{ fontSize: "1.2rem" }}>Gratiskollen</p>
