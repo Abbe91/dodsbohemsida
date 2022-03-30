@@ -4,7 +4,7 @@ import { getBingNews } from "../../redux-toolkit/news/newsSlice";
 import { useSelector } from "react-redux";
 const Nyheter = () => {
   const bingNews = useSelector(getBingNews);
-  console.log(bingNews);
+
   return (
     <div className="bingNews">
       {bingNews?.map((news, i) => {

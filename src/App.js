@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import SankaVarmekostanden from "./components/SankaVarmekostander/SankaVarmekostanden";
@@ -18,6 +18,7 @@ import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 function App() {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
+
   const options = {
     method: "GET",
     headers: {
@@ -30,7 +31,7 @@ function App() {
   const getTipsSearch = async () => {
     try {
       const resp = fetch(
-        "https://google-search3.p.rapidapi.com/api/v1/search/q=s%C3%A4nka%20v%C3%A4rmekostnaden&num=100",
+        `https://google-search3.p.rapidapi.com/api/v1/search/q=s%C3%A4nka%20v%C3%A4rmekostnaden&num=100`,
         options
       )
         .then((response) => response.json())
