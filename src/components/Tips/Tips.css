@@ -22,4 +22,6 @@
 }
 .tips-search-result {
   z-index: 101;
+  height: 450px;
+  overflow-y: scroll;
 }

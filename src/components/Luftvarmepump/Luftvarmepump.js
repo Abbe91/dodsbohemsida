@@ -61,6 +61,7 @@ const Luftvarmepump = () => {
         <h2
           style={{
             maxWidth: "90%",
+            marginBottom: "1rem",
           }}
         >
           {mainquery} NEWS!

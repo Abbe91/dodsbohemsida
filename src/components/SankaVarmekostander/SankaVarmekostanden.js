@@ -62,6 +62,7 @@ const SankaVarmekostanden = () => {
         <h2
           style={{
             maxWidth: "90%",
+            marginBottom: "1rem",
           }}
         >
           Sänka dina värmekostander NEWS!

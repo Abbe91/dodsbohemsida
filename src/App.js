@@ -21,14 +21,16 @@ function App() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Host": "google-web-search.p.rapidapi.com",
+      "X-User-Agent": "desktop",
+      "X-Proxy-Location": "SE",
+      "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
       "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
     },
   };
   const getTipsSearch = async () => {
     try {
       const resp = fetch(
-        "https://google-web-search.p.rapidapi.com/?query=s%C3%A4nka%20v%C3%A4rmekostaden&gl=SE&max=10",
+        "https://google-search3.p.rapidapi.com/api/v1/search/q=s%C3%A4nka%20v%C3%A4rmekostnaden&num=100",
         options
       )
         .then((response) => response.json())
