@@ -19,6 +19,7 @@ const Nav = () => {
       const value = e.currentTarget.innerText.split("oss")[0];
       dispatch(addElement(value));
     }
+    setShowNav(false);
   };
   return (
     <>
@@ -63,7 +64,9 @@ const Nav = () => {
           </button>
           {navlinks.map((link) => (
             <div key={link.id} className="nav-links-div">
-              <button type="button">{link.label}</button>
+              <button type="button" onClick={handleClick}>
+                {link.label}
+              </button>
             </div>
           ))}
         </div>
