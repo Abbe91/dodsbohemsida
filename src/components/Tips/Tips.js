@@ -2,11 +2,11 @@ import React from "react";
 import "./Tips.css";
 import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import { useSelector } from "react-redux";
-const Tips = () => {
+const Tips = ({ query }) => {
   const newsData = useSelector(getNewsData);
   return (
     <div className="tips">
-      <h1>Tips om hur du kan sänka din värmekostnad.</h1>
+      <h1>{query}.</h1>
       <div className="tips-search-result">
         {newsData?.map((news, i) => (
           <div key={i} className="search-result">

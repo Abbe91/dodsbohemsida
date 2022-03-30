@@ -50,7 +50,7 @@ const SankaVarmekostanden = () => {
         />
       </div>
       <div className="Tips">
-        <Tips />
+        <Tips query={"sänka dina värmekostnader"} />
       </div>
       <div className="Tjänster">
         <Erbjuder />

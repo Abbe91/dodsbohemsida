@@ -51,8 +51,8 @@ const AboutUs = ({ query, oss, om }) => {
               }}
             />
             <label>
-              Jag vill få ett förslag på mail om hur jag kan sänka min
-              värmakostander.
+              Vill du få ett förslag på?
+              <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>{query}</p>
             </label>
             <input type="email" required placeholder="Din email" name="email" />
             <button type="submit" onClick={handleSubmit}>
