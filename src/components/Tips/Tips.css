@@ -25,3 +25,6 @@
   height: 450px;
   overflow-y: scroll;
 }
+.search-result {
+  margin: 1rem 0;
+}

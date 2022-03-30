@@ -4,6 +4,7 @@ import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import { useSelector } from "react-redux";
 const Tips = ({ query }) => {
   const newsData = useSelector(getNewsData);
+  console.log(newsData);
   return (
     <div className="tips">
       <h1>{query}.</h1>
@@ -11,7 +12,7 @@ const Tips = ({ query }) => {
         {newsData?.map((news, i) => (
           <div key={i} className="search-result">
             <h4>{news.title}</h4>
-            <a href={news.url} target="_blank" rel="noreferrer">
+            <a href={news.link} target="_blank" rel="noreferrer">
               Läs mer
             </a>
           </div>
