@@ -18,10 +18,6 @@ export const navlinks = [
     label: "Tjänster",
   },
   {
-    id: 4,
-    label: "Erbjudande",
-  },
-  {
     id: 5,
     label: "Tips",
   },

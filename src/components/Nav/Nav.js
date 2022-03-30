@@ -7,11 +7,19 @@ import { AiTwotonePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import logo from "../../utils/images/effect.png";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 const Nav = () => {
+  const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
   const [showNav, setShowNav] = useState(false);
-
+  const handleClick = (e) => {
+    dispatch(addElement(e.currentTarget.innerText));
+    if (e.currentTarget.innerText === "Om oss") {
+      const value = e.currentTarget.innerText.split("oss")[0];
+      dispatch(addElement(value));
+    }
+  };
   return (
     <>
       <section className="top-nav">
@@ -40,7 +48,9 @@ const Nav = () => {
         <div className="nav-links">
           {navlinks.map((link) => (
             <div key={link.id}>
-              <button type="button">{link.label}</button>
+              <button type="button" onClick={handleClick}>
+                {link.label}
+              </button>
             </div>
           ))}
         </div>

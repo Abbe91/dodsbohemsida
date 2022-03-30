@@ -7,7 +7,6 @@ import LuftVattenVarmePump from "./components/LuftVattenVarmePump/LuftVattenVarm
 import Bergvarme from "./components/Bergvarme/Bergvarme";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
-import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import {
   setWeatherData,
@@ -50,7 +49,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
