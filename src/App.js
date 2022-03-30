@@ -51,7 +51,7 @@ function App() {
     };
     try {
       const resp = fetch(
-        "https://bing-news-search1.p.rapidapi.com/news/search?q=v%C3%A4rmepump&safeSearch=Off&textFormat=Raw&freshness=Day",
+        "https://bing-news-search1.p.rapidapi.com/news/search?q=v%C3%A4rmepump&safeSearch=Off&textFormat=Raw&freshness=Month",
         options
       )
         .then((response) => response.json())
