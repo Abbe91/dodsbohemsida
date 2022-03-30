@@ -20,3 +20,6 @@
 .search-result {
   margin: 0.5rem 0;
 }
+.tips-search-result {
+  z-index: 101;
+}
