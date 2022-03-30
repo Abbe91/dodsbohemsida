@@ -74,7 +74,7 @@ const Luftvarmepump = () => {
         <AboutUs
           query={mainquery}
           oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig med  ${query}?`}
-          om={`Vi på Effect Energispar är din auktoriserade återförsäljare och installatör av Daikin värmepumpar. Effect Energispar är ett företag som finns i Luleå, men har försäljning i hela Norrbotten.`}
+          om={` är din auktoriserade återförsäljare och installatör av Daikin värmepumpar. Effect Energispar är ett företag som finns i Luleå, men har försäljning i hela Norrbotten.`}
         />
       </div>
       <div className="Tips">

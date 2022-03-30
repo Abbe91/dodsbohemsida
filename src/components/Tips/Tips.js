@@ -4,7 +4,7 @@ import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import { useSelector } from "react-redux";
 const Tips = ({ query }) => {
   const newsData = useSelector(getNewsData);
-  console.log(newsData);
+
   return (
     <div className="tips">
       <h1>{query}.</h1>

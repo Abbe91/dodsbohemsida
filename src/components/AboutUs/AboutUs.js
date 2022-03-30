@@ -35,12 +35,15 @@ const AboutUs = ({ query, oss, om }) => {
         }
       );
   };
+
   return (
     <div className="aboutUs">
       <div className="aboutUs-info">
         <h1>{query}</h1>
         <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
-        <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>{om}</p>
+        <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>
+          Vi på <strong>{customerData.business}</strong> {om}
+        </p>
         <div>
           <form ref={form}>
             <AiOutlineMail
