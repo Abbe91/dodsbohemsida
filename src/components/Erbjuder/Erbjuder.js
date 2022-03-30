@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Erbjuder.css";
 import { BsHouseDoor } from "react-icons/bs";
 import { erbjuder } from "../../utils/data";
+import emailjs from "@emailjs/browser";
 const Erbjuder = () => {
+  const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const form = useRef();
+  const handleSubmit = (e) => {
+    setSending(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_wzr1q3r",
+        "template_4xmyon5",
+        form.current,
+        process.env.REACT_APP_EMAILJS_ID
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            console.log("email sent");
+            setSending(false);
+            setSent(true);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="erbjuder">
       <BsHouseDoor className="icon" />
@@ -32,10 +59,16 @@ const Erbjuder = () => {
         </div>
         <div>
           <h2 style={{ marginTop: "2rem" }}>Vill du ha en offert?</h2>
-          <form>
+          <form ref={form}>
             <div>
-              <input type="email" placeholder="Din email" />
-              <button type="submit">Skicka</button>
+              <input type="email" placeholder="Din email" name="email" />
+              <button type="submit" onClick={handleSubmit}>
+                {sending
+                  ? "skickar..."
+                  : sent
+                  ? "Tack för din förfrågan"
+                  : "Skicka"}
+              </button>
             </div>
           </form>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./AboutUs.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
@@ -6,8 +6,35 @@ import { AiOutlineMail } from "react-icons/ai";
 import GoogleMapReact from "google-map-react";
 import { HiLocationMarker } from "react-icons/hi";
 import mapStyles from "../../utils/mapStyles";
+import emailjs from "@emailjs/browser";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
+  const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const form = useRef();
+  const handleSubmit = (e) => {
+    setSending(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_wzr1q3r",
+        "template_4xmyon5",
+        form.current,
+        process.env.REACT_APP_EMAILJS_ID
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            console.log("email sent");
+            setSending(false);
+            setSent(true);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="aboutUs">
       <div className="aboutUs-info">
@@ -15,7 +42,7 @@ const AboutUs = ({ query, oss, om }) => {
         <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
         <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>{om}</p>
         <div>
-          <form>
+          <form ref={form}>
             <AiOutlineMail
               style={{
                 color: "#0369a1",
@@ -27,8 +54,14 @@ const AboutUs = ({ query, oss, om }) => {
               Jag vill få ett förslag på mail om hur jag kan sänka min
               värmakostander.
             </label>
-            <input type="email" required placeholder="Din email" />
-            <button type="submit">Skicka</button>
+            <input type="email" required placeholder="Din email" name="email" />
+            <button type="submit" onClick={handleSubmit}>
+              {sending
+                ? "skickar..."
+                : sent
+                ? "Tack för din förfrågan"
+                : "Skicka"}
+            </button>
           </form>
         </div>
         <div className="aboutUs-contact">

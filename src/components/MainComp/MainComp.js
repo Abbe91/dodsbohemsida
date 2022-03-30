@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./MainComp.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import { AiFillCheckCircle } from "react-icons/ai";
+import emailjs from "@emailjs/browser";
 const MainComp = ({
   query,
   formTitle,
@@ -15,10 +16,32 @@ const MainComp = ({
   text1,
 }) => {
   const [accept, setAccept] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
   const customerData = useSelector(getCustomerData);
+  const form = useRef();
   const handleSubmit = (e) => {
+    setSending(true);
     e.preventDefault();
-    console.log(e.currentTarget.innerText);
+    emailjs
+      .sendForm(
+        "service_wzr1q3r",
+        "template_4xmyon5",
+        form.current,
+        process.env.REACT_APP_EMAILJS_ID
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            console.log("email sent");
+            setSending(false);
+            setSent(true);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <div className="mainComp">
@@ -49,7 +72,7 @@ const MainComp = ({
           </div>
         </div>
       </div>
-      <form>
+      <form ref={form}>
         <div
           style={{
             dislay: "flex",
@@ -64,8 +87,8 @@ const MainComp = ({
           <i style={{ fontSize: "1.5rem" }}>{icon}</i>
         </div>
         <h4>{formTitle}</h4>
-        <input type="text" placeholder="Ditt namn" required />
-        <input type="text" placeholder="Din email" required />
+        <input type="text" placeholder="Ditt namn" required name="name" />
+        <input type="text" placeholder="Din email" required name="email" />
 
         <div
           style={{
@@ -75,7 +98,7 @@ const MainComp = ({
           }}
         >
           <label htmlFor="typ">Typ</label>
-          <select>
+          <select name="typ">
             <option value="Luftvärme">Luftvärme</option>
             <option value="bergvärme">Bergvärme</option>
             <option value="luft/vatten">Luft/Vatten</option>
@@ -94,13 +117,13 @@ const MainComp = ({
             <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
               Jag har något installerat hemma
             </p>
-            <input type="checkbox" />
+            <input type="checkbox" name="har-installerat" />
           </div>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
               Jag har <strong>INTE</strong> något installerat hemma
             </p>
-            <input type="checkbox" />
+            <input type="checkbox" name="har-inte-installerat" />
           </div>
         </div>
         <a
@@ -116,7 +139,11 @@ const MainComp = ({
             className="main-form-btn"
             onClick={handleSubmit}
           >
-            Skicka
+            {sending
+              ? "skickar..."
+              : sent
+              ? "Tack för din förfrågan"
+              : "Skicka"}
           </button>
         )}
         <div className="form-policy">
