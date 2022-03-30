@@ -27,7 +27,7 @@
   line-height: 30px;
 }
 .kostandri-cont p {
-  width: 60%;
+  width: 80%;
   font-size: 1.1rem;
 }
 .kostandri-cont form {
@@ -59,6 +59,6 @@
 }
 @media screen and (max-width: 600px) {
   .kostandri-cont {
-    height: 700px;
+    height: 600px;
   }
 }
