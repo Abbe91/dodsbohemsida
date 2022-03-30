@@ -12,6 +12,7 @@ import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import { addNews } from "../../redux-toolkit/news/newsSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
+import { Helmet } from "react-helmet-async";
 const Luftvarmepump = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "Luftvärmepump";
@@ -52,6 +53,11 @@ const Luftvarmepump = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Luftvärmepump</title>
+        <meta name="description" content="Luftvärmepump" />
+      </Helmet>
       <div className="Nav">
         <Nav />
       </div>

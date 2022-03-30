@@ -11,6 +11,7 @@ import Erbjuder from "../Erbjuder/Erbjuder";
 import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
+import { Helmet } from "react-helmet-async";
 const SankaVarmekostanden = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "sänka dina värmekostander";
@@ -22,6 +23,11 @@ const SankaVarmekostanden = () => {
   }, [element]);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Sänka dina värmekostander</title>
+        <meta name="description" content="Sänka dina värmekostander" />
+      </Helmet>
       <div className="Nav">
         <Nav />
       </div>
