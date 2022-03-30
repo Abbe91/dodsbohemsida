@@ -1,0 +1,64 @@
+.kostandri-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(
+      rgba(0.4, 0.4, 0.4, 0.4),
+      rgba(0.4, 0.4, 0.4, 0.4)
+    ),
+    url("https://cdn.pixabay.com/photo/2019/01/08/10/58/smart-home-3920905_1280.jpg")
+      no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 440px;
+  color: white;
+}
+.kostandri-cont .divider {
+  width: 300px;
+  height: 1px;
+  background: #0369a1;
+  margin: 1rem 0;
+}
+.kostandri-cont h1 {
+  line-height: 30px;
+}
+.kostandri-cont p {
+  width: 60%;
+  font-size: 1.1rem;
+}
+.kostandri-cont form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0;
+}
+.kostandri-cont form input {
+  width: 300px;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem 0;
+}
+.kostandri-cont form button {
+  background: #0369a1;
+  color: white;
+  font-family: 700;
+  width: 300px;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+}
+.kostandri-cont form button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 600px) {
+  .kostandri-cont {
+    height: 600px;
+  }
+}

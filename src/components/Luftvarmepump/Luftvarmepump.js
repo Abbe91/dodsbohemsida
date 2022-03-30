@@ -11,6 +11,7 @@ import Erbjuder from "../Erbjuder/Erbjuder";
 import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import { addNews } from "../../redux-toolkit/news/newsSlice";
+import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 const Luftvarmepump = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "Luftvärmepump";
@@ -96,6 +97,14 @@ const Luftvarmepump = () => {
           {mainquery} NEWS!
         </h2>
         <Nyheter />
+      </div>
+      <div className="Kostnadsfri">
+        <Kostnadsfri
+          vad={"genomgång"}
+          text={
+            "För att säkerställa vad som blir den energieffektivaste lösningen i ditt hus börjar vi alltid med en genomgång av ditt befintliga värmesystem, din planlösning, din nuvarande förbrukning och även dina personliga krav på värme och inomhuskomfort."
+          }
+        />
       </div>
     </div>
   );

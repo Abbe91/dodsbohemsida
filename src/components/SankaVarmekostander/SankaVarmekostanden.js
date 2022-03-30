@@ -10,6 +10,7 @@ import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
 import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
+import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 const SankaVarmekostanden = () => {
   const customerData = useSelector(getCustomerData);
   const mainquery = "sänka dina värmekostander";
@@ -55,6 +56,7 @@ const SankaVarmekostanden = () => {
       <div className="Tjänster">
         <Erbjuder />
       </div>
+
       <div
         className="Nyheter"
         style={{ textAlign: "center", marginTop: "3rem" }}
@@ -68,6 +70,15 @@ const SankaVarmekostanden = () => {
           Sänka dina värmekostander NEWS!
         </h2>
         <Nyheter />
+      </div>
+      <div className="Kostnadsfri">
+        <Kostnadsfri
+          vad={"genomgång"}
+          mainquery={mainquery}
+          text={
+            "För att säkerställa vad som blir den energieffektivaste lösningen i ditt hus börjar vi alltid med en genomgång av ditt befintliga värmesystem, din planlösning, din nuvarande förbrukning och även dina personliga krav på värme och inomhuskomfort."
+          }
+        />
       </div>
     </div>
   );
