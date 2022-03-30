@@ -14,7 +14,7 @@ import {
 } from "./redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { getWheaterData } from "./api/index";
-import { addNews } from "./redux-toolkit/news/newsSlice";
+import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 function App() {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -38,6 +38,29 @@ function App() {
       console.log(error);
     }
   };
+
+  const getBingnews = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        "Accept-Language": "se",
+        "X-BingApis-SDK": "true",
+        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
+      },
+    };
+    try {
+      const resp = fetch(
+        "https://bing-news-search1.p.rapidapi.com/news/search?q=v%C3%A4rmepump&safeSearch=Off&textFormat=Raw&freshness=Day",
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => dispatch(setBingNews(response.value)))
+        .catch((err) => console.error(err));
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
       (data) => {
@@ -45,6 +68,7 @@ function App() {
       }
     );
     getTipsSearch();
+    getBingnews();
   }, []);
   return (
     <div className="App">

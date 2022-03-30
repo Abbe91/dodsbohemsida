@@ -8,6 +8,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import Tips from "../Tips/Tips";
 import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
+import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 const SankaVarmekostanden = () => {
   const customerData = useSelector(getCustomerData);
@@ -53,6 +54,20 @@ const SankaVarmekostanden = () => {
       </div>
       <div className="Tjänster">
         <Erbjuder />
+      </div>
+      <div
+        className="Nyheter"
+        style={{ textAlign: "center", marginTop: "5rem" }}
+      >
+        <h2
+          style={{
+            margin: "1rem 0",
+            maxWidth: "90%",
+          }}
+        >
+          Sänka dina värmekostander NEWS!
+        </h2>
+        <Nyheter />
       </div>
     </div>
   );

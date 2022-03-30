@@ -1,0 +1,62 @@
+.bingNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bing-news-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  height: 300px;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.bing-news-item h4 {
+  max-width: 400px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: #0369a1;
+}
+.bing-news-item p {
+  font-size: 0.8rem;
+  width: 80%;
+  line-height: 23px;
+}
+.bing-news-item a {
+  cursor: pointer;
+  color: #0369a1;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  transition: all 0.3s linear;
+}
+.bing-news-item div {
+  overflow: hidden;
+  transition: all 0.3s linear;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.bing-news-item img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s linear;
+}
+.bing-news-item img {
+  border-radius: 100%;
+  transition: all 0.3s linear;
+}
+.bing-news-item a:hover {
+  padding-left: 0.2rem;
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 800px) {
+  .bingNews {
+    flex-direction: row;
+  }
+}
