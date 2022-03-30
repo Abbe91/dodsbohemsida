@@ -57,11 +57,10 @@ const SankaVarmekostanden = () => {
       </div>
       <div
         className="Nyheter"
-        style={{ textAlign: "center", marginTop: "5rem" }}
+        style={{ textAlign: "center", marginTop: "3rem" }}
       >
         <h2
           style={{
-            margin: "1rem 0",
             maxWidth: "90%",
           }}
         >
