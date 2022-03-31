@@ -99,11 +99,11 @@ const Luftvarmepump = () => {
       </div>
       <div className="booking-lottie">
         <div className="booking-content">
-          <h2>Vill du också {mainquery}?</h2>
+          <h2>Behöver du också {mainquery}?</h2>
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
-            dig som kund med at {mainquery}. Besöket/genomgången tar ca 45min
-            och du som kund får en offert på plats om hur vi kan hjälpa dig
+            dig som kund med {mainquery}. Besöket/genomgången tar ca 45min och
+            du som kund får en offert på plats om hur vi kan hjälpa dig med
             <strong style={{ fontWeight: "700" }}> {mainquery}.</strong>
           </h4>
           <button type="button">
