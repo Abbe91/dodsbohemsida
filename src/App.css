@@ -10,6 +10,7 @@
   overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background: #ffffff;
 }
 .App::-webkit-scrollbar {
   display: none;
