@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Kostnadsfri.css";
 import emailjs from "@emailjs/browser";
 import video from "../../utils/video.mp4";
@@ -29,6 +29,11 @@ const Kostnadsfri = ({ vad, text }) => {
         }
       );
   };
+  useEffect(() => {
+    if (window.innerWidth < 900) {
+      document.querySelector("video").autoPlay = false;
+    }
+  }, []);
   return (
     <div className="kostandri-cont">
       <div>
