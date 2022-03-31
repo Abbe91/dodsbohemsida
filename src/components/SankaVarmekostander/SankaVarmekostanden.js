@@ -46,6 +46,10 @@ const SankaVarmekostanden = () => {
           text={`Behöver du hjälp med att sänka dina värmekostander? Då är vi på ${customerData.business} det självklara valet. Vi är en firma som verkligen kan allt kring hur man sänker värmekostanden. Vi kan också hjälpa dig med installation och vi erbjuder en full helhetslösning med målet att ge det bästa valet för dig och din plånbok. Som kund hos har du allt samlat hos ett och samma företag - försäljning, installation och service.`}
           subTitle4={"Helhetslösning för att sänka värmekostanden."}
           text1={`Vårt företag är auktoriserad återförsäljare för världsledande Daikin utmanar med ett komplett program värmepumpar utvecklade för Sverige. Vi hjälper dig att sänka dina värmekostander och vi sköter allt från försäljning till installation och självklart service. Vårt mål är att kunna leverera den bästa produkten som även sänker dina värmekostander`}
+          subTitle5={"Våra tjänster"}
+          text2={
+            "Vi erbjuder, bergvärme, luftvärmepumpar, luft/vattenvärmepumpar, ac anläggningar, service och reperations av värmepumpar. Hos oss får du din värmepump monterad och klar med trygga garantier"
+          }
         />
       </div>
 
@@ -57,7 +61,7 @@ const SankaVarmekostanden = () => {
         />
       </div>
       <div className="Tips">
-        <Tips query={"Tips om sänka dina värmekostnader"} />
+        <Tips query={"Sänka dina värmekostnader tips"} />
       </div>
       <div className="Tjänster">
         <Erbjuder />

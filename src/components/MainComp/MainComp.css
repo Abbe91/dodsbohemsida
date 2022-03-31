@@ -10,7 +10,7 @@
       no-repeat;
   background-position: center;
   background-size: cover;
-  height: 800px;
+  height: 1000px;
 }
 .mainComp form {
   margin-top: 2rem;
@@ -128,7 +128,7 @@ input:focus {
 }
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1700px;
+    height: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;

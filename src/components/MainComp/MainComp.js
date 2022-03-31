@@ -12,8 +12,10 @@ const MainComp = ({
   subTitle2,
   subTitle3,
   subTitle4,
+  subTitle5,
   text,
   text1,
+  text2,
 }) => {
   const [accept, setAccept] = useState(false);
   const [sent, setSent] = useState(false);
@@ -69,6 +71,10 @@ const MainComp = ({
           <div style={{ marginTop: "1rem" }}>
             <h2>{subTitle4}</h2>
             <p style={{ maxWidth: "500px" }}>{text1}</p>
+          </div>
+          <div style={{ marginTop: "1rem" }}>
+            <h2>{subTitle5}</h2>
+            <p style={{ maxWidth: "500px" }}>{text2}</p>
           </div>
         </div>
       </div>

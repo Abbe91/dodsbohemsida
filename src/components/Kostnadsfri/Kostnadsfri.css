@@ -6,29 +6,26 @@
   margin-top: 5rem;
   text-align: center;
   width: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
       rgba(0.4, 0.4, 0.4, 0.4),
       rgba(0.4, 0.4, 0.4, 0.4)
     ),
     url("https://cdn.pixabay.com/photo/2019/01/08/10/58/smart-home-3920905_1280.jpg")
       no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 440px;
-  color: white;
+  background-size: cover; */
+  height: 100%;
+  color: black;
+  position: relative;
 }
-.kostandri-cont .divider {
-  width: 300px;
-  height: 1px;
-  background: #0369a1;
-  margin: 1rem 0;
-}
+
 .kostandri-cont h1 {
   line-height: 30px;
 }
 .kostandri-cont p {
-  width: 80%;
+  width: 60%;
   font-size: 1.1rem;
+  margin-top: 0.3rem;
 }
 .kostandri-cont form {
   display: flex;
@@ -57,8 +54,39 @@
 .kostandri-cont form button:hover {
   opacity: 0.8;
 }
+.kostandri-cont div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 101;
+}
+.kostandri-cont video {
+  height: 500px;
+}
+.video-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background: linear-gradient(
+    rgba(0.3, 0.3, 0.3, 0.3) 100%,
+    rgba(0.3, 0.3, 0.3, 0.3) 100%
+  );
+}
+.video-wrapper {
+  position: relative;
+}
+
 @media screen and (max-width: 600px) {
   .kostandri-cont {
     height: 600px;
+  }
+  .kostandri-cont p {
+    width: 90%;
   }
 }
