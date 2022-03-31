@@ -31,7 +31,7 @@ const Kostnadsfri = ({ vad, text }) => {
   };
   useEffect(() => {
     if (window.innerWidth < 900) {
-      document.querySelector("video").autoPlay = false;
+      document.querySelector("video").pause();
     }
   }, []);
   return (
