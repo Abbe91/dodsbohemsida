@@ -77,3 +77,11 @@
     margin-top: 2rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .bing-news-item h4 {
+    margin-top: 1rem;
+  }
+  .bing-news-item div {
+    top: -85px;
+  }
+}
