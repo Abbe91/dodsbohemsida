@@ -30,8 +30,9 @@ const Kostnadsfri = ({ vad, text }) => {
       );
   };
   useEffect(() => {
-    if (window.innerWidth < 900) {
-      document.querySelector("video").pause();
+    if (window.innerWidth >= 900) {
+      document.querySelector("video").autoplay = true;
+      document.querySelector("video").loop = true;
     }
   }, []);
   return (
@@ -52,7 +53,7 @@ const Kostnadsfri = ({ vad, text }) => {
         </form>
       </div>
       <section className="video-wrapper">
-        <video autoPlay loop>
+        <video>
           <source src={video} type="video/mp4"></source>
         </video>
       </section>
