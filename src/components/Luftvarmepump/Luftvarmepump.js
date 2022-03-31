@@ -126,6 +126,7 @@ const Luftvarmepump = () => {
           style={{
             maxWidth: "90%",
             marginBottom: "1rem",
+            color: "#0369a1",
           }}
         >
           {mainquery} NEWS!

@@ -41,7 +41,9 @@ const Erbjuder = () => {
             flexDirection: "column",
           }}
         >
-          <h2 className="title">Vi Erbjuder</h2>
+          <h2 className="title" style={{ color: "#0369a1" }}>
+            Vi Erbjuder
+          </h2>
           {erbjuder?.map((el) => (
             <div key={el.id} className="erbjudande">
               <i
@@ -58,7 +60,9 @@ const Erbjuder = () => {
           ))}
         </div>
         <div>
-          <h2 style={{ marginTop: "2rem" }}>Vill du ha en offert?</h2>
+          <h2 style={{ marginTop: "2rem", color: "#0369a1" }}>
+            Vill du ha en offert?
+          </h2>
           <form ref={form}>
             <div>
               <input type="email" placeholder="Din email" name="email" />
