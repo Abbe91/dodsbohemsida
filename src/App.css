@@ -8,6 +8,11 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.App::-webkit-scrollbar {
+  display: none;
 }
 :root {
   --mainColor: #f44336;

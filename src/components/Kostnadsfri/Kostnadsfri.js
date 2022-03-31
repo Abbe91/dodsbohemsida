@@ -47,7 +47,9 @@ const Kostnadsfri = ({ vad, text }) => {
         </form>
       </div>
       <section className="video-wrapper">
-        <video src={video} autoPlay loop />
+        <video autoPlay loop>
+          <source src={video} type="video/mp4"></source>
+        </video>
       </section>
     </div>
   );
