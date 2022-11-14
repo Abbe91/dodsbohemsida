@@ -35,7 +35,7 @@ const AboutUs = ({ query, oss, om }) => {
         }
       );
   };
-
+  const testar = "bara";
   return (
     <div className="aboutUs">
       <div className="aboutUs-info" style={{ maxWidth: "90%" }}>
