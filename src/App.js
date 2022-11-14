@@ -9,6 +9,12 @@ import Tommadodsbogoteborg from "./components/tommadodsbogoteborg/Tommadodsbogot
 import Varderadodsbogoteborg from "./blocks/Varderadodsbogoteborg";
 import Saljadodsbogoteborg from "./blocks/Saljadodsbogoteborg";
 import Bortforslingdodsbogoteborg from "./blocks/Bortforslingdodsbogoteborg";
+import Bortforslingdodsboulricehamn from "./blocks/Bortforslingdodsboulricehamn";
+import Varderadodsboulricehamn from "./blocks/Varderadodsboulricehamn";
+import Hjalpdodsboulricehamn from "./blocks/Hjalpdodsboulricehamn";
+import Saljadodsboulricehamn from "./blocks/Saljadodsboulricehamn";
+import Tommadodsboulricehamn from "./blocks/Tommadodsboulricehamn";
+import Uppkopdodsboulricehamn from "./blocks/Uppkopdodsboulricehamn";
 import {
   setWeatherData,
   getCustomerData
@@ -104,6 +110,30 @@ function App() {
           <Route
             path="/bortforslingdodsbogoteborg"
             element={<Bortforslingdodsbogoteborg />}
+          />
+          <Route
+            path="bortforslingdodsboulricehamn"
+            element={<Bortforslingdodsboulricehamn />}
+          />
+          <Route
+            path="varderadodsboulricehamn"
+            element={<Varderadodsboulricehamn />}
+          />
+          <Route
+            path="hjalpdodsboulricehamn"
+            element={<Hjalpdodsboulricehamn />}
+          />
+          <Route
+            path="saljadodsboulricehamn"
+            element={<Saljadodsboulricehamn />}
+          />
+          <Route
+            path="tommadodsboulricehamn"
+            element={<Tommadodsboulricehamn />}
+          />
+          <Route
+            path="uppkopdodsboulricehamn"
+            element={<Uppkopdodsboulricehamn />}
           />
           <Route path="*" element={<Error />} />
         </Routes>

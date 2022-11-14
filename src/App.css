@@ -97,3 +97,7 @@ button {
   height: 100%;
   width: 100%;
 }
+.links-footer-container {
+  display: flex;
+  flex-direction: row;
+}

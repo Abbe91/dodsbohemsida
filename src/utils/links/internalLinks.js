@@ -24,3 +24,30 @@ export const internallinks = [
     title: "Bortforsling dödsbo Göteborg"
   }
 ];
+
+export const popularLinks = [
+  {
+    path: "varderadodsboulricehamn",
+    title: "Värdera dödsbo Ulricehamn"
+  },
+  {
+    path: "hjalpdodsboulricehamn",
+    title: "Hjälp dödsbo Ulricehamn"
+  },
+  {
+    path: "bortforslingdodsboulricehamn",
+    title: "Bortforsling dödsbo Ulricehamn"
+  },
+  {
+    path: "saljadodsboulricehamn",
+    title: "Sälja dödsbo Ulricehamn"
+  },
+  {
+    path: "tommadodsboulricehamn",
+    title: "Tömma dödsbo Ulricehamn"
+  },
+  {
+    path: "uppkopdodsboulricehamn",
+    title: "Uppköp dödsbo Ulricehamn"
+  }
+];
