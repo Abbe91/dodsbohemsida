@@ -1,14 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  email: "info@effectenergispar.se",
-  phone: "070-3424117",
-  business: "Effect Energispar",
-  adress: "Hampmyrvägen 25",
-  zip: "975 93",
-  city: "Luleå",
-  coords: { lat: 65.56615126993924, lng: 21.7915225295041 },
+  email: "info@dodsboexperten.se",
+  phone: "031-7539060",
+  business: "Dödsbo Experten",
+  adress: "Första Långgatan 11",
+  zip: "413 28",
+  city: "Göteborg",
+  coords: { lat: 57.700097611245894, lng: 11.947820491799002 },
   weatherData: [],
+  searchTerms: [
+    "Dödsbo Hantering",
+    "Flytt",
+    "Städning",
+    "Värdering",
+    "Uppköp",
+    "Sanering"
+  ]
 };
 
 const customerSlice = createSlice({
@@ -17,8 +25,8 @@ const customerSlice = createSlice({
   reducers: {
     setWeatherData: (state, { payload }) => {
       state.weatherData = payload;
-    },
-  },
+    }
+  }
 });
 export const { setWeatherData } = customerSlice.actions;
 export const getCustomerData = (state) => state.customer;

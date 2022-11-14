@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  element: "Nav",
+  element: "Nav"
 };
 
 const scrollElementSlice = createSlice({
@@ -10,8 +10,8 @@ const scrollElementSlice = createSlice({
   reducers: {
     addElement: (state, { payload }) => {
       state.element = payload;
-    },
-  },
+    }
+  }
 });
 
 export const { addElement } = scrollElementSlice.actions;

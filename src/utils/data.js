@@ -1,55 +1,48 @@
 import React from "react";
-import { GiMountainCave } from "react-icons/gi";
-import { FaWater } from "react-icons/fa";
-import { MdOutlineAir } from "react-icons/md";
-import { AiTwotoneBoxPlot } from "react-icons/ai";
-import { MdMiscellaneousServices } from "react-icons/md";
+import { BiHomeAlt } from "react-icons/bi";
+import { AiOutlineCalculator } from "react-icons/ai";
+import { FaTruckMoving } from "react-icons/fa";
+import { MdCleaningServices } from "react-icons/md";
+import { AiOutlineCreditCard } from "react-icons/ai";
 export const navlinks = [
   {
     id: 1,
-    label: "Hem",
+    label: "Hem"
   },
+
   {
     id: 2,
-    label: "Om oss",
+    label: "Om oss"
   },
   {
     id: 3,
-    label: "Tjänster",
-  },
-  {
-    id: 5,
-    label: "Tips",
-  },
-  {
-    id: 6,
-    label: "Nyheter",
-  },
+    label: "Tjänster"
+  }
 ];
 export const erbjuder = [
   {
     id: 1,
-    title: "Bergvärme",
-    icon: <GiMountainCave />,
+    title: "Dödsbo Hantering",
+    icon: <BiHomeAlt />
   },
   {
     id: 2,
-    title: "Luft/Vattenvärmepumpar",
-    icon: <FaWater />,
+    title: "Värdering av Dödsbo och Bohag",
+    icon: <AiOutlineCalculator />
   },
   {
     id: 3,
-    title: "Luftvärmepumpar",
-    icon: <MdOutlineAir />,
+    title: "Flytt & Packning",
+    icon: <FaTruckMoving />
   },
   {
     id: 4,
-    title: "AC-anläggningar och luftrenare",
-    icon: <AiTwotoneBoxPlot />,
+    title: "Städning, Flyttstäd & Sanering",
+    icon: <MdCleaningServices />
   },
   {
     id: 5,
-    title: "Service reparation av värmepumpar",
-    icon: <MdMiscellaneousServices />,
-  },
+    title: "Uppköp & Försäljning",
+    icon: <AiOutlineCreditCard />
+  }
 ];

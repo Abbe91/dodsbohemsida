@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0%;
@@ -27,6 +28,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 li {
   list-style-type: none;
 }
@@ -80,4 +82,18 @@ button {
   .booking-lottie {
     margin-bottom: 5rem;
   }
+}
+.logo {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+
+.snabb-kollen-form {
+  display: flex;
+  flex-direction: column;
+}
+.Snabbkollen {
+  height: 100%;
+  width: 100%;
 }

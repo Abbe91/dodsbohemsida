@@ -15,7 +15,7 @@ const MainComp = ({
   subTitle5,
   text,
   text1,
-  text2,
+  text2
 }) => {
   const [accept, setAccept] = useState(false);
   const [sent, setSent] = useState(false);
@@ -30,12 +30,14 @@ const MainComp = ({
         "service_wzr1q3r",
         "template_4xmyon5",
         form.current,
-        process.env.REACT_APP_EMAILJS_ID
+        process.env.REACT_APP_EMAILJS
       )
       .then(
         (result) => {
           if (result.text === "OK") {
-            console.log("email sent");
+            document
+              .querySelectorAll("input")
+              ?.forEach((el) => (el.value = ""));
             setSending(false);
             setSent(true);
           }
@@ -55,7 +57,7 @@ const MainComp = ({
               display: "flex",
               alignItems: "center",
               flexDirection: "row",
-              marginBottom: "0.2rem",
+              marginBottom: "0.2rem"
             }}
           >
             <h4 style={{ marginRight: "0.5rem" }}>{subTitle}</h4>
@@ -86,7 +88,7 @@ const MainComp = ({
             alignItems: "center",
             marginBottom: "1rem",
             letterSpacing: "1px",
-            borderBottom: "1px solid gray",
+            borderBottom: "1px solid gray"
           }}
         >
           <p style={{ fontSize: "1.2rem" }}>Gratiskollen</p>
@@ -100,16 +102,18 @@ const MainComp = ({
           style={{
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <label htmlFor="typ">Typ</label>
           <select name="typ">
-            <option value="Luftvärme">Luftvärme</option>
-            <option value="bergvärme">Bergvärme</option>
-            <option value="luft/vatten">Luft/Vatten</option>
-            <option value="ac">AC</option>
-            <option value="service">Service</option>
+            <option value="Dödsbo">Dödsbo</option>
+            <option value="Värdering">Värdering</option>
+            <option value="Bohag">Bohag</option>
+            <option value="Flytt">Flytt</option>
+            <option value="Städ">Städ</option>
+            <option value="Uppköp">Uppköp</option>
+            <option value="Sanering">Sanering</option>
           </select>
         </div>
         <div>
@@ -117,19 +121,19 @@ const MainComp = ({
             style={{
               display: "flex",
               flexDirection: "row",
-              margin: "0.7rem 0",
+              margin: "0.7rem 0"
             }}
           >
             <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
-              Jag har något installerat hemma
+              Jag vill bli kontaktad
             </p>
-            <input type="checkbox" name="har-installerat" />
+            <input type="checkbox" name="vill-bli-kontaktad" />
           </div>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
-              Jag har <strong>INTE</strong> något installerat hemma
+              Jag <strong>Vill</strong> ha en offert
             </p>
-            <input type="checkbox" name="har-inte-installerat" />
+            <input type="checkbox" name="vill-ha-offert" />
           </div>
         </div>
         <a
@@ -167,7 +171,7 @@ const MainComp = ({
               alignItems: "center",
               flexDirection: "row",
               margin: ".5rem 0",
-              transition: "all 0.3s linear",
+              transition: "all 0.3s linear"
             }}
           >
             <div
@@ -180,7 +184,7 @@ const MainComp = ({
                   style={{
                     width: "100%",
                     height: "100%",
-                    color: "black",
+                    color: "black"
                   }}
                 />
               )}
@@ -190,7 +194,7 @@ const MainComp = ({
                 marginLeft: "0.5rem",
                 fontSize: "0.7rem",
                 fontWeight: "700",
-                color: "black",
+                color: "black"
               }}
             >
               Jag godkänner

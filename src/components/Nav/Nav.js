@@ -19,6 +19,7 @@ const Nav = () => {
       const value = e.currentTarget.innerText.split("oss")[0];
       dispatch(addElement(value));
     }
+
     setShowNav(false);
   };
   return (
@@ -41,7 +42,8 @@ const Nav = () => {
       </section>
       <nav>
         <div className="nav-logo">
-          <img src={logo} alt="logo" />
+          <h2 className="logo">{customerData.business}</h2>
+          {/* <img src={logo} alt="logo" /> */}
         </div>
         <div className="navbar" onClick={() => setShowNav(!showNav)}>
           <AiOutlineBars />

@@ -4,9 +4,7 @@ import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import { useSelector } from "react-redux";
 import LottieHouse from "../../LottieAnimation/LottieHouse";
 import home from "../../utils/animation/hus.json";
-const Tips = ({ query }) => {
-  const newsData = useSelector(getNewsData);
-
+const Tips = ({ query, newsData }) => {
   return (
     <div className="tips">
       <div>
@@ -26,7 +24,7 @@ const Tips = ({ query }) => {
             fontSize: "0.7rem",
             fontWeight: "700",
             letterSpacing: "1px",
-            opacity: "0.7",
+            opacity: "0.7"
           }}
         >
           Data hämtad från google search

@@ -38,7 +38,7 @@ const AboutUs = ({ query, oss, om }) => {
 
   return (
     <div className="aboutUs">
-      <div className="aboutUs-info">
+      <div className="aboutUs-info" style={{ maxWidth: "90%" }}>
         <h1 style={{ color: "#0369a1" }}>{query}</h1>
         <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
         <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>
@@ -50,7 +50,7 @@ const AboutUs = ({ query, oss, om }) => {
               style={{
                 color: "#0369a1",
                 fontSize: "1.4rem",
-                margin: "0.5rem 0",
+                margin: "0.5rem 0"
               }}
             />
             <label>
@@ -88,16 +88,16 @@ const AboutUs = ({ query, oss, om }) => {
       <div className="map-container" style={{ height: "400px", width: "80%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: process.env.REACT_APP_GOOGLEMAPS_API_KEY,
+            key: process.env.REACT_APP_GOOGLEMAPS_API_KEY
           }}
           defaultCenter={customerData.coords}
           center={customerData.coords}
-          defaultZoom={9}
+          defaultZoom={13}
           margin={[50, 50, 50, 50]}
           options={{
             disableDefaultUI: true,
             zoomControl: true,
-            styles: mapStyles,
+            styles: mapStyles
           }}
         >
           <div
@@ -106,7 +106,7 @@ const AboutUs = ({ query, oss, om }) => {
             lng={Number(customerData.coords.lng)}
           >
             <HiLocationMarker
-              style={{ fontSize: "0.8rem", color: "#f44336" }}
+              style={{ fontSize: "1.3rem", color: "#f44336" }}
             />
           </div>
           {customerData.weatherData?.list?.length &&
