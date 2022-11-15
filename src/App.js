@@ -15,6 +15,7 @@ import Hjalpdodsboulricehamn from "./blocks/Hjalpdodsboulricehamn";
 import Saljadodsboulricehamn from "./blocks/Saljadodsboulricehamn";
 import Tommadodsboulricehamn from "./blocks/Tommadodsboulricehamn";
 import Uppkopdodsboulricehamn from "./blocks/Uppkopdodsboulricehamn";
+import Hjalpdodsbogoteborg from "./blocks/Hjalpadodsbogoteborg";
 import {
   setWeatherData,
   getCustomerData
@@ -92,48 +93,52 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            path="/tommadodsbogoteborg"
+            path="/tomma-dodsbo-goteborg"
             element={<Tommadodsbogoteborg />}
           />
           <Route
-            path="/saljadodsbogoteborg"
+            path="/salja-dodsbo-goteborg"
             element={<Saljadodsbogoteborg />}
           />
           <Route
-            path="/uppkopdodsbogoteborg"
+            path="/uppkop-dodsbo-goteborg"
             element={<Uppkopdodsbogoteborg />}
           />
           <Route
-            path="/varderadodsbogoteborg"
+            path="/vardera-dodsbo-goteborg"
             element={<Varderadodsbogoteborg />}
           />
           <Route
-            path="/bortforslingdodsbogoteborg"
+            path="/bortforsling-dodsbo-goteborg"
             element={<Bortforslingdodsbogoteborg />}
           />
           <Route
-            path="bortforslingdodsboulricehamn"
+            path="bortforsling-dodsbo-ulricehamn"
             element={<Bortforslingdodsboulricehamn />}
           />
           <Route
-            path="varderadodsboulricehamn"
+            path="vardera-dodsbo-ulricehamn"
             element={<Varderadodsboulricehamn />}
           />
           <Route
-            path="hjalpdodsboulricehamn"
+            path="hjalp-dodsbo-ulricehamn"
             element={<Hjalpdodsboulricehamn />}
           />
           <Route
-            path="saljadodsboulricehamn"
+            path="salja-dodsbo-ulricehamn"
             element={<Saljadodsboulricehamn />}
           />
           <Route
-            path="tommadodsboulricehamn"
+            path="tomma-dodsbo-ulricehamn"
             element={<Tommadodsboulricehamn />}
           />
           <Route
-            path="uppkopdodsboulricehamn"
+            path="uppkop-dodsbo-ulricehamn"
             element={<Uppkopdodsboulricehamn />}
+          />
+          <Route
+            path="hjalp-dodsbo-goteborg"
+            element={<Hjalpdodsbogoteborg />}
           />
           <Route path="*" element={<Error />} />
         </Routes>

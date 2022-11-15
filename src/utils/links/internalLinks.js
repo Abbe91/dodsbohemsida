@@ -1,53 +1,53 @@
 export const internallinks = [
   {
-    path: "tommadodsbogoteborg",
+    path: "tomma-dodsbo-goteborg",
     title: "Tömma dödsbo Göteborg"
   },
   {
-    path: "uppkopdodsbogoteborg",
+    path: "uppkop-dodsbo-goteborg",
     title: "Uppköp dödsbo Göteborg"
   },
   {
-    path: "saljadodsbogoteborg",
+    path: "salja-dodsbo-goteborg",
     title: "Sälja dödsbo Göteborg"
   },
   {
-    path: "varderadodsbogoteborg",
+    path: "vardera-dodsbo-goteborg",
     title: "Värdera dödsbo Göteborg"
   },
   {
-    path: "hjalpdodsbogoteborg",
+    path: "hjalp-dodsbo-goteborg",
     title: "Hjälp dödsbo Göteborg"
   },
   {
-    path: "bortforslingdodsbogoteborg",
+    path: "bortforsling-dodsbogoteborg",
     title: "Bortforsling dödsbo Göteborg"
   }
 ];
 
 export const popularLinks = [
   {
-    path: "varderadodsboulricehamn",
+    path: "vardera-dodsbo-ulricehamn",
     title: "Värdera dödsbo Ulricehamn"
   },
   {
-    path: "hjalpdodsboulricehamn",
+    path: "hjalp-dodsbo-ulricehamn",
     title: "Hjälp dödsbo Ulricehamn"
   },
   {
-    path: "bortforslingdodsboulricehamn",
+    path: "bortforsling-dodsbo-ulricehamn",
     title: "Bortforsling dödsbo Ulricehamn"
   },
   {
-    path: "saljadodsboulricehamn",
+    path: "salja-dodsbo-ulricehamn",
     title: "Sälja dödsbo Ulricehamn"
   },
   {
-    path: "tommadodsboulricehamn",
+    path: "tomma-dodsbo-ulricehamn",
     title: "Tömma dödsbo Ulricehamn"
   },
   {
-    path: "uppkopdodsboulricehamn",
+    path: "uppkop-dodsbo-ulricehamn",
     title: "Uppköp dödsbo Ulricehamn"
   }
 ];

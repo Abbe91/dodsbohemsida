@@ -121,14 +121,9 @@ input:focus {
   transition: all 0.3s linear;
 }
 
-@media screen and (min-width: 900px) {
-  .main-content-container {
-    margin-left: 1rem;
-  }
-}
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1750px;
+    height: 1700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
