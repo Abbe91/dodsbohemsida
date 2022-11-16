@@ -24,7 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWheaterData } from "./api/index";
 import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
-import Snabbkollen from "./components/Snabbkollen";
+import Partners from "./components/Partners";
 function App() {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -142,6 +142,7 @@ function App() {
           />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Partners />
         <Footer />
         <Links />
       </Router>

@@ -47,7 +47,7 @@ button {
 .booking-lottie .booking-content h4 {
   font-size: 0.9rem;
   font-weight: 100;
-  max-width: 400px;
+  max-width: 500px;
   margin: 1rem 0;
   line-height: 22px;
 }
@@ -100,4 +100,35 @@ button {
 .links-footer-container {
   display: flex;
   flex-direction: row;
+}
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  background: rgb(248, 247, 247);
+  padding: 1.5rem;
+}
+.partners p {
+  max-width: 340px;
+}
+.partners section {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  background: white;
+}
+@media screen and (max-width: 800px) {
+  .partners {
+    flex-direction: column;
+  }
 }
