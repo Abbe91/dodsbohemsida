@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Uppkopdodsbogoteborg from "./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg";
-import Error from "./pages/Error/Error";
-import Home from "./pages/Home/Home";
-import Footer from "./components/Footer/Footer";
-import Tommadodsbogoteborg from "./components/tommadodsbogoteborg/Tommadodsbogoteborg";
-import Varderadodsbogoteborg from "./blocks/Varderadodsbogoteborg";
-import Saljadodsbogoteborg from "./blocks/Saljadodsbogoteborg";
-import Bortforslingdodsbogoteborg from "./blocks/Bortforslingdodsbogoteborg";
-import Bortforslingdodsboulricehamn from "./blocks/Bortforslingdodsboulricehamn";
-import Varderadodsboulricehamn from "./blocks/Varderadodsboulricehamn";
-import Hjalpdodsboulricehamn from "./blocks/Hjalpdodsboulricehamn";
-import Saljadodsboulricehamn from "./blocks/Saljadodsboulricehamn";
-import Tommadodsboulricehamn from "./blocks/Tommadodsboulricehamn";
-import Uppkopdodsboulricehamn from "./blocks/Uppkopdodsboulricehamn";
-import Hjalpdodsbogoteborg from "./blocks/Hjalpadodsbogoteborg";
+
+import Besok from "./components/Besok";
+import Partners from "./components/Partners";
+//
+
 import {
   setWeatherData,
   getCustomerData
@@ -24,8 +14,69 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWheaterData } from "./api/index";
 import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
-import Partners from "./components/Partners";
+import { Audio } from "react-loader-spinner";
 function App() {
+  // lazy imports
+  const Uppkopdodsbogoteborg = lazy(() =>
+    import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
+  );
+  const Error = lazy(() => import("./pages/Error/Error"));
+  const Home = lazy(() => import("./pages/Home/Home"));
+  const Footer = lazy(() => import("./components/Footer/Footer"));
+  const Tommadodsbogoteborg = lazy(() =>
+    import("./components/tommadodsbogoteborg/Tommadodsbogoteborg")
+  );
+  const Varderadodsbogoteborg = lazy(() =>
+    import("./blocks/Varderadodsbogoteborg")
+  );
+  const Saljadodsbogoteborg = lazy(() =>
+    import("./blocks/Saljadodsbogoteborg")
+  );
+  const Bortforslingdodsbogoteborg = lazy(() =>
+    import("./blocks/Bortforslingdodsbogoteborg")
+  );
+  const Bortforslingdodsboulricehamn = lazy(() =>
+    import("./blocks/Bortforslingdodsboulricehamn")
+  );
+  const Varderadodsboulricehamn = lazy(() =>
+    import("./blocks/Varderadodsboulricehamn")
+  );
+  const Hjalpdodsboulricehamn = lazy(() =>
+    import("./blocks/Hjalpdodsboulricehamn")
+  );
+  const Saljadodsboulricehamn = lazy(() =>
+    import("./blocks/Saljadodsboulricehamn")
+  );
+  const Tommadodsboulricehamn = lazy(() =>
+    import("./blocks/Tommadodsboulricehamn")
+  );
+  const Uppkopdodsboulricehamn = lazy(() =>
+    import("./blocks/Uppkopdodsboulricehamn")
+  );
+  const Hjalpdodsbogoteborg = lazy(() =>
+    import("./blocks/Hjalpadodsbogoteborg")
+  );
+  const Besok = lazy(() => import("./components/Besok"));
+  const BortforslingDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/BortforslingDodsboKungalv")
+  );
+  const HjalpDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/HjalpDodsboKungalv")
+  );
+  const SaljaDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/SaljaDodsboKungalv")
+  );
+  const TommaDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/TommaDodsboKungalv")
+  );
+  const VarderaDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/VarderaDodsboKungalv")
+  );
+  const UppkopDodsboKungalv = lazy(() =>
+    import("./blocks/kungalv/UppkopDodsboKungalv")
+  );
+  //
+
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
 
@@ -85,67 +136,100 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {/* <div style={{ height: "10rem" }}>
-        <Snabbkollen />
-      </div> */}
-
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/tomma-dodsbo-goteborg"
-            element={<Tommadodsbogoteborg />}
+      <Suspense
+        fallback={
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="green"
+            ariaLabel="loading"
           />
-          <Route
-            path="/salja-dodsbo-goteborg"
-            element={<Saljadodsbogoteborg />}
-          />
-          <Route
-            path="/uppkop-dodsbo-goteborg"
-            element={<Uppkopdodsbogoteborg />}
-          />
-          <Route
-            path="/vardera-dodsbo-goteborg"
-            element={<Varderadodsbogoteborg />}
-          />
-          <Route
-            path="/bortforsling-dodsbo-goteborg"
-            element={<Bortforslingdodsbogoteborg />}
-          />
-          <Route
-            path="bortforsling-dodsbo-ulricehamn"
-            element={<Bortforslingdodsboulricehamn />}
-          />
-          <Route
-            path="vardera-dodsbo-ulricehamn"
-            element={<Varderadodsboulricehamn />}
-          />
-          <Route
-            path="hjalp-dodsbo-ulricehamn"
-            element={<Hjalpdodsboulricehamn />}
-          />
-          <Route
-            path="salja-dodsbo-ulricehamn"
-            element={<Saljadodsboulricehamn />}
-          />
-          <Route
-            path="tomma-dodsbo-ulricehamn"
-            element={<Tommadodsboulricehamn />}
-          />
-          <Route
-            path="uppkop-dodsbo-ulricehamn"
-            element={<Uppkopdodsboulricehamn />}
-          />
-          <Route
-            path="hjalp-dodsbo-goteborg"
-            element={<Hjalpdodsbogoteborg />}
-          />
-          <Route path="*" element={<Error />} />
-        </Routes>
-        <Partners />
-        <Footer />
-        <Links />
-      </Router>
+        }
+      >
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/tomma-dodsbo-goteborg"
+              element={<Tommadodsbogoteborg />}
+            />
+            <Route
+              path="/salja-dodsbo-goteborg"
+              element={<Saljadodsbogoteborg />}
+            />
+            <Route
+              path="/uppkop-dodsbo-goteborg"
+              element={<Uppkopdodsbogoteborg />}
+            />
+            <Route
+              path="/vardera-dodsbo-goteborg"
+              element={<Varderadodsbogoteborg />}
+            />
+            <Route
+              path="/bortforsling-dodsbo-goteborg"
+              element={<Bortforslingdodsbogoteborg />}
+            />
+            <Route
+              path="bortforsling-dodsbo-ulricehamn"
+              element={<Bortforslingdodsboulricehamn />}
+            />
+            <Route
+              path="vardera-dodsbo-ulricehamn"
+              element={<Varderadodsboulricehamn />}
+            />
+            <Route
+              path="hjalp-dodsbo-ulricehamn"
+              element={<Hjalpdodsboulricehamn />}
+            />
+            <Route
+              path="salja-dodsbo-ulricehamn"
+              element={<Saljadodsboulricehamn />}
+            />
+            <Route
+              path="tomma-dodsbo-ulricehamn"
+              element={<Tommadodsboulricehamn />}
+            />
+            <Route
+              path="uppkop-dodsbo-ulricehamn"
+              element={<Uppkopdodsboulricehamn />}
+            />
+            <Route
+              path="hjalp-dodsbo-goteborg"
+              element={<Hjalpdodsbogoteborg />}
+            />
+            <Route
+              path="bortforsling-dodsbo-kungalv"
+              element={<BortforslingDodsboKungalv />}
+            />
+            <Route
+              path="hjalp-dodsbo-kungalv"
+              element={<HjalpDodsboKungalv />}
+            />
+            <Route
+              path="salja-dodsbo-kungalv"
+              element={<SaljaDodsboKungalv />}
+            />
+            <Route
+              path="tomma-dodsbo-kungalv"
+              element={<TommaDodsboKungalv />}
+            />
+            <Route
+              path="vardera-dodsbo-kungalv"
+              element={<VarderaDodsboKungalv />}
+            />
+            <Route
+              path="uppkop-dodsbo-kungalv"
+              element={<UppkopDodsboKungalv />}
+            />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Partners />
+          <Besok />
+          <Footer />
+          <Links />
+        </Router>
+      </Suspense>
     </div>
   );
 }

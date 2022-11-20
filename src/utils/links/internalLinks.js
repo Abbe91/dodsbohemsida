@@ -51,3 +51,30 @@ export const popularLinks = [
     title: "Uppköp dödsbo Ulricehamn"
   }
 ];
+
+export const fleromrodenLinks = [
+  {
+    path: "vardera-dodsbo-kungalv",
+    title: "Värdera dödsbo Kungälv"
+  },
+  {
+    path: "hjalp-dodsbo-kungalv",
+    title: "Hjälp dödsbo Kungälv"
+  },
+  {
+    path: "bortforsling-dodsbo-kungalv",
+    title: "Bortforsling dödsbo Kungälv"
+  },
+  {
+    path: "salja-dodsbo-kungalv",
+    title: "Sälja dödsbo Kungälv"
+  },
+  {
+    path: "tomma-dodsbo-kungalv",
+    title: "Tömma dödsbo Kungälv"
+  },
+  {
+    path: "uppkop-dodsbo-kungalv",
+    title: "Uppköp dödsbo Kungälv"
+  }
+];

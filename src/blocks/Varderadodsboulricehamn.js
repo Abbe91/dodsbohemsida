@@ -121,9 +121,9 @@ const Varderadodsboulricehamn = () => {
 
       <div className="Kostnadsfri">
         <Kostnadsfri
-          vad={"genomgång"}
+          vad={"Värdering"}
           mainquery={mainquery}
-          text={`För att vi skall kunna ge dig ett ärligt pris för ditt bohag, lösöre och några utav de tjänster vi erbjuder så erbjuder kostandsfritt besök för ${mainquery}.`}
+          text={`För att vi skall kunna ge dig ett ärligt pris för ditt bohag, lösöre och några utav de tjänster vi erbjuder så erbjuder vi en kostandsfritt besök för ${mainquery}.`}
         />
       </div>
     </div>

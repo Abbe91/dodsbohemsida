@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
-import MainComp from "../components/MainComp/MainComp";
+import MainComp from "../../components/MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
-import { getCustomerData } from "../redux-toolkit/customer/customerSlice";
+import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
-import AboutUs from "../components/AboutUs/AboutUs";
-import Tips from "../components/Tips/Tips";
-import Nav from "../components/Nav/Nav";
-import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
-import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
-import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
+import AboutUs from "../../components/AboutUs/AboutUs";
+import Tips from "../../components/Tips/Tips";
+import Nav from "../../components/Nav/Nav";
+import Erbjuder from "../../components/Erbjuder/Erbjuder";
+import Nyheter from "../../components/Nyheter/Nyheter";
+import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
+import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
-import LottieBooking from "../LottieAnimation/LottieBooking";
-import booking from "../utils/animation/booking.json";
-
-const Uppkopdodsboulricehamn = () => {
-  const mainquery = "Tömma dödsbo Ulricehamn";
+import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import LottieBooking from "../../LottieAnimation/LottieBooking";
+import booking from "../../utils/animation/booking.json";
+const TommaDodsboKungalv = () => {
+  const mainquery = "tömma dödsbo Kungälv";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "uppköp dödsbo Ulricehamn",
-    metaContent: "Uppköp dödsbo Ulricehamn",
-    query: "Uppköp dödsbo Ulricehamn",
-    formTitle: "Uppköp dödsbo Ulricehamn",
+    metaTitle: "Tömma dödsbo Kungälv",
+    metaContent: "Tömma dödsbo Kungälv",
+    query: "Tömma dödsbo Kungälv",
+    formTitle: "Tömma dödsbo Kungälv",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
@@ -130,4 +129,4 @@ const Uppkopdodsboulricehamn = () => {
   );
 };
 
-export default Uppkopdodsboulricehamn;
+export default TommaDodsboKungalv;
