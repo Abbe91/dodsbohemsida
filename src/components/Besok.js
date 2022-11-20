@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "../utils/images/värdera-dödsbo.jpg";
 import image2 from "../utils/images/dödsbo-värdering.png";
 import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles({
