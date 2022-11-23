@@ -80,7 +80,7 @@ const AboutUs = ({ query, oss, om }) => {
           <div>
             <h4>Kontakt</h4>
             <p>{customerData.phone}</p>
-            <p>{customerData.email}</p>
+            {/* <p>{customerData.email}</p> */}
           </div>
         </div>
       </div>

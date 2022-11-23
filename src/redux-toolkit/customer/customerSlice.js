@@ -4,10 +4,10 @@ const initialState = {
   email: "info@dodsbo-jouren.se",
   phone: "031-7539060",
   business: "Dödsbo Jouren",
-  adress: "Första Långgatan 11",
-  zip: "413 28",
+  adress: "Hisingsgatan 10",
+  zip: "417 03",
   city: "Göteborg",
-  coords: { lat: 57.700097611245894, lng: 11.947820491799002 },
+  coords: { lat: 57.71674387891259, lng: 11.947577329191638 },
   weatherData: [],
   searchTerms: [
     "Dödsbo Hantering",

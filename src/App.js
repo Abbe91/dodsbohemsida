@@ -75,6 +75,9 @@ function App() {
   const UppkopDodsboKungalv = lazy(() =>
     import("./blocks/kungalv/UppkopDodsboKungalv")
   );
+  const Bortforslingdodsboale = lazy(() =>
+    import("./blocks/ale/Bortforslingdodsboale")
+  );
   //
 
   const dispatch = useDispatch();
@@ -221,6 +224,10 @@ function App() {
             <Route
               path="uppkop-dodsbo-kungalv"
               element={<UppkopDodsboKungalv />}
+            />
+            <Route
+              path="bortforsling-dodsbo-ale"
+              element={<Bortforslingdodsboale />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

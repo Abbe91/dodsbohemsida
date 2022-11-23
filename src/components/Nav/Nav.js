@@ -27,16 +27,19 @@ const Nav = () => {
       <section className="top-nav">
         <div className="user-contact">
           <div>
-            <a href={`tel:${customerData.phone}`}>
-              <AiTwotonePhone />
-            </a>
-            <p>{customerData.phone}</p>
-          </div>
-          <div>
-            <a href={`mailto:${customerData.email}`}>
+            <p>
+              <strong>Ring oss</strong>
+            </p>
+            {/* <a href={`mailto:${customerData.email}`}>
               <AiOutlineMail />
             </a>
-            <p>{customerData.email}</p>
+            <p>{customerData.email}</p> */}
+          </div>
+          <div>
+            <a href={`tel:${customerData.phone}`}>
+              <AiTwotonePhone />
+              <p>{customerData.phone}</p>
+            </a>
           </div>
         </div>
       </section>
