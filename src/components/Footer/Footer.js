@@ -5,15 +5,16 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiMapPinLine } from "react-icons/ri";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
+
 const Footer = () => {
   const customerData = useSelector(getCustomerData);
   return (
-    <div className="footer">
+    <div className="footer" style={{ height: "280px" }}>
       <a href={`tel:${customerData.phone}`}>
         <AiTwotonePhone />
         <p>{customerData.phone}</p>
       </a>
-      <a href={`mailto:${customerData.email}`}>
+      {/* <a href={`mailto:${customerData.email}`}>
         <AiOutlineMail />
         <p>{customerData.email}</p>
       </a>
@@ -23,7 +24,27 @@ const Footer = () => {
         rel="noreferrer"
       >
         <RiMapPinLine />
-      </a>
+      </a> */}
+      <section style={{ margin: "1rem 1rem" }}>
+        <h4 style={{ marginBottom: "0.5rem" }}>Våra kontor/butiker</h4>
+        <div className="office">
+          <div>
+            <h5>Göteborg</h5>
+            <p>Hisingsgatan 10</p>
+            <p>417 03 Göteborg</p>
+          </div>
+          <div>
+            <h5>Tjörn, Skärhamn</h5>
+            <p>Magasinsgatan 11</p>
+            <p>47 132 Skärhamn</p>
+          </div>
+          <div>
+            <h5>Ulricehamn</h5>
+            <p>Bogesundsgatan 2</p>
+            <p>52 338 Ulricehamn</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
