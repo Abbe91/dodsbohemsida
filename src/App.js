@@ -279,7 +279,7 @@ function App() {
           </Routes>
           <Partners />
           <Besok />
-          {/* <Oppetider /> */}
+          <Oppetider />
           <Footer />
           <Links />
         </Router>

@@ -1,16 +1,57 @@
 import React from "react";
+import { Grid, Card, Typography, makeStyles, Box } from "@material-ui/core";
+import LottieBooking from "../LottieAnimation/LottieBooking";
+import clock from "../utils/animation/dodsbo-goteborg-dodsbojouren.json";
 
+const useStyles = makeStyles({
+  divider: {
+    width: "120px",
+    height: "2px",
+    background: "#0369a1",
+    margin: "1rem 0.2rem"
+  },
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    letterSpacing: "1px",
+    lineHeight: "35px",
+    textAlign: "center",
+    marginBottom: "2rem"
+  }
+});
 const Oppetider = () => {
+  const classes = useStyles();
   return (
-    <div
-      style={{
-        textAlign: "center",
-        color: "black",
-        height: "200px",
-        width: "100%"
-      }}
-    >
-      hsh
+    <div className={classes.root}>
+      <Typography variant="h5" style={{ fontWeight: "bold" }}>
+        Öppetider
+      </Typography>
+      <Box className={classes.divider}></Box>
+      <ul>
+        <li>Måndag 07:00-20:00</li>
+        <li>Tisdag 07:00-20:00</li>
+        <li>Onsdag 07:00-20:00</li>
+        <li>Torsdag 07:00-20:00</li>
+        <li>Fredag 07:00-20:00</li>
+        <li>Lördag 10:00-20:00</li>
+        <li>Söndag 10:00-20:00</li>
+      </ul>
+      <Typography
+        variant="p"
+        style={{
+          color: "#0369a1",
+          maxWidth: "90%",
+          lineHeight: "20px",
+          marginTop: "1rem",
+          fontWeight: "bold",
+          fontSize: "0.8rem"
+        }}
+      >
+        Tiderna kan variera vid röda dagar och högtider.
+      </Typography>
+      <LottieBooking lotti={clock} height={300} width={300} />
     </div>
   );
 };
