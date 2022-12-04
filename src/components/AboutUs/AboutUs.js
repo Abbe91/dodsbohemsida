@@ -77,10 +77,27 @@ const AboutUs = ({ query, oss, om }) => {
               </p>
             </div>
           </div>
-          <div>
+          <div style={{ lineHeight: "20px" }}>
             <h4>Kontakt</h4>
             <p>{customerData.phone}</p>
-            {/* <p>{customerData.email}</p> */}
+            <p
+              style={{
+                fontSize: "0.7rem",
+                letterSpacing: "1px",
+                margin: "0.2rem 0"
+              }}
+            >
+              <strong>orgnummer</strong>
+            </p>
+            <p
+              style={{
+                fontSize: "0.7rem",
+                letterSpacing: "1px",
+                margin: "0.2rem 0"
+              }}
+            >
+              556469-5194
+            </p>
           </div>
         </div>
       </div>

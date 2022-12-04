@@ -140,18 +140,18 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Suspense
-        fallback={
-          <Audio
-            height="80"
-            width="80"
-            radius="9"
-            color="green"
-            ariaLabel="loading"
-          />
-        }
-      >
-        <Router>
+      <Router>
+        <Suspense
+          fallback={
+            <Audio
+              height="80"
+              width="80"
+              radius="9"
+              color="green"
+              ariaLabel="loading"
+            />
+          }
+        >
           <Routes>
             <Route
               path="/"
@@ -282,8 +282,8 @@ function App() {
           <Oppetider />
           <Footer />
           <Links />
-        </Router>
-      </Suspense>
+        </Suspense>
+      </Router>
     </div>
   );
 }

@@ -9,11 +9,12 @@ import { useSelector } from "react-redux";
 const Footer = () => {
   const customerData = useSelector(getCustomerData);
   return (
-    <div className="footer" style={{ height: "280px" }}>
+    <div className="footer" style={{ height: "300px" }}>
       <a href={`tel:${customerData.phone}`}>
-        <AiTwotonePhone />
+        <AiTwotonePhone style={{ marginBottom: "0.2rem" }} />
         <p>{customerData.phone}</p>
       </a>
+
       {/* <a href={`mailto:${customerData.email}`}>
         <AiOutlineMail />
         <p>{customerData.email}</p>
@@ -44,6 +45,15 @@ const Footer = () => {
             <p>52 338 Ulricehamn</p>
           </div>
         </div>
+        <p
+          style={{
+            fontSize: "0.7rem",
+            letterSpacing: "1px",
+            margin: "0.2rem 0"
+          }}
+        >
+          Orgnummer: 556469-5194{" "}
+        </p>
       </section>
     </div>
   );
