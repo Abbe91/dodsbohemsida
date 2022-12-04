@@ -42,12 +42,12 @@ const Besok = () => {
           Göteborg, Kungälv, Ale, Stenungsund och Tjörn. Vi har säljkanalerna
           och egen butiker. Dödsbo Jouren är ett företag som tänker miljösmart
           och på återanvändning. Vi skänker till behandlingshem, olika typer av
-          boenden, kyrkor, <strong>hjälporganisationer</strong>{" "}
-          hjälporganisationer och till behövande. Vi har valt att skänka 100
-          kronor per uppdrag till Rädda Barnen. Efter att vi har tömt dödsboet
-          inklusive förråd, källare och övriga utrymmen så gör vi en noggrann
-          flyttstädning av bohaget, dödsboet eller huset. Söker du en uppköpare
-          av dödsbon kan du vända dig till oss.
+          boenden, kyrkor, <strong>hjälporganisationer</strong> och till
+          behövande. Vi har valt att skänka 100 kronor per uppdrag till olika
+          hjälporganisationer. Efter att vi har tömt dödsboet inklusive förråd,
+          källare och övriga utrymmen så gör vi en noggrann flyttstädning av
+          bohaget, dödsboet eller huset. Söker du en uppköpare av dödsbon kan du
+          vända dig till oss.
         </p>
       </section>
       <section style={{ margin: "1rem 0" }}>
