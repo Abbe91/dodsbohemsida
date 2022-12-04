@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet-async";
 import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
-const Saljadodsbogoteborg = () => {
+const Saljadodsbogoteborg = ({ videoText }) => {
   const mainquery = "sälja dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
@@ -122,7 +122,7 @@ const Saljadodsbogoteborg = () => {
         <Kostnadsfri
           vad={"Värdering"}
           mainquery={mainquery}
-          text={`För att vi skall kunna ge dig ett ärligt pris för ditt bohag, lösöre och några utav de tjänster vi erbjuder så erbjuder kostandsfritt besök för ${mainquery}.`}
+          text={`${videoText}${mainquery}.`}
         />
       </div>
     </div>

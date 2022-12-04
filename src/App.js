@@ -1,10 +1,9 @@
 import React, { useEffect, useState, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-import Besok from "./components/Besok";
 import Partners from "./components/Partners";
 //
+import { getContentData } from "./redux-toolkit/content/contentSlice";
 
 import {
   setWeatherData,
@@ -78,10 +77,12 @@ function App() {
   const Bortforslingdodsboale = lazy(() =>
     import("./blocks/ale/Bortforslingdodsboale")
   );
+  const Oppetider = lazy(() => import("./components/Oppetider"));
   //
 
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
+  const contentData = useSelector(getContentData);
 
   const options = {
     method: "GET",
@@ -152,87 +153,133 @@ function App() {
       >
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={<Home videoText={contentData?.videoText} />}
+            />
             <Route
               path="/tomma-dodsbo-goteborg"
-              element={<Tommadodsbogoteborg />}
+              element={
+                <Tommadodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/salja-dodsbo-goteborg"
-              element={<Saljadodsbogoteborg />}
+              element={
+                <Saljadodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/uppkop-dodsbo-goteborg"
-              element={<Uppkopdodsbogoteborg />}
+              element={
+                <Uppkopdodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/vardera-dodsbo-goteborg"
-              element={<Varderadodsbogoteborg />}
+              element={
+                <Varderadodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/bortforsling-dodsbo-goteborg"
-              element={<Bortforslingdodsbogoteborg />}
+              element={
+                <Bortforslingdodsbogoteborg
+                  videoText={contentData?.videoText}
+                />
+              }
             />
             <Route
               path="bortforsling-dodsbo-ulricehamn"
-              element={<Bortforslingdodsboulricehamn />}
+              element={
+                <Bortforslingdodsboulricehamn
+                  videoText={contentData?.videoText}
+                />
+              }
             />
             <Route
               path="vardera-dodsbo-ulricehamn"
-              element={<Varderadodsboulricehamn />}
+              element={
+                <Varderadodsboulricehamn videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="hjalp-dodsbo-ulricehamn"
-              element={<Hjalpdodsboulricehamn />}
+              element={
+                <Hjalpdodsboulricehamn videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="salja-dodsbo-ulricehamn"
-              element={<Saljadodsboulricehamn />}
+              element={
+                <Saljadodsboulricehamn videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="tomma-dodsbo-ulricehamn"
-              element={<Tommadodsboulricehamn />}
+              element={
+                <Tommadodsboulricehamn videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="uppkop-dodsbo-ulricehamn"
-              element={<Uppkopdodsboulricehamn />}
+              element={
+                <Uppkopdodsboulricehamn videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="hjalp-dodsbo-goteborg"
-              element={<Hjalpdodsbogoteborg />}
+              element={
+                <Hjalpdodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="bortforsling-dodsbo-kungalv"
-              element={<BortforslingDodsboKungalv />}
+              element={
+                <BortforslingDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="hjalp-dodsbo-kungalv"
-              element={<HjalpDodsboKungalv />}
+              element={
+                <HjalpDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="salja-dodsbo-kungalv"
-              element={<SaljaDodsboKungalv />}
+              element={
+                <SaljaDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="tomma-dodsbo-kungalv"
-              element={<TommaDodsboKungalv />}
+              element={
+                <TommaDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="vardera-dodsbo-kungalv"
-              element={<VarderaDodsboKungalv />}
+              element={
+                <VarderaDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="uppkop-dodsbo-kungalv"
-              element={<UppkopDodsboKungalv />}
+              element={
+                <UppkopDodsboKungalv videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="bortforsling-dodsbo-ale"
-              element={<Bortforslingdodsboale />}
+              element={
+                <Bortforslingdodsboale videoText={contentData?.videoText} />
+              }
             />
             <Route path="*" element={<Error />} />
           </Routes>
           <Partners />
           <Besok />
+          {/* <Oppetider /> */}
           <Footer />
           <Links />
         </Router>

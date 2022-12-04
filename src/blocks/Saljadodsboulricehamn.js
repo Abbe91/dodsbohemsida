@@ -15,7 +15,7 @@ import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 
-const Saljadodsboulricehamn = () => {
+const Saljadodsboulricehamn = ({ videoText }) => {
   const mainquery = "sälja dödsbo Ulricehamn";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
@@ -123,7 +123,7 @@ const Saljadodsboulricehamn = () => {
         <Kostnadsfri
           vad={"genVärderingomgång"}
           mainquery={mainquery}
-          text={`För att vi skall kunna ge dig ett ärligt pris för ditt bohag, lösöre och några utav de tjänster vi erbjuder så erbjuder kostandsfritt besök för ${mainquery}.`}
+          text={`${videoText}${mainquery}.`}
         />
       </div>
     </div>

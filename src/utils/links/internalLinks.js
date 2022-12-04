@@ -20,7 +20,7 @@ export const internallinks = [
     title: "Hjälp dödsbo Göteborg"
   },
   {
-    path: "bortforsling-dodsbogoteborg",
+    path: "bortforsling-dodsbo-goteborg",
     title: "Bortforsling dödsbo Göteborg"
   }
 ];
