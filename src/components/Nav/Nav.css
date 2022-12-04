@@ -95,10 +95,7 @@ nav .navbar {
 .nav-btn-close {
   transition: all 0.3s linear;
 }
-.nav-btn-close:hover {
-  transform: rotateY(180deg);
-  transition: all 0.3s linear;
-}
+
 .nav-links-div {
   border-bottom: 1px solid rgb(245, 243, 243);
   width: 100%;
