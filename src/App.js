@@ -129,29 +129,29 @@ function App() {
       console.log(error);
     }
   };
-  useEffect(() => {
-    getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
-      (data) => {
-        dispatch(setWeatherData(data));
-      }
-    );
-    getTipsSearch();
-    getBingnews();
-  }, []);
+  // useEffect(() => {
+  //   getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
+  //     (data) => {
+  //       dispatch(setWeatherData(data));
+  //     }
+  //   );
+  //   getTipsSearch();
+  //   getBingnews();
+  // }, []);
   return (
     <div className="App">
-      <Router>
-        <Suspense
-          fallback={
-            <Audio
-              height="80"
-              width="80"
-              radius="9"
-              color="green"
-              ariaLabel="loading"
-            />
-          }
-        >
+      <Suspense
+        fallback={
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="green"
+            ariaLabel="loading"
+          />
+        }
+      >
+        <Router>
           <Routes>
             <Route
               path="/"
@@ -283,8 +283,8 @@ function App() {
           <Recensioner />
           <Footer />
           <Links />
-        </Suspense>
-      </Router>
+        </Router>
+      </Suspense>
     </div>
   );
 }
