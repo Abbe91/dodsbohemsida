@@ -129,15 +129,15 @@ function App() {
       console.log(error);
     }
   };
-  // useEffect(() => {
-  //   getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
-  //     (data) => {
-  //       dispatch(setWeatherData(data));
-  //     }
-  //   );
-  //   getTipsSearch();
-  //   getBingnews();
-  // }, []);
+  useEffect(() => {
+    getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
+      (data) => {
+        dispatch(setWeatherData(data));
+      }
+    );
+    getTipsSearch();
+    getBingnews();
+  }, []);
   return (
     <div className="App">
       <Suspense
@@ -280,7 +280,7 @@ function App() {
           <Partners />
           <Besok />
           <Oppetider />
-          <Recensioner />
+          {/* <Recensioner /> */}
           <Footer />
           <Links />
         </Router>

@@ -126,7 +126,7 @@ const AboutUs = ({ query, oss, om }) => {
               style={{ fontSize: "1.3rem", color: "#f44336" }}
             />
           </div>
-          {/* {customerData.weatherData?.list?.length &&
+          {customerData.weatherData?.list?.length &&
             customerData.weatherData.list.map((data, i) => (
               <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
                 <img
@@ -134,7 +134,7 @@ const AboutUs = ({ query, oss, om }) => {
                   height="70px"
                 />
               </div>
-            ))} */}
+            ))}
         </GoogleMapReact>
       </div>
     </div>
