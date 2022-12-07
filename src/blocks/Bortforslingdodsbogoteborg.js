@@ -84,7 +84,7 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
           <h2>Hjälp {mainquery}?</h2>
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
-            dig som kund med at {mainquery}. Besöket/genomgången tar ca 45min
+            dig som kund med att {mainquery}. Besöket/genomgången tar ca 45min
             och du som kund får en offert på plats om hur vi kan hjälpa dig
             <strong style={{ fontWeight: "700" }}> {mainquery}.</strong>
           </h4>

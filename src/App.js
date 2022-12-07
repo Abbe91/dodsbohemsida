@@ -78,7 +78,7 @@ function App() {
     import("./blocks/ale/Bortforslingdodsboale")
   );
   const Oppetider = lazy(() => import("./components/Oppetider"));
-  //
+  const Recensioner = lazy(() => import("./components/Recensioner"));
 
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -280,6 +280,7 @@ function App() {
           <Partners />
           <Besok />
           <Oppetider />
+          <Recensioner />
           <Footer />
           <Links />
         </Suspense>
