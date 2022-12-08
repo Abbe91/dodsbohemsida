@@ -5,10 +5,10 @@ import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { AiTwotonePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
-import logo from "../../utils/images/effect.png";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
+import { Button } from "@material-ui/core";
 const Nav = () => {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -24,7 +24,7 @@ const Nav = () => {
   };
   return (
     <>
-      <section className="top-nav">
+      <section className="top-nav" style={{ margin: "0.5rem 0" }}>
         <div className="user-contact">
           <div>
             <p>
@@ -37,8 +37,13 @@ const Nav = () => {
           </div>
           <div>
             <a href={`tel:${customerData.phone}`}>
-              <AiTwotonePhone />
-              <p>{customerData.phone}</p>
+              <Button
+                variant="contained"
+                style={{ background: "#0369a1", color: "white" }}
+              >
+                <AiTwotonePhone />
+              </Button>
+              {/* <p>{customerData.phone}</p> */}
             </a>
           </div>
         </div>

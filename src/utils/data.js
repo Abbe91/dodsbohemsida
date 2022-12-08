@@ -46,3 +46,41 @@ export const erbjuder = [
     icon: <AiOutlineCreditCard />
   }
 ];
+
+export const customerReviews = [
+  {
+    id: 0,
+    service: "Tömning av dödsbo",
+    kund: "Marie Lindqvist"
+  },
+  {
+    id: 1,
+    service: "Uppköp av dödsbo",
+    kund: "Liselott Andersson"
+  },
+  {
+    id: 2,
+    service: "Försäljning av dödsbo",
+    kund: "Bosse Eriksson"
+  },
+  {
+    id: 3,
+    service: "Bohags flytt",
+    kund: "Jasem Hossan"
+  },
+  {
+    id: 4,
+    service: "Flytt städning",
+    kund: "Petra Dhal"
+  },
+  {
+    id: 5,
+    service: "Bortforsling av dödsbo",
+    kund: "Kirsten Abbasi"
+  },
+  {
+    id: 5,
+    service: "Städning av dödsbo",
+    kund: "John Pettersson"
+  }
+];

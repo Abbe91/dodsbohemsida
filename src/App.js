@@ -280,7 +280,7 @@ function App() {
           <Partners />
           <Besok />
           <Oppetider />
-          {/* <Recensioner /> */}
+          <Recensioner />
           <Footer />
           <Links />
         </Router>
