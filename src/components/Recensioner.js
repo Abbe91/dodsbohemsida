@@ -5,19 +5,19 @@ import { customerReviews } from "../utils/data";
 const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",
-    height: "400px",
+    height: "560px",
     margin: "1rem 0",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "space-evenly",
+    width: "100%",
     alignItems: "center",
     "@media screen and (max-width: 800px)": {
-      flexDirection: "column",
       height: "700px"
     }
   },
   contentContainer: {
-    maxWidth: "90%"
+    maxWidth: "50%"
   },
   cardContainer: {
     margin: "1rem 0",
@@ -35,7 +35,10 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: "5px"
+    borderRadius: "5px",
+    "@media screen and (min-width: 800px)": {
+      width: "600px"
+    }
   },
   divider: {
     height: "1px",
