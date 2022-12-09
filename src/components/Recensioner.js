@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
+import { Star } from "@material-ui/icons";
 import { customerReviews } from "../utils/data";
 const useStyles = makeStyles({
   root: {
@@ -8,17 +9,39 @@ const useStyles = makeStyles({
     margin: "1rem 0",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly"
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    "@media screen and (max-width: 800px)": {
+      flexDirection: "column",
+      height: "700px"
+    }
   },
   contentContainer: {
-    maxWidth: "50%"
+    maxWidth: "90%"
   },
   cardContainer: {
     margin: "1rem 0",
-    background: "white"
+    background: "white",
+    borderRadius: "5px"
   },
   reviews: {
     overflowY: "scroll"
+  },
+  card: {
+    height: "260px",
+    width: "340px",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "5px"
+  },
+  divider: {
+    height: "1px",
+    background: "#0369a1",
+    width: "140px",
+    margin: "0.5rem 0"
   }
 });
 const Recensioner = () => {
@@ -26,11 +49,11 @@ const Recensioner = () => {
   return (
     <div className={classes.root}>
       <section className={classes.contentContainer}>
-        <h1>Längst erfarenhet</h1>
-        <p>
+        <h1 style={{ margin: "1rem 0" }}>Längst erfarenhet</h1>
+        <p style={{ lineHeight: "26px", marginBottom: "1rem" }}>
           Vi på Dödsbo Jouren är det självklara valet för hantering av bohag och
           dödsbo med över 20 års erfarenhet tillsammans är vi helt övetygade om
-          att vi kan erbjuda dig det besta upplägget för ditt bohag, dödsbo och
+          att vi kan erbjuda dig det bästa upplägget för ditt bohag, dödsbo och
           din plånbok. Vårt upptagningsområde sträcker sig över hela Västra
           Götaland.
         </p>
@@ -38,9 +61,29 @@ const Recensioner = () => {
       <section className={classes.reviews}>
         {customerReviews?.map((review) => (
           <div id={review.id} className={classes.cardContainer}>
-            <Card>
-              <h4>{review.service}</h4>
-              <p>{review.kund}</p>
+            <Card className={classes.card}>
+              <h5>{review.service}</h5>
+              <p style={{ fontSize: "0.8rem", margin: "0.2rem 0" }}>
+                {review.kund}
+              </p>
+              <div className={classes.divider}></div>
+              <span
+                style={{
+                  fontSize: "0.75rem",
+                  maxWidth: "260px",
+                  lineHeight: "21px",
+                  marginBottom: "0.5rem"
+                }}
+              >
+                {review.comment}
+              </span>
+              <div style={{ color: "orange" }}>
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </div>
             </Card>
           </div>
         ))}
