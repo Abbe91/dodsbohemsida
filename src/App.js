@@ -77,6 +77,12 @@ function App() {
   const Bortforslingdodsboale = lazy(() =>
     import("./blocks/ale/Bortforslingdodsboale")
   );
+  const Hjalpdodsboale = lazy(() => import("./blocks/ale/Hjalpdodsboale"));
+  const Saljadosboale = lazy(() => import("./blocks/ale/Saljadosboale"));
+  const Tommadodsboale = lazy(() => import("./blocks/ale/Tommadodsboale"));
+  const Uppkopdodsboale = lazy(() => import("./blocks/ale/Uppkopdodsboale"));
+  const Varderadodsboale = lazy(() => import("./blocks/ale/Varderadodsboale"));
+  //
   const Oppetider = lazy(() => import("./components/Oppetider"));
   const Recensioner = lazy(() => import("./components/Recensioner"));
 
@@ -274,6 +280,26 @@ function App() {
               element={
                 <Bortforslingdodsboale videoText={contentData?.videoText} />
               }
+            />
+            <Route
+              path="hjalp-dodsbo-ale"
+              element={<Hjalpdodsboale videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="salja-dodsbo-ale"
+              element={<Saljadosboale videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="tomma-dodsbo-ale"
+              element={<Tommadodsboale videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="uppkop-dodsbo-ale"
+              element={<Uppkopdodsboale videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="vardera-dodsbo-ale"
+              element={<Varderadodsboale videoText={contentData?.videoText} />}
             />
             <Route path="*" element={<Error />} />
           </Routes>
