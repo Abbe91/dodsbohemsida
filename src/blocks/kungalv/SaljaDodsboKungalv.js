@@ -114,7 +114,7 @@ const SaljaDodsboKungalv = ({ videoText }) => {
           >
             Sänka dina värmekostander NEWS!
           </h2>
-          <Nyheter />
+          <Nyheter bingNews={bingNews} />
         </div>
       )}
 

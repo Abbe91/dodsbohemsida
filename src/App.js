@@ -82,6 +82,7 @@ function App() {
   const Tommadodsboale = lazy(() => import("./blocks/ale/Tommadodsboale"));
   const Uppkopdodsboale = lazy(() => import("./blocks/ale/Uppkopdodsboale"));
   const Varderadodsboale = lazy(() => import("./blocks/ale/Varderadodsboale"));
+  const DodsboGoteborg = lazy(() => import("./blocks/DodsboGoteborg"));
   //
   const Oppetider = lazy(() => import("./components/Oppetider"));
   const Recensioner = lazy(() => import("./components/Recensioner"));
@@ -90,24 +91,21 @@ function App() {
   const customerData = useSelector(getCustomerData);
   const contentData = useSelector(getContentData);
 
-  const options = {
-    method: "GET",
-    headers: {
-      "X-User-Agent": "desktop",
-      "X-Proxy-Location": "SE",
-      "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
-      "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY
-    }
-  };
   const getTipsSearch = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": "google-search72.p.rapidapi.com"
+      }
+    };
     try {
-      const resp = fetch(
-        `https://google-search3.p.rapidapi.com/api/v1/search/q=s%C3%A4nka%20v%C3%A4rmekostnaden&num=100`,
+      fetch(
+        "https://google-search72.p.rapidapi.com/search?query=d%C3%B6dsbo&gl=sv&lr=sv&num=10&start=0&sort=relevance",
         options
       )
         .then((response) => response.json())
-        .then((response) => dispatch(addNews(response.results)))
-        .catch((err) => console.error(err));
+        .then((response) => dispatch(addNews(response.items)));
     } catch (error) {
       console.log(error);
     }
@@ -300,6 +298,10 @@ function App() {
             <Route
               path="vardera-dodsbo-ale"
               element={<Varderadodsboale videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="dodsbo-goteborg"
+              element={<DodsboGoteborg videoText={contentData?.videoText} />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

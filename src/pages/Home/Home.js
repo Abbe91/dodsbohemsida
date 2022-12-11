@@ -37,6 +37,8 @@ const Home = ({ videoText }) => {
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
+  console.log(bingNews);
+
   return (
     <div>
       <Helmet>
@@ -70,14 +72,14 @@ const Home = ({ videoText }) => {
           om={`är det självklara valet för hantering av bohag och dödsbo med 20 års erfarenhet.`}
         />
       </div>
+      <div className="Tjänster">
+        <Erbjuder />
+      </div>
       {newsData && (
         <div className="Tips">
           <Tips query={mainquery.toUpperCase()} newsData={newsData} />
         </div>
       )}
-      <div className="Tjänster">
-        <Erbjuder />
-      </div>
 
       <div className="booking-lottie">
         <div className="booking-content">
@@ -114,7 +116,7 @@ const Home = ({ videoText }) => {
           >
             Sänka dina värmekostander NEWS!
           </h2>
-          <Nyheter />
+          <Nyheter bingNews={bingNews} />
         </div>
       )}
 

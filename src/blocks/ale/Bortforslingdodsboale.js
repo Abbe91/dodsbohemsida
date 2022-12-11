@@ -37,6 +37,7 @@ const Bortforslingdodsboale = ({ videoText }) => {
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
+
   return (
     <div>
       <Helmet>
@@ -114,7 +115,7 @@ const Bortforslingdodsboale = ({ videoText }) => {
           >
             Sänka dina värmekostander NEWS!
           </h2>
-          <Nyheter />
+          <Nyheter bingNews={bingNews} />
         </div>
       )}
 
