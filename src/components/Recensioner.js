@@ -55,7 +55,7 @@ const Recensioner = () => {
         <h1 style={{ margin: "1rem 0" }}>Längst erfarenhet</h1>
         <p style={{ lineHeight: "26px", marginBottom: "1rem" }}>
           Vi på Dödsbo Jouren är det självklara valet för hantering av bohag och
-          dödsbo med över 20 års erfarenhet tillsammans är vi helt övetygade om
+          dödsbo med över 50 års erfarenhet tillsammans är vi helt övetygade om
           att vi kan erbjuda dig det bästa upplägget för ditt bohag, dödsbo och
           din plånbok. Vårt upptagningsområde sträcker sig över hela Västra
           Götaland.

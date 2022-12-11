@@ -72,14 +72,14 @@ export const customerReviews = [
   },
   {
     id: 3,
-    service: "Bohags flytt",
+    service: "Bohagsflytt",
     kund: "Jasem Hossan",
     comment:
       "Kanon! Packning, Flytt och flyttstädning av vårt hus. Proffsigt, smidigt och billigt då vi fick äntliigen nyttja vår rut. Bohagsflytten gick hur bra som helst."
   },
   {
     id: 4,
-    service: "Flytt städning",
+    service: "Flyttstädning",
     kund: "Petra Dahl",
     comment:
       "Vi fick hjälp med att flyttstäda vårt bohag och Dödsbo Jouren forslade bort lite gammla möbler vi hade i förrådet. Enkelt och prisvärt."
