@@ -100,23 +100,6 @@ const TommaDodsboKungalv = ({ videoText }) => {
         </div>
         <LottieBooking lotti={booking} height={400} width={400} />
       </div>
-      {bingNews && (
-        <div
-          className="Nyheter"
-          style={{ textAlign: "center", marginTop: "3rem" }}
-        >
-          <h2
-            style={{
-              maxWidth: "90%",
-              marginBottom: "0.3rem",
-              color: "#0369a1"
-            }}
-          >
-            Sänka dina värmekostander NEWS!
-          </h2>
-          <Nyheter bingNews={bingNews} />
-        </div>
-      )}
 
       <div className="Kostnadsfri">
         <Kostnadsfri
