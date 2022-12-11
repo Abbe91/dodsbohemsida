@@ -39,7 +39,7 @@ const Oppetider = () => {
         <li>Söndag 10:00-20:00</li>
       </ul>
       <Typography
-        variant="p"
+        variant="subtitle1"
         style={{
           color: "#0369a1",
           maxWidth: "90%",
