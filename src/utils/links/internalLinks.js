@@ -22,6 +22,10 @@ export const internallinks = [
   {
     path: "bortforsling-dodsbo-goteborg",
     title: "Bortforsling dödsbo Göteborg"
+  },
+  {
+    path: "dodsbo-goteborg",
+    title: "Dödsbo Göteborg"
   }
 ];
 
@@ -49,6 +53,26 @@ export const popularLinks = [
   {
     path: "uppkop-dodsbo-ulricehamn",
     title: "Uppköp dödsbo Ulricehamn"
+  },
+  {
+    path: "uppkop-dodsbo-ale",
+    title: "Uppköp dödsbo Ale"
+  },
+  {
+    path: "bortforsling-dodsbo-ale",
+    title: "Bortforsling dödsbo Ale"
+  },
+  {
+    path: "salja-dodsbo-ale",
+    title: "Sälja dödsbo Ale"
+  },
+  {
+    path: "vardera-dodsbo-ale",
+    title: "Värdera dödsbo Ale"
+  },
+  {
+    path: "tomma-dodsbo-ale",
+    title: "Tömma dödsbo Ale"
   }
 ];
 

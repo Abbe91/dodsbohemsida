@@ -83,7 +83,23 @@ function App() {
   const Uppkopdodsboale = lazy(() => import("./blocks/ale/Uppkopdodsboale"));
   const Varderadodsboale = lazy(() => import("./blocks/ale/Varderadodsboale"));
   const DodsboGoteborg = lazy(() => import("./blocks/DodsboGoteborg"));
+  const Bortforslingdodsbofrolunda = lazy(() =>
+    import("./blocks/frolunda/Bortforslingdodsbofrolunda")
+  );
+  const Saljadodsbofrolunda = lazy(() =>
+    import("./blocks/frolunda/Saljadodsbofrolunda")
+  );
+  const Tommadodsbofrolunda = lazy(() =>
+    import("./blocks/frolunda/Tommadodsbofrolunda")
+  );
+  const Uppkopdodsbofrolunda = lazy(() =>
+    import("./blocks/frolunda/Uppkopdodsbofrolunda")
+  );
+  const Varderadodsbofrolunda = lazy(() =>
+    import("./blocks/frolunda/Varderadodsbofrolunda")
+  );
   //
+
   const Oppetider = lazy(() => import("./components/Oppetider"));
   const Recensioner = lazy(() => import("./components/Recensioner"));
 
@@ -302,6 +318,44 @@ function App() {
             <Route
               path="dodsbo-goteborg"
               element={<DodsboGoteborg videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="bortforsling-dodsbo-frolunda"
+              element={
+                <Bortforslingdodsbofrolunda
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+            <Route
+              path="salja-dodsbo-frolunda"
+              element={
+                <Saljadodsbofrolunda videoText={contentData?.videoText} />
+              }
+            />{" "}
+            <Route
+              path="salja-dodsbo-frolunda"
+              element={
+                <Saljadodsbofrolunda videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tomma-dodsbo-frolunda"
+              element={
+                <Tommadodsbofrolunda videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="uppkop-dodsbo-frolunda"
+              element={
+                <Uppkopdodsbofrolunda videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="vardera-dodsbo-frolunda"
+              element={
+                <Varderadodsbofrolunda videoText={contentData?.videoText} />
+              }
             />
             <Route path="*" element={<Error />} />
           </Routes>
