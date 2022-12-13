@@ -100,5 +100,25 @@ export const fleromrodenLinks = [
   {
     path: "uppkop-dodsbo-kungalv",
     title: "Uppköp dödsbo Kungälv"
+  },
+  {
+    path: "uppkop-dodsbo-frolunda",
+    title: "Uppköp dödsbo Frölunda"
+  },
+  {
+    path: "salja-dodsbo-frolunda",
+    title: "Sälja dödsbo Frölunda"
+  },
+  {
+    path: "tomma-dodsbo-frolunda",
+    title: "Tömma dödsbo Frölunda"
+  },
+  {
+    path: "vardera-dodsbo-frolunda",
+    title: "Värdera dödsbo Frölunda"
+  },
+  {
+    path: "bortforsling-dodsbo-frolunda",
+    title: "Bortforsling dödsbo Frölunda"
   }
 ];
