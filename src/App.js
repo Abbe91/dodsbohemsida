@@ -98,6 +98,22 @@ function App() {
   const Varderadodsbofrolunda = lazy(() =>
     import("./blocks/frolunda/Varderadodsbofrolunda")
   );
+  const Bortforslinghisingen = lazy(() =>
+    import("./blocks/Hisingen/Bortforslinghisingen")
+  );
+  const Saljadodsbohisingen = lazy(() =>
+    import("./blocks/Hisingen/Saljadodsbohisingen")
+  );
+  const Tommadodsbohisingen = lazy(() =>
+    import("./blocks/Hisingen/Tommadodsbohisingen")
+  );
+  const Uppkopdodsbohisingen = lazy(() =>
+    import("./blocks/Hisingen/Uppkopdodsbohisingen")
+  );
+  const Varderadodsbohisingen = lazy(() =>
+    import("./blocks/Hisingen/Varderadodsbohisingen")
+  );
+
   //
 
   const Oppetider = lazy(() => import("./components/Oppetider"));
@@ -355,6 +371,36 @@ function App() {
               path="vardera-dodsbo-frolunda"
               element={
                 <Varderadodsbofrolunda videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="vardera-dodsbo-hisingen"
+              element={
+                <Varderadodsbohisingen videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tomma-dodsbo-hisingen"
+              element={
+                <Tommadodsbohisingen videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="salja-dodsbo-hisingen"
+              element={
+                <Saljadodsbohisingen videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="uppkop-dodsbo-hisingen"
+              element={
+                <Uppkopdodsbohisingen videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="bortforsling-dodsbo-hisingen"
+              element={
+                <Bortforslinghisingen videoText={contentData?.videoText} />
               }
             />
             <Route path="*" element={<Error />} />
