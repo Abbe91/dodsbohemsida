@@ -89,6 +89,7 @@ nav .navbar {
 .nav-menu button {
   background: transparent;
   border: none;
+  color: black;
   margin: 0.5rem 0;
   font-size: 1.1rem;
 }
@@ -103,6 +104,10 @@ nav .navbar {
   align-items: center;
   justify-content: center;
   transition: all 0.3s linear;
+  color: black;
+}
+.nav-links-div button {
+  color: black;
 }
 .nav-links-div:hover {
   border-bottom: 3px solid rgb(184, 182, 182);
