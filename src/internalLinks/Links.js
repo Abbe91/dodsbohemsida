@@ -49,8 +49,6 @@ const Links = () => {
             ))}
           </div>
         </section>
-      </div>
-      <div className="links-footer-container">
         <section style={{ margin: "1rem 1rem" }}>
           <h4>Populära sökningar</h4>
           <div style={{ display: "flex", flexDirection: "column" }}>

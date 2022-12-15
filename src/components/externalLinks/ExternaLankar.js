@@ -11,7 +11,8 @@ const useStyles = makeStyles({
 
   links: {
     color: "#0369a1",
-    fontSize: "0.9rem"
+    fontSize: "0.9rem",
+    marginBottom: "0.3rem"
   }
 });
 const ExternaLankar = () => {
@@ -33,7 +34,15 @@ const ExternaLankar = () => {
         target="_blank"
         className={classes.links}
       >
-        Svenska Länkkatalogen - länkguide
+        Svenska Länkkatalogen
+      </a>
+      <a
+        href="http://www.kvalitetskatalogen.se/"
+        target="_blank"
+        className={classes.links}
+        title="kvalitetskatalogen"
+      >
+        Kvalitetskatalogen.se
       </a>
     </div>
   );
