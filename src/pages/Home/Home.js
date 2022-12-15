@@ -37,8 +37,6 @@ const Home = ({ videoText }) => {
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
-  console.log(bingNews);
-
   return (
     <div>
       <Helmet>

@@ -113,7 +113,9 @@ function App() {
   const Varderadodsbohisingen = lazy(() =>
     import("./blocks/Hisingen/Varderadodsbohisingen")
   );
-
+  const ExternaLankar = lazy(() =>
+    import("./components/externalLinks/ExternaLankar")
+  );
   //
 
   const Oppetider = lazy(() => import("./components/Oppetider"));
@@ -348,7 +350,7 @@ function App() {
               element={
                 <Saljadodsbofrolunda videoText={contentData?.videoText} />
               }
-            />{" "}
+            />
             <Route
               path="salja-dodsbo-frolunda"
               element={
@@ -411,6 +413,7 @@ function App() {
           <Recensioner />
           <Footer />
           <Links />
+          <ExternaLankar />
         </Router>
       </Suspense>
     </div>
