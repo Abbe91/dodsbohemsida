@@ -44,6 +44,14 @@ const ExternaLankar = () => {
       >
         Kvalitetskatalogen.se
       </a>
+      <a
+        href="https://www.webbkatalog.se/"
+        target="_blank"
+        className={classes.links}
+        title="webbkatalogen"
+      >
+        Webbkatalog.se
+      </a>
     </div>
   );
 };
