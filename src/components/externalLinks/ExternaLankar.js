@@ -52,6 +52,23 @@ const ExternaLankar = () => {
       >
         Webbkatalog.se
       </a>
+      <a
+        href="http://www.f4.se"
+        id="R300F19"
+        target="_blank"
+        className={classes.links}
+        title="f4 länkkatalog"
+      >
+        F4.se - Länkkatalog
+      </a>
+      <a
+        href="http://www.mybuddys.se/"
+        target="_blank"
+        className={classes.links}
+        title="mybuddys länkkatalog"
+      >
+        MyBuddys Länkkatalog
+      </a>
     </div>
   );
 };
