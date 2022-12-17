@@ -124,6 +124,19 @@ export const customerReviews = [
     service: "Uppköp av dödsbo Göteborg",
     kund: "Tony Sloth",
     comment:
-      "Vi fick en kostnadsfri värderin och sedan gjord de ett uppköp av vårt dödsbo i Göteborg."
+      "Vi fick en kostnadsfri värdering och sedan gjord de ett uppköp av vårt dödsbo i Göteborg."
+  },
+  {
+    id: 10,
+    service: "Dödsbo uppköpare",
+    kund: "Liselott Thor",
+    comment:
+      "Dödsbo Jouren hjälpte oss med att köpa upp lösöre ur vårt dödsbo. De köpte en hel del."
+  },
+  {
+    id: 10,
+    service: "Köper dödsbo Göteborg",
+    kund: "Per-Olof Andersson",
+    comment: "Bra firma i Göteborg som köper dödsbo och tömmer samt städar"
   }
 ];
