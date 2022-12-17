@@ -116,7 +116,10 @@ function App() {
   const ExternaLankar = lazy(() =>
     import("./components/externalLinks/ExternaLankar")
   );
-  
+  const Dodsboanmalan = lazy(() => import("./pages/InfoPages/Dodsboanmalan"));
+  const Dodsbodelagare = lazy(() => import("./pages/InfoPages/Dodsbodelagare"));
+  const Dodsboet = lazy(() => import("./pages/InfoPages/Dodsboet"));
+  const SaljaDodsbo = lazy(() => import("./pages/InfoPages/SaljaDodsbo"));
   //
 
   const Oppetider = lazy(() => import("./components/Oppetider"));
@@ -405,6 +408,22 @@ function App() {
               element={
                 <Bortforslinghisingen videoText={contentData?.videoText} />
               }
+            />
+            <Route
+              path="dodsboanmalan"
+              element={<Dodsboanmalan videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="salja-dodsbo"
+              element={<SaljaDodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="Dodsboet"
+              element={<Dodsboet videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="dodsbodelagare"
+              element={<Dodsbodelagare videoText={contentData?.videoText} />}
             />
             <Route path="*" element={<Error />} />
           </Routes>
