@@ -14,7 +14,9 @@ import { Helmet } from "react-helmet-async";
 import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
+import BookingModal from "../../components/BookingModal";
 const Saljadodsbofrolunda = ({ videoText }) => {
+  const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "sälja dödsbo Frölunda";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
@@ -89,17 +91,18 @@ const Saljadodsbofrolunda = ({ videoText }) => {
             och du som kund får en offert på plats om hur vi kan hjälpa dig
             <strong style={{ fontWeight: "700" }}> {mainquery}.</strong>
           </h4>
-          <button type="button">
-            <a
-              href={`mailto:${customerData.email}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              BOKA
-            </a>
+          <button
+            type="button"
+            onClick={() => setModalOpen(!modalOpen)}
+            style={{ display: modalOpen ? "none" : "block" }}
+          >
+            BOKA
           </button>
         </div>
         <LottieBooking lotti={booking} height={400} width={400} />
+        {modalOpen && (
+          <BookingModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+        )}
       </div>
 
       <div className="Kostnadsfri">

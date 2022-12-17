@@ -63,7 +63,7 @@ const Recensioner = () => {
       </section>
       <section className={classes.reviews}>
         {customerReviews?.map((review) => (
-          <div id={review.id} className={classes.cardContainer}>
+          <div key={review.id} className={classes.cardContainer}>
             <Card className={classes.card}>
               <h5>{review.service}</h5>
               <p style={{ fontSize: "0.8rem", margin: "0.2rem 0" }}>

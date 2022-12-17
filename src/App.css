@@ -36,10 +36,21 @@ button {
   cursor: pointer;
 }
 .booking-lottie {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: start;
+}
+.booking-modal {
+  height: 100%;
+  position: absolute;
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .booking-lottie .booking-content h2 {
   color: #0369a1;

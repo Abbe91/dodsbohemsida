@@ -116,6 +116,7 @@ function App() {
   const ExternaLankar = lazy(() =>
     import("./components/externalLinks/ExternaLankar")
   );
+  
   //
 
   const Oppetider = lazy(() => import("./components/Oppetider"));

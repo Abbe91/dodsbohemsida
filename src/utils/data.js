@@ -120,7 +120,7 @@ export const customerReviews = [
       "Trevliga killar som gjorde ett jättebra jobb med att städa vårt dödsbo i Göteborg."
   },
   {
-    id: 9,
+    id: 10,
     service: "Uppköp av dödsbo Göteborg",
     kund: "Tony Sloth",
     comment:

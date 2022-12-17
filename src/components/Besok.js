@@ -52,7 +52,7 @@ const Besok = () => {
         </p>
       </section>
       <section style={{ margin: "1rem 0" }}>
-        <img src={image2} className="besok-img" />
+        <img src={image2} className="besok-img" loading="lazy" />
       </section>
     </div>
   );

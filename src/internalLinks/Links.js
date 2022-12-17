@@ -14,7 +14,7 @@ const Links = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {internallinks?.map((link, i) => (
               <Link
-                id={i}
+                key={i}
                 to={link.path}
                 style={{
                   margin: "0.1rem 0",
@@ -34,7 +34,7 @@ const Links = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {popularLinks?.map((link, i) => (
               <Link
-                id={i}
+                key={i}
                 to={link.path}
                 style={{
                   margin: "0.1rem 0",
@@ -54,7 +54,7 @@ const Links = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {fleromrodenLinks?.map((link, i) => (
               <Link
-                id={i}
+                key={i}
                 to={link.path}
                 style={{
                   margin: "0.1rem 0",
