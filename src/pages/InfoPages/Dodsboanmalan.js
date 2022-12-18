@@ -129,7 +129,7 @@ const Dodsboanmalan = () => {
               marginBottom: "2rem"
             }}
           >
-            Läs mer om Dödsboanmälan
+            Läs mer här om Dödsboanmälan på Skatteverkets hemsida
           </a>
         </div>
         <Link to="/">

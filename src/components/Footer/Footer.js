@@ -10,10 +10,13 @@ const Footer = () => {
   const customerData = useSelector(getCustomerData);
   return (
     <div className="footer" style={{ height: "300px" }}>
-      <a href={`tel:${customerData.phone}`}>
-        <AiTwotonePhone style={{ marginBottom: "0.2rem" }} />
-        <p>{customerData.phone}</p>
-      </a>
+      <div>
+        <h3 style={{ marginBottom: "0.7rem" }}>Dödsbo Jouren</h3>
+        <a href={`tel:${customerData.phone}`}>
+          <AiTwotonePhone style={{ marginBottom: "0.2rem" }} />
+          <p>{customerData.phone}</p>
+        </a>
+      </div>
 
       {/* <a href={`mailto:${customerData.email}`}>
         <AiOutlineMail />

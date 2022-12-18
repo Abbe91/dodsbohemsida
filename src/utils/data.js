@@ -18,6 +18,21 @@ export const navlinks = [
   {
     id: 3,
     label: "Tjänster"
+  },
+  {
+    id: 4,
+    label: "Dödsboanmälan",
+    path: "/dodsboanmalan"
+  },
+  {
+    id: 5,
+    label: "Dödsbodelägare",
+    path: "/dodsbodelagare"
+  },
+  {
+    id: 6,
+    label: "Dödsboet",
+    path: "/dodsboet"
   }
 ];
 export const erbjuder = [
@@ -127,14 +142,14 @@ export const customerReviews = [
       "Vi fick en kostnadsfri värdering och sedan gjord de ett uppköp av vårt dödsbo i Göteborg."
   },
   {
-    id: 10,
+    id: 11,
     service: "Dödsbo uppköpare",
     kund: "Liselott Thor",
     comment:
       "Dödsbo Jouren hjälpte oss med att köpa upp lösöre ur vårt dödsbo. De köpte en hel del."
   },
   {
-    id: 10,
+    id: 12,
     service: "Köper dödsbo Göteborg",
     kund: "Per-Olof Andersson",
     comment: "Bra firma i Göteborg som köper dödsbo och tömmer samt städar"

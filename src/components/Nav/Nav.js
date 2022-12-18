@@ -9,6 +9,7 @@ import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -57,13 +58,34 @@ const Nav = () => {
           <AiOutlineBars />
         </div>
         <div className="nav-links">
-          {navlinks.map((link) => (
-            <div key={link.id}>
-              <button type="button" onClick={handleClick}>
-                {link.label}
-              </button>
-            </div>
-          ))}
+          {navlinks.map((link) => {
+            if (link.path) {
+              return (
+                <Link
+                  to={link.path}
+                  style={{
+                    background: "transparent",
+                    border: "navajowhite",
+                    color: "white",
+                    fontSize: "0.9rem",
+                    fontWeight: 700,
+                    marginRight: " 0.75rem",
+                    opacity: 0.8
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            } else {
+              return (
+                <div key={link.id}>
+                  <button type="button" onClick={handleClick}>
+                    {link.label}
+                  </button>
+                </div>
+              );
+            }
+          })}
         </div>
         <div className={showNav ? "nav-menu show-nav" : "nav-menu"}>
           <button
