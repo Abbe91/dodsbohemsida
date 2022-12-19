@@ -46,6 +46,10 @@ export const internallinks = [
   {
     path: "bortforsling-dodsbo-hisingen",
     title: "Bortforsling dödsbo Hisingen"
+  },
+  {
+    path: "uppkop-av-bohag",
+    title: "Uppköp av bohag"
   }
 ];
 
@@ -97,6 +101,10 @@ export const popularLinks = [
   {
     path: "dodsbouppkopare",
     title: "Dödsbouppköpare"
+  },
+  {
+    path: "foretag-som-koper-bohag",
+    title: "Företag som köper bohag"
   }
 ];
 
@@ -156,5 +164,9 @@ export const fleromrodenLinks = [
   {
     path: "dodsbofirma",
     title: "Dodsbofirma"
+  },
+  {
+    path: "tomma-dodsbo",
+    title: "Tömma Dödsbo"
   }
 ];
