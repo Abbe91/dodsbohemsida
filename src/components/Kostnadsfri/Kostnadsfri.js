@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Kostnadsfri.css";
 import emailjs from "@emailjs/browser";
-import video from "../../utils/video.mp4";
+import video from "../../utils/dodsbo.mp4";
 const Kostnadsfri = ({ vad, text }) => {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
