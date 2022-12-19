@@ -26,6 +26,26 @@ export const internallinks = [
   {
     path: "dodsbo-goteborg",
     title: "Dödsbo Göteborg"
+  },
+  {
+    path: "vardera-dodsbo-hisingen",
+    title: "Värdera dödsbo Hisingen"
+  },
+  {
+    path: "tomma-dodsbo-hisingen",
+    title: "Tömma dödsbo Hisingen"
+  },
+  {
+    path: "salja-dodsbo-hisingen",
+    title: "Sälja dödsbo Hisingen"
+  },
+  {
+    path: "uppkop-dodsbo-hisingen",
+    title: "Uppköp dödsbo Hisingen"
+  },
+  {
+    path: "bortforsling-dodsbo-hisingen",
+    title: "Bortforsling dödsbo Hisingen"
   }
 ];
 
@@ -73,6 +93,10 @@ export const popularLinks = [
   {
     path: "tomma-dodsbo-ale",
     title: "Tömma dödsbo Ale"
+  },
+  {
+    path: "dodsbouppkopare",
+    title: "Dödsbouppköpare"
   }
 ];
 
@@ -120,5 +144,17 @@ export const fleromrodenLinks = [
   {
     path: "bortforsling-dodsbo-frolunda",
     title: "Bortforsling dödsbo Frölunda"
+  },
+  {
+    path: "dodsbouppkopare-goteborg",
+    title: "Dödsbouppköpare Göteborg"
+  },
+  {
+    path: "tommerdodsbo",
+    title: "Tömmer dödsbo"
+  },
+  {
+    path: "dodsbofirma",
+    title: "Dodsbofirma"
   }
 ];

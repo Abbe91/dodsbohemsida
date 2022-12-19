@@ -20,6 +20,7 @@ const ExternaLankar = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <section></section>
       <a
         href="https://xn--svenskalnkar-ncb.com/foretag-tjanster"
         target="_blank"
