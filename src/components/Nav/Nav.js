@@ -94,13 +94,32 @@ const Nav = () => {
           >
             <AiOutlineCloseCircle />
           </button>
-          {navlinks.map((link) => (
-            <div key={link.id} className="nav-links-div">
-              <button type="button" onClick={handleClick}>
-                {link.label}
-              </button>
-            </div>
-          ))}
+          {navlinks.map((link) => {
+            if (link.path) {
+              return (
+                <Link
+                  to={link.path}
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    color: "black",
+                    margin: "0.3rem 0",
+                    fontSize: "1.1rem"
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            } else {
+              return (
+                <div key={link.id}>
+                  <button type="button" onClick={handleClick}>
+                    {link.label}
+                  </button>
+                </div>
+              );
+            }
+          })}
         </div>
       </nav>
     </>
