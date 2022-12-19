@@ -163,7 +163,7 @@ export const fleromrodenLinks = [
   },
   {
     path: "dodsbofirma",
-    title: "Dodsbofirma"
+    title: "Dödsbo firma"
   },
   {
     path: "tomma-dodsbo",
