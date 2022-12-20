@@ -138,7 +138,7 @@ function App() {
   //
   const Oppetider = lazy(() => import("./components/Oppetider"));
   const Recensioner = lazy(() => import("./components/Recensioner"));
-
+  const Seo = lazy(() => import("./components/SEO/Seo"));
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
   const contentData = useSelector(getContentData);
@@ -480,6 +480,7 @@ function App() {
           <Footer />
           <Links />
           <ExternaLankar />
+          <Seo />
         </Router>
       </Suspense>
     </div>
