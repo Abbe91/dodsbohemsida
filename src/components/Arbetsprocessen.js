@@ -55,7 +55,7 @@ const Arbetsprocessen = () => {
           <p style={{ width: "300px", marginTop: "1rem" }}>
             <strong style={{ color: "#0369a1" }}> VÄRDERING:</strong> Vi
             erbjuder en kostnadsfri värdering av hemmets föremål för att kunna
-            ge ett fast pris för själva tömningen av boet.
+            ge ett fast pris för själva tömningen av dödsboet.
           </p>
         </section>
         <section
