@@ -92,7 +92,9 @@ const Seo = () => {
               tittar vilket gör det enklare då vi lättare kan få en bild av
               omfattningen så att det blir enklare att lämna ett förslag eller
               en offert. Vi anpassar oss givetvis efter er och ni bestämmer så
-              klart i vilken omfattning ni vill anlita oss.
+              klart i vilken omfattning ni vill anlita oss. Vi köper dödsbon,
+              tömmer dödsbon, bortforsling av dödsbon, städar dödsbon, flytt
+              till boende, sanering av dödsbon och bohagsflytt.
             </p>
           </Card>
         </div>
