@@ -140,6 +140,7 @@ function App() {
   const Recensioner = lazy(() => import("./components/Recensioner"));
   const Seo = lazy(() => import("./components/SEO/Seo"));
   const Arbetsprocessen = lazy(() => import("./components/Arbetsprocessen"));
+
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);

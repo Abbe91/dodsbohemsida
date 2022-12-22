@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const useStyles = makeStyles({
   content: {
     textAlign: "center",
@@ -27,6 +28,18 @@ const Dodsbodelagare = () => {
   const classes = useStyles();
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Dödsbodelägare köpes, Dödsbo säljes, Städning av dödsbo, Företag köper
+          bohag, Tömning av dödsbo, Boupptäckning
+        </title>
+        <meta
+          name="description"
+          content="Dödsbodelägare, Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
+          Tömning av dödsbo, Boupptäckning"
+        />
+      </Helmet>
       <section className={classes.content}>
         <h2 style={{ margin: "1rem 0" }}>Dödsbodelägare</h2>
         <h4 className={classes.h4}>Dödsbodelägare och efterarvingar</h4>

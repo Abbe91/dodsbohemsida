@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-
+import { Helmet } from "react-helmet-async";
 const useStyles = makeStyles({
   root: {
     display: "flex",
@@ -26,6 +26,14 @@ const Arbetsprocessen = () => {
   const classes = useStyles();
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Värdering av dödsbo, Värdering av bohag. Köper dödsbo</title>
+        <meta
+          name="description"
+          content="Värdering av dödsbo, Värdering av bohag. Köper dödsbo"
+        />
+      </Helmet>
       <h2 style={{ color: "#0369a1", textAlign: "center" }}>SÅ FUNGERAR DET</h2>
       <div className={classes.root}>
         <section>

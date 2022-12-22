@@ -33,6 +33,11 @@ export const navlinks = [
     id: 6,
     label: "Dödsboet",
     path: "/dodsboet"
+  },
+  {
+    id: 7,
+    label: "Sälja dödsbo",
+    path: "/salja-dodsbo"
   }
 ];
 export const erbjuder = [
