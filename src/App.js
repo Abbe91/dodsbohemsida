@@ -140,7 +140,9 @@ function App() {
   const Recensioner = lazy(() => import("./components/Recensioner"));
   const Seo = lazy(() => import("./components/SEO/Seo"));
   const Arbetsprocessen = lazy(() => import("./components/Arbetsprocessen"));
-
+  const ImagesServicesComponent = lazy(() =>
+    import("./components/ImagesServicesComponent")
+  );
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -478,6 +480,7 @@ function App() {
           </Routes>
           <Partners />
           <Besok />
+          {/* <ImagesServicesComponent /> */}
           <Arbetsprocessen />
           <Oppetider />
           <Recensioner />

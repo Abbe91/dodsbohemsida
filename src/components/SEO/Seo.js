@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
-
+import { Helmet } from "react-helmet-async";
 const locales = [
   { id: 0, city: "Kungälv" },
   { id: 1, city: "Ale" },
@@ -74,6 +74,20 @@ const Seo = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Dödsbo köpes, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
+          Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma,
+          köper upp dödsbo, luktsanering, Ddödsbo Kungälv, Dödsbo Göteborg,
+          Köper dödsbo, städar dödsbo, dödsbo
+        </title>
+        <meta
+          name="description"
+          content="Dödsbo köpes, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
+          Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma, köper upp dödsbo, luktsanering, Ddödsbo Kungälv, Dödsbo Göteborg, Köper dödsbo, städar dödsbo, dödsbo"
+        />
+      </Helmet>
       {locales?.map((local) => (
         <div className={classes.content}>
           <Card key={local.id} className={classes.card}>
