@@ -31,7 +31,7 @@ const Dodsbodelagare = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Dödsbodelägare köpes, Dödsbo säljes, Städning av dödsbo, Företag köper
+          Dödsbodelägare, Dödsbo säljes, Städning av dödsbo, Företag köper
           bohag, Tömning av dödsbo, Boupptäckning
         </title>
         <meta

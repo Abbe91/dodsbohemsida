@@ -135,6 +135,7 @@ function App() {
   const Foretagsomkoperbohag = lazy(() =>
     import("./blocks/Goteborg/Foretagsomkoperbohag")
   );
+  const Stadningavdodsbo = lazy(() => import("./blocks/Stadningavdodsbo"));
   //
   const Oppetider = lazy(() => import("./components/Oppetider"));
   const Recensioner = lazy(() => import("./components/Recensioner"));
@@ -143,6 +144,8 @@ function App() {
   const ImagesServicesComponent = lazy(() =>
     import("./components/ImagesServicesComponent")
   );
+  const Dodsbokopes = lazy(() => import("./blocks/Dodsbokopes"));
+  const Tomningavdodsbo = lazy(() => import("./blocks/Tomningavdodsbo"));
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -475,6 +478,18 @@ function App() {
             <Route
               path="tomma-dodsbo"
               element={<Tommadodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="dodsbo-kopes"
+              element={<Dodsbokopes videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="stadning-av-dodsbo"
+              element={<Stadningavdodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="tomning-av-dodsbo"
+              element={<Tomningavdodsbo videoText={contentData?.videoText} />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

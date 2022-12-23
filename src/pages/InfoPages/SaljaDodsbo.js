@@ -31,8 +31,8 @@ const SaljaDodsbo = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Dödsboanmälan köpes, Dödsbo säljes, Städning av dödsbo, Företag köper
-          bohag, Tömning av dödsbo, Boupptäckning
+          Sälja dödsbo, dödsbo köpes, Dödsbo säljes, Städning av dödsbo, Företag
+          köper bohag, Tömning av dödsbo, Boupptäckning
         </title>
         <meta
           name="description"

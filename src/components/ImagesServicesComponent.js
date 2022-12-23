@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   }
 });
 const images = [
-  { url: dodsbokopes, text: "Dödsbo köpes", path: "/uppkop-av-bohag" },
+  { url: dodsbokopes, text: "Dödsbo köpes", path: "/dodsbo-kopes" },
   { url: dodsbosaljes, text: "Dödsbo säljes", path: "/salja-dodsbo" },
   { url: dodsboanmalan, text: "Dödsboanmälan", path: "/dodsboanmalan" },
   {
@@ -48,9 +48,13 @@ const images = [
   {
     url: stadningavdodsbo,
     text: "Städning av dödsbo",
-    path: "/dodsbo-goteborg"
+    path: "/stadning-av-dodsbo"
   },
-  { url: tomningavdodsbo, text: "Tömning av dödsbo", path: "/tomma-dodsbo" }
+  {
+    url: tomningavdodsbo,
+    text: "Tömning av dödsbo",
+    path: "/tomning-av-dodsbo"
+  }
 ];
 const ImagesServicesComponent = () => {
   const classes = useStyles();
