@@ -480,7 +480,7 @@ function App() {
           </Routes>
           <Partners />
           <Besok />
-          {/* <ImagesServicesComponent /> */}
+          <ImagesServicesComponent />
           <Arbetsprocessen />
           <Oppetider />
           <Recensioner />

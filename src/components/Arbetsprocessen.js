@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     padding: "3rem",
+    flexWrap: "wrap",
     "@media screen and (max-width: 1000px)": {
       flexDirection: "column"
     }

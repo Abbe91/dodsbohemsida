@@ -1,14 +1,57 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
+import dodsbokopes from "../utils/images/seoimages/dödsbo-köpes.jpg";
+import dodsbosaljes from "../utils/images/seoimages/dödsbo-säljes.jpg";
+import dodsboanmalan from "../utils/images/seoimages/dödsboanmälan.jpg";
+import foretagkoperbohag from "../utils/images/seoimages/företag-köper-bohag.jpg";
+import stadningavdodsbo from "../utils/images/seoimages/städning-av-dödsbo.jpg";
+import tomningavdodsbo from "../utils/images/seoimages/tömning-av-dödsbo.jpg";
 const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",
     height: "400px",
-    width: "100%"
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    overflowX: "scroll",
+    alignItems: "center"
+  },
+  imageContainer: {
+    margin: "0.5rem 0.5rem"
+  },
+  btn: {
+    width: "100%",
+    height: "2rem",
+    background: "#0369a1",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    margin: "0.5rem auto",
+    padding: "0.3rem"
+  },
+  images: {
+    backgroundPosition: "center",
+    objectFit: "cover"
   }
 });
-
+const images = [
+  { url: dodsbokopes, text: "Dödsbo köpes", path: "/uppkop-av-bohag" },
+  { url: dodsbosaljes, text: "Dödsbo säljes", path: "/salja-dodsbo" },
+  { url: dodsboanmalan, text: "Dödsboanmälan", path: "/dodsboanmalan" },
+  {
+    url: foretagkoperbohag,
+    text: "Företag köper bohag",
+    path: "/foretag-som-koper-bohag"
+  },
+  {
+    url: stadningavdodsbo,
+    text: "Städning av dödsbo",
+    path: "/dodsbo-goteborg"
+  },
+  { url: tomningavdodsbo, text: "Tömning av dödsbo", path: "/tomma-dodsbo" }
+];
 const ImagesServicesComponent = () => {
   const classes = useStyles();
   return (
@@ -25,12 +68,20 @@ const ImagesServicesComponent = () => {
           Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma"
         />
       </Helmet>
-      <div>image 1</div>
-      <div>image 2</div>
-      <div>image 3</div>
-      <div>image 4</div>
-      <div>image 5</div>
-      <div>image 6</div>
+      {images?.map((image, i) => (
+        <div key={i} className={classes.imageContainer}>
+          <img
+            src={image.url}
+            alt="dödsbo köpes, dödsbo säljes, dödsboanmälan,företag köper bohag, städning av dödsbo, tömning av dödsbo"
+            style={{ height: "200px", width: "200px", borderRadius: "5px" }}
+            className={classes.images}
+          />
+
+          <Link to={image.path}>
+            <button className={classes.btn}>{image.text}</button>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
