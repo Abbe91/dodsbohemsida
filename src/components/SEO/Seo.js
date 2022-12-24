@@ -92,9 +92,9 @@ const Seo = () => {
         <div className={classes.content}>
           <Card key={local.id} className={classes.card}>
             <h5 style={{ marginBottom: "0.4rem" }}>
-              Vi hjälper er med ert dödsbo i {local.city} med omnejd
+              Vi hjälper er med ert dödsbo i {local.city}.
             </h5>
-            <p style={{ fontSize: "0.75rem" }}>
+            <p style={{ fontSize: "0.75rem", lineHeight: "22px" }}>
               Välkommen till oss på Dödsbo Jouren i {local.city} ! Vi hjälper er
               gärna om ni har ett behov av att få ett dödsbo värderat, uppköpt,
               tömt, bortforslat eller städat. Vi verkar inom hela {local.city}{" "}

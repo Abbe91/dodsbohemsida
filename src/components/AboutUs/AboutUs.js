@@ -46,13 +46,14 @@ const AboutUs = ({ query, oss, om }) => {
         </p>
         <h4>Vi köper och säljer dödsbon </h4>
         <p>
-          När du behöver hjälp med att sälja ditt dödsbo, tömma, städa eller att
-          vi köper upp så kan du kontakta oss. Vi ger dig kostnadsfri värdering
-          och en offert som du kan ta ställning till. Om du bestämmer dig för
-          att låta oss köpa ditt dödsbo kan du även få hjälp av oss med att
-          tömma dösboet och sedan få dödsboet städat. Vi samarbetar med många
-          auktionsfirmor och kan hjälpa er med att sälja lösöre som är av större
-          värde. Vi kan även vara behjälpliga med bouppteckningen av dösboet.
+          När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
+          dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
+          dig kostnadsfri värdering och en offert som du kan ta ställning till.
+          Om du bestämmer dig för att låta oss köpa ditt dödsbo kan du även få
+          hjälp av oss med att tömma dösboet och sedan få dödsboet städat. Vi
+          samarbetar med många auktionsfirmor och kan hjälpa er med att sälja
+          lösöre som är av större värde. Vi kan även vara behjälpliga med
+          bouppteckningen av dösboet.
         </p>
         <div>
           <form ref={form}>
