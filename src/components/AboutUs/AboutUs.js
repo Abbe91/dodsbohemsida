@@ -44,7 +44,7 @@ const AboutUs = ({ query, oss, om }) => {
         <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
-        <h4>Vi köper och säljer dödsbon </h4>
+        <h4>Vi köper, tömmer, städar och säljer dödsbon </h4>
         <p style={{ maxWidth: "800px" }}>
           När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
           dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
