@@ -45,7 +45,7 @@ const AboutUs = ({ query, oss, om }) => {
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
         <h4>Vi köper och säljer dödsbon </h4>
-        <p>
+        <p style={{ maxWidth: "800px" }}>
           När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
           dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
           dig kostnadsfri värdering och en offert som du kan ta ställning till.
