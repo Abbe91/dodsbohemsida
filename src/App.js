@@ -448,11 +448,11 @@ function App() {
               element={<Dodsbodelagare videoText={contentData?.videoText} />}
             />
             <Route
-              path="dodsbouppkopare"
+              path="dodsbo-uppkopare"
               element={<DodsboUppkopare videoText={contentData?.videoText} />}
             />
             <Route
-              path="dodsbouppkopare-goteborg"
+              path="dodsbo-uppkopare-goteborg"
               element={
                 <Dodsbouppkoparegoteborg videoText={contentData?.videoText} />
               }

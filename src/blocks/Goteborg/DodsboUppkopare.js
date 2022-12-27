@@ -17,14 +17,14 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const DodsboUppkopare = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Dödsbouppköpare";
+  const mainquery = "Dödsbo uppköpare";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Dödsbouppköpare",
-    metaContent: "Dödsbouppköpare",
-    query: "Dödsbouppköpare",
-    formTitle: "Dödsbouppköpare",
+    metaTitle: "Dödsbo uppköpare",
+    metaContent: "Dödsbo uppköpare",
+    query: "Dödsbo uppköpare",
+    formTitle: "Dödsbo uppköpare",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`

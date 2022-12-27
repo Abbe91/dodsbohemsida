@@ -102,7 +102,7 @@ const Seo = () => {
               frågor kommer på tal och då kan det vara motiverat att anlita
               någon som underlättar er situation så att ni istället kan fokusera
               på annat som behöver tas om hand. När vi åtar oss dessa uppdrag
-              med dödsbon i{local.city} så kommer vi oftast ut på plats och
+              med dödsbon i {local.city} så kommer vi oftast ut på plats och
               tittar vilket gör det enklare då vi lättare kan få en bild av
               omfattningen så att det blir enklare att lämna ett förslag eller
               en offert. Vi anpassar oss givetvis efter er och ni bestämmer så

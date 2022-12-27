@@ -99,8 +99,8 @@ export const popularLinks = [
     title: "Tömma dödsbo Ale"
   },
   {
-    path: "dodsbouppkopare",
-    title: "Dödsbouppköpare"
+    path: "dodsbo-uppkopare",
+    title: "Dödsbo uppköpare"
   },
   {
     path: "foretag-som-koper-bohag",
@@ -154,8 +154,8 @@ export const fleromrodenLinks = [
     title: "Bortforsling dödsbo Frölunda"
   },
   {
-    path: "dodsbouppkopare-goteborg",
-    title: "Dödsbouppköpare Göteborg"
+    path: "dodsbo-uppkopare-goteborg",
+    title: "Dödsbo uppköpare Göteborg"
   },
   {
     path: "tommerdodsbo",
