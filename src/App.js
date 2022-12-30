@@ -14,6 +14,7 @@ import { getWheaterData } from "./api/index";
 import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
+
 function App() {
   // lazy imports
   const Uppkopdodsbogoteborg = lazy(() =>

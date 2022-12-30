@@ -88,8 +88,8 @@ const Seo = () => {
           Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma, köper upp dödsbo, luktsanering, Ddödsbo Kungälv, Dödsbo Göteborg, Köper dödsbo, städar dödsbo, dödsbo"
         />
       </Helmet>
-      {locales?.map((local) => (
-        <div className={classes.content}>
+      {locales?.map((local, i) => (
+        <div className={classes.content} key={i}>
           <Card key={local.id} className={classes.card}>
             <h5 style={{ marginBottom: "0.4rem" }}>
               Vi hjälper er med ert dödsbo i {local.city}.

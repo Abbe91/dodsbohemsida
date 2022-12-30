@@ -72,6 +72,7 @@ const Nav = () => {
                     marginRight: " 0.75rem",
                     opacity: 0.8
                   }}
+                  key={link.id}
                 >
                   {link.label}
                 </Link>
@@ -94,7 +95,7 @@ const Nav = () => {
           >
             <AiOutlineCloseCircle />
           </button>
-          {navlinks.map((link) => {
+          {navlinks.map((link, i) => {
             if (link.path) {
               return (
                 <Link
@@ -106,6 +107,7 @@ const Nav = () => {
                     margin: "0.3rem 0",
                     fontSize: "1.1rem"
                   }}
+                  key={link.id}
                 >
                   {link.label}
                 </Link>
