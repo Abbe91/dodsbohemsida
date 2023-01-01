@@ -29,12 +29,13 @@
   color: #64748b;
 }
 .mainComp form input[type="text"] {
-  width: 90%;
+  width: 80%;
   height: 2.4rem;
   border: none;
   border-radius: 5px;
-  margin: 0.7rem 0;
+  margin: 0.3rem 0;
 }
+
 .mainComp form div {
   display: flex;
   flex-direction: column;

@@ -17,10 +17,10 @@ const AboutUs = ({ query, oss, om }) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_wzr1q3r",
-        "template_4xmyon5",
+        "service_k835y1d",
+        "template_vky05mk",
         form.current,
-        process.env.REACT_APP_EMAILJS_ID
+        process.env.REACT_APP_EMAILJS_2
       )
       .then(
         (result) => {

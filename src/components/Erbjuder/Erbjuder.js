@@ -12,10 +12,10 @@ const Erbjuder = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_wzr1q3r",
-        "template_4xmyon5",
+        "service_k835y1d",
+        "template_vky05mk",
         form.current,
-        process.env.REACT_APP_EMAILJS_ID
+        process.env.REACT_APP_EMAILJS_2
       )
       .then(
         (result) => {
@@ -38,7 +38,7 @@ const Erbjuder = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            flexDirection: "column",
+            flexDirection: "column"
           }}
         >
           <h2 className="title" style={{ color: "#0369a1" }}>
@@ -50,7 +50,7 @@ const Erbjuder = () => {
                 style={{
                   marginRight: "0.5rem",
                   color: "#0369a1",
-                  fontSize: "1.2rem",
+                  fontSize: "1.2rem"
                 }}
               >
                 {el.icon}

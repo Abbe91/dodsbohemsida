@@ -28,10 +28,10 @@ const MainComp = ({
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_wzr1q3r",
-        "template_4xmyon5",
+        "service_k835y1d",
+        "template_vky05mk",
         form.current,
-        process.env.REACT_APP_EMAILJS
+        process.env.REACT_APP_EMAILJS_2
       )
       .then(
         (result) => {
@@ -97,8 +97,25 @@ const MainComp = ({
             <i style={{ fontSize: "1.5rem" }}>{icon}</i>
           </div>
           <h4>{formTitle}</h4>
-          <input type="text" placeholder="Ditt namn" required name="name" />
+          <input type="text" placeholder="Ditt namn" required name="namn" />
           <input type="text" placeholder="Din email" required name="email" />
+          <input
+            type="text"
+            placeholder="Ditt nummer"
+            required
+            name="telefon"
+          />
+          <textarea
+            placeholder="Beskriv lite kort vad du behöver hjälp med"
+            style={{
+              border: "none",
+              borderRadius: "5px",
+              width: "80%",
+              height: "3rem",
+              textAlign: "center",
+              fontSize: "0.7rem"
+            }}
+          ></textarea>
 
           <div
             style={{

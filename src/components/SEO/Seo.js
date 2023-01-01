@@ -96,19 +96,19 @@ const Seo = () => {
             </h5>
             <p style={{ fontSize: "0.75rem", lineHeight: "22px" }}>
               Välkommen till oss på Dödsbo Jouren i {local.city} ! Vi hjälper er
-              gärna om ni har ett behov av att få ett dödsbo värderat, uppköpt,
-              tömt, bortforslat eller städat. Vi verkar inom hela {local.city}{" "}
-              och dess närområden. Ofta är det en jobbig tid när sådana här
-              frågor kommer på tal och då kan det vara motiverat att anlita
-              någon som underlättar er situation så att ni istället kan fokusera
-              på annat som behöver tas om hand. När vi åtar oss dessa uppdrag
-              med dödsbon i {local.city} så kommer vi oftast ut på plats och
-              tittar vilket gör det enklare då vi lättare kan få en bild av
-              omfattningen så att det blir enklare att lämna ett förslag eller
-              en offert. Vi anpassar oss givetvis efter er och ni bestämmer så
-              klart i vilken omfattning ni vill anlita oss. Vi köper dödsbon,
-              tömmer dödsbon, bortforsling av dödsbon, städar dödsbon, flytt
-              till boende, sanering av dödsbon och bohagsflytt.
+              gärna om ni har ett behov av att få ett dödsbo värderat, dödsbo
+              uppköpt, dödsbo tömt, dödsbo bortforslat eller städa dödsbo. Vi
+              verkar inom hela {local.city} och dess närområden. Ofta är det en
+              jobbig tid när sådana här frågor kommer på tal och då kan det vara
+              motiverat att anlita oss. Vi underlättar för er så att ni istället
+              kan fokusera på annat. När vi åtar oss dessa uppdrag med dödsbon i{" "}
+              {local.city} så kommer vi oftast ut på plats och tittar vilket gör
+              det enklare då vi lättare kan få en bild av omfattningen av
+              dödsboet eller bohaget så att det blir enklare att lämna ett
+              förslag eller en offert. Vi anpassar oss givetvis efter er och ni
+              bestämmer så klart i vilken omfattning ni vill anlita oss. Vi
+              köper dödsbon, tömmer dödsbon, bortforsling av dödsbon, städar
+              dödsbon, flytt till boende, sanering av dödsbon och bohagsflytt.
             </p>
           </Card>
         </div>
