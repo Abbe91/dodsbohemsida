@@ -45,8 +45,15 @@ const Kostnadsfri = ({ vad, text }) => {
           kostnadsfritt besök för dödsbo eller bohag.
         </p>
         <form ref={form}>
-          <h2>Vill du veta mer?</h2>
-          <input type="email" required placeholder="Din email" name="email" />
+          <h2 style={{ marginBottom: "0.5rem" }}>Vill du veta mer?</h2>
+          <input
+            type="email"
+            required
+            placeholder="Din email"
+            name="email"
+            style={{ margin: "0 0" }}
+          />
+          <input type="email" required placeholder="Ditt namn" name="namn" />
           <button type="submit" onClick={handleSubmit}>
             {sending
               ? "skickar..."

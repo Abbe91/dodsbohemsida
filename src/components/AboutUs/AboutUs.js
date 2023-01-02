@@ -40,12 +40,18 @@ const AboutUs = ({ query, oss, om }) => {
     <div className="aboutUs">
       <div className="aboutUs-info" style={{ maxWidth: "90%" }}>
         <h1 style={{ color: "#0369a1" }}>{query}</h1>
-        <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
-        <p style={{ margin: "0.75rem auto", maxWidth: "800px" }}>
+        <h5 style={{ margin: "0.5rem" }}>{oss}</h5>
+        <p
+          style={{
+            margin: "0.75rem auto",
+            maxWidth: "800px",
+            fontSize: "0.8rem"
+          }}
+        >
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
-        <h4>Vi köper, tömmer, städar och säljer dödsbon </h4>
-        <p style={{ maxWidth: "800px" }}>
+        <h5>Vi köper, tömmer, städar och säljer dödsbon </h5>
+        <p style={{ maxWidth: "800px", fontSize: "0.9rem" }}>
           När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
           dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
           dig kostnadsfri värdering och en offert som du kan ta ställning till.
@@ -68,7 +74,14 @@ const AboutUs = ({ query, oss, om }) => {
               Vill du få ett förslag på?
               <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>{query}</p>
             </label>
-            <input type="email" required placeholder="Din email" name="email" />
+            <input
+              type="email"
+              required
+              placeholder="Din email"
+              name="email"
+              style={{ marginBottom: "0.5rem" }}
+            />
+            <input type="email" required placeholder="Telefon" name="telefon" />
             <button type="submit" onClick={handleSubmit}>
               {sending
                 ? "skickar..."
