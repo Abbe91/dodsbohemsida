@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
 import { Helmet } from "react-helmet-async";
 const locales = [
+  { id: 3, city: "Göteborg" },
   { id: 0, city: "Kungälv" },
   { id: 1, city: "Ale" },
   { id: 2, city: "Kungsbacka" },
-  { id: 3, city: "Göteborg" },
   { id: 4, city: "Frölunda" },
   { id: 5, city: "Hisingen" },
   { id: 6, city: "Härryda" },

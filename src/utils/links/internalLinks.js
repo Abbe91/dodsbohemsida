@@ -50,6 +50,10 @@ export const internallinks = [
   {
     path: "uppkop-av-bohag",
     title: "Uppköp av bohag"
+  },
+  {
+    path: "uppkop-av-dodsbo",
+    title: "Uppköp av dödsbo"
   }
 ];
 
@@ -93,18 +97,6 @@ export const popularLinks = [
   {
     path: "vardera-dodsbo-ale",
     title: "Värdera dödsbo Ale"
-  },
-  {
-    path: "tomma-dodsbo-ale",
-    title: "Tömma dödsbo Ale"
-  },
-  {
-    path: "dodsbo-uppkopare",
-    title: "Dödsbo uppköpare"
-  },
-  {
-    path: "foretag-som-koper-bohag",
-    title: "Företag som köper bohag"
   }
 ];
 
@@ -168,5 +160,17 @@ export const fleromrodenLinks = [
   {
     path: "tomma-dodsbo",
     title: "Tömma Dödsbo"
+  },
+  {
+    path: "tomma-dodsbo-ale",
+    title: "Tömma dödsbo Ale"
+  },
+  {
+    path: "dodsbo-uppkopare",
+    title: "Dödsbo uppköpare"
+  },
+  {
+    path: "foretag-som-koper-bohag",
+    title: "Företag som köper bohag"
   }
 ];

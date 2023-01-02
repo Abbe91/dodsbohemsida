@@ -15,16 +15,16 @@ import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Dodsbofirma = ({ videoText }) => {
+const UppkopAvDodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Dödsbo firma";
+  const mainquery = "Uppköp av dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Dödsbo firma",
-    metaContent: "Dödsbo firma",
-    query: "Dödsbo firma",
-    formTitle: "Dödsbo firma",
+    metaTitle: "Uppköp av dödsbo",
+    metaContent: "Uppköp av dödsbo",
+    query: "Uppköp av dödsbo",
+    formTitle: "Uppköp av dödsbo",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
@@ -115,4 +115,4 @@ const Dodsbofirma = ({ videoText }) => {
   );
 };
 
-export default Dodsbofirma;
+export default UppkopAvDodsbo;

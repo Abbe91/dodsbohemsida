@@ -150,6 +150,7 @@ function App() {
   const Helhetslosningdodsbo = lazy(() =>
     import("./components/Helhetslosningdodsbo")
   );
+  const UppkopAvDodsbo = lazy(() => import("./blocks/Goteborg/UppkopAvDodsbo"));
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -494,6 +495,10 @@ function App() {
             <Route
               path="tomning-av-dodsbo"
               element={<Tomningavdodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="uppkop-av-dodsbo"
+              element={<UppkopAvDodsbo videoText={contentData?.videoText} />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

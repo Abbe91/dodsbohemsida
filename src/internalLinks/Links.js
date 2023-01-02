@@ -10,7 +10,7 @@ const Links = () => {
     <section>
       <div className="links-footer-container">
         <section style={{ margin: "1rem 1rem" }}>
-          <h4>Andra har även sökt</h4>
+          <h4>Söktes på senast</h4>
           <div style={{ display: "flex", flexDirection: "column" }}>
             {internallinks?.map((link, i) => (
               <Link
@@ -30,7 +30,7 @@ const Links = () => {
           </div>
         </section>
         <section style={{ margin: "1rem 1rem" }}>
-          <h4>Fler områden</h4>
+          <h4>Andra har även sökt</h4>
           <div style={{ display: "flex", flexDirection: "column" }}>
             {popularLinks?.map((link, i) => (
               <Link
