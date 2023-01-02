@@ -147,6 +147,9 @@ function App() {
   );
   const Dodsbokopes = lazy(() => import("./blocks/Dodsbokopes"));
   const Tomningavdodsbo = lazy(() => import("./blocks/Tomningavdodsbo"));
+  const Helhetslosningdodsbo = lazy(() =>
+    import("./components/Helhetslosningdodsbo")
+  );
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -497,6 +500,7 @@ function App() {
           <Partners />
           <Besok />
           <ImagesServicesComponent />
+          <Helhetslosningdodsbo />
           <Arbetsprocessen />
           <Oppetider />
           <Recensioner />

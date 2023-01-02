@@ -39,7 +39,11 @@ const Kostnadsfri = ({ vad, text }) => {
     <div className="kostandri-cont">
       <div>
         <h1>Kostnadsfri {vad}</h1>
-        <p>{text}</p>
+        <p>
+          För att vi skall kunna ge dig ett så ärligt pris som möjligt för ditt
+          bohag, dödsbo, lösöre eller våra tjänster så erbjuder vi ett
+          kostnadsfritt besök för dödsbo eller bohag.
+        </p>
         <form ref={form}>
           <h2>Vill du veta mer?</h2>
           <input type="email" required placeholder="Din email" name="email" />

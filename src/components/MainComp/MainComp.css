@@ -23,7 +23,6 @@
   opacity: 0.95;
   height: 700px;
   width: 70%;
-  margin-right: 1rem;
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   color: #64748b;
@@ -124,7 +123,7 @@ input:focus {
 
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1700px;
+    height: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,5 +139,10 @@ input:focus {
   }
   .main-content-container {
     width: 96%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .mainComp form {
+    margin-right: 1rem;
   }
 }
