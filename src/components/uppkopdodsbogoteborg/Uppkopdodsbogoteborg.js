@@ -21,9 +21,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Uppköp dödsbo Göteborg",
-    metaContent: "Uppköp dödsbo Göteborg",
-    query: "Uppköp dödsbo Göteborg",
+    metaTitle:
+      "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+    metaContent:
+      "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",

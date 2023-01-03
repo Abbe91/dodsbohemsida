@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import Links from "../externalLinks/Links";
 const Nav = () => {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -122,6 +123,15 @@ const Nav = () => {
               );
             }
           })}
+          <div
+            style={{
+              width: "80%",
+              height: "1px",
+              background: "#0369a1",
+              marginTop: "1rem"
+            }}
+          ></div>
+          <Links />
         </div>
       </nav>
     </>
