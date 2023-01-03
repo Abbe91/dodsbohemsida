@@ -92,23 +92,25 @@ const Seo = () => {
         <div className={classes.content} key={i}>
           <Card key={local.id} className={classes.card}>
             <h5 style={{ marginBottom: "0.4rem" }}>
-              Vi hjälper er med ert dödsbo i {local.city}.
+              Säljer, köper, värderar, röjer, tömmer och städar dödsbo i{" "}
+              {local.city}.
             </h5>
             <p style={{ fontSize: "0.75rem", lineHeight: "22px" }}>
               Välkommen till oss på Dödsbo Jouren i {local.city} ! Vi hjälper er
-              gärna om ni har ett behov av att få ett dödsbo värderat, dödsbo
-              uppköpt, dödsbo tömt, dödsbo bortforslat eller städa dödsbo. Vi
-              verkar inom hela {local.city} och dess närområden. Ofta är det en
-              jobbig tid när sådana här frågor kommer på tal och då kan det vara
-              motiverat att anlita oss. Vi underlättar för er så att ni istället
-              kan fokusera på annat. När vi åtar oss dessa uppdrag med dödsbon i{" "}
-              {local.city} så kommer vi oftast ut på plats och tittar vilket gör
-              det enklare då vi lättare kan få en bild av omfattningen av
-              dödsboet eller bohaget så att det blir enklare att lämna ett
-              förslag eller en offert. Vi anpassar oss givetvis efter er och ni
-              bestämmer så klart i vilken omfattning ni vill anlita oss. Vi
-              köper dödsbon, tömmer dödsbon, bortforsling av dödsbon, städar
-              dödsbon, flytt till boende, sanering av dödsbon och bohagsflytt.
+              gärna om ni har ett behov av att få ett dödsbo värderat i{" "}
+              {local.city}, dödsbo uppköpt i {local.city}, dödsbo tömt i{" "}
+              {local.city}, dödsbo bortforslat i {local.city} eller städa dödsbo
+              i {local.city}. Vi gör dödsbo röjningar inom hela {local.city} och
+              dess närområden. Vi underlättar för er så att ni istället kan
+              fokusera på annat medans vi tar hand om ert dödsbo i {local.city}.
+              När vi åtar oss dessa uppdrag med dödsbon i {local.city} så kommer
+              vi oftast ut på plats och tittar vilket gör det enklare då vi
+              lättare kan få en bild av omfattningen av dödsboet eller bohaget
+              så att det blir enklare att lämna ett förslag eller en offert. Vi
+              anpassar oss givetvis efter er och ni bestämmer så klart i vilken
+              omfattning ni vill anlita oss. Vi köper dödsbon, tömmer dödsbon,
+              röjningar av dödsbon, bortforsling av dödsbon, städar dödsbon,
+              flytt till boende, sanering av dödsbon och bohagsflytt.
             </p>
           </Card>
         </div>
