@@ -151,6 +151,27 @@ function App() {
     import("./components/Helhetslosningdodsbo")
   );
   const UppkopAvDodsbo = lazy(() => import("./blocks/Goteborg/UppkopAvDodsbo"));
+  const Bortforslingdodsbokungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Bortforslingdodsbokungsbacka")
+  );
+  const Dodsbofirmakungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Dodsbofirmakungsbacka")
+  );
+  const HamtardodsboKungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/HamtardodsboKungsbacka")
+  );
+  const Koperdodsbokungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Koperdodsbokungsbacka")
+  );
+  const Saljadodsbokungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Saljadodsbokungsbacka")
+  );
+  const TommadodsboKungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/TommadodsboKungsbacka")
+  );
+  const Tommerdodsbokungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Tommerdodsbokungsbacka")
+  );
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -499,6 +520,50 @@ function App() {
             <Route
               path="uppkop-av-dodsbo"
               element={<UppkopAvDodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="bortforsling-dodsbo-kungsbacka"
+              element={
+                <Bortforslingdodsbokungsbacka
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+            <Route
+              path="dodsbo-firma-kungsbacka"
+              element={
+                <Dodsbofirmakungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="hamtar-dodsbo-kungsbacka"
+              element={
+                <HamtardodsboKungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="koper-dodsbo-kungsbacka"
+              element={
+                <Koperdodsbokungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="salja-dodsbo-kungsbacka"
+              element={
+                <Saljadodsbokungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tomma-dodsbo-kungsbacka"
+              element={
+                <TommadodsboKungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tommer-dodsbo-kungsbacka"
+              element={
+                <Tommerdodsbokungsbacka videoText={contentData?.videoText} />
+              }
             />
             <Route path="*" element={<Error />} />
           </Routes>

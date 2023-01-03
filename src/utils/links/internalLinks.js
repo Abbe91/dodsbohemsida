@@ -172,5 +172,33 @@ export const fleromrodenLinks = [
   {
     path: "foretag-som-koper-bohag",
     title: "Företag som köper bohag"
+  },
+  {
+    path: "bortforsling-dodsbo-kungsbacka",
+    title: "Bortforsling dödsbo Kungsbacka"
+  },
+  {
+    path: "dodsbo-firma-kungsbacka",
+    title: "Dödsbo firma Kungsbacka"
+  },
+  {
+    path: "hamtar-dodsbo-kungsbacka",
+    title: "Hämtar dödsbo Kungsbacka"
+  },
+  {
+    path: "koper-dodsbo-kungsbacka",
+    title: "Köper dödsbo Kungsbacka"
+  },
+  {
+    path: "salja-dodsbo-kungsbacka",
+    title: "Sälja dödsbo Kungsbacka"
+  },
+  {
+    path: "tomma-dodsbo-kungsbacka",
+    title: "Tömma dödsbo Kungsbacka"
+  },
+  {
+    path: "tommer-dodsbo-kungsbacka",
+    title: "Tömma dödsbo Kungsbacka"
   }
 ];
