@@ -26,7 +26,7 @@ const Uppkopdodsboulricehamn = ({ videoText }) => {
     query: "Uppköp dödsbo Ulricehamn",
     formTitle: "Uppköp dödsbo Ulricehamn",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
