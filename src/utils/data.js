@@ -158,5 +158,19 @@ export const customerReviews = [
     service: "Köper dödsbo Göteborg",
     kund: "Per-Olof Andersson",
     comment: "Bra firma i Göteborg som köper dödsbo och tömmer samt städar"
+  },
+  {
+    id: 166463,
+    service: "Flyttstädning i Göteborg",
+    kund: "Janne Jansson",
+    comment:
+      "Vi fick hjälp med att röja vårt dödsbo och sen gjorde Dödsbo Jouren flyttstädning av dödsboet. Enkel kommunikation och smidigt."
+  },
+  {
+    id: 166463,
+    service: "Röja dödsbo i Göteborg",
+    kund: "Karl Einersson",
+    comment:
+      "Röjning av dödsboet gick som vi ville. Dödsbo Jouren skötte allt trots att vi inte kunde vara på plats. Pålitligt företag och rekommenderar dem starkt. "
   }
 ];

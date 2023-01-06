@@ -15,7 +15,7 @@ import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 
-function App() {
+const App = () => {
   // lazy imports
   const Uppkopdodsbogoteborg = lazy(() =>
     import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
@@ -857,6 +857,6 @@ function App() {
       </Suspense>
     </div>
   );
-}
+};
 
 export default App;
