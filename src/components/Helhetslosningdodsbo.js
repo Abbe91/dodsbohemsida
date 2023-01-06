@@ -43,7 +43,8 @@ const useStyles = makeStyles({
   },
   input: {
     height: "2rem",
-    marginBottom: "0.3rem"
+    marginBottom: "0.3rem",
+    width: "100%"
   }
 });
 
@@ -110,6 +111,11 @@ const Helhetslosningdodsbo = () => {
             placeholder="Beskriv lite kort det du behöver hjälp med"
             rows={4}
             name="beskriv"
+            style={{
+              width: "100%",
+              height: "2.8rem",
+              border: "1px solid rgb(168, 167, 167)"
+            }}
           ></textarea>
           <button type="submit" className={classes.btn} onClick={handleSubmit}>
             {sending

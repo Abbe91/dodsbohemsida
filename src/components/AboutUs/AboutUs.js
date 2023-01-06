@@ -88,7 +88,8 @@ const AboutUs = ({ query, oss, om }) => {
               style={{
                 marginTop: "0.5rem",
                 textAlign: "center",
-                height: "3rem"
+                height: "3rem",
+                width: "90%"
               }}
             ></textarea>
             <button type="submit" onClick={handleSubmit}>

@@ -52,7 +52,8 @@
   border-radius: 4px;
 }
 
-.erbjuder-item form input {
+.erbjuder-item form input,
+textarea {
   width: 240px;
   height: 2rem;
   margin-top: 0.5rem;
