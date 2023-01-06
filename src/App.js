@@ -842,11 +842,11 @@ const App = () => {
             />
             <Route path="*" element={<Error />} />
           </Routes>
-          <Partners />
-          <Besok />
-          <ImagesServicesComponent />
           <Helhetslosningdodsbo />
           <Arbetsprocessen />
+          <Partners />
+          <ImagesServicesComponent />
+          <Besok />
           <Oppetider />
           <Recensioner />
           <Footer />
