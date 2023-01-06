@@ -82,6 +82,15 @@ const AboutUs = ({ query, oss, om }) => {
               style={{ marginBottom: "0.5rem" }}
             />
             <input type="email" required placeholder="Telefon" name="telefon" />
+            <textarea
+              placeholder="Beskriv lite kort"
+              name="beskriv"
+              style={{
+                marginTop: "0.5rem",
+                textAlign: "center",
+                height: "3rem"
+              }}
+            ></textarea>
             <button type="submit" onClick={handleSubmit}>
               {sending
                 ? "skickar..."

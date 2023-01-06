@@ -172,6 +172,97 @@ function App() {
   const Tommerdodsbokungsbacka = lazy(() =>
     import("./blocks/kungsbacka/Tommerdodsbokungsbacka")
   );
+  const Bortforslingdodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Bortforslingdodsbomolndal")
+  );
+  const Dodsbofirmamolndal = lazy(() =>
+    import("./blocks/Molndal/Dodsbofirmamolndal")
+  );
+  const Kopadodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Kopadodsbomolndal")
+  );
+  const Rojadodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Rojadodsbomolndal")
+  );
+  const Saljadodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Saljadodsbomolndal")
+  );
+  const Stadadodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Stadadodsbomolndal")
+  );
+  const Tommadodsbomolndal = lazy(() =>
+    import("./blocks/Molndal/Tommadodsbomolndal")
+  );
+  const Rojadodsbogoteborg = lazy(() =>
+    import("./blocks/Goteborg/Rojadodsbogoteborg")
+  );
+  const Stadadodsbogoteborg = lazy(() =>
+    import("./blocks/Goteborg/Stadadodsbogoteborg")
+  );
+  const Bortforslingdodsbopartille = lazy(() =>
+    import("./blocks/Partille/Bortforslingdodsbopartille")
+  );
+  const Kopadodsbopartille = lazy(() =>
+    import("./blocks/Partille/Kopadodsbopartille")
+  );
+  const Rojerdodsbopartille = lazy(() =>
+    import("./blocks/Partille/Rojerdodsbopartille")
+  );
+  const Saljadodsbopartille = lazy(() =>
+    import("./blocks/Partille/Saljadodsbopartille")
+  );
+  const Stadadodsbopartille = lazy(() =>
+    import("./blocks/Partille/Stadadodsbopartille")
+  );
+  const Uppkopdodsbopartille = lazy(() =>
+    import("./blocks/Partille/Uppkopdodsbopartille")
+  );
+  const Varderadodsbokungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/Varderadodsbokungsbacka")
+  );
+  const Bortforslingdodsbostenungssund = lazy(() =>
+    import("./blocks/Stenungsund/Bortforslingdodsbostenungssund")
+  );
+  const Kopadodsbostenungssund = lazy(() =>
+    import("./blocks/Stenungsund/Kopadodsbostenungssund")
+  );
+  const Rojadodsbostenungsund = lazy(() =>
+    import("./blocks/Stenungsund/Rojadodsbostenungsund")
+  );
+  const Saljadodsbostenungssund = lazy(() =>
+    import("./blocks/Stenungsund/Saljadodsbostenungssund")
+  );
+  const Tommadodsbostenungssund = lazy(() =>
+    import("./blocks/Stenungsund/Tommadodsbostenungssund")
+  );
+  const Varderadodsbostenungssund = lazy(() =>
+    import("./blocks/Stenungsund/Varderadodsbostenungssund")
+  );
+  const Bortforslingdodsbotrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Bortforslingdodsbotrollhattan")
+  );
+  const Dodsbokopestrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Dodsbokopestrollhattan")
+  );
+  const Dodsbotrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Dodsbotrollhattan")
+  );
+  const Flyttstadningtrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Flyttstadningtrollhattan")
+  );
+  const Saljadodsbotrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Saljadodsbotrollhattan")
+  );
+  const Stadningavdodsbotrollhatttan = lazy(() =>
+    import("./blocks/Trollhattan/Stadningavdodsbotrollhatttan")
+  );
+  const Tommadodsbotrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Tommadodsbotrollhattan")
+  );
+  const Varderadodsbotrollhattan = lazy(() =>
+    import("./blocks/Trollhattan/Varderadodsbotrollhattan")
+  );
+  //
   //
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -246,6 +337,133 @@ function App() {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/flyttstadning-trollhattan"
+              element={
+                <Flyttstadningtrollhattan videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/dodsbo-trollhattan"
+              element={<Dodsbotrollhattan videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/dodsbo-kopes-trollhattan"
+              element={
+                <Dodsbokopestrollhattan videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/bortforsling-dodsbo-trollhattan"
+              element={
+                <Bortforslingdodsbotrollhattan
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+            <Route
+              path="/vardera-dodsbo-trollhattan"
+              element={
+                <Varderadodsbotrollhattan videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/salja-dodsbo-trollhattan"
+              element={
+                <Saljadodsbotrollhattan videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/tomma-dodsbo-trollhattan"
+              element={
+                <Tommadodsbotrollhattan videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/stadning-av-dodsbo-trollhattan"
+              element={
+                <Stadningavdodsbotrollhatttan
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+            <Route
+              path="/bortforsling-dodsbo-stenungssund"
+              element={
+                <Bortforslingdodsbostenungssund
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+            <Route
+              path="/roja-dodsbo-stenungssund"
+              element={
+                <Rojadodsbostenungsund videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/kopa-dodsbo-stenungssund"
+              element={
+                <Kopadodsbostenungssund videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/salja-dodsbo-stenungssund"
+              element={
+                <Saljadodsbostenungssund videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/tomma-dodsbo-stenungssund"
+              element={
+                <Tommadodsbostenungssund videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/vardera-dodsbo-stenungssund"
+              element={
+                <Varderadodsbostenungssund videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/bortforsling-dodsbo-partille"
+              element={
+                <Bortforslingdodsbopartille
+                  videoText={contentData?.videoText}
+                />
+              }
+            />
+
+            <Route
+              path="/salja-dodsbo-partille"
+              element={
+                <Saljadodsbopartille videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/kopa-dodsbo-partille"
+              element={
+                <Kopadodsbopartille videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/rojer-dodsbo-partille"
+              element={
+                <Rojerdodsbopartille videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/stada-dodsbo-partille"
+              element={
+                <Stadadodsbopartille videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/uppkop-dodsbo-partille"
+              element={
+                <Uppkopdodsbopartille videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/tomma-dodsbo-goteborg"
@@ -530,6 +748,13 @@ function App() {
               }
             />
             <Route
+              path="vardera-dodsbo-kungsbacka"
+              element={
+                <Varderadodsbokungsbacka videoText={contentData?.videoText} />
+              }
+            />
+
+            <Route
               path="dodsbo-firma-kungsbacka"
               element={
                 <Dodsbofirmakungsbacka videoText={contentData?.videoText} />
@@ -563,6 +788,56 @@ function App() {
               path="tommer-dodsbo-kungsbacka"
               element={
                 <Tommerdodsbokungsbacka videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tomma-dodsbo-molndal"
+              element={
+                <Tommadodsbomolndal videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="bortforsling-dodsbo-molndal"
+              element={
+                <Bortforslingdodsbomolndal videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="dodsbo-firma-molndal"
+              element={
+                <Dodsbofirmamolndal videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="kopa-dodsbo-molndal"
+              element={<Kopadodsbomolndal videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="roja-dodsbo-molndal"
+              element={<Rojadodsbomolndal videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="salja-dodsbo-molndal"
+              element={
+                <Saljadodsbomolndal videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="stada-dodsbo-molndal"
+              element={
+                <Stadadodsbomolndal videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="roja-dodsbo-goteborg"
+              element={
+                <Rojadodsbogoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="stada-dodsbo-goteborg"
+              element={
+                <Stadadodsbogoteborg videoText={contentData?.videoText} />
               }
             />
             <Route path="*" element={<Error />} />

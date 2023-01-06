@@ -19,14 +19,15 @@
   align-items: center;
   justify-content: center;
   background: #f1f5f9;
-  height: 240px;
+  height: 300px;
   width: 80%;
   margin: 1.6rem auto;
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   color: #64748b;
 }
-.aboutUs form input {
+.aboutUs form input,
+textarea {
   width: 90%;
   height: 2rem;
   border-radius: 5px;

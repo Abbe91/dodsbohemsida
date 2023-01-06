@@ -54,6 +54,74 @@ export const internallinks = [
   {
     path: "uppkop-av-dodsbo",
     title: "Uppköp av dödsbo"
+  },
+  {
+    path: "roja-dodsbo-goteborg",
+    title: "Röja dödsbo Göteborg"
+  },
+  {
+    path: "stada-dodsbo-goteborg",
+    title: "Städa dödsbo Göteborg"
+  },
+  {
+    path: "vardera-dodsbo-kungsbacka",
+    title: "Värdera dödsbo Kungsbacka"
+  },
+  {
+    path: "bortforsling-dodsbo-partille",
+    title: "Bortforsling dödsbo Partille"
+  },
+  {
+    path: "salja-dodsbo-partille",
+    title: "Sälja dödsbo Partille"
+  },
+  {
+    path: "kopa-dodsbo-partille",
+    title: "Köpa dödsbo Partille"
+  },
+  {
+    path: "rojer-dodsbo-partille",
+    title: "Röjer dödsbo Partille"
+  },
+  {
+    path: "stada-dodsbo-partille",
+    title: "Städa dödsbo Partille"
+  },
+  {
+    path: "uppkop-dodsbo-partille",
+    title: "Uppköp dödsbo Partille"
+  },
+  {
+    path: "flyttstadning-trollhattan",
+    title: "Flyttstädning Trollhättan"
+  },
+  {
+    path: "dodsbo-trollhattan",
+    title: "Dödsbo Trollhättan"
+  },
+  {
+    path: "dodsbo-kopes-trollhattan",
+    title: "Dödsbo köpes Trollhättan"
+  },
+  {
+    path: "bortforsling-dodsbo-trollhattan",
+    title: "Bortforsling dödsbo Trollhättan"
+  },
+  {
+    path: "vardera-dodsbo-trollhattan",
+    title: "Värdera dödsbo Trollhättan"
+  },
+  {
+    path: "salja-dodsbo-trollhattan",
+    title: "Sälja dödsbo Trollhättan"
+  },
+  {
+    path: "tomma-dodsbo-trollhattan",
+    title: "Tömma dödsbo Trollhättan"
+  },
+  {
+    path: "stadning-av-dodsbo-trollhattan",
+    title: "Städning av dödsbo Trollhättan"
   }
 ];
 
@@ -97,6 +165,58 @@ export const popularLinks = [
   {
     path: "vardera-dodsbo-ale",
     title: "Värdera dödsbo Ale"
+  },
+  {
+    path: "tomma-dodsbo-molndal",
+    title: "Tömma dödsbo Mölndal"
+  },
+  {
+    path: "bortforsling-dodsbo-molndal",
+    title: "Bortforsling dödsbo Mölndal"
+  },
+  {
+    path: "dodsbo-firma-molndal",
+    title: "Dödsbo firma Mölndal"
+  },
+  {
+    path: "kopa-dodsbo-molndal",
+    title: "Köpa dödsbo Mölndal"
+  },
+  {
+    path: "roja-dodsbo-molndal",
+    title: "Röja dödsbo Mölndal"
+  },
+  {
+    path: "salja-dodsbo-molndal",
+    title: "Sälja dödsbo Mölndal"
+  },
+  {
+    path: "stada-dodsbo-molndal",
+    title: "Städa dödsbo Mölndal"
+  },
+  {
+    path: "bortforsling-dodsbo-stenungssund",
+    title: "Bortforsling dödsbo Stenungssund"
+  },
+  {
+    path: "roja-dodsbo-stenungssund",
+    title: "Röja dödsbo Stenungssund"
+  },
+  {
+    path: "kopa-dodsbo-stenungssund",
+    title: "Köpa dödsbo Stenungssund"
+  },
+  {
+    path: "salja-dodsbo-stenungssund",
+    title: "Sälja dödsbo Stenungssund"
+  },
+  {
+    path: "tomma-dodsbo-stenungssund",
+    title: "Tömma dödsbo Stenungssund"
+  },
+  {
+    path: "vardera-dodsbo-stenungssund",
+    title: "Värdera dödsbo Stenungssund"
   }
 ];
 
@@ -199,6 +319,6 @@ export const fleromrodenLinks = [
   },
   {
     path: "tommer-dodsbo-kungsbacka",
-    title: "Tömma dödsbo Kungsbacka"
+    title: "Tömmer dödsbo Kungsbacka"
   }
 ];

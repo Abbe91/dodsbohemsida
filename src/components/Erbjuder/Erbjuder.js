@@ -66,6 +66,15 @@ const Erbjuder = () => {
           <form ref={form}>
             <div>
               <input type="email" placeholder="Din email" name="email" />
+              <textarea
+                placeholder="Beskriv lite kort"
+                name="beskriv"
+                style={{
+                  marginTop: "0.5rem",
+                  textAlign: "center",
+                  height: "3rem"
+                }}
+              ></textarea>
               <button type="submit" onClick={handleSubmit}>
                 {sending
                   ? "skickar..."
