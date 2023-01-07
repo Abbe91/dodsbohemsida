@@ -167,7 +167,7 @@ export const customerReviews = [
       "Vi fick hjälp med att röja vårt dödsbo och sen gjorde Dödsbo Jouren flyttstädning av dödsboet. Enkel kommunikation och smidigt."
   },
   {
-    id: 166463,
+    id: 166466868,
     service: "Röja dödsbo i Göteborg",
     kund: "Karl Einersson",
     comment:
