@@ -136,6 +136,7 @@ input:focus {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 0rem;
   }
   .main-content-container {
     width: 96%;
