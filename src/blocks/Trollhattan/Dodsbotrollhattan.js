@@ -26,7 +26,7 @@ const Dodsbotrollhattan = ({ videoText }) => {
     query: "Dödsbo Trollhättan",
     formTitle: "Dödsbo Trollhättan",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Trollhättan",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Trollhättan",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

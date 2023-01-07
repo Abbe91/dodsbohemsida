@@ -26,7 +26,7 @@ const Varderadodsbostenungssund = ({ videoText }) => {
     query: "Värdera dödsbo Stenungssund",
     formTitle: "Värdera dödsbo Stenungssund",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

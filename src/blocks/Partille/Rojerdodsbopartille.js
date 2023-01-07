@@ -26,7 +26,7 @@ const Rojerdodsbopartille = ({ videoText }) => {
     query: "Röjer dödsbo Partille",
     formTitle: "Röjer dödsbo Partille",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och röjning av dödsbo i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och röjning av dödsbo i Partille",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

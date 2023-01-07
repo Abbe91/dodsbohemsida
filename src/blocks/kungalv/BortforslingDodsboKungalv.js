@@ -26,7 +26,7 @@ const BortforslingDodsboKungalv = ({ videoText }) => {
     query: "Bortforsling dödsbo Kungälv",
     formTitle: "Bortforsling dödsbo Kungälv",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

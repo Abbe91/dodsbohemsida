@@ -26,7 +26,7 @@ const Varderadodsbofrolunda = ({ videoText }) => {
     query: "Värdera dödsbo Frölunda",
     formTitle: "Värdera dödsbo Frölunda",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Frölunda",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Frölunda",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

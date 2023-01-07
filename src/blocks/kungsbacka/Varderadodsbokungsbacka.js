@@ -26,7 +26,7 @@ const Varderadodsbokungsbacka = ({ videoText }) => {
     query: "Värdera dödsbo Kungsbacka",
     formTitle: "Värdera dödsbo Kungsbacka",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

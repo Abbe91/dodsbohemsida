@@ -26,7 +26,7 @@ const Foretagsomkoperbohag = ({ videoText }) => {
     query: "Företag som köper bohag",
     formTitle: "Företag som köper bohag",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Göteborg",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

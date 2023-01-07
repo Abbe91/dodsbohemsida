@@ -26,7 +26,7 @@ const Tomningavdodsbo = ({ videoText }) => {
     query: "Tömning av dödsbo",
     formTitle: "Tömning av dödsbo",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning av dödsbo, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning av dödsbo, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

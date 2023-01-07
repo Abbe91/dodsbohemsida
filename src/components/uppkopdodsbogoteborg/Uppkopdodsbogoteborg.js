@@ -27,7 +27,7 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
       "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
