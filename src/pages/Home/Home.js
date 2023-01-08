@@ -70,7 +70,7 @@ const Home = ({ videoText }) => {
       <div className="Om">
         <AboutUs
           query={mainquery.toUpperCase()}
-          oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig ${mainquery}?`}
+          oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig med ditt ${mainquery}?`}
           om={`är det självklara valet för hantering av bohag och dödsbo med 20 års erfarenhet.`}
         />
       </div>

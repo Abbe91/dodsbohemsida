@@ -40,7 +40,7 @@ const AboutUs = ({ query, oss, om }) => {
     <div className="aboutUs">
       <div className="aboutUs-info" style={{ maxWidth: "90%" }}>
         <h1 style={{ color: "#0369a1" }}>{query}</h1>
-        <h5 style={{ margin: "0.5rem" }}>{oss}</h5>
+        <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
         <p
           style={{
             margin: "0.75rem auto",
@@ -51,7 +51,9 @@ const AboutUs = ({ query, oss, om }) => {
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
         <h5>Vi köper, tömmer, städar och säljer dödsbon </h5>
-        <p style={{ maxWidth: "800px", fontSize: "0.9rem" }}>
+        <p
+          style={{ maxWidth: "800px", fontSize: "0.9rem", lineHeight: "25PX" }}
+        >
           När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
           dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
           dig kostnadsfri värdering och en offert som du kan ta ställning till.

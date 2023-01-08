@@ -183,7 +183,7 @@ const MainComp = ({
             </button>
           )}
           <div className="form-policy">
-            <p style={{ fontSize: "0.8rem", width: "90%", margin: "1rem 0" }}>
+            <p style={{ fontSize: "0.75rem", width: "90%", margin: "1rem 0" }}>
               Genom att använda detta formulär accepterar du att{" "}
               <strong style={{ marginRight: "0.15rem" }}>
                 {customerData.business}

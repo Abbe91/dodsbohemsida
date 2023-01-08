@@ -10,7 +10,7 @@
       no-repeat;
   background-position: center;
   background-size: cover;
-  height: 1000px;
+  height: 940px;
 }
 .mainComp form {
   margin-top: 2rem;
@@ -65,13 +65,13 @@ input:focus {
   border-radius: 5px;
   font-size: 0.9rem;
   cursor: pointer;
+  color: black;
 }
 .mainComp label {
   font-size: 0.9rem;
-  margin: 1rem 1rem;
+  margin: 1rem 0.5rem;
 }
 .main-content-container {
-  margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ input:focus {
 
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1900px;
+    height: 1820px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,5 +145,8 @@ input:focus {
 @media screen and (min-width: 900px) {
   .mainComp form {
     margin-right: 1rem;
+  }
+  .main-content-container {
+    margin-top: 2rem;
   }
 }

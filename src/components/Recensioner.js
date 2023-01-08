@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
 import { Star } from "@material-ui/icons";
 import { customerReviews } from "../utils/data";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",
@@ -65,7 +66,9 @@ const Recensioner = () => {
         {customerReviews?.map((review) => (
           <div key={review.id} className={classes.cardContainer}>
             <Card className={classes.card}>
-              <h5>{review.service}</h5>
+              <Link to={review.path} style={{ color: "black" }}>
+                <h5>{review.service}</h5>
+              </Link>
               <p style={{ fontSize: "0.8rem", margin: "0.2rem 0" }}>
                 {review.kund}
               </p>
