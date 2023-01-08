@@ -4,7 +4,6 @@ import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
-
 const MainComp = ({
   query,
   formTitle,
@@ -48,6 +47,7 @@ const MainComp = ({
         }
       );
   };
+
   return (
     <section>
       <div className="mainComp">
@@ -88,7 +88,7 @@ const MainComp = ({
             </div>
           </div>
         </div>
-        <form ref={form}>
+        <form ref={form} id="main-comp-cont">
           <div
             style={{
               dislay: "flex",

@@ -11,6 +11,7 @@ import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Links from "../externalLinks/Links";
+
 const Nav = () => {
   const dispatch = useDispatch();
   const customerData = useSelector(getCustomerData);
@@ -44,6 +45,20 @@ const Nav = () => {
                 style={{ background: "#0369a1", color: "white" }}
               >
                 <AiTwotonePhone />
+              </Button>
+              {/* <p>{customerData.phone}</p> */}
+            </a>
+            <a href={"#main-comp-cont"}>
+              <Button
+                variant="contained"
+                style={{
+                  background: "#0369a1",
+                  color: "white",
+                  height: "1.6rem",
+                  fontSize: "0.75rem"
+                }}
+              >
+                Gratiskollen
               </Button>
               {/* <p>{customerData.phone}</p> */}
             </a>

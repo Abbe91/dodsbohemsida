@@ -113,6 +113,7 @@ nav .navbar {
   border-bottom: 3px solid rgb(184, 182, 182);
   transition: all 0.3s linear;
 }
+
 @media screen and (max-width: 1200px) {
   .nav-links {
     display: none;
