@@ -122,6 +122,10 @@ export const internallinks = [
   {
     path: "stadning-av-dodsbo-trollhattan",
     title: "Städning av dödsbo Trollhättan"
+  },
+  {
+    path: "flyttstadning-dodsbo-boras",
+    title: "Flyttstädning dödsbo Borås"
   }
 ];
 
@@ -217,6 +221,38 @@ export const popularLinks = [
   {
     path: "vardera-dodsbo-stenungssund",
     title: "Värdera dödsbo Stenungssund"
+  },
+  {
+    path: "tommer-lagenheter-boras",
+    title: "Tommer lägenheter Borås"
+  },
+  {
+    path: "slutstadning-dodsbo-boras",
+    title: "Slutstädning dödsbo Borås"
+  },
+  {
+    path: "salja-dodsbo-boras",
+    title: "Sälja dödsbo Borås"
+  },
+  {
+    path: "kopa-dodsbo-boras",
+    title: "Köpa dödsbo Borås"
+  },
+  {
+    path: "roja-dodsbo-boras",
+    title: "Röja dödsbo Borås"
+  },
+  {
+    path: "bortforsling-dodsbo-boras",
+    title: "Bortforsling dödsbo Borås"
+  },
+  {
+    path: "dodsbo-firma-boras",
+    title: "Dödsbo firma Borås"
+  },
+  {
+    path: "dodsbo-tomning-boras",
+    title: "Dödsbo tömning Borås"
   }
 ];
 
@@ -320,5 +356,17 @@ export const fleromrodenLinks = [
   {
     path: "tommer-dodsbo-kungsbacka",
     title: "Tömmer dödsbo Kungsbacka"
+  },
+  {
+    path: "tomma-dodsbo-boras",
+    title: "Tömma dödsbo Borås"
+  },
+  {
+    path: "vardera-dodsbo-boras",
+    title: "Värdera dödsbo Borås"
+  },
+  {
+    path: "uppkop-dodsbo-boras",
+    title: "Uppköp dödsbo Borås"
   }
 ];

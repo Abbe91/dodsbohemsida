@@ -17,14 +17,14 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Tommerlagenheterboras = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömmer dödsbo Borås";
+  const mainquery = "Tömmer lägenheter Borås";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömmer dödsbo Borås",
-    metaContent: "Tömmer dödsbo Borås",
-    query: "Tömmer dödsbo Borås",
-    formTitle: "Tömmer dödsbo Borås",
+    metaTitle: "Tömmer lägenheter Borås",
+    metaContent: "Tömmer lägenheter Borås",
+    query: "Tömmer lägenheter Borås",
+    formTitle: "Tömmer lägenheter Borås",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Borås",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
