@@ -87,9 +87,20 @@ const Helhetslosningdodsbo = () => {
         <p className={classes.paragraph}>
           Ett dödsbo är mer krävande än vad man tror. Idag ställs det ju många
           krav på sortering och avfall av dödsbon. Vi på Dödsbo Jouren tar hela
-          ansvaret från att sortera dödsboet, bortforsling av dödsboet, tömning
-          av dödsboet och sedan städning av dödsboet. Vi gör även luktsaneringar
-          av dödsbo eller röksanering av dödsbo.
+          ansvaret från att sortera{" "}
+          <a href="/dodsboet" style={{ color: "#0369a1" }} title="dödsboet">
+            dödsboet
+          </a>
+          , bortforsling av dödsboet,{" "}
+          <a
+            href="/tomma-dodsbo"
+            style={{ color: "#0369a1" }}
+            title="tömma dödsbo"
+          >
+            tömning av dödsboet
+          </a>{" "}
+          och sedan städning av dödsboet. Vi gör även luktsaneringar av dödsbo
+          eller röksanering av dödsbo.
         </p>
       </section>
       <section className={classes.sec2}>

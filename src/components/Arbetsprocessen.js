@@ -55,11 +55,13 @@ const Arbetsprocessen = () => {
             <strong style={{ color: "#0369a1" }}>
               Tömning & Bortforsling:
             </strong>{" "}
-            Vi kommer den dagen vi bestämt tillsammans för att börja sortera i
-            dödsboet eller bohaget. När vi sorterat klart börjar vi forsla bort
-            det som vi kan skänka eller det som skall gå till tippen. Efter
-            detta tar vi då det lösöre vi köpt upp som vi kör till vår butik
-            eller lager.
+            Vi kommer den dagen vi bestämt tillsammans för att börja sortera i{" "}
+            <a href="/dodsboet" style={{ color: "#0369a1" }} title="dödsboet">
+              dödsboet
+            </a>{" "}
+            eller bohaget. När vi sorterat klart börjar vi forsla bort det som
+            vi kan skänka eller det som skall gå till tippen. Efter detta tar vi
+            då det lösöre vi köpt upp som vi kör till vår butik eller lager.
           </p>
         </section>
         <section>

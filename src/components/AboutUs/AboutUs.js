@@ -62,9 +62,12 @@ const AboutUs = ({ query, oss, om }) => {
           >
             tömma dödsbo
           </a>
-          , städa dödsbo eller att vi köper från dödsboet så kan du kontakta
-          oss. Vi ger dig kostnadsfri värdering och en offert som du kan ta
-          ställning till. Om du bestämmer dig för att låta oss{" "}
+          , städa dödsbo eller att vi köper från{" "}
+          <a href="/dodsboet" style={{ color: "#0369a1" }} title="dödsboet">
+            dödsboet
+          </a>{" "}
+          så kan du kontakta oss. Vi ger dig kostnadsfri värdering och en offert
+          som du kan ta ställning till. Om du bestämmer dig för att låta oss{" "}
           <a
             href="/uppkop-av-dodsbo"
             style={{ color: "#0369a1" }}
