@@ -81,9 +81,9 @@ const ImagesServicesComponent = () => {
             className={classes.images}
           />
 
-          <Link to={image.path}>
+          <a href={image.path} title={image.text}>
             <button className={classes.btn}>{image.text}</button>
-          </Link>
+          </a>
         </div>
       ))}
     </div>

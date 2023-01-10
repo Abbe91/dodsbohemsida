@@ -294,6 +294,9 @@ const App = () => {
   const Varderadodsboboras = lazy(() =>
     import("./blocks/boras/Varderadodsboboras")
   );
+  const Flyttstadningavbohag = lazy(() =>
+    import("./blocks/flyttstadning/Flyttstadningavbohag")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -369,6 +372,12 @@ const App = () => {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/flyttstadning-av-bohag"
+              element={
+                <Flyttstadningavbohag videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/tomma-dodsbo-boras"

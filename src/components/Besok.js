@@ -45,10 +45,24 @@ const Besok = () => {
           behandlingshem, olika typer av boenden, kyrkor,{" "}
           <strong>hjälporganisationer</strong> och till behövande. Vi har valt
           att skänka 100 kronor per uppdrag till olika hjälporganisationer.
-          Efter att vi har tömt dödsboet inklusive förråd, källare och övriga
-          utrymmen så gör vi en noggrann flyttstädning av bohaget, dödsboet
-          eller huset. Söker du en uppköpare av dödsbon kan du vända dig till
-          oss.
+          Efter att vi har{" "}
+          <a
+            href="/tomma-dodsbo"
+            style={{ color: "#0369a1" }}
+            title="tömma dödsbo"
+          >
+            tömma dödsboet
+          </a>{" "}
+          inklusive förråd, källare och övriga utrymmen så gör vi en noggrann{" "}
+          <a
+            href="/flyttstadning-av-bohag"
+            title="flyttstädning av bohag"
+            style={{ color: "#0369a1" }}
+          >
+            flyttstädning av bohaget
+          </a>{" "}
+          , dödsboet eller huset. Söker du en uppköpare av dödsbon kan du vända
+          dig till oss.
         </p>
       </section>
       <section style={{ margin: "1rem 0" }}>
