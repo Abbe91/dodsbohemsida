@@ -54,14 +54,35 @@ const AboutUs = ({ query, oss, om }) => {
         <p
           style={{ maxWidth: "800px", fontSize: "0.9rem", lineHeight: "25PX" }}
         >
-          När du behöver hjälp med att sälja ditt dödsbo, tömma dödsbo, städa
-          dödsbo eller att vi köper från dödsboet så kan du kontakta oss. Vi ger
-          dig kostnadsfri värdering och en offert som du kan ta ställning till.
-          Om du bestämmer dig för att låta oss köpa ditt dödsbo kan du även få
-          hjälp av oss med att tömma dösboet och sedan få dödsboet städat. Vi
-          samarbetar med många auktionsfirmor och kan hjälpa er med att sälja
-          lösöre som är av större värde. Vi kan även vara behjälpliga med
-          bouppteckningen av dösboet.
+          När du behöver hjälp med att sälja ditt dödsbo,{" "}
+          <a
+            href="/tomma-dodsbo"
+            style={{ color: "#0369a1" }}
+            title="tömma dödsbo"
+          >
+            tömma dödsbo
+          </a>
+          , städa dödsbo eller att vi köper från dödsboet så kan du kontakta
+          oss. Vi ger dig kostnadsfri värdering och en offert som du kan ta
+          ställning till. Om du bestämmer dig för att låta oss{" "}
+          <a
+            href="/uppkop-av-dodsbo"
+            style={{ color: "#0369a1" }}
+            title="uppköp av dödsbo"
+          >
+            köpa ditt dödsbo
+          </a>{" "}
+          kan du även få hjälp av oss med att{" "}
+          <a
+            href="/tomma-dodsbo"
+            style={{ color: "#0369a1" }}
+            title="tömma dödsbo"
+          >
+            tömma dödsboet
+          </a>{" "}
+          och sedan få dödsboet städat. Vi samarbetar med många auktionsfirmor
+          och kan hjälpa er med att sälja lösöre som är av större värde. Vi kan
+          även vara behjälpliga med bouppteckningen av dösboet.
         </p>
         <div>
           <form ref={form}>

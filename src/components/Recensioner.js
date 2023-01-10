@@ -66,9 +66,13 @@ const Recensioner = () => {
         {customerReviews?.map((review) => (
           <div key={review.id} className={classes.cardContainer}>
             <Card className={classes.card}>
-              <Link to={review.path} style={{ color: "black" }}>
+              <a
+                href={review.path}
+                style={{ color: "black" }}
+                title={review.service}
+              >
                 <h5>{review.service}</h5>
-              </Link>
+              </a>
               <p style={{ fontSize: "0.8rem", margin: "0.2rem 0" }}>
                 {review.kund}
               </p>

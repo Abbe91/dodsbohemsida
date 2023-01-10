@@ -89,7 +89,8 @@ const Home = ({ videoText }) => {
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
             dig som kund med att {mainquery}. Besöket/genomgången tar ca 45min
-            och du som kund får en offert på plats om hur vi kan hjälpa dig
+            och du som kund får en offert på plats om hur vi kan hjälpa dig med
+            dit
             <strong style={{ fontWeight: "700" }}> {mainquery}.</strong>
           </h4>
           <button

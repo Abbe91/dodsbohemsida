@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { Helmet } from "react-helmet-async";
 const useStyles = makeStyles({
   root: {
     display: "flex",
@@ -27,14 +26,6 @@ const Arbetsprocessen = () => {
   const classes = useStyles();
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Värdering av dödsbo, Värdering av bohag. Köper dödsbo</title>
-        <meta
-          name="description"
-          content="Värdering av dödsbo, Värdering av bohag. Köper dödsbo"
-        />
-      </Helmet>
       <h2 style={{ color: "#0369a1", textAlign: "center" }}>SÅ FUNGERAR DET</h2>
       <div className={classes.root}>
         <section>
@@ -44,9 +35,16 @@ const Arbetsprocessen = () => {
           <p style={{ width: "300px", marginTop: "0.5rem" }}>
             <strong style={{ color: "#0369a1" }}> VÄRDERING:</strong> Vi
             erbjuder en kostnadsfri värdering av hemmets föremål, dödsboet eller
-            bohaget. Detta är för att kunna ge er ett fast pris för själva
-            tömningen av dödsboet och så att vi även kan ge er ett pris för
-            uppköpet av lösöret vi är intresserade av att köpa upp.
+            bohaget. Detta är för att kunna ge er ett fast pris för själva{" "}
+            <a
+              href="/tomma-dodsbo"
+              style={{ color: "#0369a1" }}
+              title="tömma dödsbo"
+            >
+              tömningen av dödsboet
+            </a>{" "}
+            och så att vi även kan ge er ett pris för uppköpet av lösöret vi är
+            intresserade av att köpa upp.
           </p>
         </section>
         <section>
@@ -82,9 +80,16 @@ const Arbetsprocessen = () => {
           <p style={{ width: "300px", marginTop: "1rem" }}>
             <strong style={{ color: "#0369a1" }}> BETALNING: </strong>Är
             föremålen/lösöret av högre värde än kostnaderna för arbetet så
-            kommer vi att betala dig som kund för att få tömma dödsboet. Eller
-            så kan det även bli att vi drar av summan mot det ni skall betala
-            oss.
+            kommer vi att betala dig som kund för att få{" "}
+            <a
+              href="/tomma-dodsbo"
+              style={{ color: "#0369a1" }}
+              title="tömma dödsbo"
+            >
+              tömma dödsboet
+            </a>
+            . Eller så kan det även bli att vi drar av summan mot det ni skall
+            betala oss.
           </p>
         </section>
       </div>
