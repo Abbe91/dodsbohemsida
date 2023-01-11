@@ -297,6 +297,18 @@ const App = () => {
   const Flyttstadningavbohag = lazy(() =>
     import("./blocks/flyttstadning/Flyttstadningavbohag")
   );
+  const Varderingavdodsbo = lazy(() =>
+    import("./pages/InfoPages/Varderingavdodsbo")
+  );
+  const Flyttstadning = lazy(() =>
+    import("./blocks/flyttstadning/Flyttstadning")
+  );
+  const Flyttstadninggoteborg = lazy(() =>
+    import("./blocks/flyttstadning/Flyttstadninggoteborg")
+  );
+  const Flyttstadningkungalv = lazy(() =>
+    import("./blocks/flyttstadning/Flyttstadningkungalv")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -374,10 +386,30 @@ const App = () => {
               element={<Home videoText={contentData?.videoText} />}
             />
             <Route
+              path="/flyttstadning-i-goteborg"
+              element={
+                <Flyttstadninggoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/flyttstadning-i-kungalv"
+              element={
+                <Flyttstadningkungalv videoText={contentData?.videoText} />
+              }
+            />
+            <Route
               path="/flyttstadning-av-bohag"
               element={
                 <Flyttstadningavbohag videoText={contentData?.videoText} />
               }
+            />
+            <Route
+              path="/flyttstadning"
+              element={<Flyttstadning videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/vardering-av-dodsbo"
+              element={<Varderingavdodsbo videoText={contentData?.videoText} />}
             />
             <Route
               path="/tomma-dodsbo-boras"

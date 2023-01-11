@@ -66,8 +66,16 @@ const AboutUs = ({ query, oss, om }) => {
           <a href="/dodsboet" style={{ color: "#0369a1" }} title="dödsboet">
             dödsboet
           </a>{" "}
-          så kan du kontakta oss. Vi ger dig kostnadsfri värdering och en offert
-          som du kan ta ställning till. Om du bestämmer dig för att låta oss{" "}
+          så kan du kontakta oss. Vi ger dig kostnadsfri{" "}
+          <a
+            href="/vardering-av-dodsbo"
+            title="värdering av dödsbo"
+            style={{ color: "#0369a1" }}
+          >
+            värdering
+          </a>{" "}
+          och en offert som du kan ta ställning till. Om du bestämmer dig för
+          att låta oss{" "}
           <a
             href="/uppkop-av-dodsbo"
             style={{ color: "#0369a1" }}

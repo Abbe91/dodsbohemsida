@@ -70,9 +70,16 @@ const Arbetsprocessen = () => {
           </div>
           <p style={{ width: "300px", marginTop: "1rem" }}>
             <strong style={{ color: "#0369a1" }}> STÄDNING:</strong> Behöver du
-            även hjälp med att få dödsboet eller bohaget städat så erbjuder vi
-            även den tjänsten för alla våra dödsbon och bohag. Vi gör även
-            saneringar som luktsaneringar av rökande eller annat.
+            även hjälp med att få dödsboet eller bohaget{" "}
+            <a
+              href="/stadning-av-dodsbo"
+              title="städning av dödsbo"
+              style={{ color: "#0369a1" }}
+            >
+              städat
+            </a>{" "}
+            så erbjuder vi även den tjänsten för alla våra dödsbon och bohag. Vi
+            gör även saneringar som luktsaneringar av rökande eller annat.
           </p>
         </section>
         <section>

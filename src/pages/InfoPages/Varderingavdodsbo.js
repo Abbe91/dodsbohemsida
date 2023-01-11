@@ -15,31 +15,30 @@ import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Flyttstadninggoteborg = ({ videoText }) => {
+const Varderingavdodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Flyttstädning i Göteborg";
+  const mainquery = "Värdering av dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Flyttstädning i Göteborg",
-    metaContent: "Flyttstädning i Göteborg",
-    query: "Flyttstädning i Göteborg",
-    formTitle: "Flyttstädning i Göteborg",
+    metaTitle: "Värdering av dödsbo",
+    metaContent: "Värdering av dödsbo",
+    query: "Värdering av dödsbo",
+    formTitle: "Värdering av dödsbo",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och värdering av dödsbo",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Göteborg";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och värdering av dödsbo och bohag.";
   const element = useSelector(getElement);
   useEffect(() => {
     document
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
-
   return (
     <div>
       <Helmet>
@@ -116,4 +115,4 @@ const Flyttstadninggoteborg = ({ videoText }) => {
   );
 };
 
-export default Flyttstadninggoteborg;
+export default Varderingavdodsbo;

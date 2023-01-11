@@ -368,5 +368,21 @@ export const fleromrodenLinks = [
   {
     path: "uppkop-dodsbo-boras",
     title: "Uppköp dödsbo Borås"
+  },
+  {
+    path: "vardering-av-dodsbo",
+    title: "Värdering av dödsbo"
+  },
+  {
+    path: "flyttstadning",
+    title: "Flyttstädning"
+  },
+  {
+    path: "flyttstadning-i-goteborg",
+    title: "Flyttstädning i Göteborg"
+  },
+  {
+    path: "flyttstadning-i-kungalv",
+    title: "Flyttstädning i Kungälv"
   }
 ];

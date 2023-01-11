@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
 import { Star } from "@material-ui/icons";
 import { customerReviews } from "../utils/data";
-import { Link } from "react-router-dom";
+
 const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",

@@ -38,8 +38,15 @@ const Besok = () => {
           }}
         ></div>
         <p className={classes.para}>
-          Vi erbjuder <strong>kostnadsfri</strong> värdering av dödsbo och bohag
-          inom Göteborg, Kungälv, Ale, Stenungsund och Tjörn. Vi har
+          Vi erbjuder <strong>kostnadsfri</strong>{" "}
+          <a
+            href="/vardering-av-dodsbo"
+            title="värdering av dödsbo"
+            style={{ color: "#0369a1" }}
+          >
+            värdering av dödsbo
+          </a>{" "}
+          och bohag inom Göteborg, Kungälv, Ale, Stenungsund och Tjörn. Vi har
           säljkanalerna och egen butiker. Dödsbo Jouren är ett företag som
           tänker miljösmart och på återanvändning. Vi skänker till
           behandlingshem, olika typer av boenden, kyrkor,{" "}

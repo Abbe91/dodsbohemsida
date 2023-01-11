@@ -12,9 +12,10 @@ const Links = () => {
         <h4>Populära sökningar</h4>
         <div style={{ display: "flex", flexDirection: "column" }}>
           {fleromrodenLinks?.map((link, i) => (
-            <Link
+            <a
               key={i}
-              to={link.path}
+              href={link.path}
+              title={link.title}
               style={{
                 margin: "0.1rem 0",
                 fontSize: "0.9rem",
@@ -23,7 +24,7 @@ const Links = () => {
               }}
             >
               <p className="footer-links">{link.title}</p>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -31,9 +32,10 @@ const Links = () => {
         <h4>Andra även sökt</h4>
         <div style={{ display: "flex", flexDirection: "column" }}>
           {popularLinks?.map((link, i) => (
-            <Link
+            <a
               key={i}
-              to={link.path}
+              href={link.path}
+              title={link.title}
               style={{
                 margin: "0.1rem 0",
                 fontSize: "0.9rem",
@@ -43,7 +45,7 @@ const Links = () => {
               className="footer-links"
             >
               <p className="footer-links">{link.title}</p>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -51,9 +53,10 @@ const Links = () => {
         <h4>Söktes på senast</h4>
         <div style={{ display: "flex", flexDirection: "column" }}>
           {internallinks?.map((link, i) => (
-            <Link
+            <a
               key={i}
-              to={link.path}
+              href={link.path}
+              title={link.title}
               style={{
                 margin: "0.1rem 0",
                 fontSize: "0.9rem",
@@ -63,7 +66,7 @@ const Links = () => {
               className="footer-links"
             >
               <p className="footer-links">{link.title}</p>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
