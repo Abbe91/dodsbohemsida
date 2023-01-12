@@ -309,6 +309,18 @@ const App = () => {
   const Flyttstadningkungalv = lazy(() =>
     import("./blocks/flyttstadning/Flyttstadningkungalv")
   );
+  const Koperdodsboalingsas = lazy(() =>
+    import("./blocks/alingsas/Koperdodsboalingsas")
+  );
+  const Stadardodsboalingsas = lazy(() =>
+    import("./blocks/alingsas/Stadardodsboalingsas")
+  );
+  const Tommadodsboalingsas = lazy(() =>
+    import("./blocks/alingsas/Tommadodsboalingsas")
+  );
+  const Varderadodsboalingsas = lazy(() =>
+    import("./blocks/alingsas/Varderadodsboalingsas")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -358,11 +370,11 @@ const App = () => {
     }
   };
   useEffect(() => {
-    getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
-      (data) => {
-        dispatch(setWeatherData(data));
-      }
-    );
+    // getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
+    //   (data) => {
+    //     dispatch(setWeatherData(data));
+    //   }
+    // );
     getTipsSearch();
     getBingnews();
   }, []);
@@ -384,6 +396,30 @@ const App = () => {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/vardera-dodsbo-alingsas"
+              element={
+                <Varderadodsboalingsas videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/tomma-dodsbo-alingsas"
+              element={
+                <Tommadodsboalingsas videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/stadar-dodsbo-alingsas"
+              element={
+                <Stadardodsboalingsas videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/koper-dodsbo-alingsas"
+              element={
+                <Koperdodsboalingsas videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/flyttstadning-i-goteborg"

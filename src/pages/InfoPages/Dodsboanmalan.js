@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+
 const useStyles = makeStyles({
   content: {
     textAlign: "center",
@@ -45,6 +46,7 @@ const Dodsboanmalan = () => {
         <h4 className={classes.h4}>
           Dödsboanmälan i stället för en bouppteckning
         </h4>
+
         <p>
           Ibland kan en dödsboanmälan ersätta en bouppteckning. Det är personen
           som har ansvaret för att se till att en bouppteckning förrättas som

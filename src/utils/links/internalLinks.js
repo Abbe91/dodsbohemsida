@@ -126,6 +126,22 @@ export const internallinks = [
   {
     path: "flyttstadning-dodsbo-boras",
     title: "Flyttstädning dödsbo Borås"
+  },
+  {
+    path: "/stadar-dodsbo-alingsas",
+    title: "Städar dödsbo Alingsås"
+  },
+  {
+    path: "/koper-dodsbo-alingsas",
+    title: "Köper dödsbo Alingsås"
+  },
+  {
+    path: "/tomma-dodsbo-alingsas",
+    title: "Tömma dödsbo Alingsås"
+  },
+  {
+    path: "/vardera-dodsbo-alingsas",
+    title: "Värdera dödsbo Alingsås"
   }
 ];
 
