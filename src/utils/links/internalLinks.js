@@ -400,5 +400,9 @@ export const fleromrodenLinks = [
   {
     path: "flyttstadning-i-kungalv",
     title: "Flyttstädning i Kungälv"
+  },
+  {
+    path: "/bohagsflytt",
+    title: "Bohagsflytt"
   }
 ];
