@@ -17,22 +17,22 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Bortforslingdodsbotrollhattan = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Bortforsling dödsbo Trollhättan";
+  const mainquery = "Bortforsling av dödsbo Trollhättan";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo Trollhättan",
-    metaContent: "Bortforsling dödsbo Trollhättan",
-    query: "Bortforsling dödsbo Trollhättan",
-    formTitle: "Bortforsling dödsbo Trollhättan",
+    metaTitle: "Bortforsling av dödsbo Trollhättan",
+    metaContent: "Bortforsling av dödsbo Trollhättan",
+    query: "Bortforsling av dödsbo Trollhättan",
+    formTitle: "Bortforsling av dödsbo Trollhättan",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Trollhättan",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ och bortforsling av dödsbo i Trollhättan",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Trollhättan";
+    "uppköp, tömning, sanering, luktsanering, flytt, städning, försäljning och bortforsling av dödsbo i Trollhättan";
   const element = useSelector(getElement);
   useEffect(() => {
     document

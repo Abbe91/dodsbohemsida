@@ -56,7 +56,8 @@ const locales = [
   { id: 51, city: "Hjällbo" },
   { id: 52, city: "Majorna" },
   { id: 53, city: "Askim" },
-  { id: 54, city: "Hovås" }
+  { id: 54, city: "Hovås" },
+  { id: 60, city: "Ulricehamn" }
 ];
 const useStyles = makeStyles({
   root: {
@@ -67,7 +68,7 @@ const useStyles = makeStyles({
   card: {
     width: "355px",
     margin: "1rem 1rem",
-    height: "400px"
+    height: "460px"
   }
 });
 const Seo = () => {

@@ -77,8 +77,8 @@ const Nav = () => {
           {navlinks.map((link) => {
             if (link.path) {
               return (
-                <Link
-                  to={link.path}
+                <button
+                  key={link.id}
                   style={{
                     background: "transparent",
                     border: "navajowhite",
@@ -88,10 +88,11 @@ const Nav = () => {
                     marginRight: " 0.75rem",
                     opacity: 0.8
                   }}
-                  key={link.id}
                 >
-                  {link.label}
-                </Link>
+                  <Link to={link.path} style={{ color: "white" }}>
+                    {link.label}
+                  </Link>
+                </button>
               );
             } else {
               return (
@@ -114,8 +115,7 @@ const Nav = () => {
           {navlinks.map((link, i) => {
             if (link.path) {
               return (
-                <Link
-                  to={link.path}
+                <button
                   style={{
                     background: "transparent",
                     border: "none",
@@ -125,8 +125,14 @@ const Nav = () => {
                   }}
                   key={link.id}
                 >
-                  {link.label}
-                </Link>
+                  <Link
+                    to={link.path}
+                    style={{ color: "black" }}
+                    className="nav-menu-link"
+                  >
+                    {link.label}
+                  </Link>
+                </button>
               );
             } else {
               return (

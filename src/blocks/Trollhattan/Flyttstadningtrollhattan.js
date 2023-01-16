@@ -26,13 +26,13 @@ const Flyttstadningtrollhattan = ({ videoText }) => {
     query: "Flyttstädning Trollhättan",
     formTitle: "Flyttstädning Trollhättan",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Trollhättan",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Trollhättan",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Trollhättan";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, försäljning och flyttstädning av dödsbo i Trollhättan";
   const element = useSelector(getElement);
   useEffect(() => {
     document

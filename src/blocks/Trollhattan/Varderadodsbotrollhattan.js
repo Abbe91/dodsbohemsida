@@ -26,13 +26,13 @@ const Varderadodsbotrollhattan = ({ videoText }) => {
     query: "Värdera dödsbo Trollhättan",
     formTitle: "Värdera dödsbo Trollhättan",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Trollhättan",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Trollhättan",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Trollhättan";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning, värdering av dödsbo i Trollhättan";
   const element = useSelector(getElement);
   useEffect(() => {
     document
