@@ -404,5 +404,9 @@ export const fleromrodenLinks = [
   {
     path: "/bohagsflytt",
     title: "Bohagsflytt"
+  },
+  {
+    path: "/vardera-dodsbo",
+    title: "Värdera dödsbo"
   }
 ];

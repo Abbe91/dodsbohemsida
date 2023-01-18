@@ -176,7 +176,7 @@ export const customerReviews = [
     id: 166463,
     service: "Flyttstädning i Göteborg",
     kund: "Janne Jansson",
-    path: "/flyttstadning-goteborg",
+    path: "/flyttstadning-i-goteborg",
     comment:
       "Vi fick hjälp med att röja vårt dödsbo och sen gjorde Dödsbo Jouren flyttstädning av dödsboet. Enkel kommunikation och smidigt."
   },

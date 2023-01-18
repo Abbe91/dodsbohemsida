@@ -41,8 +41,8 @@ const Kostnadsfri = ({ vad, text }) => {
         <h1>Kostnadsfri {vad}</h1>
         <p>
           För att vi skall kunna ge dig ett så ärligt pris som möjligt för ditt
-          bohag, dödsbo, lösöre eller våra tjänster så erbjuder vi ett
-          kostnadsfritt besök för dödsbo eller bohag.
+          bohag, dödsbo, lösöre eller våra tjänster så erbjuder vi en
+          kostnadsfri värdering av ditt dödsbo eller bohag.
         </p>
         <form ref={form}>
           <h2 style={{ marginBottom: "0.5rem" }}>Vill du veta mer?</h2>

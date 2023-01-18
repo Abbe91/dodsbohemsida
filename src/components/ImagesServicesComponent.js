@@ -8,6 +8,7 @@ import dodsboanmalan from "../utils/images/seoimages/dödsboanmälan.jpg";
 import foretagkoperbohag from "../utils/images/seoimages/företag-köper-bohag.jpg";
 import stadningavdodsbo from "../utils/images/seoimages/städning-av-dödsbo.jpg";
 import tomningavdodsbo from "../utils/images/seoimages/tömning-av-dödsbo.jpg";
+import varderadodsbo from "../utils/images/värdera-dödsbo.jpg";
 const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",
@@ -38,12 +39,10 @@ const useStyles = makeStyles({
 });
 const images = [
   { url: dodsbokopes, text: "Dödsbo köpes", path: "/dodsbo-kopes" },
-  { url: dodsbosaljes, text: "Dödsbo säljes", path: "/salja-dodsbo" },
-  { url: dodsboanmalan, text: "Dödsboanmälan", path: "/dodsboanmalan" },
   {
-    url: foretagkoperbohag,
-    text: "Företag köper bohag",
-    path: "/foretag-som-koper-bohag"
+    url: varderadodsbo,
+    text: "Värdera dödsbo",
+    path: "/vardera-dodsbo"
   },
   {
     url: stadningavdodsbo,
@@ -54,6 +53,13 @@ const images = [
     url: tomningavdodsbo,
     text: "Tömning av dödsbo",
     path: "/tomning-av-dodsbo"
+  },
+  { url: dodsbosaljes, text: "Dödsbo säljes", path: "/salja-dodsbo" },
+  { url: dodsboanmalan, text: "Dödsboanmälan", path: "/dodsboanmalan" },
+  {
+    url: foretagkoperbohag,
+    text: "Företag köper bohag",
+    path: "/foretag-som-koper-bohag"
   }
 ];
 const ImagesServicesComponent = () => {

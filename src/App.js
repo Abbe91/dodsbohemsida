@@ -322,6 +322,7 @@ const App = () => {
     import("./blocks/alingsas/Varderadodsboalingsas")
   );
   const Bohagsflytt = lazy(() => import("./blocks/flytt/Bohagsflytt"));
+  const Varderadodsbo = lazy(() => import("./components/Varderadodsbo"));
   //
   //
   const dispatch = useDispatch();
@@ -397,6 +398,10 @@ const App = () => {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/vardera-dodsbo"
+              element={<Varderadodsbo videoText={contentData?.videoText} />}
             />
             <Route
               path="/bohagsflytt"

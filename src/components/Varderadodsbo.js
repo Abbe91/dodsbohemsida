@@ -1,46 +1,43 @@
 import React, { useEffect, useState } from "react";
-import MainComp from "../../components/MainComp/MainComp";
+import MainComp from "./MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
-import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
+import { getCustomerData } from "../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
-import AboutUs from "../../components/AboutUs/AboutUs";
-import Tips from "../../components/Tips/Tips";
-import Nav from "../../components/Nav/Nav";
-import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
-import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
-import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
+import AboutUs from "../components/AboutUs/AboutUs";
+import Tips from "../components/Tips/Tips";
+import Nav from "../components/Nav/Nav";
+import Erbjuder from "../components/Erbjuder/Erbjuder";
+import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
+import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
-import LottieBooking from "../../LottieAnimation/LottieBooking";
-import booking from "../../utils/animation/booking.json";
-import BookingModal from "../../components/BookingModal";
-
-const Home = ({ videoText }) => {
+import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import LottieBooking from "../LottieAnimation/LottieBooking";
+import booking from "../utils/animation/booking.json";
+import BookingModal from "../components/BookingModal";
+const Varderadodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "dödsbo eller bohag";
+  const mainquery = "Värdera dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Dödsbo eller bohag",
-    metaContent: "Dödsbo eller bohag",
-    query: "Dödsbo eller bohag",
-    formTitle: "Dödsbo eller bohag",
+    metaTitle: "Värdera dödsbo",
+    metaContent: "Värdera dödsbo",
+    query: "Värdera dödsbo",
+    formTitle: "Värdera dödsbo",
     subTitle2:
-      "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, sanering, luktsanering, flytt, städning, försäljning, bortforsling, och värdering av dödsbo.";
   const element = useSelector(getElement);
   useEffect(() => {
     document
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
-
   return (
     <div>
       <Helmet>
@@ -70,27 +67,26 @@ const Home = ({ videoText }) => {
       <div className="Om">
         <AboutUs
           query={mainquery.toUpperCase()}
-          oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig med ditt ${mainquery}?`}
+          oss={`Vilka är vi? Och hur gör vi för att kunna hjälpa dig ${mainquery}?`}
           om={`är det självklara valet för hantering av bohag och dödsbo med 20 års erfarenhet.`}
         />
-      </div>
-      <div className="Tjänster">
-        <Erbjuder />
       </div>
       {newsData && (
         <div className="Tips">
           <Tips query={mainquery.toUpperCase()} newsData={newsData} />
         </div>
       )}
+      <div className="Tjänster">
+        <Erbjuder />
+      </div>
 
       <div className="booking-lottie">
         <div className="booking-content">
           <h2>Hjälp {mainquery}?</h2>
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
-            dig som kund med ditt {mainquery}. Besöket/genomgången tar ca 45min
-            och du som kund får en offert på plats om hur vi kan hjälpa dig med
-            ditt
+            dig som kund med att {mainquery}. Besöket/genomgången tar ca 45min
+            och du som kund får en offert på plats om hur vi kan hjälpa dig
             <strong style={{ fontWeight: "700" }}> {mainquery}.</strong>
           </h4>
           <button
@@ -109,7 +105,7 @@ const Home = ({ videoText }) => {
 
       <div className="Kostnadsfri">
         <Kostnadsfri
-          vad={"genomgång"}
+          vad={"Värdering"}
           mainquery={mainquery}
           text={`${videoText}${mainquery}.`}
         />
@@ -118,4 +114,4 @@ const Home = ({ videoText }) => {
   );
 };
 
-export default Home;
+export default Varderadodsbo;
