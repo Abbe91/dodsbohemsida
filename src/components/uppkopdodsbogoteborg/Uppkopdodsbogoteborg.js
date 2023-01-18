@@ -17,7 +17,7 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../BookingModal";
 const Uppkopdodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "uppköp dödsbo Göteborg";
+  const mainquery = "Uppköp dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
