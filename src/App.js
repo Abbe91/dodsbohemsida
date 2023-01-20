@@ -323,6 +323,12 @@ const App = () => {
   );
   const Bohagsflytt = lazy(() => import("./blocks/flytt/Bohagsflytt"));
   const Varderadodsbo = lazy(() => import("./components/Varderadodsbo"));
+  const Bortforslingdodsbo = lazy(() =>
+    import("./components/Bortforslingdodsbo")
+  );
+  const Saneradodsbo = lazy(() => import("./components/Saneradodsbo"));
+  const Flytta = lazy(() => import("./components/Flytta"));
+  const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
   //
   //
   const dispatch = useDispatch();
@@ -398,6 +404,24 @@ const App = () => {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/salja-dodsbo/salja-dodsbo"
+              element={<SaljaDodsbon videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/sanera-dodsbo"
+              element={<Saneradodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/bohagsflytt"
+              element={<Flytta videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/bortforsling-dodsbo"
+              element={
+                <Bortforslingdodsbo videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/vardera-dodsbo"

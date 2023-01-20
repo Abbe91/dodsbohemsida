@@ -4,6 +4,7 @@ import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import ServicesIconsComp from "../ServicesIconsComp";
 const MainComp = ({
   query,
   formTitle,
@@ -229,6 +230,7 @@ const MainComp = ({
           </div>
         </form>
       </div>
+      <ServicesIconsComp />
     </section>
   );
 };

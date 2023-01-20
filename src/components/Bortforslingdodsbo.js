@@ -14,24 +14,24 @@ import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
-const Varderadodsbo = ({ videoText }) => {
+const Bortforslingdodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "värdera dödsbo";
+  const mainquery = "bortforsling dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo",
-    metaContent: "Värdera dödsbo",
-    query: "Värdera dödsbo",
-    formTitle: "Värdera dödsbo",
+    metaTitle: "Bortforsling dödsbo",
+    metaContent: "Bortforsling dödsbo",
+    query: "Bortforsling dödsbo",
+    formTitle: "Bortforsling dödsbo",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ värdering och bortforsling av dödsbo.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, sanering, luktsanering, flytt, städning, försäljning, bortforsling, och värdering av dödsbo.";
+    "uppköp, tömning, sanering, luktsanering, flytt, städning, försäljning, värdering och bortforsling av dödsbo.";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -114,4 +114,4 @@ const Varderadodsbo = ({ videoText }) => {
   );
 };
 
-export default Varderadodsbo;
+export default Bortforslingdodsbo;
