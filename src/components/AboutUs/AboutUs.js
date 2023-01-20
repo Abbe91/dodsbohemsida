@@ -52,7 +52,7 @@ const AboutUs = ({ query, oss, om }) => {
         </p>
         <h5>Vi köper, tömmer, städar och säljer dödsbon </h5>
         <p
-          style={{ maxWidth: "800px", fontSize: "0.9rem", lineHeight: "25PX" }}
+          style={{ maxWidth: "800px", fontSize: "0.9rem", lineHeight: "27px" }}
         >
           När du behöver hjälp med att sälja ditt dödsbo,{" "}
           <a
