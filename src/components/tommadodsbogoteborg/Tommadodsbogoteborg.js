@@ -32,9 +32,9 @@ const Tommadodsbogoteborg = ({ videoText }) => {
       "Behöver du professionell hjälp med att tömma dödsbo eller bohag?"
   });
   const customerData = useSelector(getCustomerData);
-  const mainquery = "tömma dödsbo i göteborg";
+  const mainquery = "tömma dödsbo i Göteborg";
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, bortforsling, sanering, luktsanering, flytt, städ, försäljning, och tömning av dödsbo och bohag i Göteborg";
   const element = useSelector(getElement);
   useEffect(() => {
     document
