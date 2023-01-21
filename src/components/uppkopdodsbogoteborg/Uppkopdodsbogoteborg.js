@@ -17,17 +17,18 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../BookingModal";
 const Uppkopdodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Uppköp dödsbo Göteborg";
+  const mainquery = "uppköp dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+    query: "Uppköp dödsbo Göteborg",
     metaContent:
       "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
