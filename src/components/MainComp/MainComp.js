@@ -67,9 +67,9 @@ const MainComp = ({
               <p> {icon}</p>
             </div>
             <h5 style={{ maxWidth: "400px", marginBottom: "1.5rem" }}>
-              Din auktoriserade hanterare av dödsbo, bohag, uppköp av dödsbon,
-              försäljning av dödsbo, tömning av dödsbo, bortforsling av dödsbo,
-              sanering av dödsbo, flytt och städning av dödsbo.
+              Auktoriserade firma som hanterare dödsbon, bohag, uppköp
+              försäljning, tömning, bortforsling, sanering, flytt och städning
+              av dödsbon och bohag.
             </h5>
             <div>
               <h2>{subTitle3}</h2>
