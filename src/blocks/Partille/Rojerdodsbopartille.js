@@ -17,7 +17,7 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Rojerdodsbopartille = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Röjer dödsbo Partille";
+  const mainquery = "röjer dödsbo Partille";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
@@ -32,7 +32,7 @@ const Rojerdodsbopartille = ({ videoText }) => {
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning, röjning av dödsbo i Partille";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -57,7 +57,7 @@ const Rojerdodsbopartille = ({ videoText }) => {
           subTitle={`Välkommen till ${customerData.business}`}
           subTitle2={content.subTitle2}
           subTitle3={content.subTitle3}
-          text={`Behöver du hjälp med ${mainquery}? Då är vi på ${customerData.business} det självklara valet. Vi är en firma som verkligen kan allt kring ${mainquery}. Vi kan också hjälpa dig med ${services} och vi erbjuder en full helhetslösning med målet att ge det bästa valet för dig och din plånbok. Som kund hos har du allt samlat hos ett och samma företag.`}
+          text={`Behöver du hjälp med ${mainquery}? Då är vi på ${customerData.business} det självklara valet. Vi är en firma som verkligen kan allt kring ${mainquery}. Vi kan också hjälpa dig med ${services}. Vi erbjuder en full helhetslösning med målet att ge det bästa valet för dig och din plånbok. Som kund hos har du allt samlat hos ett och samma företag.`}
           subTitle4={`Helhetslösning för ${mainquery}`}
           text1={`Vårt företag har varit i branschen i över 20år. Vi har flera samarbeten med auktionsfirmor, olika typer va hjälp boenden, och hjälp organisationer. Vi skänker lösöre och möbler samt sorterar och och värnar om miljön`}
           subTitle5={"Våra tjänster"}

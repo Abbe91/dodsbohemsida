@@ -17,7 +17,7 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Stadadodsbopartille = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Städa dödsbo Partille";
+  const mainquery = "städa dödsbo Partille";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
@@ -26,13 +26,13 @@ const Stadadodsbopartille = ({ videoText }) => {
     query: "Städa dödsbo Partille",
     formTitle: "Städa dödsbo Partille",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Partille",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, försäljning och städning av dödsbo i Partille";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -57,7 +57,7 @@ const Stadadodsbopartille = ({ videoText }) => {
           subTitle={`Välkommen till ${customerData.business}`}
           subTitle2={content.subTitle2}
           subTitle3={content.subTitle3}
-          text={`Behöver du hjälp med ${mainquery}? Då är vi på ${customerData.business} det självklara valet. Vi är en firma som verkligen kan allt kring ${mainquery}. Vi kan också hjälpa dig med ${services} och vi erbjuder en full helhetslösning med målet att ge det bästa valet för dig och din plånbok. Som kund hos har du allt samlat hos ett och samma företag.`}
+          text={`Behöver du hjälp med ${mainquery}? Då är vi på ${customerData.business} det självklara valet. Vi är en firma som verkligen kan allt kring ${mainquery}. Vi kan också hjälpa dig med ${services}. Vi erbjuder en full helhetslösning med målet att ge det bästa valet för dig och din plånbok. Som kund hos har du allt samlat hos ett och samma företag.`}
           subTitle4={`Helhetslösning för ${mainquery}`}
           text1={`Vårt företag har varit i branschen i över 20år. Vi har flera samarbeten med auktionsfirmor, olika typer va hjälp boenden, och hjälp organisationer. Vi skänker lösöre och möbler samt sorterar och och värnar om miljön`}
           subTitle5={"Våra tjänster"}
