@@ -67,7 +67,7 @@ const MainComp = ({
               <p> {icon}</p>
             </div>
             <h5 style={{ maxWidth: "400px", marginBottom: "1.5rem" }}>
-              Auktoriserad firma som hanterar dödsbon, bohag, uppköp
+              Auktoriserad firma som hanterar dödsbon, bohag, uppköp,
               försäljning, tömning, bortforsling, sanering, flytt och städning
               av dödsbon och bohag.
             </h5>
