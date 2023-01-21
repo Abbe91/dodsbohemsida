@@ -88,7 +88,7 @@ const useStyles = makeStyles({
   },
   btnContainer: {
     textAlign: "center",
-    margin: "1.2rem 0.3rem"
+    margin: "1.2rem 0.2rem"
   },
   root: {
     padding: "2rem"

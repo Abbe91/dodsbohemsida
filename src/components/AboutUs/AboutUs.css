@@ -5,6 +5,7 @@
   text-align: center;
   justify-content: space-between;
   color: #64748b;
+  transition: all 0.3s linear;
 }
 .aboutUs h1 {
   font-size: 1.8rem;

@@ -7,8 +7,10 @@ import GoogleMapReact from "google-map-react";
 import { HiLocationMarker } from "react-icons/hi";
 import mapStyles from "../../utils/mapStyles";
 import emailjs from "@emailjs/browser";
+import { ArrowForwardIos, Close } from "@material-ui/icons";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
+  const [readMore, setReadMore] = useState(false);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const form = useRef();
@@ -38,7 +40,10 @@ const AboutUs = ({ query, oss, om }) => {
 
   return (
     <div className="aboutUs">
-      <div className="aboutUs-info" style={{ maxWidth: "90%" }}>
+      <div
+        className="aboutUs-info"
+        style={{ maxWidth: "90%", transition: "all 0.3s linear" }}
+      >
         <h1 style={{ color: "#0369a1" }}>{query}</h1>
         <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
         <p
@@ -52,7 +57,14 @@ const AboutUs = ({ query, oss, om }) => {
         </p>
         <h5>Vi köper, tömmer, städar och säljer dödsbon </h5>
         <p
-          style={{ maxWidth: "800px", fontSize: "0.9rem", lineHeight: "27px" }}
+          style={{
+            maxWidth: "800px",
+            fontSize: "0.9rem",
+            lineHeight: "27px",
+            height: readMore ? "100%" : "140px",
+            overflow: !readMore && "scroll",
+            transition: "all 0.3s linear"
+          }}
         >
           När du behöver hjälp med att sälja ditt dödsbo,{" "}
           <a
@@ -93,8 +105,45 @@ const AboutUs = ({ query, oss, om }) => {
           </a>{" "}
           och sedan få dödsboet städat. Vi samarbetar med många auktionsfirmor
           och kan hjälpa er med att sälja lösöre som är av större värde. Vi kan
-          även vara behjälpliga med bouppteckningen av dösboet.
+          även vara behjälpliga med bouppteckningen av dödsboet.
         </p>
+        {!readMore && (
+          <p
+            onClick={() => setReadMore(!readMore)}
+            style={{
+              border: "none",
+              color: "#0369a1",
+              background: "transparent",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              fontSize: "0.85rem"
+            }}
+          >
+            Läs mer
+            <ArrowForwardIos style={{ fontSize: "0.9rem" }} />
+          </p>
+        )}
+        {readMore && (
+          <p
+            onClick={() => setReadMore(!readMore)}
+            style={{
+              border: "none",
+              color: "#0369a1",
+              background: "transparent",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              fontSize: "0.85rem"
+            }}
+          >
+            Stäng
+            <Close />
+          </p>
+        )}
+
         <div>
           <form ref={form}>
             <AiOutlineMail
