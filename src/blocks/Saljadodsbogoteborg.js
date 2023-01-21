@@ -26,13 +26,13 @@ const Saljadodsbogoteborg = ({ videoText }) => {
     query: "Sälja dödsbo Göteborg",
     formTitle: "Sälja dödsbo Göteborg",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Göteborg",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning och försäljning av dödsbo i Göteborg";
   const element = useSelector(getElement);
   useEffect(() => {
     document

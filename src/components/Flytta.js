@@ -31,7 +31,7 @@ const Flytta = ({ videoText }) => {
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, sanering, luktsanering, städning, försäljning, bortforsling,  värdering och flytt av bohag.";
+    "uppköp, tömning, sanering, luktsanering, städning, försäljning, bortforsling,  värdering och flytt av bohag";
   const element = useSelector(getElement);
   useEffect(() => {
     document
