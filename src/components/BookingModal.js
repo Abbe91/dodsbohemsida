@@ -81,6 +81,7 @@ const BookingModal = ({ modalOpen, setModalOpen }) => {
             border: "1px solid gray"
           }}
           type="date"
+          placeholder="åååå-mm-dd"
           step={3}
           id="date"
           name="date"
