@@ -37,8 +37,8 @@ const BookingModal = ({ modalOpen, setModalOpen }) => {
   const form = useRef();
 
   const handleSubmit = (e) => {
-    setSending(true);
     e.preventDefault();
+    setSending(true);
     emailjs
       .sendForm(
         "service_k835y1d",
@@ -71,11 +71,19 @@ const BookingModal = ({ modalOpen, setModalOpen }) => {
       <h4 className={classes.title}>Boka kostnadsfritt besök / värdering </h4>
       <form ref={form} style={{ textAlign: "center" }}>
         <input
+          style={{
+            width: "80%",
+            marginBottom: "0.5rem",
+            height: "2.4rem",
+            color: "black",
+            background: "transparent",
+            border: "none",
+            border: "1px solid gray"
+          }}
           type="date"
           step={3}
           id="date"
           name="date"
-          className={classes.inputs}
           value={inputValues.date}
           onChange={(e) => setInputValues({ date: e.target.value })}
         />

@@ -329,6 +329,7 @@ const App = () => {
   const Saneradodsbo = lazy(() => import("./components/Saneradodsbo"));
   const Flytta = lazy(() => import("./components/Flytta"));
   const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
+  const BookingModal = lazy(() => import("./components/BookingModal"));
   //
   //
   const dispatch = useDispatch();
@@ -405,6 +406,7 @@ const App = () => {
               path="/"
               element={<Home videoText={contentData?.videoText} />}
             />
+            <Route path="/boka" element={<BookingModal />} />
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}
