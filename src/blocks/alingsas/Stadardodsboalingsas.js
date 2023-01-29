@@ -21,8 +21,10 @@ const Stadardodsboalingsas = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Städar dödsbo Alingsås",
-    metaContent: "Städar dödsbo Alingsås",
+    metaTitle:
+      "Städar dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Alingsås",
+    metaContent:
+      "Städar dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Alingsås",
     query: "Städar dödsbo Alingsås",
     formTitle: "Städar dödsbo Alingsås",
     subTitle2:

@@ -21,18 +21,20 @@ const Stadadodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Städa dödsbo Göteborg",
-    metaContent: "Städa dödsbo Göteborg",
+    metaTitle:
+      "Städa dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
+    metaContent:
+      "Städa dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
     query: "Städa dödsbo Göteborg",
     formTitle: "Städa dödsbo Göteborg",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, röjning, bortforsling, sanering, luktsanering, flytt, städa, försäljning av dödsbo och bohag";
+    "uppköp, tömning, röjning, bortforsling, sanering, luktsanering, flytt, städa, försäljning och städning av dödsbo i Göteborg";
   const element = useSelector(getElement);
   useEffect(() => {
     document

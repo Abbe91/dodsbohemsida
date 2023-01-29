@@ -21,8 +21,10 @@ const Varderadodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Borås",
-    metaContent: "Värdera dödsbo Borås",
+    metaTitle:
+      "Värdera dödsbo Borås. Din auktoriserade hanterare av dödsbo, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Borås",
+    metaContent:
+      "Värdera dödsbo Borås. Din auktoriserade hanterare av dödsbo, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Borås",
     query: "Värdera dödsbo Borås",
     formTitle: "Värdera dödsbo Borås",
     subTitle2:

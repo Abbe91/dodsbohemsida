@@ -21,12 +21,14 @@ const UppkopAvDodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Uppköp av dödsbo",
-    metaContent: "Uppköp av dödsbo",
+    metaTitle:
+      "Uppköp av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo.",
+    metaContent:
+      "Uppköp av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo.",
     query: "Uppköp av dödsbo",
     formTitle: "Uppköp av dödsbo",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

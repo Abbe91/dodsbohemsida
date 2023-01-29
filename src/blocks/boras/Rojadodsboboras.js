@@ -21,8 +21,10 @@ const Rojadodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Röja dödsbo Borås",
-    metaContent: "Röja dödsbo Borås",
+    metaTitle:
+      "Röja dödsbo Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Borås",
+    metaContent:
+      "Röja dödsbo Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Borås",
     query: "Röja dödsbo Borås",
     formTitle: "Röja dödsbo Borås",
     subTitle2:

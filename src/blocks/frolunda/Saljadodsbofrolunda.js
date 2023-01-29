@@ -21,18 +21,20 @@ const Saljadodsbofrolunda = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Sälja dödsbo Frölunda",
-    metaContent: "Sälja dödsbo Frölunda",
+    metaTitle:
+      "Sälja dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Frölunda",
+    metaContent:
+      "Sälja dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Frölunda",
     query: "Sälja dödsbo Frölunda",
     formTitle: "Sälja dödsbo Frölunda",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Frölunda",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Frölunda",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, flytt, städ, värdering och försäljning av dödsbo i Frölunda";
   const element = useSelector(getElement);
   useEffect(() => {
     document

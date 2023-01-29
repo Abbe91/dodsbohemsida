@@ -21,8 +21,10 @@ const Flyttstadninggoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Flyttstädning i Göteborg",
-    metaContent: "Flyttstädning i Göteborg",
+    metaTitle:
+      "Flyttstädning i Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Göteborg",
+    metaContent:
+      "Flyttstädning i Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Göteborg",
     query: "Flyttstädning i Göteborg",
     formTitle: "Flyttstädning i Göteborg",
     subTitle2:

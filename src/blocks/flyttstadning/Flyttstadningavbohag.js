@@ -21,9 +21,11 @@ const Flyttstadningavbohag = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Flyttstädning av bohag",
+    metaTitle:
+      "Flyttstädning av bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av bohag",
     metaContent: "Flyttstädning av bohag",
-    query: "Flyttstädning av bohag",
+    query:
+      "Flyttstädning av bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av bohag",
     formTitle: "Flyttstädning av bohag",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av bohag",

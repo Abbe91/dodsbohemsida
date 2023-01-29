@@ -21,18 +21,20 @@ const Bortforslingdodsboale = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo Ale",
-    metaContent: "Bortforsling dödsbo Ale",
+    metaTitle:
+      "Bortforsling dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Ale",
+    metaContent:
+      "Bortforsling dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Ale",
     query: "Bortforsling dödsbo Ale",
     formTitle: "Bortforsling dödsbo Ale",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ale",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Ale",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och bortforsling av dödsbo i Ale";
   const element = useSelector(getElement);
   useEffect(() => {
     document

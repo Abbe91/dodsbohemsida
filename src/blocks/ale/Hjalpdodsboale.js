@@ -21,8 +21,10 @@ const Hjalpdodsboale = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Hjälp dödsbo Ale",
-    metaContent: "Hjälp dödsbo Ale",
+    metaTitle:
+      "Hjälp dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ale",
+    metaContent:
+      "Hjälp dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ale",
     query: "Hjälp dödsbo Ale",
     formTitle: "Hjälp dödsbo Ale",
     subTitle2:

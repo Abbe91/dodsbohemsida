@@ -21,12 +21,14 @@ const Bortforslinghisingen = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo Hisingen",
-    metaContent: "Bortforsling dödsbo Hisingen",
+    metaTitle:
+      "Bortforsling dödsbo Hisingen. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och bortforsling av dödsbo i Hisingen",
+    metaContent:
+      "Bortforsling dödsbo Hisingen. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och bortforsling av dödsbo i Hisingen",
     query: "Bortforsling dödsbo Hisingen",
     formTitle: "Bortforsling dödsbo Hisingen",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och bortforsling av dödsbo i Hisingen",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

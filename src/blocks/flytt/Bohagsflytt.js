@@ -20,8 +20,10 @@ const Bohagsflytt = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bohagsflytt",
-    metaContent: "Bohagsflytt",
+    metaTitle:
+      "Bohagsflytt. Din auktoriserade hanterare av bohagsflytt, flytt av lägenheter, flytt av hus. Vi forslar bort och tömmer även hus och lägenheter",
+    metaContent:
+      "Bohagsflytt. Din auktoriserade hanterare av bohagsflytt, flytt av lägenheter, flytt av hus. Vi forslar bort och tömmer även hus och lägenheter",
     query: "Bohagsflytt",
     formTitle: "Bohagsflytt",
     subTitle2:
@@ -31,7 +33,7 @@ const Bohagsflytt = ({ videoText }) => {
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "flytt, tömning, bortforsling, sanering, uppköp av lösöre, städning och värdering av dödsbo & bohag.";
+    "bohagsflytt, tömning, bortforsling, sanering, uppköp av lösöre, städning och flytt av bohag.";
   const element = useSelector(getElement);
   useEffect(() => {
     document

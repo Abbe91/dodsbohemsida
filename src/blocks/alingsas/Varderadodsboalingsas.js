@@ -21,8 +21,10 @@ const Varderadodsboalingsas = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Alingsås",
-    metaContent: "Värdera dödsbo Alingsås",
+    metaTitle:
+      "Värdera dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning,  bortforsling, sanering, flytt, städning, tömning och värdering av dödsbo i Alingsås",
+    metaContent:
+      "Värdera dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning,  bortforsling, sanering, flytt, städning, tömning och värdering av dödsbo i Alingsås",
     query: "Värdera dödsbo Alingsås",
     formTitle: "Värdera dödsbo Alingsås",
     subTitle2:

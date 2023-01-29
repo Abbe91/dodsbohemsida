@@ -21,8 +21,10 @@ const Koperdodsboalingsas = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Köper dödsbo Alingsås",
-    metaContent: "Köper dödsbo Alingsås",
+    metaTitle:
+      "Köper dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Alingsås",
+    metaContent:
+      "Köper dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Alingsås",
     query: "Köper dödsbo Alingsås",
     formTitle: "Köper dödsbo Alingsås",
     subTitle2:

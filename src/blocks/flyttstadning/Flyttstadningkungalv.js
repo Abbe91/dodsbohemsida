@@ -21,8 +21,10 @@ const Flyttstadningkungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Flyttstädning i Kungälv",
-    metaContent: "Flyttstädning i Kungälv",
+    metaTitle:
+      "Flyttstädning i Kungälv. uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Kungälv",
+    metaContent:
+      "Flyttstädning i Kungälv. uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Kungälv",
     query: "Flyttstädning i Kungälv",
     formTitle: "Flyttstädning i Kungälv",
     subTitle2:

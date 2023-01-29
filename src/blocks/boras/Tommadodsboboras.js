@@ -21,8 +21,10 @@ const Tommadodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömma dödsbo Borås",
-    metaContent: "Tömma dödsbo Borås",
+    metaTitle:
+      "Tömma dödsbo Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo  i Borås",
+    metaContent:
+      "Tömma dödsbo Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo  i Borås",
     query: "Tömma dödsbo Borås",
     formTitle: "Tömma dödsbo Borås",
     subTitle2:

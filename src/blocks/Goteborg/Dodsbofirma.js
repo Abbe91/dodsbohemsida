@@ -21,8 +21,10 @@ const Dodsbofirma = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Dödsbo firma",
-    metaContent: "Dödsbo firma",
+    metaTitle:
+      "Dödsbo firma. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+    metaContent:
+      "Dödsbo firma. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     query: "Dödsbo firma",
     formTitle: "Dödsbo firma",
     subTitle2:

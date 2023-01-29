@@ -21,12 +21,14 @@ const Foretagsomkoperbohag = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Företag som köper bohag",
-    metaContent: "Företag som köper bohag",
+    metaTitle:
+      "Företag som köper bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
+    metaContent:
+      "Företag som köper bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
     query: "Företag som köper bohag",
     formTitle: "Företag som köper bohag",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
