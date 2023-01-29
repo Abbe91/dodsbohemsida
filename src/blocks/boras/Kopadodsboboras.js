@@ -26,13 +26,13 @@ const Kopadodsboboras = ({ videoText }) => {
     query: "Köpa dödsbo Borås",
     formTitle: "Köpa dödsbo Borås",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Borås",
+      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Borås",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning och uppköp av dödsbo i Borås";
   const element = useSelector(getElement);
   useEffect(() => {
     document

@@ -26,13 +26,13 @@ const Flyttstadningdodsboboras = ({ videoText }) => {
     query: "Flyttstädning dödsbo Borås",
     formTitle: "Flyttstädning dödsbo Borås",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Borås",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av dödsbo i Borås",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, flytt, försäljning och flyttstädning av dödsbo i Borås";
   const element = useSelector(getElement);
   useEffect(() => {
     document
