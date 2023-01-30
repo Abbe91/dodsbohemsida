@@ -20,8 +20,10 @@ const Varderadodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo",
-    metaContent: "Värdera dödsbo",
+    metaTitle:
+      "Värdera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
+    metaContent:
+      "Värdera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
     query: "Värdera dödsbo",
     formTitle: "Värdera dödsbo",
     subTitle2:

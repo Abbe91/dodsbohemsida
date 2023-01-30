@@ -21,8 +21,10 @@ const Hjalpdodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Hjälp dödsbo Göteborg",
-    metaContent: "Hjälp dödsbo Göteborg",
+    metaTitle:
+      "Hjälp dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Götebor",
+    metaContent:
+      "Hjälp dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Götebor",
     query: "Hjälp dödsbo Göteborg",
     formTitle: "Hjälp dödsbo Göteborg",
     subTitle2:

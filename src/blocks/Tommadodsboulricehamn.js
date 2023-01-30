@@ -21,8 +21,10 @@ const Tommadodsboulricehamn = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömma dödsbo Ulricehamn",
-    metaContent: "Tömma dödsbo Ulricehamn",
+    metaTitle:
+      "Tömma dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+    metaContent:
+      "Tömma dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
     query: "Tömma dödsbo Ulricehamn",
     formTitle: "Tömma dödsbo Ulricehamn",
     subTitle2:

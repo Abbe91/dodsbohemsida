@@ -16,11 +16,13 @@ import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
 const Saneradodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "sanera dödsbo";
+  const mainquery =
+    "sanera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, flytt, städ, bortforsling, värderingoch sanering av dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Sanera dödsbo",
+    metaTitle:
+      "Sanera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, flytt, städ, bortforsling, värderingoch sanering av dödsbo",
     metaContent: "Sanera dödsbo",
     query: "Sanera dödsbo",
     formTitle: "Sanera dödsbo",

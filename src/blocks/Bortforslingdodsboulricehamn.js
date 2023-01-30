@@ -21,8 +21,10 @@ const Bortforslingdodsboulricehamn = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo Ulricehamn",
-    metaContent: "Bortforsling dödsbo Ulricehamn",
+    metaTitle:
+      "Bortforsling dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+    metaContent:
+      "Bortforsling dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
     query: "Bortforsling dödsbo Ulricehamn",
     formTitle: "Bortforsling dödsbo Ulricehamn",
     subTitle2:

@@ -20,8 +20,10 @@ const Bortforslingdodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo",
-    metaContent: "Bortforsling dödsbo",
+    metaTitle:
+      "Bortforsling dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ värdering och bortforsling av dödsbo",
+    metaContent:
+      "Bortforsling dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ värdering och bortforsling av dödsbo",
     query: "Bortforsling dödsbo",
     formTitle: "Bortforsling dödsbo",
     subTitle2:

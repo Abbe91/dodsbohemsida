@@ -20,8 +20,10 @@ const Flytta = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bohagsflytt",
-    metaContent: "Bohagsflytt",
+    metaTitle:
+      "Bohagsflytt. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, städ, bortforsling, värdering och flytt av bohag",
+    metaContent:
+      "Bohagsflytt. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, städ, bortforsling, värdering och flytt av bohag",
     query: "Bohagsflytt",
     formTitle: "Bohagsflytt",
     subTitle2:
