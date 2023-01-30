@@ -21,18 +21,20 @@ const Rojadodsbomolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Röja dödsbo Mölndal",
-    metaContent: "Röja dödsbo Mölndal",
+    metaTitle:
+      "Röja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Mölndal",
+    metaContent:
+      "Röja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Mölndal",
     query: "Röja dödsbo Mölndal",
     formTitle: "Röja dödsbo Mölndal",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Mölndal",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning och röjning av dödsbo i Mölndal";
   const element = useSelector(getElement);
   useEffect(() => {
     document

@@ -21,18 +21,20 @@ const Kopadodsbomolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Köpa dödsbo Mölndal",
-    metaContent: "Köpa dödsbo Mölndal",
+    metaTitle:
+      "Köpa dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Mölndal",
+    metaContent:
+      "Köpa dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Mölndal",
     query: "Köpa dödsbo Mölndal",
     formTitle: "Köpa dödsbo Mölndal",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Mölndal",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning och uppköp av dödsbo i Mölndal";
   const element = useSelector(getElement);
   useEffect(() => {
     document

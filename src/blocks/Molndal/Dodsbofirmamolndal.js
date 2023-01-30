@@ -21,12 +21,14 @@ const Dodsbofirmamolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Dödsbo firma Mölndal",
-    metaContent: "Dödsbo firma Mölndal",
+    metaTitle:
+      "Dödsbo firma Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Mölndal",
+    metaContent:
+      "Dödsbo firma Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Mölndal",
     query: "Dödsbo firma Mölndal",
     formTitle: "Dödsbo firma Mölndal",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Mölndal",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

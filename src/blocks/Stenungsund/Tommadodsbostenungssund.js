@@ -17,22 +17,22 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Tommadodsbostenungssund = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömma dödsbo Stenungssund";
+  const mainquery = "Tömma dödsbo Stenungsund";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömma dödsbo Stenungssund",
-    metaContent: "Tömma dödsbo Stenungssund",
-    query: "Tömma dödsbo Stenungssund",
-    formTitle: "Tömma dödsbo Stenungssund",
+    metaTitle: "Tömma dödsbo Stenungsund",
+    metaContent: "Tömma dödsbo Stenungsund",
+    query: "Tömma dödsbo Stenungsund",
+    formTitle: "Tömma dödsbo Stenungsund",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning i Stenungsund",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungssund";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungsund";
   const element = useSelector(getElement);
   useEffect(() => {
     document

@@ -21,8 +21,10 @@ const Stadadodsbopartille = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Städa dödsbo Partille",
-    metaContent: "Städa dödsbo Partille",
+    metaTitle:
+      "Städa dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Partille",
+    metaContent:
+      "Städa dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Partille",
     query: "Städa dödsbo Partille",
     formTitle: "Städa dödsbo Partille",
     subTitle2:

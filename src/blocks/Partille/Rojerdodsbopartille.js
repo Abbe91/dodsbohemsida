@@ -21,8 +21,10 @@ const Rojerdodsbopartille = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Röjer dödsbo Partille",
-    metaContent: "Röjer dödsbo Partille",
+    metaTitle:
+      "Röjer dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och röjning av dödsbo i Partille",
+    metaContent:
+      "Röjer dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och röjning av dödsbo i Partille",
     query: "Röjer dödsbo Partille",
     formTitle: "Röjer dödsbo Partille",
     subTitle2:

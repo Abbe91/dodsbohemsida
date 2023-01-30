@@ -21,8 +21,10 @@ const Flyttstadningtrollhattan = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Flyttstädning Trollhättan",
-    metaContent: "Flyttstädning Trollhättan",
+    metaTitle:
+      "Flyttstädning Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Trollhättan",
+    metaContent:
+      "Flyttstädning Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Trollhättan",
     query: "Flyttstädning Trollhättan",
     formTitle: "Flyttstädning Trollhättan",
     subTitle2:

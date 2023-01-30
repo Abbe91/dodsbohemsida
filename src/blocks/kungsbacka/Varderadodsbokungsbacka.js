@@ -21,8 +21,10 @@ const Varderadodsbokungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Kungsbacka",
-    metaContent: "Värdera dödsbo Kungsbacka",
+    metaTitle:
+      "Värdera dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
+    metaContent:
+      "Värdera dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
     query: "Värdera dödsbo Kungsbacka",
     formTitle: "Värdera dödsbo Kungsbacka",
     subTitle2:

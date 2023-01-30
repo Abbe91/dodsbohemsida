@@ -21,18 +21,20 @@ const Varderadodsbostenungssund = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Stenungssund",
-    metaContent: "Värdera dödsbo Stenungssund",
-    query: "Värdera dödsbo Stenungssund",
-    formTitle: "Värdera dödsbo Stenungssund",
+    metaTitle:
+      "Värdera dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Stenungsund",
+    metaContent:
+      "Värdera dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Stenungsund",
+    query: "Värdera dödsbo Stenungsund",
+    formTitle: "Värdera dödsbo Stenungsund",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Stenungsund",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungssund";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungsund";
   const element = useSelector(getElement);
   useEffect(() => {
     document

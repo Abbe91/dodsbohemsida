@@ -17,16 +17,18 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Kopadodsbostenungssund = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Köpa dödsbo Stenungssund";
+  const mainquery = "Köpa dödsbo Stenungsund";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Köpa dödsbo Stenungssund",
-    metaContent: "Köpa dödsbo Stenungssund",
-    query: "Köpa dödsbo Stenungssund",
-    formTitle: "Köpa dödsbo Stenungssund",
+    metaTitle:
+      "Köpa dödsbo Stenungsund.Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Stenungsund",
+    metaContent:
+      "Köpa dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Stenungsund",
+    query: "Köpa dödsbo Stenungsund",
+    formTitle: "Köpa dödsbo Stenungsund",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Stenungsund",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

@@ -21,8 +21,10 @@ const Varderadodsbotrollhattan = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Trollhättan",
-    metaContent: "Värdera dödsbo Trollhättan",
+    metaTitle:
+      "Värdera dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Trollhättan",
+    metaContent:
+      "Värdera dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Trollhättan",
     query: "Värdera dödsbo Trollhättan",
     formTitle: "Värdera dödsbo Trollhättan",
     subTitle2:

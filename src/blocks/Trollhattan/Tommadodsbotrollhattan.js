@@ -21,8 +21,10 @@ const Tommadodsbotrollhattan = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömma dödsbo Trollhättan",
-    metaContent: "Tömma dödsbo Trollhättan",
+    metaTitle:
+      "Tömma dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Trollhättan",
+    metaContent:
+      "Tömma dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Trollhättan",
     query: "Tömma dödsbo Trollhättan",
     formTitle: "Tömma dödsbo Trollhättan",
     subTitle2:

@@ -21,18 +21,20 @@ const Saljadodsbokungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Sälja dödsbo Kungsbacka",
-    metaContent: "Sälja dödsbo Kungsbacka",
+    metaTitle:
+      "Sälja dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Kungsbacka",
+    metaContent:
+      "Sälja dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Kungsbacka",
     query: "Sälja dödsbo Kungsbacka",
     formTitle: "Sälja dödsbo Kungsbacka",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Kungsbacka",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och sälja dödsbo i Kungsbacka";
   const element = useSelector(getElement);
   useEffect(() => {
     document

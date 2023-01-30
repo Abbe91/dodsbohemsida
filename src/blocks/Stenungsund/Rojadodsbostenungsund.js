@@ -21,12 +21,14 @@ const Rojadodsbostenungsund = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Röja dödsbo Stenungssund",
-    metaContent: "Röja dödsbo Stenungssund",
-    query: "Röja dödsbo Stenungssund",
-    formTitle: "Röja dödsbo Stenungssund",
+    metaTitle:
+      "Röja dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning och röjning av dödsbo i Stenungsund",
+    metaContent:
+      "Röja dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning och röjning av dödsbo i Stenungsund",
+    query: "Röja dödsbo Stenungsund",
+    formTitle: "Röja dödsbo Stenungsund",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Partille",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning och röjning av dödsbo i Stenungsund",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
