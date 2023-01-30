@@ -83,7 +83,7 @@ const MainComp = ({
               <h2>{subTitle5}</h2>
               <p style={{ maxWidth: "500px" }}>{text2}</p>
               <p>
-                Behöver du hjälp med att tömma ditt dödsbo eller få ditt dösbo
+                Behöver du hjälp med att tömma ditt dödsbo eller få ditt dödsbo
                 värderat? Vi hjälper dig med hela processen för ditt dödsbo.{" "}
               </p>
             </div>

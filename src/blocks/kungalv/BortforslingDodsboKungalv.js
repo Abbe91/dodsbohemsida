@@ -21,18 +21,20 @@ const BortforslingDodsboKungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling dödsbo Kungälv",
-    metaContent: "Bortforsling dödsbo Kungälv",
+    metaTitle:
+      "Bortforsling dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Kungälv",
+    metaContent:
+      "Bortforsling dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Kungälv",
     query: "Bortforsling dödsbo Kungälv",
     formTitle: "Bortforsling dödsbo Kungälv",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städning och bortforsling av dödsbo i Kungälv",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, sanering, luktsanering, flytt, städning, försäljning och bortforsling av dödsbo i Kungälv";
   const element = useSelector(getElement);
   useEffect(() => {
     document

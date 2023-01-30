@@ -21,18 +21,20 @@ const HamtardodsboKungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Hämtar dödsbo Kungsbacka",
-    metaContent: "Hämtar dödsbo Kungsbacka",
+    metaTitle:
+      "Hämtar dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och hämtar dödsbo i Kungsbacka",
+    metaContent:
+      "Hämtar dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och hämtar dödsbo i Kungsbacka",
     query: "Hämtar dödsbo Kungsbacka",
     formTitle: "Hämtar dödsbo Kungsbacka",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och hämtar dödsbo i Kungsbacka",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning och hämtar dödsbo i Kungsbacka";
   const element = useSelector(getElement);
   useEffect(() => {
     document
