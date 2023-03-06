@@ -24,8 +24,7 @@ const Saljadodsbopartille = ({ videoText }) => {
     metaTitle:
       "Sälja dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städ och försäljning av dödsbo i Partille",
     metaContent: "Sälja dödsbo Partille",
-    query:
-      "Sälja dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städ och försäljning av dödsbo i Partille",
+    query: "Sälja dödsbo Partille",
     formTitle: "Sälja dödsbo Partille",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städ och försäljning av dödsbo i Partille",
