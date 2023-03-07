@@ -11,7 +11,7 @@ nav {
   z-index: 101;
 }
 nav .nav-logo {
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
 }
 .nav-menu {
   position: fixed;

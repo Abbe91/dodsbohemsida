@@ -54,7 +54,7 @@ const MainComp = ({
       <div className="mainComp">
         <div className="main-content-container">
           <div>
-            <h1>{query}</h1>
+            <h2 style={{ marginBottom: "0.5rem" }}>{query}</h2>
             <div
               style={{
                 display: "flex",
