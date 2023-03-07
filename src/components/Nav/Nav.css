@@ -84,7 +84,7 @@ nav .navbar {
   transition: all 0.3s linear;
 }
 .user-contact a:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 .nav-menu button {
   background: transparent;

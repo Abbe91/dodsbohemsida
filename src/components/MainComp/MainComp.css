@@ -77,6 +77,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   color: white;
+  font-family: "";
 }
 .main-content-container div {
   display: flex;
@@ -123,7 +124,7 @@ input:focus {
 
 @media screen and (max-width: 900px) {
   .mainComp {
-    height: 1820px;
+    height: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
