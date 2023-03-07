@@ -66,7 +66,13 @@ const MainComp = ({
               <h4 style={{ marginRight: "0.5rem" }}>{subTitle}</h4>
               <p> {icon}</p>
             </div>
-            <h5 style={{ maxWidth: "400px", marginBottom: "1.5rem" }}>
+            <h5
+              style={{
+                maxWidth: "400px",
+                marginBottom: "1.5rem",
+                fontSize: "0.9rem"
+              }}
+            >
               Auktoriserad firma som hanterar dödsbon, bohag, uppköp,
               försäljning, tömning, bortforsling, sanering, flytt och städning
               av dödsbon och bohag.
