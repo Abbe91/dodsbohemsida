@@ -119,8 +119,7 @@ const MainComp = ({
               borderRadius: "5px",
               width: "80%",
               height: "3rem",
-              textAlign: "center",
-              fontSize: "0.7rem"
+              textAlign: "center"
             }}
             name="beskriv"
           ></textarea>
