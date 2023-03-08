@@ -25,6 +25,10 @@ const Nav = () => {
 
     setShowNav(false);
   };
+  const clickToCall = () => {
+    const today = new Date();
+  };
+
   return (
     <>
       <section className="top-nav" style={{ margin: "0.5rem 0" }}>
@@ -39,7 +43,7 @@ const Nav = () => {
             <p>{customerData.email}</p> */}
           </div>
           <div>
-            <a href={`tel:${customerData.phone}`}>
+            <a href={`tel:${customerData.phone}`} onClick={clickToCall}>
               <Button
                 variant="contained"
                 style={{ background: "#0369a1", color: "white" }}

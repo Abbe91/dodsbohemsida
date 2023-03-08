@@ -16,8 +16,7 @@ import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
 const Saneradodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery =
-    "sanera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, flytt, städ, bortforsling, värderingoch sanering av dödsbo";
+  const mainquery = "Sanera dödsbo";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
