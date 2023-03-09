@@ -327,6 +327,9 @@ const App = () => {
     import("./components/Bortforslingdodsbo")
   );
   const Saneradodsbo = lazy(() => import("./components/Saneradodsbo"));
+  const Koperdodsbogoteborg = lazy(() =>
+    import("./blocks/Goteborg/Koperdodsbogoteborg")
+  );
   const Flytta = lazy(() => import("./components/Flytta"));
   const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
   const BookingModal = lazy(() => import("./components/BookingModal"));
@@ -410,6 +413,12 @@ const App = () => {
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="koper-dodsbo-goteborg"
+              element={
+                <Koperdodsbogoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/sanera-dodsbo"

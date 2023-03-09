@@ -4,6 +4,10 @@ export const internallinks = [
     title: "Tömma dödsbo Göteborg"
   },
   {
+    path: "koper-dodsbo-goteborg",
+    title: "Köper dödsbo Göteborg"
+  },
+  {
     path: "uppkop-dodsbo-goteborg",
     title: "Uppköp dödsbo Göteborg"
   },
