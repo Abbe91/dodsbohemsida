@@ -4,6 +4,7 @@ import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import { useLocation } from "react-router-dom";
 import ServicesIconsComp from "../ServicesIconsComp";
 const MainComp = ({
   query,
@@ -22,6 +23,7 @@ const MainComp = ({
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const customerData = useSelector(getCustomerData);
+  const location = useLocation();
   const form = useRef();
   const handleSubmit = (e) => {
     setSending(true);
@@ -129,7 +131,12 @@ const MainComp = ({
             }}
             name="beskriv"
           ></textarea>
-
+          <input
+            type={"url"}
+            style={{ display: "none" }}
+            value={location?.pathname}
+            name="path"
+          />
           <div
             style={{
               display: "flex",
