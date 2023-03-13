@@ -27,6 +27,7 @@ const App = () => {
   const Tommadodsbogoteborg = lazy(() =>
     import("./components/tommadodsbogoteborg/Tommadodsbogoteborg")
   );
+  const Tommabohag = lazy(() => import("./components/Tommabohag"));
   const Varderadodsbogoteborg = lazy(() =>
     import("./blocks/Varderadodsbogoteborg")
   );
@@ -420,6 +421,10 @@ const App = () => {
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tomma-bohag"
+              element={<Tommabohag videoText={contentData?.videoText} />}
             />
             <Route
               path="/tomma-hus/tomma-hus-goteborg"
