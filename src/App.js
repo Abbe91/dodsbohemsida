@@ -14,6 +14,7 @@ import { getWheaterData } from "./api/index";
 import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
+import SeoServiceComponent from "./components/SeoServiceComponent";
 
 const App = () => {
   // lazy imports
@@ -1078,6 +1079,7 @@ const App = () => {
           <Partners />
           <ImagesServicesComponent />
           <Besok />
+          <SeoServiceComponent />
           <Oppetider />
           <Recensioner />
           <Footer />
