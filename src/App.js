@@ -333,6 +333,12 @@ const App = () => {
   const Flytta = lazy(() => import("./components/Flytta"));
   const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
   const BookingModal = lazy(() => import("./components/BookingModal"));
+  const Tommahusgoteborg = lazy(() =>
+    import("./blocks/Goteborg/Tommahusgoteborg")
+  );
+  const Tommalagenhetgoteborg = lazy(() =>
+    import("./blocks/Goteborg/Tommalagenhetgoteborg")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -413,6 +419,16 @@ const App = () => {
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tomma-hus/tomma-hus-goteborg"
+              element={<Tommahusgoteborg videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tomma-lagenhet/tomma-lagenhet-goteborg"
+              element={
+                <Tommalagenhetgoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="koper-dodsbo-goteborg"
