@@ -341,6 +341,9 @@ const App = () => {
   const Tommalagenhetgoteborg = lazy(() =>
     import("./blocks/Goteborg/Tommalagenhetgoteborg")
   );
+  const TommaHusKungsbacka = lazy(() =>
+    import("./blocks/kungsbacka/TommaHusKungsbacka")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -421,6 +424,12 @@ const App = () => {
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tomma-hus/tomma-hus-kungsbacka"
+              element={
+                <TommaHusKungsbacka videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/tomma-bohag"

@@ -273,6 +273,10 @@ export const popularLinks = [
   {
     path: "dodsbo-tomning-boras",
     title: "Dödsbo tömning Borås"
+  },
+  {
+    path: "tomma-hus-kungsbacka",
+    title: "Tömma hus Kungsbacka"
   }
 ];
 
