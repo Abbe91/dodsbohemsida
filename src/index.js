@@ -4,11 +4,17 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./redux-toolkit/store";
 import { HelmetProvider } from "react-helmet-async";
-ReactDOM.render(
+const APP = (
   <HelmetProvider>
     <Provider store={store}>
       <App />
     </Provider>
-  </HelmetProvider>,
-  document.getElementById("root")
+  </HelmetProvider>
 );
+const rootElement = document.getElementById("root");
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(APP, rootElement);
+} else {
+  ReactDOM.render(APP, rootElement);
+}
