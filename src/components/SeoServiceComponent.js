@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
@@ -16,7 +16,8 @@ const useStyles = makeStyles({
     overflowX: "scroll",
     alignItems: "center",
     textAlign: "center",
-    margin: "3rem 0"
+    margin: "3rem 0",
+    transition: "all 0.3s linear"
   },
   card: {
     height: "380px",
@@ -28,6 +29,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    transition: "all 0.3s linear",
     boxShadow:
       "rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px"
   },
@@ -90,12 +92,35 @@ const services = [
 
 const SeoServiceComponent = () => {
   const classes = useStyles();
-
+  const [active, setactive] = useState(false);
+  useEffect(() => {
+    const elements = document.querySelectorAll("#element");
+    elements.forEach((el) => {
+      el.addEventListener("pointerover", (e) => {
+        e.currentTarget.style.transform = "scale(1.1)";
+      });
+    });
+    elements.forEach((el) => {
+      el.addEventListener("pointerleave", (e) => {
+        e.currentTarget.style.transform = "scale(1)";
+      });
+    });
+  });
+  useEffect(() => {});
   return (
     <div className={classes.root}>
       {services.map((service, ind) => {
         return (
-          <div key={ind} className={classes.card}>
+          <div
+            key={ind}
+            className={classes.card}
+            style={{
+              transform: ind === 0 && "scale(1.1)",
+              marginRight: "1rem",
+              marginLeft: "1rem"
+            }}
+            id="element"
+          >
             {service.icon}
             <h5
               style={{ width: "320px", color: "#0369a1", margin: "0.5rem 0" }}
