@@ -125,7 +125,7 @@ const Nav = () => {
                     border: "none",
                     color: "black",
                     margin: "0.3rem 0",
-                    fontSize: "1.1rem"
+                    fontSize: "1rem"
                   }}
                   key={link.id}
                 >
@@ -148,14 +148,6 @@ const Nav = () => {
               );
             }
           })}
-          <div
-            style={{
-              width: "80%",
-              height: "1px",
-              background: "#0369a1",
-              marginTop: "1rem"
-            }}
-          ></div>
           <Links />
         </div>
       </nav>

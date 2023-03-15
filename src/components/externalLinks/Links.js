@@ -10,8 +10,9 @@ const useStyles = makeStyles({
   links: {
     color: "#0369a1",
     borderBottom: "1px solid black",
-    fontSize: "0.9rem"
+    fontSize: "0.8rem"
   },
+
   container: {
     marginTop: "0.5rem",
     "&:hover": {
@@ -41,9 +42,9 @@ const Links = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h4 style={{ fontSize: "0.9rem", opacity: "0.75" }}>
+      <p style={{ fontSize: "0.8rem", opacity: "0.75" }}>
         Bra länkar och information kring dödsboet
-      </h4>
+      </p>
       {urls?.map((url, i) => (
         <div key={i} className={classes.container}>
           <a href={url.path} target="_blank" className={classes.links}>
