@@ -44,8 +44,7 @@ const AboutUs = ({ query, oss, om }) => {
         className="aboutUs-info"
         style={{ maxWidth: "90%", transition: "all 0.3s linear" }}
       >
-        <h1 style={{ color: "#0369a1" }}>{query}</h1>
-        <h4 style={{ margin: "0.5rem" }}>{oss}</h4>
+        <h2 style={{ color: "#0369a1", marginTop: "1rem" }}>{query}</h2>
         <p
           style={{
             margin: "0.75rem auto",
@@ -59,7 +58,7 @@ const AboutUs = ({ query, oss, om }) => {
         <p
           style={{
             maxWidth: "800px",
-            fontSize: "0.9rem",
+            fontSize: "0.8rem",
             lineHeight: "27px",
             height: readMore ? "100%" : "140px",
             overflow: !readMore && "scroll",
