@@ -66,18 +66,6 @@ const ImagesServicesComponent = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>
-          Dödsbo köpes, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma
-        </title>
-        <meta
-          name="description"
-          content="Dödsbo köpes, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning, Dödsbo uppköpare, Dödsbo firma"
-        />
-      </Helmet>
       {images?.map((image, i) => (
         <div key={i} className={classes.imageContainer}>
           <img

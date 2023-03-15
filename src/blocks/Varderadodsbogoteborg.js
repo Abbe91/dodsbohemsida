@@ -7,11 +7,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
@@ -19,7 +18,6 @@ const Varderadodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "värdera dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Värdera dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i i Göteborg",
