@@ -77,7 +77,7 @@ const MainComp = ({
             >
               Auktoriserad firma som hanterar dödsbon, bohag, uppköp,
               försäljning, tömning, bortforsling, sanering, flytt och städning
-              av dödsbon och bohag.
+              av dödsbon och hushåll.
             </h5>
             <div>
               <h2>{subTitle3}</h2>
@@ -91,8 +91,9 @@ const MainComp = ({
               <h2>{subTitle5}</h2>
               <p style={{ maxWidth: "500px" }}>{text2}</p>
               <p>
-                Behöver du hjälp med att tömma ditt dödsbo eller få ditt dödsbo
-                värderat? Vi hjälper dig med hela processen för ditt dödsbo.{" "}
+                Behöver du hjälp med att tömma ditt dödsbo eller hushåll eller
+                få ditt dödsbo värderat? Vi hjälper dig med hela processen för
+                ditt dödsbo och bohag.{" "}
               </p>
             </div>
           </div>
@@ -147,10 +148,12 @@ const MainComp = ({
             <label htmlFor="typ">Typ</label>
             <select name="typ">
               <option value="Dödsbo">Dödsbo</option>
-              <option value="Värdering">Värdering</option>
               <option value="Bohag">Bohag</option>
+              <option value="Värdering">Värdering</option>
+              <option value="Bortforsling">Bortforsling</option>
+              <option value="Tömning">Tömning</option>
+              <option value="Städ">Städning</option>
               <option value="Flytt">Flytt</option>
-              <option value="Städ">Städ</option>
               <option value="Uppköp">Uppköp</option>
               <option value="Sanering">Sanering</option>
             </select>
