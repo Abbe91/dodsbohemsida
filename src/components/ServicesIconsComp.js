@@ -30,12 +30,12 @@ const services = [
   {
     title: "Tömning",
     icon: <LocalShipping />,
-    path: "/tomma-dodsbo"
+    path: "/tommer-hushall"
   },
   {
     title: "Bortforsling",
     icon: <Weekend />,
-    path: "/bortforsling-dodsbo"
+    path: "/bortforsling"
   },
   {
     title: "Städning",

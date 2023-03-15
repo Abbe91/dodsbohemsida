@@ -14,25 +14,25 @@ import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Tommerhemgoteborg = ({ videoText }) => {
+const Bortforsling = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömmer hem Göteborg";
+  const mainquery = "Bortforsling av hushåll och dödsbon";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömmer hem i Göteborg. Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter i Göteborg. Dödsbo Jouren tar hand om hela hem och även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+      "Bortforsling av hushåll och dödsbon. Vi gör bortforslingar, flyttar och städar hushåll, dödsbon, förråd, hus, lägenhet, garage, vind, kontor och företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade. Bortforsling av hushåll och dödsbon.",
     metaContent:
-      "Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter i Göteborg. Dödsbo Jouren tar hand om hela hem och även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med att tömma ett hem i Göteborg? Då är vi på Dödsbo Jouren det självklara valet.",
-    query: "Tömmer hem Göteborg",
-    formTitle: "Tömmer hem Göteborg",
+      "Bortforsling av hushåll och dödsbon. Vi gör bortforslingar, flyttar och städar hushåll, dödsbo, förråd, hus, lägenhet, garage, vind, kontor eller företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med bortforsling av möbler mm från ditt hushåll eller dödsbo? Då är vi på Dödsbo Jouren det självklara valet. Bortforsling av hushåll och dödsbon.",
+    query: "Bortforsling av hushåll och dödsbon",
+    formTitle: "Bortforsling av hushåll och dödsbon",
     subTitle2:
-      "Vi tömmer, flyttar och städar hem, förråd, kontor och företag i Göteborg, eller helt vanlig flytt, städning eller sanering.",
+      "Vi gör bortforslingar, flyttar och städar hushåll, dödsbon, förråd, hus, lägenhet, garage, vind, kontor och företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och hem";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och hushåll";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -115,4 +115,4 @@ const Tommerhemgoteborg = ({ videoText }) => {
   );
 };
 
-export default Tommerhemgoteborg;
+export default Bortforsling;

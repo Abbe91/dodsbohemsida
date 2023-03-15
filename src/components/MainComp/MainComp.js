@@ -62,40 +62,24 @@ const MainComp = ({
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-                marginBottom: "0.2rem"
+                marginBottom: "0.4rem"
               }}
             >
               <h4 style={{ marginRight: "0.5rem" }}>{subTitle}</h4>
               <p> {icon}</p>
             </div>
-            <h5
+            <p
               style={{
                 maxWidth: "400px",
                 marginBottom: "1.5rem",
-                fontSize: "0.9rem"
+                fontSize: "0.9rem",
+                lineHeight: "21px"
               }}
             >
               Auktoriserad firma som hanterar dödsbon, bohag, uppköp,
               försäljning, tömning, bortforsling, sanering, flytt och städning
               av dödsbon och hushåll.
-            </h5>
-            <div>
-              <h2>{subTitle3}</h2>
-              <p style={{ maxWidth: "500px" }}>{text}</p>
-            </div>
-            <div style={{ marginTop: "1rem" }}>
-              <h2>{subTitle4}</h2>
-              <p style={{ maxWidth: "500px" }}>{text1}</p>
-            </div>
-            <div style={{ marginTop: "1rem" }}>
-              <h2>{subTitle5}</h2>
-              <p style={{ maxWidth: "500px" }}>{text2}</p>
-              <p>
-                Behöver du hjälp med att tömma ditt dödsbo eller hushåll eller
-                få ditt dödsbo värderat? Vi hjälper dig med hela processen för
-                ditt dödsbo och bohag.{" "}
-              </p>
-            </div>
+            </p>
           </div>
         </div>
         <form ref={form} id="main-comp-cont">
@@ -246,6 +230,51 @@ const MainComp = ({
         </form>
       </div>
       <ServicesIconsComp />
+      <section className="content-new-container">
+        <div
+          style={{
+            margin: "1rem 0.5rem",
+            background: "rgb(248, 247, 247)",
+            height: "280px",
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <h4>{subTitle5}</h4>
+          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text2}</p>
+          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>
+            Behöver du hjälp med att tömma ditt dödsbo eller hushåll eller få
+            ditt dödsbo värderat? Vi hjälper dig med hela processen för ditt
+            dödsbo och bohag.{" "}
+          </p>
+        </div>
+        <div
+          style={{
+            margin: "1rem 0.5rem",
+            height: "280px",
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <h4>{subTitle3}</h4>
+          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text}</p>
+        </div>
+        <div
+          style={{
+            margin: "1rem 0.5rem",
+            background: "rgb(248, 247, 247)",
+            height: "280px",
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <h4>{subTitle4}</h4>
+          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text1}</p>
+        </div>
+      </section>
     </section>
   );
 };

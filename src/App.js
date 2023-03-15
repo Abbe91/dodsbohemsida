@@ -353,6 +353,7 @@ const App = () => {
   const Tommerhemgoteborg = lazy(() =>
     import("./blocks/Goteborg/Tommerhemgoteborg")
   );
+  const Bortforsling = lazy(() => import("./blocks/Goteborg/Bortforsling"));
   //
   //
   const dispatch = useDispatch();
@@ -443,6 +444,10 @@ const App = () => {
             <Route
               path="/tomma-bohag"
               element={<Tommabohag videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/bortforsling"
+              element={<Bortforsling videoText={contentData?.videoText} />}
             />
             <Route
               path="/tommer-hem"
