@@ -55,7 +55,7 @@ const AboutUs = ({ query, oss, om }) => {
         >
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
-        <h5>Vi köper, tömmer, städar och säljer dödsbon </h5>
+        <h5>Vi köper, tömmer, städar och säljer dödsbon och hushåll.</h5>
         <p
           style={{
             maxWidth: "800px",
