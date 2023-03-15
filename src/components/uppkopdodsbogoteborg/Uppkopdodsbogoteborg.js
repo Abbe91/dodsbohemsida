@@ -7,11 +7,10 @@ import AboutUs from "../AboutUs/AboutUs";
 import Tips from "../Tips/Tips";
 import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
-import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../BookingModal";
@@ -19,10 +18,9 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "uppköp dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+      "Uppköp dödsbo Göteborg. Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
     query: "Uppköp dödsbo Göteborg",
     metaContent:
       "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
