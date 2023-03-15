@@ -241,9 +241,23 @@ const MainComp = ({
             flexDirection: "column"
           }}
         >
-          <h4>{subTitle5}</h4>
-          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text2}</p>
-          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>
+          <h4 style={{ marginLeft: "0.5rem" }}>{subTitle5}</h4>
+          <p
+            style={{
+              maxWidth: "500px",
+              fontSize: "0.9rem",
+              marginLeft: "0.5rem"
+            }}
+          >
+            {text2}
+          </p>
+          <p
+            style={{
+              maxWidth: "500px",
+              fontSize: "0.9rem",
+              marginLeft: "0.5rem"
+            }}
+          >
             Behöver du hjälp med att tömma ditt dödsbo eller hushåll eller få
             ditt dödsbo värderat? Vi hjälper dig med hela processen för ditt
             dödsbo och bohag.{" "}
@@ -258,8 +272,16 @@ const MainComp = ({
             flexDirection: "column"
           }}
         >
-          <h4>{subTitle3}</h4>
-          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text}</p>
+          <h4 style={{ marginLeft: "0.5rem" }}>{subTitle3}</h4>
+          <p
+            style={{
+              maxWidth: "500px",
+              fontSize: "0.9rem",
+              marginLeft: "0.5rem"
+            }}
+          >
+            {text}
+          </p>
         </div>
         <div
           style={{
@@ -271,8 +293,16 @@ const MainComp = ({
             flexDirection: "column"
           }}
         >
-          <h4>{subTitle4}</h4>
-          <p style={{ maxWidth: "500px", fontSize: "0.9rem" }}>{text1}</p>
+          <h4 style={{ marginLeft: "0.5rem" }}>{subTitle4}</h4>
+          <p
+            style={{
+              maxWidth: "500px",
+              fontSize: "0.9rem",
+              marginLeft: "0.5rem"
+            }}
+          >
+            {text1}
+          </p>
         </div>
       </section>
     </section>
