@@ -282,6 +282,22 @@ export const popularLinks = [
 
 export const fleromrodenLinks = [
   {
+    path: "tommer-hushall",
+    title: "Tömmer hushåll"
+  },
+  {
+    path: "tommer-hem",
+    title: "Tömmer hem"
+  },
+  {
+    path: "tommer-hem-goteborg",
+    title: "Tömmer hem i Göteborg"
+  },
+  {
+    path: "tommer-hushall-goteborg",
+    title: "Tömmer hushåll i Göteborg"
+  },
+  {
     path: "vardera-dodsbo-kungalv",
     title: "Värdera dödsbo Kungälv"
   },

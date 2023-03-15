@@ -344,6 +344,15 @@ const App = () => {
   const TommaHusKungsbacka = lazy(() =>
     import("./blocks/kungsbacka/TommaHusKungsbacka")
   );
+
+  const Tommerhem = lazy(() => import("./blocks/Goteborg/Tommerhem"));
+  const TommerHushall = lazy(() => import("./blocks/Goteborg/TommerHushall"));
+  const Tommerhushallgoteborg = lazy(() =>
+    import("./blocks/Goteborg/Tommerhushallgoteborg")
+  );
+  const Tommerhemgoteborg = lazy(() =>
+    import("./blocks/Goteborg/Tommerhemgoteborg")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -434,6 +443,24 @@ const App = () => {
             <Route
               path="/tomma-bohag"
               element={<Tommabohag videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tommer-hem"
+              element={<Tommerhem videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tommer-hem-goteborg"
+              element={<Tommerhemgoteborg videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tommer-hushall"
+              element={<TommerHushall videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/tommer-hushall-goteborg"
+              element={
+                <Tommerhushallgoteborg videoText={contentData?.videoText} />
+              }
             />
             <Route
               path="/tomma-hus/tomma-hus-goteborg"
