@@ -160,6 +160,7 @@ const SaljaDodsbo = () => {
             Data hämtad från www.svenskfast.se
           </h5>
           <a
+            rel="noreferrer"
             href="https://www.svenskfast.se/guider/dodsbo/"
             title="sälja dödsbo"
             target="_blank"

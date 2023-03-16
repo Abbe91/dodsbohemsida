@@ -80,6 +80,7 @@ const Dodsbodelagare = () => {
         <div>
           <h5 style={{ marginTop: "1rem" }}>Data hämtad från skatteverket</h5>
           <a
+            rel="noreferrer"
             href="https://www4.skatteverket.se/rattsligvagledning/edition/2021.7/340698.html"
             title="dödsbodelägare"
             target="_blank"

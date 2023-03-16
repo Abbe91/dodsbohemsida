@@ -22,6 +22,7 @@ const ExternaLankar = () => {
     <div className={classes.root}>
       <section></section>
       <a
+        rel="noreferrer"
         href="https://xn--svenskalnkar-ncb.com/foretag-tjanster"
         target="_blank"
         title="svenskalänkar"
@@ -30,6 +31,7 @@ const ExternaLankar = () => {
         Svenskalänkar.com
       </a>
       <a
+        rel="noreferrer"
         href="http://www.lankkatalogen.se"
         id="RC49D4"
         title="Länkguide"
@@ -39,6 +41,7 @@ const ExternaLankar = () => {
         Svenska Länkkatalogen
       </a>
       <a
+        rel="noreferrer"
         href="http://www.kvalitetskatalogen.se/"
         target="_blank"
         className={classes.links}
@@ -47,6 +50,7 @@ const ExternaLankar = () => {
         Kvalitetskatalogen.se
       </a>
       <a
+        rel="noreferrer"
         href="https://www.webbkatalog.se/"
         target="_blank"
         className={classes.links}
@@ -55,6 +59,7 @@ const ExternaLankar = () => {
         Webbkatalog.se
       </a>
       <a
+        rel="noreferrer"
         href="http://www.f4.se"
         id="R300F19"
         target="_blank"
@@ -64,6 +69,7 @@ const ExternaLankar = () => {
         F4.se - Länkkatalog
       </a>
       <a
+        rel="noreferrer"
         href="http://www.mybuddys.se/"
         target="_blank"
         className={classes.links}

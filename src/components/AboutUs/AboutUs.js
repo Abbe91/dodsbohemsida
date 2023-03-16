@@ -249,6 +249,7 @@ const AboutUs = ({ query, oss, om }) => {
                   src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
                   height="70px"
                   loading="lazy"
+                  alt="cloud or sun"
                 />
               </div>
             ))}

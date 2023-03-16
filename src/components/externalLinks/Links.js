@@ -47,7 +47,12 @@ const Links = () => {
       </p>
       {urls?.map((url, i) => (
         <div key={i} className={classes.container}>
-          <a href={url.path} target="_blank" className={classes.links}>
+          <a
+            href={url.path}
+            target="_blank"
+            className={classes.links}
+            rel="noreferrer"
+          >
             {url.title}
           </a>
         </div>

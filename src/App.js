@@ -1,16 +1,13 @@
-import React, { useEffect, useState, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Partners from "./components/Partners";
 //
 import { getContentData } from "./redux-toolkit/content/contentSlice";
 
-import {
-  setWeatherData,
-  getCustomerData
-} from "./redux-toolkit/customer/customerSlice";
+import { getCustomerData } from "./redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { getWheaterData } from "./api/index";
+
 import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
@@ -357,7 +354,6 @@ const App = () => {
   //
   //
   const dispatch = useDispatch();
-  const customerData = useSelector(getCustomerData);
   const contentData = useSelector(getContentData);
 
   const getTipsSearch = async () => {

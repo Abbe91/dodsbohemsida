@@ -64,6 +64,7 @@ const Dodsboet = () => {
         <div>
           <h5 style={{ marginTop: "1rem" }}>Data hämtad från skatteverket</h5>
           <a
+            rel="noreferrer"
             href="https://www.skatteverket.se/privat/folkbokforing/narenanhorigdor/avslutadodsboet.4.5a85666214dbad743ffecae.html"
             title="dödsboet"
             target="_blank"
