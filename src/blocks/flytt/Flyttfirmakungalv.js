@@ -14,20 +14,20 @@ import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Flyttfirmaboras = ({ videoText }) => {
+const Flyttfirmakungalv = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Flyttfirma Borås";
+  const mainquery = "Flyttfirma Kungälv";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv. Vi forslar bort och tömmer även hus, lägenheter och kontor",
     metaContent:
-      "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås. Vi forslar bort och tömmer även hus, lägenheter och kontor",
-    query: "Flyttfirma Borås",
-    formTitle: "Flyttfirma Borås",
+      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+    query: "Flyttfirma Kungälv",
+    formTitle: "Flyttfirma Kungälv",
     subTitle2:
-      "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås.",
+      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
@@ -116,4 +116,4 @@ const Flyttfirmaboras = ({ videoText }) => {
   );
 };
 
-export default Flyttfirmaboras;
+export default Flyttfirmakungalv;

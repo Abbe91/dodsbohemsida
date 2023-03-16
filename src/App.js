@@ -351,6 +351,19 @@ const App = () => {
     import("./blocks/Goteborg/Tommerhemgoteborg")
   );
   const Bortforsling = lazy(() => import("./blocks/Goteborg/Bortforsling"));
+  const Billigflyttfirmagoteborg = lazy(() =>
+    import("./blocks/flytt/Billigflyttfirmagoteborg")
+  );
+  const Flyttfirmakungalv = lazy(() =>
+    import("./blocks/flytt/Flyttfirmakungalv")
+  );
+  const Flyttfirmaoffert = lazy(() =>
+    import("./blocks/flytt/Flyttfirmaoffert")
+  );
+  const Flyttfirmaboras = lazy(() => import("./blocks/flytt/Flyttfirmaboras"));
+  const Flyttfirmagoteborg = lazy(() =>
+    import("./blocks/flytt/Flyttfirmagoteborg")
+  );
   //
   //
   const dispatch = useDispatch();
@@ -427,6 +440,30 @@ const App = () => {
               element={<Home videoText={contentData?.videoText} />}
             />
             <Route path="/boka" element={<BookingModal />} />
+            <Route
+              path="flyttfirma/billig-flyttfirma-goteborg"
+              element={
+                <Billigflyttfirmagoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="flyttfirma/flyttfirma-kungalv"
+              element={<Flyttfirmakungalv videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="flyttfirma/flyttfirma-boras"
+              element={<Flyttfirmaboras videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="flyttfirma/flyttfirma-goteborg"
+              element={
+                <Flyttfirmagoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="flyttfirma/flyttfirma-offert"
+              element={<Flyttfirmaoffert videoText={contentData?.videoText} />}
+            />
             <Route
               path="/salja-dodsbo/salja-dodsbo"
               element={<SaljaDodsbon videoText={contentData?.videoText} />}

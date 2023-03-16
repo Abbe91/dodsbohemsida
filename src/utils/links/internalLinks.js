@@ -282,6 +282,26 @@ export const popularLinks = [
 
 export const fleromrodenLinks = [
   {
+    path: "flyttfirma/flyttfirma-goteborg",
+    title: "Flyttfirma Göteborg"
+  },
+  {
+    path: "flyttfirma/flyttfirma-kungalv",
+    title: "Flyttfirma Kungälv"
+  },
+  {
+    path: "flyttfirma/flyttfirma-boras",
+    title: "Flyttfirma Borås"
+  },
+  {
+    path: "flyttfirma/billig-flyttfirma-goteborg",
+    title: "Billig flyttfirma Göteborg"
+  },
+  {
+    path: "flyttfirma/flyttfirma-offert",
+    title: "Flyttfirma Offert"
+  },
+  {
     path: "tommer-hushall",
     title: "Tömmer hushåll"
   },
