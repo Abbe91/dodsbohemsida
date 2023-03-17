@@ -7,7 +7,6 @@ import AboutUs from "../AboutUs/AboutUs";
 import Tips from "../Tips/Tips";
 import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
-import Nyheter from "../Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
@@ -18,7 +17,6 @@ import BookingModal from "../BookingModal";
 const Tommadodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Tömma dödsbo Göteborg. Behöver du hjälp med att tömma dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att tömma dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",

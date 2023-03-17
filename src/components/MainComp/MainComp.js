@@ -93,10 +93,9 @@ const MainComp = ({
               borderBottom: "1px solid gray"
             }}
           >
-            <p style={{ fontSize: "1.2rem" }}>Gratiskollen</p>
+            <p style={{ fontSize: "1.3rem" }}>Gratiskollen</p>
             <i style={{ fontSize: "1.5rem" }}>{icon}</i>
           </div>
-          <h4>{formTitle}</h4>
           <input type="text" placeholder="Ditt namn" required name="namn" />
           <input type="text" placeholder="Din email" required name="email" />
           <input
@@ -229,7 +228,7 @@ const MainComp = ({
           </div>
         </form>
       </div>
-      <ServicesIconsComp />
+
       <section className="content-new-container">
         <div
           style={{
@@ -305,6 +304,7 @@ const MainComp = ({
           </p>
         </div>
       </section>
+      <ServicesIconsComp />
     </section>
   );
 };

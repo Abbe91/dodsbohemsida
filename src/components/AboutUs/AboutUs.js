@@ -153,8 +153,10 @@ const AboutUs = ({ query, oss, om }) => {
               }}
             />
             <label>
-              Vill du få ett förslag på?
-              <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>{query}</p>
+              Vill du få ett förslag på
+              <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>
+                {query} ELLER ANNAT?
+              </p>
             </label>
             <input
               type="email"
