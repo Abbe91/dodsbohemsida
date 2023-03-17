@@ -18,22 +18,22 @@ import BookingModal from "../../components/BookingModal";
 
 const Home = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "tömma dödsbo";
+  const mainquery = "dödsbo eller hushåll";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle: "Tömma dödsbo och tömma bohag",
     metaContent: "Tömma dödsbo och tömma bohag",
-    query: "Tömma dödsbo",
+    query: "",
     formTitle: "Tömma dödsbo",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
-    subTitle3: `Behöver du hjälp med att ${mainquery}?`
+    subTitle3: `Behöver du hjälp med ditt ${mainquery}?`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, bortforsling, sanering, flytt, städning och försäljning av dödsbon.";
+    "uppköp, bortforsling, sanering, flytt, städning och försäljning av dödsbon och hushåll.";
   const element = useSelector(getElement);
   useEffect(() => {
     document
