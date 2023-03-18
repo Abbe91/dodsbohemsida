@@ -68,7 +68,11 @@ const useStyles = makeStyles({
   card: {
     width: "355px",
     margin: "1rem 1rem",
-    height: "730px"
+    height: "500px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
 const Seo = () => {
@@ -82,11 +86,6 @@ const Seo = () => {
               Säljer, köper, värderar, röjer, tömmer och städar dödsbo i{" "}
               {local.city}.
             </h5>
-            <img
-              src={bild}
-              alt={`Säljer, köper, värderar, röjer, tömmer och städar dödsbo i ${local.city}`}
-              style={{ margin: "0.5rem 0", height: "240px", width: "100%" }}
-            />
             <p style={{ fontSize: "0.75rem", lineHeight: "22px" }}>
               Välkommen till oss på Dödsbo Jouren i {local.city} ! Vi hjälper er
               gärna om ni har ett behov av att få ett dödsbo värderat i{" "}
