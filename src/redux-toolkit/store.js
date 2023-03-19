@@ -3,11 +3,15 @@ import customerReducer from "./customer/customerSlice";
 import newsReducer from "./news/newsSlice";
 import elementReducer from "./scrollElement/scrollElementSlice";
 import contentReducer from "./content/contentSlice";
+import leadsReducer from "./leads/leadsSlice";
+import useReducer from "./userSlice";
 export const store = configureStore({
   reducer: {
     customer: customerReducer,
     news: newsReducer,
     element: elementReducer,
-    content: contentReducer
+    content: contentReducer,
+    leads: leadsReducer,
+    user: useReducer
   }
 });

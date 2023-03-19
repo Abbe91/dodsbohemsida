@@ -6,6 +6,8 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
 import ServicesIconsComp from "../ServicesIconsComp";
+import { db } from "../../firebase";
+import { collection, addDoc } from "firebase/firestore";
 const MainComp = ({
   query,
   formTitle,
@@ -25,9 +27,31 @@ const MainComp = ({
   const customerData = useSelector(getCustomerData);
   const location = useLocation();
   const form = useRef();
+  const [leadsData, setleadsData] = useState({
+    namn: "",
+    email: "",
+    beskriv: "",
+    telefon: "",
+    tjanst: location?.pathname,
+    typ: "",
+    leadId: Math.floor(Math.random() * 10000000000000)
+  });
+
+  const handleLeadsFormChange = (e) => {
+    setleadsData({ ...leadsData, [e.target.name]: e.target.value });
+  };
+  const addLeadToFireTore = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "newLeads"), leadsData);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
   const handleSubmit = (e) => {
     setSending(true);
     e.preventDefault();
+    addLeadToFireTore();
     emailjs
       .sendForm(
         "service_k835y1d",
@@ -96,13 +120,26 @@ const MainComp = ({
             <p style={{ fontSize: "1.3rem" }}>Gratiskollen</p>
             <i style={{ fontSize: "1.5rem" }}>{icon}</i>
           </div>
-          <input type="text" placeholder="Ditt namn" required name="namn" />
-          <input type="text" placeholder="Din email" required name="email" />
+          <input
+            type="text"
+            placeholder="Ditt namn"
+            required
+            name="namn"
+            onChange={handleLeadsFormChange}
+          />
+          <input
+            type="text"
+            placeholder="Din email"
+            required
+            name="email"
+            onChange={handleLeadsFormChange}
+          />
           <input
             type="text"
             placeholder="Ditt nummer"
             required
             name="telefon"
+            onChange={handleLeadsFormChange}
           />
           <textarea
             placeholder="Beskriv lite kort vad du behöver hjälp med"
@@ -114,6 +151,7 @@ const MainComp = ({
               textAlign: "center"
             }}
             name="beskriv"
+            onChange={handleLeadsFormChange}
           ></textarea>
           <input
             type={"url"}
@@ -129,9 +167,9 @@ const MainComp = ({
             }}
           >
             <label htmlFor="typ">Typ</label>
-            <select name="typ">
+            <select name="typ" onChange={handleLeadsFormChange}>
               <option value="Dödsbo">Dödsbo</option>
-              <option value="Bohag">Bohag</option>
+              <option value="Bohag">Bohag/Hushåll</option>
               <option value="Värdering">Värdering</option>
               <option value="Bortforsling">Bortforsling</option>
               <option value="Tömning">Tömning</option>
@@ -152,13 +190,21 @@ const MainComp = ({
               <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
                 Jag vill bli kontaktad
               </p>
-              <input type="checkbox" name="vill-bli-kontaktad" />
+              <input
+                type="checkbox"
+                name="vill-bli-kontaktad"
+                onChange={handleLeadsFormChange}
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
                 Jag <strong>Vill</strong> ha en offert
               </p>
-              <input type="checkbox" name="vill-ha-offert" />
+              <input
+                type="checkbox"
+                name="vill-ha-offert"
+                onChange={handleLeadsFormChange}
+              />
             </div>
           </div>
           <a
@@ -262,16 +308,18 @@ const MainComp = ({
             dödsbo och bohag.{" "}
           </p>
         </div>
+
         <div
           style={{
             margin: "1rem 0.5rem",
+            background: "rgb(248, 247, 247)",
             height: "280px",
             justifyContent: "center",
             display: "flex",
             flexDirection: "column"
           }}
         >
-          <h4 style={{ marginLeft: "0.5rem" }}>{subTitle3}</h4>
+          <h4 style={{ marginLeft: "0.5rem" }}>Dödsbo är krävande</h4>
           <p
             style={{
               maxWidth: "500px",
@@ -279,7 +327,13 @@ const MainComp = ({
               marginLeft: "0.5rem"
             }}
           >
-            {text}
+            {/* {text1} */}
+            Att ta hand om ett dödsbo kan vara en svår uppgift som kräver mycket
+            tid och arbete. Det kan vara en känslomässigt påfrestande tid för de
+            efterlevande, och det kan vara svårt att veta var man ska börja. Men
+            med rätt hjälp och stöd kan det bli enklare. Vi på Dödsbo Jouren
+            specialiserar oss på hantering av dödsbo och kan hjälpa dig att ta
+            hand om alla aspekter av processen.
           </p>
         </div>
         <div
@@ -292,7 +346,7 @@ const MainComp = ({
             flexDirection: "column"
           }}
         >
-          <h4 style={{ marginLeft: "0.5rem" }}>{subTitle4}</h4>
+          <h4 style={{ marginLeft: "0.5rem" }}>Vad kan vi göra</h4>
           <p
             style={{
               maxWidth: "500px",
@@ -300,7 +354,42 @@ const MainComp = ({
               marginLeft: "0.5rem"
             }}
           >
-            {text1}
+            {/* {text1} */}
+            Vi erbjuder en mängd olika tjänster, inklusive värdering av
+            tillgångar, bortforsling av skräp, tömning av fastigheter, uppköp av
+            egendom, städning och sanering. Vi förstår att varje dödsbo är unikt
+            och att det kan finnas olika behov beroende på situationen. Därför
+            är våra tjänster flexibla och anpassningsbara för att möta dina
+            specifika behov. Vi arbetar alltid med respekt och omsorg för att
+            underlätta denna svåra tid för de efterlevande.
+          </p>
+        </div>
+        <div
+          style={{
+            margin: "1rem 0.5rem",
+            background: "rgb(248, 247, 247)",
+            height: "280px",
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <h4 style={{ marginLeft: "0.5rem" }}>Välutbildad personal</h4>
+          <p
+            style={{
+              maxWidth: "500px",
+              fontSize: "0.9rem",
+              marginLeft: "0.5rem"
+            }}
+          >
+            {/* {text1} */}
+            Vår erfarna personal är välutbildad och kunnig inom alla aspekter av
+            hantering av dödsbo. Vi har de verktyg och resurser som krävs för
+            att göra processen så smidig och effektiv som möjligt. Oavsett om du
+            behöver hjälp med värdering av egendom, bortforsling av skräp eller
+            städning av fastigheter, så kan vi hjälpa till. Vi erbjuder
+            konkurrenskraftiga priser och högkvalitativ service för att se till
+            att varje kund får den hjälp de behöver.
           </p>
         </div>
       </section>
@@ -310,3 +399,8 @@ const MainComp = ({
 };
 
 export default MainComp;
+
+//  Kontakta oss på
+//             [Företagsnamn] för att få hjälp med hantering av dödsbo idag. Vi är
+//             här för att hjälpa dig genom denna svåra tid och göra processen så
+//             smidig som möjligt.

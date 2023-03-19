@@ -2,18 +2,17 @@ import React, { useEffect, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Partners from "./components/Partners";
-//
 import { getContentData } from "./redux-toolkit/content/contentSlice";
-
-import { getCustomerData } from "./redux-toolkit/customer/customerSlice";
+import { collection, getDocs } from "firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
-
-import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
-
+import { setNewLead } from "./redux-toolkit/leads/leadsSlice";
+import ProtectedRoute from "./pages/ProtectedRoute";
+import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
 const App = () => {
+  const dispatch = useDispatch();
   // lazy imports
   const Uppkopdodsbogoteborg = lazy(() =>
     import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
@@ -48,6 +47,9 @@ const App = () => {
   );
   const Tommadodsboulricehamn = lazy(() =>
     import("./blocks/Tommadodsboulricehamn")
+  );
+  const Bortforslingavdodsbogoteborg = lazy(() =>
+    import("./blocks/Goteborg/Bortforslingavdodsbogoteborg")
   );
   const Uppkopdodsboulricehamn = lazy(() =>
     import("./blocks/Uppkopdodsboulricehamn")
@@ -364,11 +366,11 @@ const App = () => {
   const Flyttfirmagoteborg = lazy(() =>
     import("./blocks/flytt/Flyttfirmagoteborg")
   );
+  const Login = lazy(() => import("./pages/Login"));
   //
   //
-  const dispatch = useDispatch();
-  const contentData = useSelector(getContentData);
 
+  const contentData = useSelector(getContentData);
   const getTipsSearch = async () => {
     const options = {
       method: "GET",
@@ -388,7 +390,6 @@ const App = () => {
       console.log(error);
     }
   };
-
   const getBingnews = async () => {
     const options = {
       method: "GET",
@@ -412,13 +413,8 @@ const App = () => {
     }
   };
   useEffect(() => {
-    // getWheaterData(customerData.coords.lat, customerData.coords.lng).then(
-    //   (data) => {
-    //     dispatch(setWeatherData(data));
-    //   }
-    // );
-    getTipsSearch();
     getBingnews();
+    getTipsSearch();
   }, []);
   return (
     <div className="App">
@@ -439,6 +435,7 @@ const App = () => {
               path="/"
               element={<Home videoText={contentData?.videoText} />}
             />
+            <Route path="/login" element={<Login />} />
             <Route path="/boka" element={<BookingModal />} />
             <Route
               path="flyttfirma/billig-flyttfirma-goteborg"
@@ -1049,6 +1046,14 @@ const App = () => {
             <Route
               path="uppkop-av-dodsbo"
               element={<UppkopAvDodsbo videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Bortforslingavdodsbogoteborg />
+                </ProtectedRoute>
+              }
             />
             <Route
               path="bortforsling-dodsbo-kungsbacka"
