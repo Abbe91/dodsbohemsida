@@ -72,7 +72,6 @@ const Nav = () => {
       <nav>
         <div className="nav-logo">
           <h2 className="logo">{customerData.business}</h2>
-          {/* <img src={logo} alt="logo" /> */}
         </div>
         <div className="navbar" onClick={() => setShowNav(!showNav)}>
           <AiOutlineBars />

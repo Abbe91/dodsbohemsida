@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
-import ServicesIconsComp from "../ServicesIconsComp";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 const MainComp = ({
@@ -274,6 +273,25 @@ const MainComp = ({
           </div>
         </form>
       </div>
+      <div style={{ textAlign: "center", margin: "2rem 0" }}>
+        <img
+          src="https://www.svgrepo.com/show/245414/moving-truck.svg"
+          style={{ width: "50px", height: "50px" }}
+          alt="truck, lastbil"
+        />
+        <h1>Snabbt & Pålitligt</h1>
+        <p
+          style={{
+            maxWidth: "360px",
+            margin: "0.5rem auto",
+            fontSize: "0.8rem"
+          }}
+        >
+          Letar du efter en som kan ta hand om dödsbon och hushåll på ett
+          professionellt sätt? Då har du kommit rätt! Vi är experter på att
+          köpa, tömma, städa och sälja dödsbon och hushåll.
+        </p>
+      </div>
 
       <section className="content-new-container">
         <div
@@ -393,7 +411,6 @@ const MainComp = ({
           </p>
         </div>
       </section>
-      <ServicesIconsComp />
     </section>
   );
 };

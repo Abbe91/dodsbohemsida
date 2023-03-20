@@ -42,10 +42,14 @@ const AboutUs = ({ query, oss, om }) => {
     <div className="aboutUs">
       <div
         className="aboutUs-info"
-        style={{ maxWidth: "90%", transition: "all 0.3s linear" }}
+        style={{
+          maxWidth: "90%",
+          transition: "all 0.3s linear",
+          width: "100%"
+        }}
       >
-        <h2 style={{ color: "#0369a1", marginTop: "1rem" }}>{query}</h2>
-        <p
+        {/* <h2 style={{ color: "#0369a1", marginTop: "1rem" }}>{query}</h2> */}
+        {/* <p
           style={{
             margin: "0.75rem auto",
             maxWidth: "800px",
@@ -54,8 +58,8 @@ const AboutUs = ({ query, oss, om }) => {
         >
           Vi på <strong>{customerData.business}</strong> {om}
         </p>
-        <h5>Vi köper, tömmer, städar och säljer dödsbon och hushåll.</h5>
-        <p
+        <h5>Vi köper, tömmer, städar och säljer dödsbon och hushåll.</h5> */}
+        {/* <p
           style={{
             maxWidth: "800px",
             fontSize: "0.8rem",
@@ -105,8 +109,8 @@ const AboutUs = ({ query, oss, om }) => {
           och sedan få dödsboet städat. Vi samarbetar med många auktionsfirmor
           och kan hjälpa er med att sälja lösöre som är av större värde. Vi kan
           även vara behjälpliga med bouppteckningen av dödsboet.
-        </p>
-        {!readMore && (
+        </p> */}
+        {/* {!readMore && (
           <p
             onClick={() => setReadMore(!readMore)}
             style={{
@@ -123,8 +127,8 @@ const AboutUs = ({ query, oss, om }) => {
             Läs mer
             <ArrowForwardIos style={{ fontSize: "0.9rem" }} />
           </p>
-        )}
-        {readMore && (
+        )} */}
+        {/* {readMore && (
           <p
             onClick={() => setReadMore(!readMore)}
             style={{
@@ -141,7 +145,7 @@ const AboutUs = ({ query, oss, om }) => {
             Stäng
             <Close />
           </p>
-        )}
+        )} */}
 
         <div>
           <form ref={form}>
@@ -154,9 +158,7 @@ const AboutUs = ({ query, oss, om }) => {
             />
             <label>
               Vill du få ett förslag på
-              <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>
-                {query} ELLER ANNAT?
-              </p>
+              <p style={{ fontSize: "0.7rem", fontWeight: "700" }}>{query}?</p>
             </label>
             <input
               type="email"

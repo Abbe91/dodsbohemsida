@@ -1,14 +1,5 @@
 import React from "react";
-import LottieBooking from "../LottieAnimation/LottieBooking";
-import truck from "../utils/animation/flyttfirma-tommadodsbo.json";
-import {
-  Grid,
-  Typography,
-  makeStyles,
-  Container,
-  Button,
-  colors
-} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import {
   ArrowForwardIos,
   House,
@@ -105,10 +96,22 @@ const ServicesIconsComp = () => {
         style={{ textAlign: "center", margin: "1rem 0", lineHeight: "26px" }}
       >
         <h2 className={classes.title}>Vad behöver du hjälp med?</h2>
+        <p
+          style={{
+            maxWidth: "360px",
+            margin: "0.5rem auto",
+            fontSize: "0.8rem"
+          }}
+        >
+          Vi förstår att det kan vara en känslomässigt svår och stressig tid när
+          man behöver ta hand om ett dödsbo eller ett hushåll som behöver
+          tömmas. Vår målsättning är att göra hela processen så smidig och
+          stressfri som möjligt för dig. Vi har lång erfarenhet och är experter
+          på att hantera alla slags situationer när det gäller dödsbon och
+          hushåll.
+        </p>
       </section>
-      <section>
-        <LottieBooking lotti={truck} height={200} width={200} />
-      </section>
+
       <section className={classes.services}>
         {services?.map((service, i) => {
           return (

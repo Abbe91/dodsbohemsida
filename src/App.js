@@ -17,6 +17,9 @@ const App = () => {
   const Uppkopdodsbogoteborg = lazy(() =>
     import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
   );
+  const ServicesIconsComp = lazy(() =>
+    import("./components/ServicesIconsComp")
+  );
   const Error = lazy(() => import("./pages/Error/Error"));
   const Home = lazy(() => import("./pages/Home/Home"));
   const Footer = lazy(() => import("./components/Footer/Footer"));
@@ -1165,6 +1168,7 @@ const App = () => {
           <Besok />
           <SeoServiceComponent />
           <Oppetider />
+          <ServicesIconsComp />
           <Recensioner />
           <Footer />
           <Links />
