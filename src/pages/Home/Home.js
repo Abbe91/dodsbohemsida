@@ -22,8 +22,10 @@ const Home = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömma dödsbo och tömma bohag",
-    metaContent: "Tömma dödsbo och tömma bohag",
+    metaTitle:
+      "Få professionell hjälp med flytt, städning och tömning av dödsbo - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar. Dödsbo Jouren vi hjälper dig med dödsbo, städning, flytt, tömning, bortforsling av dödsbo och hushåll.",
+    metaContent:
+      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning.",
     query: "",
     formTitle: "Tömma dödsbo",
     subTitle2:
