@@ -90,6 +90,7 @@ const useStyles = makeStyles({
 });
 const ServicesIconsComp = () => {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <section
@@ -98,7 +99,7 @@ const ServicesIconsComp = () => {
         <h2 className={classes.title}>Vad behöver du hjälp med?</h2>
         <p
           style={{
-            maxWidth: "360px",
+            maxWidth: window.innerWidth > 740 ? "70%" : "360px",
             margin: "0.5rem auto",
             fontSize: "0.8rem"
           }}
