@@ -195,3 +195,22 @@ button {
 .office div {
   margin: 0.5rem 0.5rem;
 }
+
+#erbjuder-cont h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #454545;
+}
+#erbjuder-cont p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #454545;
+  max-width: 536px;
+  line-height: 24px;
+}
+#erbjuder-cont div {
+  margin-bottom: 1rem;
+}

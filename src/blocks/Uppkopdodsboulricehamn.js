@@ -80,7 +80,7 @@ const Uppkopdodsboulricehamn = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Ulrciehamn"} />
       </div>
 
       <div className="booking-lottie">

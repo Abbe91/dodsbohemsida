@@ -297,7 +297,7 @@ const MainComp = ({
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "rgb(248, 247, 247)",
+            background: "#f1f5f9",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -330,7 +330,7 @@ const MainComp = ({
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "rgb(248, 247, 247)",
+            background: "#f1f5f9",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -357,7 +357,7 @@ const MainComp = ({
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "rgb(248, 247, 247)",
+            background: "#f1f5f9",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -385,7 +385,7 @@ const MainComp = ({
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "rgb(248, 247, 247)",
+            background: "#f1f5f9",
             height: "280px",
             justifyContent: "center",
             display: "flex",

@@ -78,7 +78,7 @@ const TommaDodsboKungalv = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Kungälv"} />
       </div>
 
       <div className="booking-lottie">

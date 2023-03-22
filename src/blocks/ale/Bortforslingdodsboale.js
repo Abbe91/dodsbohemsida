@@ -81,7 +81,7 @@ const Bortforslingdodsboale = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Ale"} />
       </div>
 
       <div className="booking-lottie">

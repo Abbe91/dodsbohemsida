@@ -80,7 +80,7 @@ const Bortforslingdodsbostenungssund = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Stenungsund"} />
       </div>
 
       <div className="booking-lottie">

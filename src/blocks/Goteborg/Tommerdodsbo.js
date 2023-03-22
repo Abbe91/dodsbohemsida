@@ -80,7 +80,7 @@ const Tommerdodsbo = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Göteborg"} />
       </div>
 
       <div className="booking-lottie">

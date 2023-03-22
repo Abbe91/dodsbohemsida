@@ -81,7 +81,7 @@ const Tommerlagenheterboras = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Borås"} />
       </div>
 
       <div className="booking-lottie">

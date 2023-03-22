@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles, Card } from "@material-ui/core";
-import bild from "../../utils/images/seoimages/dödsbo-köpes.jpg";
 const locales = [
   { id: 3, city: "Göteborg" },
   { id: 0, city: "Kungälv" },

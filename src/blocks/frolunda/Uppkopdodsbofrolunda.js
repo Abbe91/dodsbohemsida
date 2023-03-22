@@ -81,7 +81,7 @@ const Uppkopdodsbofrolunda = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder />
+        <Erbjuder city={"Frölunda"} />
       </div>
 
       <div className="booking-lottie">
