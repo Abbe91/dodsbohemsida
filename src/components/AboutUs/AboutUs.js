@@ -34,6 +34,7 @@ const AboutUs = ({ query, oss, om }) => {
             maxWidth: "800px",
             fontSize: "0.8rem",
             lineHeight: "27px",
+            margin: "0 auto",
             height: "100%",
             overflow: "hidden",
             transition: "all 0.3s linear"
