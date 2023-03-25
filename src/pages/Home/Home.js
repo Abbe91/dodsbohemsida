@@ -7,8 +7,6 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
-import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
 import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
@@ -36,12 +34,6 @@ const Home = ({ videoText }) => {
 
   const services =
     "uppköp, bortforsling, sanering, flytt, städning och försäljning av dödsbon och hushåll.";
-  const element = useSelector(getElement);
-  useEffect(() => {
-    document
-      .querySelector(`.${element}`)
-      .scrollIntoView({ behavior: "smooth" });
-  }, [element]);
 
   return (
     <div>

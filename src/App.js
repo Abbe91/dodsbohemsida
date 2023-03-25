@@ -10,10 +10,11 @@ import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
 import { setNewLead } from "./redux-toolkit/leads/leadsSlice";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import { addNews, setBingNews } from "./redux-toolkit/news/newsSlice";
+
 const App = () => {
   const dispatch = useDispatch();
   // lazy imports
+  const GratisKollen = lazy(() => import("./pages/gratiskollen/GratisKollen"));
   const Uppkopdodsbogoteborg = lazy(() =>
     import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
   );
@@ -371,54 +372,8 @@ const App = () => {
   );
   const Login = lazy(() => import("./pages/Login"));
   //
-  //
 
   const contentData = useSelector(getContentData);
-  const getTipsSearch = async () => {
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
-        "X-RapidAPI-Host": "google-search72.p.rapidapi.com"
-      }
-    };
-    try {
-      fetch(
-        "https://google-search72.p.rapidapi.com/search?query=d%C3%B6dsbo&gl=sv&lr=sv&num=10&start=0&sort=relevance",
-        options
-      )
-        .then((response) => response.json())
-        .then((response) => dispatch(addNews(response.items)));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const getBingnews = async () => {
-    const options = {
-      method: "GET",
-      headers: {
-        "Accept-Language": "se",
-        "X-BingApis-SDK": "true",
-        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
-        "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY
-      }
-    };
-    try {
-      const resp = fetch(
-        "https://bing-news-search1.p.rapidapi.com/news/search?q=v%C3%A4rmepump&safeSearch=Off&textFormat=Raw&freshness=Month",
-        options
-      )
-        .then((response) => response.json())
-        .then((response) => dispatch(setBingNews(response.value)))
-        .catch((err) => console.error(err));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    getBingnews();
-    getTipsSearch();
-  }, []);
   return (
     <div className="App">
       <Suspense
@@ -437,6 +392,10 @@ const App = () => {
             <Route
               path="/"
               element={<Home videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="/dodsbojouren/gratiskollen"
+              element={<GratisKollen />}
             />
             <Route path="/login" element={<Login />} />
             <Route path="/boka" element={<BookingModal />} />
@@ -1162,7 +1121,6 @@ const App = () => {
             <Route path="*" element={<Error />} />
           </Routes>
           <Helhetslosningdodsbo />
-          <Arbetsprocessen />
           <Partners />
           <ImagesServicesComponent />
           <Besok />

@@ -1,16 +1,16 @@
 .mainComp {
+  height: 500px;
+  background: #bbe3f7;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: linear-gradient(
-      rgba(0.3, 0.3, 0.3, 0.3),
-      rgba(0.3, 0.3, 0.3, 0.3)
-    ),
-    url("https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg")
-      no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 1000px;
+  text-align: center;
+  position: relative;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
 }
 .mainComp form {
   margin-top: 2rem;
@@ -39,16 +39,7 @@
   display: flex;
   flex-direction: column;
 }
-.mainComp h1 {
-  line-height: 30px;
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-}
-.mainComp form h4 {
-  max-width: 300px;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
+
 input::placeholder {
   text-align: center;
 }
@@ -76,18 +67,8 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: black;
   font-family: "Roboto", sans-serif;
-}
-.main-content-container div {
-  display: flex;
-  flex-direction: column;
-}
-.main-content-container p {
-  max-width: 350px;
-}
-.main-content-container h2 {
-  max-width: 600px;
 }
 
 .main-form-btn {
@@ -124,11 +105,12 @@ input:focus {
 
 @media screen and (max-width: 672px) {
   .mainComp {
-    height: 1100px;
+    height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .mainComp form {
     width: 94%;
@@ -149,6 +131,9 @@ input:focus {
   }
   .main-content-container {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1300px) {

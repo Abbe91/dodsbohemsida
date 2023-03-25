@@ -4,7 +4,6 @@ import { navlinks } from "../../utils/data";
 import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { AiTwotonePhone } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
@@ -34,30 +33,26 @@ const Nav = () => {
       <section className="top-nav" style={{ margin: "0.5rem 0" }}>
         <div className="user-contact">
           <div>
-            <p>
+            <p style={{ color: "black" }}>
               <strong>Ring oss</strong>
             </p>
-            {/* <a href={`mailto:${customerData.email}`}>
-              <AiOutlineMail />
-            </a>
-            <p>{customerData.email}</p> */}
           </div>
           <div>
             <a href={`tel:${customerData.phone}`} onClick={clickToCall}>
               <Button
                 variant="contained"
-                style={{ background: "#0369a1", color: "white" }}
+                style={{ background: "#bbe3f7", color: "black" }}
               >
                 <AiTwotonePhone />
               </Button>
               {/* <p>{customerData.phone}</p> */}
             </a>
-            <a href={"#main-comp-cont"}>
+            <a href={"/dodsbojouren/gratiskollen"}>
               <Button
                 variant="contained"
                 style={{
-                  background: "#0369a1",
-                  color: "white",
+                  background: "#bbe3f7",
+                  color: "black",
                   height: "1.6rem",
                   fontSize: "0.75rem"
                 }}

@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     }
   },
   title: {
-    color: "#0369a1",
+    color: "black",
     marginBottom: "0.5rem"
   },
   form: {
@@ -34,8 +34,8 @@ const useStyles = makeStyles({
     flexDirection: "column"
   },
   btn: {
-    background: "#0369a1",
-    color: "white",
+    background: "#a2cfbc",
+    color: "black",
     border: "none",
     height: "2rem",
     borderRadius: "5px",
@@ -88,13 +88,13 @@ const Helhetslosningdodsbo = () => {
           Ett dödsbo är mer krävande än vad man tror. Idag ställs det ju många
           krav på sortering och avfall av dödsbon. Vi på Dödsbo Jouren tar hela
           ansvaret från att sortera{" "}
-          <a href="/dodsboet" style={{ color: "#0369a1" }} title="dödsboet">
+          <a href="/dodsboet" style={{ color: "black" }} title="dödsboet">
             dödsboet
           </a>
           , bortforsling av dödsboet,{" "}
           <a
             href="/tomma-dodsbo"
-            style={{ color: "#0369a1" }}
+            style={{ color: "black" }}
             title="tömma dödsbo"
           >
             tömning av dödsboet

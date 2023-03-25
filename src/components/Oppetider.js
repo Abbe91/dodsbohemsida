@@ -38,19 +38,6 @@ const Oppetider = () => {
         <li>Lördag 10:00-20:00</li>
         <li>Söndag 10:00-20:00</li>
       </ul>
-      <Typography
-        variant="subtitle1"
-        style={{
-          color: "#0369a1",
-          maxWidth: "90%",
-          lineHeight: "20px",
-          marginTop: "1rem",
-          fontWeight: "bold",
-          fontSize: "0.8rem"
-        }}
-      >
-        Tiderna kan variera vid röda dagar och högtider.
-      </Typography>
       <LottieBooking lotti={clock} height={300} width={300} />
     </div>
   );

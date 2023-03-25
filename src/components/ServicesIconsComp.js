@@ -1,56 +1,44 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import {
-  ArrowForwardIos,
-  House,
-  LocalShipping,
-  Weekend,
-  Delete,
-  MonetizationOn,
-  ShoppingCart,
-  Warning,
-  Autorenew
-} from "@material-ui/icons";
+import { ArrowForwardIos } from "@material-ui/icons";
 
 const services = [
   {
     title: "Värdera dödsbo",
-    icon: <House />,
+
     path: "/vardera-dodsbo"
   },
   {
     title: "Tömning",
-    icon: <LocalShipping />,
+
     path: "/tommer-hushall"
   },
   {
     title: "Bortforsling",
-    icon: <Weekend />,
     path: "/bortforsling"
   },
   {
     title: "Städning",
-    icon: <Delete />,
+
     path: "/flyttstadning"
   },
   {
     title: "Uppköp dödsbo",
-    icon: <ShoppingCart />,
+
     path: "uppkop-av-dodsbo"
   },
   {
     title: "Sälja dödsbo",
-    icon: <MonetizationOn />,
+
     path: "/salja-dodsbo/salja-dodsbo"
   },
   {
     title: "Sanera dödsbo",
-    icon: <Warning />,
+
     path: "/sanera-dodsbo"
   },
   {
     title: "Flytta",
-    icon: <Autorenew />,
     path: "/bohagsflytt"
   }
 ];
@@ -63,10 +51,11 @@ const useStyles = makeStyles({
     flexWrap: "wrap"
   },
   btn: {
-    background: "#0369a1",
-    color: "white",
+    background: "#a2cfbc",
+    color: "black",
     border: "none",
-    width: "6rem",
+    fontSize: "0.7rem",
+    width: "6.5rem",
     height: "2rem",
     borderRadius: "20px",
     display: "flex",
@@ -117,20 +106,14 @@ const ServicesIconsComp = () => {
         {services?.map((service, i) => {
           return (
             <div key={i} className={classes.btnContainer}>
-              {service?.icon}
-              <h5 className={classes.btntitle}>{service.title}</h5>
               <button variant="contained" className={classes.btn}>
                 <a
                   href={service.path}
                   title={service.title}
                   className={classes.btn}
+                  style={{ color: "black" }}
                 >
-                  <p style={{ fontSize: "0.9rem", marginRight: "0.2rem" }}>
-                    Välj
-                  </p>
-                  <ArrowForwardIos
-                    style={{ fontSize: "0.9rem", marginLeft: "0.1rem" }}
-                  />
+                  {service.title}
                 </a>
               </button>
             </div>

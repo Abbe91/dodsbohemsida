@@ -54,7 +54,11 @@ const Kostnadsfri = ({ vad, text }) => {
             style={{ margin: "0 0" }}
           />
           <input type="email" required placeholder="Ditt namn" name="namn" />
-          <button type="submit" onClick={handleSubmit}>
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            style={{ background: "#a2cfbc", color: "black" }}
+          >
             {sending
               ? "skickar..."
               : sent

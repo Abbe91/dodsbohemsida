@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainComp from "../MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
@@ -7,7 +7,6 @@ import AboutUs from "../AboutUs/AboutUs";
 import Tips from "../Tips/Tips";
 import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
-import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
 import { getNewsData } from "../../redux-toolkit/news/newsSlice";
@@ -33,12 +32,7 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
-  const element = useSelector(getElement);
-  useEffect(() => {
-    document
-      .querySelector(`.${element}`)
-      .scrollIntoView({ behavior: "smooth" });
-  }, [element]);
+
   return (
     <div>
       <Helmet>

@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     padding: "2rem",
+    background: "#a2cfbc",
     justifyContent: "space-evenly",
     alignItems: "center",
     textAlign: "center",
@@ -28,7 +29,7 @@ const Besok = () => {
   return (
     <div className={classes.root}>
       <section style={{ margin: "1rem 0" }}>
-        <h2 style={{ color: "#0369a1" }}>Kostnadsfri värdering</h2>
+        <h2 style={{ color: "black" }}>Kostnadsfri värdering</h2>
         <div
           style={{
             margin: "0.7rem auto",
@@ -42,7 +43,7 @@ const Besok = () => {
           <a
             href="/vardering-av-dodsbo"
             title="värdering av dödsbo"
-            style={{ color: "#0369a1" }}
+            style={{ color: "black" }}
           >
             värdering av dödsbo
           </a>{" "}
@@ -55,7 +56,7 @@ const Besok = () => {
           Efter att vi har{" "}
           <a
             href="/tomma-dodsbo"
-            style={{ color: "#0369a1" }}
+            style={{ color: "black" }}
             title="tömma dödsbo"
           >
             tömma dödsboet
@@ -64,7 +65,7 @@ const Besok = () => {
           <a
             href="/flyttstadning-av-bohag"
             title="flyttstädning av bohag"
-            style={{ color: "#0369a1" }}
+            style={{ color: "black" }}
           >
             flyttstädning av bohaget
           </a>{" "}
@@ -72,7 +73,7 @@ const Besok = () => {
           dig till oss.
         </p>
       </section>
-      <section style={{ margin: "1rem 0" }}>
+      <section style={{ margin: "1rem 0", borderRadius: "50%" }}>
         <img src={image2} className="besok-img" loading="lazy" alt="house" />
       </section>
     </div>

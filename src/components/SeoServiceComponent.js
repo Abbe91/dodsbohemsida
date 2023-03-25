@@ -40,8 +40,9 @@ const useStyles = makeStyles({
     lineHeight: "24px"
   },
   atag: {
-    color: "#0369a1",
-    fontSize: "0.9rem"
+    color: "#a2cfbc",
+    fontSize: "0.9rem",
+    fontWeight: "bold"
   }
 });
 const services = [
@@ -122,9 +123,7 @@ const SeoServiceComponent = () => {
             id="element"
           >
             {service.icon}
-            <h5
-              style={{ width: "320px", color: "#0369a1", margin: "0.5rem 0" }}
-            >
+            <h5 style={{ width: "320px", color: "black", margin: "0.5rem 0" }}>
               {service.title}
             </h5>
             <p className={classes.text}>{service.text}</p>

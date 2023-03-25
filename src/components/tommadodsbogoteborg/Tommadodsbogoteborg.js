@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainComp from "../MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
@@ -7,10 +7,9 @@ import AboutUs from "../AboutUs/AboutUs";
 import Tips from "../Tips/Tips";
 import Nav from "../Nav/Nav";
 import Erbjuder from "../Erbjuder/Erbjuder";
-import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../BookingModal";
@@ -33,12 +32,7 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   const mainquery = "tömma dödsbo i Göteborg";
   const services =
     "uppköp, bortforsling, sanering, luktsanering, flytt, städ, försäljning, och tömning av dödsbo och bohag i Göteborg";
-  const element = useSelector(getElement);
-  useEffect(() => {
-    document
-      .querySelector(`.${element}`)
-      ?.scrollIntoView({ behavior: "smooth" });
-  }, [element]);
+
   return (
     <div>
       <Helmet>

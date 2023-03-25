@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  news: [],
-  bingNews: [],
+  news: undefined,
+  bingNews: []
 };
 
 const newsSlice = createSlice({
@@ -13,8 +13,8 @@ const newsSlice = createSlice({
     },
     setBingNews: (state, { payload }) => {
       state.bingNews = payload;
-    },
-  },
+    }
+  }
 });
 export const { addNews, setBingNews } = newsSlice.actions;
 export const getNewsData = (state) => state.news.news;

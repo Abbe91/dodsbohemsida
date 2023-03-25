@@ -1,29 +1,20 @@
 import React, { useState, useRef } from "react";
 import "./MainComp.css";
-import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
-import { useSelector } from "react-redux";
-import { AiFillCheckCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
-const MainComp = ({
-  query,
-  formTitle,
-  icon,
-  subTitle,
-  subTitle2,
-  subTitle3,
-  subTitle4,
-  subTitle5,
-  text,
-  text1,
-  text2
-}) => {
-  const [accept, setAccept] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-  const customerData = useSelector(getCustomerData);
+import Arbetsprocessen from "../Arbetsprocessen";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
+import Steptwo from "./Steptwo";
+import Stepthree from "./Stepthree";
+import SnabbhjalpConfirm from "./SnabbhjalpConfirm";
+import { useDispatch } from "react-redux";
+import { setServices } from "../../redux-toolkit/snabbkollenSlice";
+import LottieHouse from "../../LottieAnimation/LottieHouse";
+import lottieanimation from "../../utils/animation/hus.json";
+const MainComp = ({ subTitle, subTitle5, text2 }) => {
+  const dispatch = useDispatch();
   const location = useLocation();
   const form = useRef();
   const [leadsData, setleadsData] = useState({
@@ -35,10 +26,9 @@ const MainComp = ({
     typ: "",
     leadId: Math.floor(Math.random() * 10000000000000)
   });
+  const steps = ["Tjänster", "Beskriv", "Återkoppling"];
+  const [activeStep, setActiveStep] = useState(0);
 
-  const handleLeadsFormChange = (e) => {
-    setleadsData({ ...leadsData, [e.target.name]: e.target.value });
-  };
   const addLeadToFireTore = async () => {
     try {
       const docRef = await addDoc(collection(db, "newLeads"), leadsData);
@@ -47,257 +37,361 @@ const MainComp = ({
       console.error("Error adding document: ", e);
     }
   };
-  const handleSubmit = (e) => {
-    setSending(true);
-    e.preventDefault();
-    addLeadToFireTore();
-    emailjs
-      .sendForm(
-        "service_k835y1d",
-        "template_vky05mk",
-        form.current,
-        process.env.REACT_APP_EMAILJS_2
-      )
-      .then(
-        (result) => {
-          if (result.text === "OK") {
-            document
-              .querySelectorAll("input")
-              ?.forEach((el) => (el.value = ""));
-            setSending(false);
-            setSent(true);
-          }
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
 
+  const handleClick = (e) => {
+    dispatch(setServices(e.target.innerText));
+    e.target.style.background = "#D6CA98";
+    e.target.style.color = "black";
+  };
+  const handledbClick = (e) => {
+    e.target.style.background = "black";
+    e.target.style.color = "white";
+  };
   return (
-    <section>
+    <section className="root">
       <div className="mainComp">
-        <div className="main-content-container">
+        {activeStep !== 3 && (
           <div>
-            <h2 style={{ marginBottom: "0.5rem" }}>{query}</h2>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                marginBottom: "0.4rem"
-              }}
-            >
-              <h4 style={{ marginRight: "0.5rem" }}>{subTitle}</h4>
-              <p> {icon}</p>
-            </div>
+            <h3 style={{ marginBottom: "0.5rem" }}>{subTitle}</h3>
+
             <p
-              style={{
-                maxWidth: "400px",
-                marginBottom: "1.5rem",
-                fontSize: "0.9rem",
-                lineHeight: "21px"
-              }}
+              style={{ maxWidth: "80%", margin: "0 auto", fontSize: "0.9rem" }}
             >
-              Auktoriserad firma som hanterar dödsbon, bohag, uppköp,
-              försäljning, tömning, bortforsling, sanering, flytt och städning
+              Auktoriserad firma som hanterar{" "}
+              <a
+                href="/tomma-dodsbo"
+                title="tömma dödsbo"
+                style={{ color: "inherit" }}
+              >
+                dödsbon
+              </a>
+              , bohag,{" "}
+              <a
+                href="/uppkop-av-dodsbo"
+                title="uppköp av dödsbo, bohag och hushåll"
+                style={{ color: "inherit" }}
+              >
+                uppköp
+              </a>
+              ,{" "}
+              <a
+                href="/salja-dodsbo"
+                title="försäljninglösöre, dödsbo, bohag och hushåll"
+                style={{ color: "inherit" }}
+              >
+                försäljning
+              </a>
+              ,{" "}
+              <a
+                href="/tomma-dodsbo"
+                title="tömma dödsbo"
+                style={{ color: "inherit" }}
+              >
+                tömning
+              </a>
+              ,{" "}
+              <a
+                href="/bortforsling-dodsbo"
+                title="bortforsling av möbler och dödsbo"
+                style={{ color: "inherit" }}
+              >
+                bortforsling
+              </a>
+              ,{" "}
+              <a
+                href="/sanera-dodsbo"
+                title="sanering av dödsbo"
+                style={{ color: "inherit" }}
+              >
+                sanering
+              </a>
+              ,{" "}
+              <a
+                href="/bohagsflytt"
+                title="bohagsflytt"
+                style={{ color: "inherit" }}
+              >
+                flytt
+              </a>{" "}
+              och{" "}
+              <a
+                href="/stadning-av-dodsbo"
+                title="städning av dödsbo"
+                style={{ color: "inherit" }}
+              >
+                städning
+              </a>{" "}
               av dödsbon och hushåll.
             </p>
           </div>
-        </div>
-        <form ref={form} id="main-comp-cont">
-          <div
-            style={{
-              dislay: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginBottom: "1rem",
-              letterSpacing: "1px",
-              borderBottom: "1px solid gray"
-            }}
-          >
-            <p style={{ fontSize: "1.3rem" }}>Gratiskollen</p>
-            <i style={{ fontSize: "1.5rem" }}>{icon}</i>
-          </div>
-          <input
-            type="text"
-            placeholder="Ditt namn"
-            required
-            name="namn"
-            onChange={handleLeadsFormChange}
+        )}
+        {activeStep == 1 && (
+          <Steptwo
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            steps={steps}
           />
-          <input
-            type="text"
-            placeholder="Din email"
-            required
-            name="email"
-            onChange={handleLeadsFormChange}
+        )}
+        {activeStep == 2 && (
+          <Stepthree
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            step={steps}
           />
-          <input
-            type="text"
-            placeholder="Ditt nummer"
-            required
-            name="telefon"
-            onChange={handleLeadsFormChange}
-          />
-          <textarea
-            placeholder="Beskriv lite kort vad du behöver hjälp med"
-            style={{
-              border: "none",
-              borderRadius: "5px",
-              width: "80%",
-              height: "3rem",
-              textAlign: "center"
-            }}
-            name="beskriv"
-            onChange={handleLeadsFormChange}
-          ></textarea>
-          <input
-            type={"url"}
-            style={{ display: "none" }}
-            value={location?.pathname}
-            name="path"
-          />
-          <div
+        )}
+        {activeStep == 3 && <SnabbhjalpConfirm />}
+        {activeStep === 0 && (
+          <section
             style={{
               display: "flex",
-              flexDirection: "row",
-              alignItems: "center"
+              flexDirection: "column",
+              justifyContent: "center",
+              marginTop: "2rem"
             }}
           >
-            <label htmlFor="typ">Typ</label>
-            <select name="typ" onChange={handleLeadsFormChange}>
-              <option value="Dödsbo">Dödsbo</option>
-              <option value="Bohag">Bohag/Hushåll</option>
-              <option value="Värdering">Värdering</option>
-              <option value="Bortforsling">Bortforsling</option>
-              <option value="Tömning">Tömning</option>
-              <option value="Städ">Städning</option>
-              <option value="Flytt">Flytt</option>
-              <option value="Uppköp">Uppköp</option>
-              <option value="Sanering">Sanering</option>
-            </select>
-          </div>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                margin: "0.7rem 0"
-              }}
-            >
-              <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
-                Jag vill bli kontaktad
-              </p>
-              <input
-                type="checkbox"
-                name="vill-bli-kontaktad"
-                onChange={handleLeadsFormChange}
-              />
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <p style={{ fontSize: ".8rem", marginRight: "0.3rem" }}>
-                Jag <strong>Vill</strong> ha en offert
-              </p>
-              <input
-                type="checkbox"
-                name="vill-ha-offert"
-                onChange={handleLeadsFormChange}
-              />
-            </div>
-          </div>
-          <a
-            href={`tel:${customerData.phone}`}
-            className="main-form-btn"
-            style={{ marginTop: "1rem" }}
-          >
-            {customerData.phone}
-          </a>
-          {accept && (
-            <button
-              type="submit"
-              className="main-form-btn"
-              onClick={handleSubmit}
-            >
-              {sending
-                ? "skickar..."
-                : sent
-                ? "Tack för din förfrågan"
-                : "Skicka"}
-            </button>
-          )}
-          <div className="form-policy">
-            <p style={{ fontSize: "0.75rem", width: "90%", margin: "1rem 0" }}>
-              Genom att använda detta formulär accepterar du att{" "}
-              <strong style={{ marginRight: "0.15rem" }}>
-                {customerData.business}
-              </strong>
-              lagrar och hanterar dina uppgifter. Uppgifterna i fråga kommer att
-              användas för att återkoppla till dig som kund/besökare.
+            <h3 className="poppins">Snabbhjälpen</h3>
+            <p style={{ marginBottom: "0.5rem", fontSize: "0.85rem" }}>
+              Vad behöver du hjälp med?
             </p>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: ".5rem 0",
-                transition: "all 0.3s linear"
-              }}
-            >
+            <section>
               <div
-                className="main-circle"
-                onClick={() => setAccept(!accept)}
-                style={{ border: accept && "none" }}
-              >
-                {accept && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
                 style={{
-                  marginLeft: "0.5rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center"
                 }}
               >
-                Jag godkänner
-              </p>
-            </div>
-          </div>
-        </form>
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Tömma
+                </button>
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Värdera
+                </button>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center"
+                }}
+              >
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Städa
+                </button>
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Flytta
+                </button>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center"
+                }}
+              >
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Uppköp
+                </button>
+                <button
+                  style={{
+                    background: "black",
+                    border: "none",
+                    width: "6.2rem",
+                    height: "2.2rem",
+                    borderRadius: "5px",
+                    marginLeft: "0.3rem",
+                    marginBottom: "0.3rem",
+                    fontWeight: "bold",
+                    fontSize: "0.75rem",
+                    color: "white"
+                  }}
+                  onClick={handleClick}
+                  onDoubleClick={handledbClick}
+                >
+                  Bortforsling
+                </button>
+              </div>
+            </section>
+          </section>
+        )}
+        {activeStep !== 3 && (
+          <button
+            className="nasta-steg"
+            style={{
+              width: "12.7rem",
+              height: "2.4rem",
+              margin: "0.4rem auto",
+              background: "transparent",
+              fontWeight: "bold",
+              fontSize: "0.9rem",
+              border: "1px solid black",
+              borderRadius: "5px",
+              color: "black"
+            }}
+            onClick={() => setActiveStep(activeStep + 1)}
+          >
+            Nästa steg
+          </button>
+        )}
+        <div>
+          <Stepper activeStep={activeStep} style={{ background: "#bbe3f7" }}>
+            {steps.map((step) => {
+              return (
+                <Step key={step}>
+                  <StepLabel>{step}</StepLabel>
+                </Step>
+              );
+            })}
+          </Stepper>
+        </div>
       </div>
-      <div style={{ textAlign: "center", margin: "2rem 0" }}>
-        <img
+      <div
+        style={{ textAlign: "center", margin: "2rem 0" }}
+        className="main-content-container"
+      >
+        {/* <img
           src="https://www.svgrepo.com/show/245414/moving-truck.svg"
           style={{ width: "50px", height: "50px" }}
           alt="truck, lastbil"
-        />
-        <h1>Snabbt & Pålitligt</h1>
-        <p
-          style={{
-            maxWidth: "360px",
-            margin: "0.5rem auto",
-            fontSize: "0.8rem"
-          }}
-        >
-          Letar du efter en som kan ta hand om dödsbon och hushåll på ett
-          professionellt sätt? Då har du kommit rätt! Vi är experter på att
-          köpa, tömma, städa och sälja dödsbon och hushåll.
-        </p>
-      </div>
+        /> */}
+        <div>
+          <h1>Snabbt & Pålitligt</h1>
+          <p
+            style={{
+              maxWidth: "330px",
+              lineHeight: "18px",
+              margin: "0.5rem auto",
+              fontSize: "0.8rem"
+            }}
+          >
+            Letar du efter en som kan ta hand om{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              dödsbon
+            </a>{" "}
+            och{" "}
+            <a
+              href="/tomma-bohag"
+              title="tömma bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              hushåll
+            </a>{" "}
+            på ett professionellt sätt? Då har du kommit rätt! Vi är experter på
+            att{" "}
+            <a
+              href="/uppkop-av-dodsbo"
+              title="uppköp av dödsbo, bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              köpa
+            </a>
+            ,{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              tömma
+            </a>{" "}
+            ,{" "}
+            <a
+              href="/stadning-av-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              städa
+            </a>{" "}
+            och sälja dödsbon och hushåll.
+          </p>
+        </div>
 
+        <LottieHouse lotti={lottieanimation} height={200} width={300} />
+      </div>
+      <Arbetsprocessen />
       <section className="content-new-container">
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "#f1f5f9",
+            background: "white",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -321,16 +415,30 @@ const MainComp = ({
               marginLeft: "0.5rem"
             }}
           >
-            Behöver du hjälp med att tömma ditt dödsbo eller hushåll eller få
-            ditt dödsbo värderat? Vi hjälper dig med hela processen för ditt
-            dödsbo och bohag.{" "}
+            Behöver du hjälp med att{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              tömma ditt dödsbo
+            </a>{" "}
+            eller hushåll eller få ditt dödsbo{" "}
+            <a
+              href="/vardera-dodsbo"
+              title="värdera dödsbo"
+              style={{ color: "inherit" }}
+            >
+              värderat
+            </a>{" "}
+            ? Vi hjälper dig med hela processen för ditt dödsbo och bohag.{" "}
           </p>
         </div>
 
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "#f1f5f9",
+            background: "#bbe3f7",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -346,18 +454,26 @@ const MainComp = ({
             }}
           >
             {/* {text1} */}
-            Att ta hand om ett dödsbo kan vara en svår uppgift som kräver mycket
-            tid och arbete. Det kan vara en känslomässigt påfrestande tid för de
-            efterlevande, och det kan vara svårt att veta var man ska börja. Men
-            med rätt hjälp och stöd kan det bli enklare. Vi på Dödsbo Jouren
-            specialiserar oss på hantering av dödsbo och kan hjälpa dig att ta
-            hand om alla aspekter av processen.
+            Att ta hand om ett{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              dödsbo
+            </a>{" "}
+            kan vara en svår uppgift som kräver mycket tid och arbete. Det kan
+            vara en känslomässigt påfrestande tid för de efterlevande, och det
+            kan vara svårt att veta var man ska börja. Men med rätt hjälp och
+            stöd kan det bli enklare. Vi på Dödsbo Jouren specialiserar oss på
+            hantering av dödsbo och kan hjälpa dig att ta hand om alla aspekter
+            av processen.
           </p>
         </div>
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "#f1f5f9",
+            background: "white",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -373,19 +489,41 @@ const MainComp = ({
             }}
           >
             {/* {text1} */}
-            Vi erbjuder en mängd olika tjänster, inklusive värdering av
-            tillgångar, bortforsling av skräp, tömning av fastigheter, uppköp av
-            egendom, städning och sanering. Vi förstår att varje dödsbo är unikt
-            och att det kan finnas olika behov beroende på situationen. Därför
-            är våra tjänster flexibla och anpassningsbara för att möta dina
-            specifika behov. Vi arbetar alltid med respekt och omsorg för att
-            underlätta denna svåra tid för de efterlevande.
+            Vi erbjuder en mängd olika tjänster, inklusive{" "}
+            <a
+              href="/vardera-dodsbo"
+              title="värdera dödsbo"
+              style={{ color: "inherit" }}
+            >
+              värdering
+            </a>{" "}
+            av tillgångar,{" "}
+            <a
+              href="/bortforsling-dodsbo"
+              title="bortforsling av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              bortforsling
+            </a>{" "}
+            av skräp,{" "}
+            <a
+              href="/tommer-hushall"
+              title="tömmer hushåll, bohag och dödsbo"
+              style={{ color: "inherit" }}
+            >
+              tömning av fastigheter
+            </a>{" "}
+            , uppköp av egendom, städning och sanering. Vi förstår att varje
+            dödsbo är unikt och att det kan finnas olika behov beroende på
+            situationen. Därför är våra tjänster flexibla och anpassningsbara
+            för att möta dina specifika behov. Vi arbetar alltid med respekt och
+            omsorg för att underlätta denna svåra tid för de efterlevande.
           </p>
         </div>
         <div
           style={{
             margin: "1rem 0.5rem",
-            background: "#f1f5f9",
+            background: "#bbe3f7",
             height: "280px",
             justifyContent: "center",
             display: "flex",
@@ -404,10 +542,33 @@ const MainComp = ({
             Vår erfarna personal är välutbildad och kunnig inom alla aspekter av
             hantering av dödsbo. Vi har de verktyg och resurser som krävs för
             att göra processen så smidig och effektiv som möjligt. Oavsett om du
-            behöver hjälp med värdering av egendom, bortforsling av skräp eller
-            städning av fastigheter, så kan vi hjälpa till. Vi erbjuder
-            konkurrenskraftiga priser och högkvalitativ service för att se till
-            att varje kund får den hjälp de behöver.
+            behöver hjälp med{" "}
+            <a
+              href="/vardera-dodsbo"
+              title="värdera dödsbo"
+              style={{ color: "inherit" }}
+            >
+              värdering av egendom
+            </a>{" "}
+            ,{" "}
+            <a
+              href="/bortforsling-dodsbo"
+              title="bortforsling av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              bortforsling av skräp
+            </a>{" "}
+            eller{" "}
+            <a
+              href="/flyttstadning"
+              title="flyttstädning  av dödsbo, hushåll, hus och hem"
+              style={{ color: "inherit" }}
+            >
+              städning av fastigheter
+            </a>{" "}
+            , så kan vi hjälpa till. Vi erbjuder konkurrenskraftiga priser och
+            högkvalitativ service för att se till att varje kund får den hjälp
+            de behöver.
           </p>
         </div>
       </section>
@@ -416,8 +577,3 @@ const MainComp = ({
 };
 
 export default MainComp;
-
-//  Kontakta oss på
-//             [Företagsnamn] för att få hjälp med hantering av dödsbo idag. Vi är
-//             här för att hjälpa dig genom denna svåra tid och göra processen så
-//             smidig som möjligt.

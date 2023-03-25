@@ -93,17 +93,11 @@
 }
 @media screen and (max-width: 900px) {
   .kostandri-cont div {
-    background: linear-gradient(
-        rgba(0.3, 0.3, 0.3, 0.3),
-        rgba(0.3, 0.3, 0.3, 0.3)
-      ),
-      url("https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg")
-        no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 560px;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    background: #bbe3f7;
+    color: black;
   }
   .kostandri-cont h1 {
     margin-bottom: 0.5rem;

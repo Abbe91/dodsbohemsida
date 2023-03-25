@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainComp from "./MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
 import { getCustomerData } from "../redux-toolkit/customer/customerSlice";
@@ -7,7 +7,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
+
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
 import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
@@ -18,7 +18,6 @@ const SaljaDodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "sälja dödsbo";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Sälja dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, sanering, flytt, städ, bortforsling, värdering och försäljning av dödsbo.",
@@ -34,12 +33,7 @@ const SaljaDodsbo = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, sanering, luktsanering, flytt, städning, bortforsling, värdering och försäljning av dödsbo.";
-  const element = useSelector(getElement);
-  useEffect(() => {
-    document
-      .querySelector(`.${element}`)
-      .scrollIntoView({ behavior: "smooth" });
-  }, [element]);
+
   return (
     <div>
       <Helmet>

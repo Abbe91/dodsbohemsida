@@ -7,14 +7,14 @@ const useStyles = makeStyles({
   root: {
     background: "rgb(248, 247, 247)",
     height: "560px",
-    margin: "1rem 0",
+    margin: "2rem 0",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
     width: "100%",
     alignItems: "center",
     "@media screen and (max-width: 800px)": {
-      height: "700px"
+      height: "860px"
     }
   },
   contentContainer: {

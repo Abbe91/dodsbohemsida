@@ -11,7 +11,7 @@ import tomningavdodsbo from "../utils/images/seoimages/tömning-av-dödsbo.jpg";
 import varderadodsbo from "../utils/images/värdera-dödsbo.jpg";
 const useStyles = makeStyles({
   root: {
-    background: "rgb(248, 247, 247)",
+    background: "white",
     height: "400px",
     width: "100%",
     display: "flex",
@@ -25,8 +25,9 @@ const useStyles = makeStyles({
   btn: {
     width: "100%",
     height: "2rem",
-    background: "#0369a1",
-    color: "white",
+    background: "#a2cfbc",
+    fontWeight: "bold",
+    color: "black",
     border: "none",
     borderRadius: "5px",
     margin: "0.5rem auto",

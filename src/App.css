@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
 * {
   padding: 0;
   margin: 0%;
@@ -29,6 +30,9 @@ input[type="color"] {
   input:focus {
     font-size: 16px;
   }
+}
+.shantel {
+  font-family: "Shantell Sans", cursive;
 }
 .App {
   height: 100%;
@@ -78,7 +82,7 @@ button {
   flex-direction: column;
 }
 .booking-lottie .booking-content h2 {
-  color: #0369a1;
+  color: black;
 }
 .booking-lottie .booking-content h4 {
   font-size: 0.9rem;
@@ -94,8 +98,8 @@ button {
   width: 200px;
   height: 2rem;
   font-weight: 700;
-  background: #0369a1;
-  color: white;
+  background: #a2cfbc;
+  color: black;
   border: none;
   border-radius: 5px;
 }
@@ -183,11 +187,11 @@ button {
   }
 }
 .besok-img {
-  width: 500px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  border-radius: 5px;
 }
 .office p {
   font-size: 0.7rem;
@@ -213,4 +217,21 @@ button {
 }
 #erbjuder-cont div {
   margin-bottom: 1rem;
+}
+.stepthree-input {
+  width: 0;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-radius: 5px;
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  font-size: 16px;
+  transition: all 0.3s linear;
+  height: 0;
+}
+.height {
+  height: 2.6rem;
+  width: 205px;
 }
