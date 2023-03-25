@@ -70,6 +70,8 @@ const GratisKollen = () => {
   };
 
   const handleTypclick = (e) => {
+    e.target.style.background = "#D6CA98";
+    e.target.style.color = "black";
     setleadsData({ ...leadsData, typ: e.currentTarget.innerText });
   };
 
