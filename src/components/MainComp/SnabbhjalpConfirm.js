@@ -25,9 +25,9 @@ const SnabbhjalpConfirm = () => {
         }
       );
   };
-  // useEffect(() => {
-  //   handleSubmit();
-  // });
+  useEffect(() => {
+    handleSubmit();
+  });
   return (
     <div
       style={{
