@@ -54,7 +54,7 @@ input:focus {
   border: 1px solid black;
   margin-top: 0.2rem;
   margin-bottom: 1.5rem;
-  width: 200px;
+  width: 100%;
   padding: 0.3rem;
   border-radius: 5px;
   text-align: center;

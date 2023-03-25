@@ -52,7 +52,7 @@ const GratisKollen = () => {
             setsent(true);
             setTimeout(() => {
               window.location.href = "/";
-            }, 2500);
+            }, 2000);
           }
         },
         (error) => {
@@ -67,6 +67,10 @@ const GratisKollen = () => {
     if (e.target.innerText === "Få e-mail") setfaehmail(!faehmail);
     e.target.style.background = "#D6CA98";
     e.target.style.color = "black";
+  };
+
+  const handleTypclick = (e) => {
+    setleadsData({ ...leadsData, typ: e.currentTarget.innerText });
   };
 
   return (
@@ -370,18 +374,86 @@ const GratisKollen = () => {
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
             justifyContent: "center",
+            flexDirection: "row",
             alignItems: "center"
           }}
         >
-          <label htmlFor="typ">Typ</label>
+          <button
+            style={{
+              background: "black",
+              border: "none",
+              width: "4.2rem",
+              height: "2.2rem",
+              borderRadius: "5px",
+              marginLeft: "0.3rem",
+              marginBottom: "0.3rem",
+              fontWeight: "bold",
+              fontSize: "0.75rem",
+              color: "white"
+            }}
+            onClick={handleTypclick}
+          >
+            Dödsbo
+          </button>
+          <button
+            style={{
+              background: "black",
+              border: "none",
+              width: "4.2rem",
+              height: "2.2rem",
+              borderRadius: "5px",
+              marginLeft: "0.3rem",
+              marginBottom: "0.3rem",
+              fontWeight: "bold",
+              fontSize: "0.75rem",
+              color: "white"
+            }}
+            onClick={handleTypclick}
+          >
+            Hushåll
+          </button>
+          <button
+            style={{
+              background: "black",
+              border: "none",
+              width: "4.2rem",
+              height: "2.2rem",
+              borderRadius: "5px",
+              marginLeft: "0.3rem",
+              marginBottom: "0.3rem",
+              fontWeight: "bold",
+              fontSize: "0.75rem",
+              color: "white"
+            }}
+            onClick={handleTypclick}
+          >
+            Kontor
+          </button>
+          <button
+            style={{
+              background: "black",
+              border: "none",
+              width: "4.2rem",
+              height: "2.2rem",
+              borderRadius: "5px",
+              marginLeft: "0.3rem",
+              marginBottom: "0.3rem",
+              fontWeight: "bold",
+              fontSize: "0.75rem",
+              color: "white"
+            }}
+            onClick={handleTypclick}
+          >
+            Annat
+          </button>
+          {/* <label htmlFor="typ">Typ</label>
           <select name="typ" onChange={handleLeadsFormChange}>
             <option value="Dödsbo">Dödsbo</option>
             <option value="Bohag">Bohag/Hushåll</option>
             <option value="Kontor">Kontor</option>
             <option value="Foretag">Företag</option>
-          </select>
+          </select> */}
         </div>
         <textarea
           placeholder="Beskriv lite kort..."
