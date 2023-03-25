@@ -64,6 +64,7 @@ const SnabbhjalpConfirm = () => {
       <form ref={form} style={{ display: "none" }}>
         <input type={"text"} name="email" value={data?.contacts} />
         <input type={"text"} name="telefon" value={data?.contacts} />
+        <input type={"text"} name="namn" value={data?.namn} />
         <input
           type={"text"}
           name="tjanster"

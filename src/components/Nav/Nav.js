@@ -65,7 +65,7 @@ const Nav = () => {
         </div>
       </section>
       <nav>
-        <div className="nav-logo">
+        <div className="nav-logo" onClick={() => (window.location.href = "/")}>
           <h2 className="logo">{customerData.business}</h2>
         </div>
         <div className="navbar" onClick={() => setShowNav(!showNav)}>

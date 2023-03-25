@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import {
   setKontaktsatt,
   setBeskrivning,
-  setContacts
+  setContacts,
+  setNamn
 } from "../../redux-toolkit/snabbkollenSlice";
 const Stepthree = () => {
   const [placeHolderText, setplaceHolderText] = useState("");
@@ -30,7 +31,9 @@ const Stepthree = () => {
   const handleContactChange = (e) => {
     dispatch(setContacts(e.target.value));
   };
-
+  const handleName = (e) => {
+    dispatch(setNamn(e.target.value));
+  };
   return (
     <div>
       <section
@@ -94,6 +97,7 @@ const Stepthree = () => {
               Få e-mail
             </button>
           </div>
+
           <div style={{ display: "flex", flexDirection: "column" }}>
             <input
               type={"text"}
@@ -121,6 +125,20 @@ const Stepthree = () => {
               onChange={handleChange}
             />
           </div>
+          <input
+            type={"text"}
+            name={"namn"}
+            placeholder="...vill du ange ditt namn?"
+            style={{
+              fontSize: "16px",
+              border: "none",
+              background: "transparent",
+              textAlign: "center",
+              color: "black",
+              margin: "0.3rem 0"
+            }}
+            onChange={handleName}
+          />
         </section>
       </section>
     </div>

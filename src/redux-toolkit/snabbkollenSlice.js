@@ -4,7 +4,8 @@ const initialState = {
   bohagsTyp: "",
   kontaktSatt: "",
   beskrivning: "",
-  contacts: ""
+  contacts: "",
+  namn: ""
 };
 
 const snabbkollenSlice = createSlice({
@@ -25,6 +26,9 @@ const snabbkollenSlice = createSlice({
     },
     setContacts: (state = initialState, { payload }) => {
       state.contacts = payload;
+    },
+    setNamn: (state = initialState, { payload }) => {
+      state.namn = payload;
     }
   }
 });
@@ -33,7 +37,8 @@ export const {
   setBohagstyp,
   setKontaktsatt,
   setBeskrivning,
-  setContacts
+  setContacts,
+  setNamn
 } = snabbkollenSlice.actions;
 export const getSnabbkollenData = (state) => state.snabbkollen;
 export default snabbkollenSlice.reducer;
