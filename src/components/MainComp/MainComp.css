@@ -102,7 +102,12 @@ input:focus {
   align-items: center;
   transition: all 0.3s linear;
 }
-
+.main-content-container p {
+  max-width: 330px;
+  line-height: 18px;
+  margin: 0.5rem auto;
+  font-size: 0.9rem;
+}
 @media screen and (max-width: 672px) {
   .mainComp {
     height: 520px;
@@ -152,5 +157,9 @@ input:focus {
   }
   .mainComp-wiw {
     display: block;
+  }
+  .main-content-container p {
+    font-size: 1rem;
+    line-height: 19px;
   }
 }

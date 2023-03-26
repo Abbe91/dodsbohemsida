@@ -76,7 +76,7 @@ const Arbetsprocessen = () => {
                 height: "200px",
                 width: "200px",
                 objectFit: "cover",
-                marginTop: "3rem",
+                marginTop: "4rem",
                 borderRadius: "50%",
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               }}
@@ -118,7 +118,7 @@ const Arbetsprocessen = () => {
                 height: "200px",
                 width: "200px",
                 objectFit: "cover",
-                marginTop: "3rem",
+                marginTop: "4rem",
                 borderRadius: "50%",
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               }}
@@ -160,7 +160,7 @@ const Arbetsprocessen = () => {
                 height: "200px",
                 width: "200px",
                 objectFit: "cover",
-                marginTop: "3rem",
+                marginTop: "4rem",
                 borderRadius: "50%",
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               }}
@@ -203,7 +203,7 @@ const Arbetsprocessen = () => {
                 height: "200px",
                 width: "200px",
                 objectFit: "cover",
-                marginTop: "3rem",
+                marginTop: "4rem",
                 borderRadius: "50%",
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               }}

@@ -344,21 +344,9 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
         style={{ textAlign: "center", margin: "2rem 0" }}
         className="main-content-container"
       >
-        {/* <img
-          src="https://www.svgrepo.com/show/245414/moving-truck.svg"
-          style={{ width: "50px", height: "50px" }}
-          alt="truck, lastbil"
-        /> */}
         <div>
           <h1>Snabbt & Pålitligt</h1>
-          <p
-            style={{
-              maxWidth: "330px",
-              lineHeight: "18px",
-              margin: "0.5rem auto",
-              fontSize: "0.9rem"
-            }}
-          >
+          <p>
             Letar du efter en som kan ta hand om{" "}
             <a
               href="/tomma-dodsbo"
@@ -410,9 +398,9 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
       <section className="content-new-container">
         <div
           style={{
-            margin: "1rem 0.5rem",
+            margin: "0rem 0.5rem",
             background: "white",
-            height: "280px",
+            height: "300px",
             justifyContent: "center",
             display: "flex",
             flexDirection: "column"
@@ -459,7 +447,7 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
           style={{
             margin: "1rem 0.5rem",
             background: "#bbe3f7",
-            height: "280px",
+            height: "300px",
             justifyContent: "center",
             display: "flex",
             flexDirection: "column"
@@ -492,9 +480,9 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
         </div>
         <div
           style={{
-            margin: "1rem 0.5rem",
+            margin: "1.2rem 0.5rem",
             background: "white",
-            height: "280px",
+            height: "300px",
             justifyContent: "center",
             display: "flex",
             flexDirection: "column"
@@ -542,9 +530,9 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
         </div>
         <div
           style={{
-            margin: "1rem 0.5rem",
+            margin: "1.2rem 0.5rem",
             background: "#bbe3f7",
-            height: "280px",
+            height: "300px",
             justifyContent: "center",
             display: "flex",
             flexDirection: "column"
