@@ -47,278 +47,298 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
     e.target.style.background = "black";
     e.target.style.color = "white";
   };
+
   return (
     <section className="root">
       <div className="mainComp">
-        {activeStep !== 3 && (
-          <div>
-            <h3 style={{ marginBottom: "0.5rem" }}>{subTitle}</h3>
+        <section style={{ maxWidth: "600px" }}>
+          {activeStep !== 3 && (
+            <div>
+              <h3 style={{ marginBottom: "0.5rem" }}>{subTitle}</h3>
 
-            <p
-              style={{ maxWidth: "80%", margin: "0 auto", fontSize: "0.9rem" }}
+              <p
+                style={{
+                  maxWidth: "80%",
+                  margin: "0 auto",
+                  fontSize: "0.9rem"
+                }}
+              >
+                Auktoriserad firma som hanterar{" "}
+                <a
+                  href="/tomma-dodsbo"
+                  title="tömma dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  dödsbon
+                </a>
+                , bohag,{" "}
+                <a
+                  href="/uppkop-av-dodsbo"
+                  title="uppköp av dödsbo, bohag och hushåll"
+                  style={{ color: "inherit" }}
+                >
+                  uppköp
+                </a>
+                ,{" "}
+                <a
+                  href="/salja-dodsbo"
+                  title="försäljninglösöre, dödsbo, bohag och hushåll"
+                  style={{ color: "inherit" }}
+                >
+                  försäljning
+                </a>
+                ,{" "}
+                <a
+                  href="/tomma-dodsbo"
+                  title="tömma dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  tömning
+                </a>
+                ,{" "}
+                <a
+                  href="/bortforsling-dodsbo"
+                  title="bortforsling av möbler och dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  bortforsling
+                </a>
+                ,{" "}
+                <a
+                  href="/sanera-dodsbo"
+                  title="sanering av dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  sanering
+                </a>
+                ,{" "}
+                <a
+                  href="/bohagsflytt"
+                  title="bohagsflytt"
+                  style={{ color: "inherit" }}
+                >
+                  flytt
+                </a>{" "}
+                och{" "}
+                <a
+                  href="/stadning-av-dodsbo"
+                  title="städning av dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  städning
+                </a>{" "}
+                av dödsbon och hushåll.
+              </p>
+            </div>
+          )}
+          {activeStep == 1 && (
+            <Steptwo
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+              steps={steps}
+            />
+          )}
+          {activeStep == 2 && (
+            <Stepthree
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+              step={steps}
+            />
+          )}
+          {activeStep == 3 && <SnabbhjalpConfirm />}
+          {activeStep === 0 && (
+            <section
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                marginTop: "2rem"
+              }}
             >
-              Auktoriserad firma som hanterar{" "}
-              <a
-                href="/tomma-dodsbo"
-                title="tömma dödsbo"
-                style={{ color: "inherit" }}
-              >
-                dödsbon
-              </a>
-              , bohag,{" "}
-              <a
-                href="/uppkop-av-dodsbo"
-                title="uppköp av dödsbo, bohag och hushåll"
-                style={{ color: "inherit" }}
-              >
-                uppköp
-              </a>
-              ,{" "}
-              <a
-                href="/salja-dodsbo"
-                title="försäljninglösöre, dödsbo, bohag och hushåll"
-                style={{ color: "inherit" }}
-              >
-                försäljning
-              </a>
-              ,{" "}
-              <a
-                href="/tomma-dodsbo"
-                title="tömma dödsbo"
-                style={{ color: "inherit" }}
-              >
-                tömning
-              </a>
-              ,{" "}
-              <a
-                href="/bortforsling-dodsbo"
-                title="bortforsling av möbler och dödsbo"
-                style={{ color: "inherit" }}
-              >
-                bortforsling
-              </a>
-              ,{" "}
-              <a
-                href="/sanera-dodsbo"
-                title="sanering av dödsbo"
-                style={{ color: "inherit" }}
-              >
-                sanering
-              </a>
-              ,{" "}
-              <a
-                href="/bohagsflytt"
-                title="bohagsflytt"
-                style={{ color: "inherit" }}
-              >
-                flytt
-              </a>{" "}
-              och{" "}
-              <a
-                href="/stadning-av-dodsbo"
-                title="städning av dödsbo"
-                style={{ color: "inherit" }}
-              >
-                städning
-              </a>{" "}
-              av dödsbon och hushåll.
-            </p>
-          </div>
-        )}
-        {activeStep == 1 && (
-          <Steptwo
-            activeStep={activeStep}
-            setActiveStep={setActiveStep}
-            steps={steps}
-          />
-        )}
-        {activeStep == 2 && (
-          <Stepthree
-            activeStep={activeStep}
-            setActiveStep={setActiveStep}
-            step={steps}
-          />
-        )}
-        {activeStep == 3 && <SnabbhjalpConfirm />}
-        {activeStep === 0 && (
-          <section
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              marginTop: "2rem"
-            }}
-          >
-            <h3 className="poppins">Snabbhjälpen</h3>
-            <p style={{ marginBottom: "0.5rem", fontSize: "0.85rem" }}>
-              Vad behöver du hjälp med?
-            </p>
-            <section>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center"
-                }}
-              >
-                <button
+              <h3 className="poppins">Snabbhjälpen</h3>
+              <p style={{ marginBottom: "0.5rem", fontSize: "0.85rem" }}>
+                Vad behöver du hjälp med?
+              </p>
+              <section>
+                <div
                   style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
                   }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
                 >
-                  Tömma
-                </button>
-                <button
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Tömma
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Värdera
+                  </button>
+                </div>
+                <div
                   style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
                   }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
                 >
-                  Värdera
-                </button>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center"
-                }}
-              >
-                <button
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Städa
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Flytta
+                  </button>
+                </div>
+                <div
                   style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
                   }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
                 >
-                  Städa
-                </button>
-                <button
-                  style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
-                  }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
-                >
-                  Flytta
-                </button>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center"
-                }}
-              >
-                <button
-                  style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
-                  }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
-                >
-                  Uppköp
-                </button>
-                <button
-                  style={{
-                    background: "black",
-                    border: "none",
-                    width: "6.2rem",
-                    height: "2.2rem",
-                    borderRadius: "5px",
-                    marginLeft: "0.3rem",
-                    marginBottom: "0.3rem",
-                    fontWeight: "bold",
-                    fontSize: "0.75rem",
-                    color: "white"
-                  }}
-                  onClick={handleClick}
-                  onDoubleClick={handledbClick}
-                >
-                  Bortforsling
-                </button>
-              </div>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Uppköp
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Bortforsling
+                  </button>
+                </div>
+              </section>
             </section>
-          </section>
-        )}
-        {activeStep !== 3 && (
-          <button
-            className="nasta-steg"
+          )}
+          {activeStep !== 3 && (
+            <button
+              className="nasta-steg"
+              style={{
+                width: "12.7rem",
+                height: "2.4rem",
+                margin: "0.4rem auto",
+                background: "transparent",
+                fontWeight: "bold",
+                fontSize: "0.9rem",
+                border: "1px solid black",
+                borderRadius: "5px",
+                color: "black"
+              }}
+              onClick={() => setActiveStep(activeStep + 1)}
+            >
+              Nästa steg
+            </button>
+          )}
+          <div className="stepperr">
+            <Stepper activeStep={activeStep} style={{ background: "#bbe3f7" }}>
+              {steps.map((step) => {
+                return (
+                  <Step key={step}>
+                    <StepLabel>{step}</StepLabel>
+                  </Step>
+                );
+              })}
+            </Stepper>
+          </div>
+        </section>
+        <section className="mainComp-wiw">
+          <img
+            src="https://images.pexels.com/photos/7464244/pexels-photo-7464244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             style={{
-              width: "12.7rem",
-              height: "2.4rem",
-              margin: "0.4rem auto",
-              background: "transparent",
-              fontWeight: "bold",
-              fontSize: "0.9rem",
-              border: "1px solid black",
-              borderRadius: "5px",
-              color: "black"
+              width: "400px",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "30%",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
             }}
-            onClick={() => setActiveStep(activeStep + 1)}
-          >
-            Nästa steg
-          </button>
-        )}
-        <div>
-          <Stepper activeStep={activeStep} style={{ background: "#bbe3f7" }}>
-            {steps.map((step) => {
-              return (
-                <Step key={step}>
-                  <StepLabel>{step}</StepLabel>
-                </Step>
-              );
-            })}
-          </Stepper>
-        </div>
+            alt="flyttkartonger, tömmer ett dödsbo"
+          />
+        </section>
       </div>
       <div
         style={{ textAlign: "center", margin: "2rem 0" }}
@@ -336,7 +356,7 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
               maxWidth: "330px",
               lineHeight: "18px",
               margin: "0.5rem auto",
-              fontSize: "0.8rem"
+              fontSize: "0.9rem"
             }}
           >
             Letar du efter en som kan ta hand om{" "}

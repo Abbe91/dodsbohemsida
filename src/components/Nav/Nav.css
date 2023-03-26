@@ -80,7 +80,7 @@ nav .navbar {
   display: flex;
   align-items: center;
   color: #64748b;
-  margin-right: 0.2rem;
+  margin-right: 0.3rem;
   transition: all 0.3s linear;
 }
 .user-contact a:hover {

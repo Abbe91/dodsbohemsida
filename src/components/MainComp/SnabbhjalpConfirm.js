@@ -35,6 +35,7 @@ const SnabbhjalpConfirm = () => {
         padding: "1rem",
         borderRadius: "5px",
         width: "90%",
+        margin: "0 auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

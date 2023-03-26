@@ -54,7 +54,8 @@ const Nav = () => {
                   background: "#bbe3f7",
                   color: "black",
                   height: "1.6rem",
-                  fontSize: "0.75rem"
+                  fontSize: "0.75rem",
+                  fontWeight: "bold"
                 }}
               >
                 Gratiskollen

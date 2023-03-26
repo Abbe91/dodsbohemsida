@@ -68,7 +68,7 @@ button {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: start;
 }
 .booking-modal {
@@ -169,6 +169,9 @@ button {
   border-radius: 5px;
   background: white;
 }
+.ddddd {
+  display: none;
+}
 @media screen and (max-width: 800px) {
   .partners {
     flex-direction: column;
@@ -184,6 +187,9 @@ button {
   }
   .footer-links {
     font-size: 0.8rem;
+  }
+  .ddddd {
+    display: block;
   }
 }
 .besok-img {

@@ -98,7 +98,14 @@ const Stepthree = () => {
             </button>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
             <input
               type={"text"}
               required

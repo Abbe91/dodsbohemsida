@@ -141,3 +141,16 @@ input:focus {
     display: flex;
   }
 }
+.mainComp-wiw {
+  display: none;
+  width: 50%;
+}
+
+@media screen and (min-width: 850px) {
+  .mainComp {
+    flex-direction: row;
+  }
+  .mainComp-wiw {
+    display: block;
+  }
+}

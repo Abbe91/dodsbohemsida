@@ -4,13 +4,15 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     alignItems: "center",
+    flexDirection: "column",
     justifyContent: "center",
+    width: "100%",
     padding: "2rem",
-    flexWrap: "wrap",
-    background: "#bbe3f7",
-    "@media screen and (max-width: 1000px)": {
-      flexDirection: "column"
-    }
+    // flexWrap: "wrap",
+    background: "#bbe3f7"
+    // "@media screen and (max-width: 1000px)": {
+    //   flexDirection: "column"
+    // }
   },
   rund: {
     width: "2.6rem",
@@ -38,76 +40,176 @@ const Arbetsprocessen = () => {
         SÅ FUNGERAR DET
       </h2>
       <div className={classes.root}>
-        <section>
-          <div className={classes.rund}>
-            <p>1</p>
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <div>
+            <div className={classes.rund}>
+              <p>1</p>
+            </div>
+            <p style={{ width: "300px", marginTop: "0.5rem" }}>
+              <strong style={{ color: "black" }}> VÄRDERING:</strong> Vi
+              erbjuder en kostnadsfri värdering av hemmets föremål, dödsboet
+              eller bohaget. Detta är för att kunna ge er ett fast pris för
+              själva{" "}
+              <a
+                href="/tomma-dodsbo"
+                style={{ color: "black" }}
+                title="tömma dödsbo"
+              >
+                tömningen av dödsboet
+              </a>{" "}
+              och så att vi även kan ge er ett pris för uppköpet av lösöret vi
+              är intresserade av att köpa upp.
+            </p>
           </div>
-          <p style={{ width: "300px", marginTop: "0.5rem" }}>
-            <strong style={{ color: "black" }}> VÄRDERING:</strong> Vi erbjuder
-            en kostnadsfri värdering av hemmets föremål, dödsboet eller bohaget.
-            Detta är för att kunna ge er ett fast pris för själva{" "}
-            <a
-              href="/tomma-dodsbo"
-              style={{ color: "black" }}
-              title="tömma dödsbo"
-            >
-              tömningen av dödsboet
-            </a>{" "}
-            och så att vi även kan ge er ett pris för uppköpet av lösöret vi är
-            intresserade av att köpa upp.
-          </p>
+          <div className="ddddd">
+            <img
+              src="https://images.pexels.com/photos/4245922/pexels-photo-4245922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              style={{
+                height: "200px",
+                width: "200px",
+                objectFit: "cover",
+                marginTop: "3rem",
+                borderRadius: "50%",
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+              }}
+              alt="värdering av dödsbo"
+            />
+          </div>
         </section>
-        <section>
-          <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
-            <p>2</p>
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <div>
+            <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
+              <p>2</p>
+            </div>
+            <p style={{ width: "300px", marginTop: "1rem" }}>
+              <strong style={{ color: "black" }}>
+                Tömning & Bortforsling:
+              </strong>{" "}
+              Vi kommer den dagen vi bestämt tillsammans för att börja sortera i{" "}
+              <a href="/dodsboet" style={{ color: "black" }} title="dödsboet">
+                dödsboet
+              </a>{" "}
+              eller bohaget. När vi sorterat klart börjar vi forsla bort det som
+              vi kan skänka eller det som skall gå till tippen. Efter detta tar
+              vi då det lösöre vi köpt upp som vi kör till vår butik eller
+              lager.
+            </p>
           </div>
-          <p style={{ width: "300px", marginTop: "1rem" }}>
-            <strong style={{ color: "black" }}>Tömning & Bortforsling:</strong>{" "}
-            Vi kommer den dagen vi bestämt tillsammans för att börja sortera i{" "}
-            <a href="/dodsboet" style={{ color: "black" }} title="dödsboet">
-              dödsboet
-            </a>{" "}
-            eller bohaget. När vi sorterat klart börjar vi forsla bort det som
-            vi kan skänka eller det som skall gå till tippen. Efter detta tar vi
-            då det lösöre vi köpt upp som vi kör till vår butik eller lager.
-          </p>
+          <div className="ddddd">
+            <img
+              src="https://images.pexels.com/photos/8770246/pexels-photo-8770246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              style={{
+                height: "200px",
+                width: "200px",
+                objectFit: "cover",
+                marginTop: "3rem",
+                borderRadius: "50%",
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+              }}
+              alt="bortforsling av möbler, skräp och av dödsbo"
+            />
+          </div>
         </section>
-        <section>
-          <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
-            <p>3</p>
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <div>
+            <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
+              <p>3</p>
+            </div>
+            <p style={{ width: "300px", marginTop: "1rem" }}>
+              <strong style={{ color: "black" }}> STÄDNING:</strong> Behöver du
+              även hjälp med att få dödsboet eller bohaget{" "}
+              <a
+                href="/stadning-av-dodsbo"
+                title="städning av dödsbo"
+                style={{ color: "black" }}
+              >
+                städat
+              </a>{" "}
+              så erbjuder vi även den tjänsten för alla våra dödsbon och bohag.
+              Vi gör även saneringar som luktsaneringar av rökande eller annat.
+            </p>
           </div>
-          <p style={{ width: "300px", marginTop: "1rem" }}>
-            <strong style={{ color: "black" }}> STÄDNING:</strong> Behöver du
-            även hjälp med att få dödsboet eller bohaget{" "}
-            <a
-              href="/stadning-av-dodsbo"
-              title="städning av dödsbo"
-              style={{ color: "black" }}
-            >
-              städat
-            </a>{" "}
-            så erbjuder vi även den tjänsten för alla våra dödsbon och bohag. Vi
-            gör även saneringar som luktsaneringar av rökande eller annat.
-          </p>
+          <div className="ddddd">
+            <img
+              src="https://cdn.pixabay.com/photo/2021/01/18/16/56/blinds-5928691_1280.jpg"
+              style={{
+                height: "200px",
+                width: "200px",
+                objectFit: "cover",
+                marginTop: "3rem",
+                borderRadius: "50%",
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+              }}
+              alt="städning av dödsbo"
+            />
+          </div>
         </section>
-        <section>
-          <div className={classes.rund}>
-            <p>4</p>
+        <section
+          style={{
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <div>
+            <div className={classes.rund}>
+              <p>4</p>
+            </div>
+            <p style={{ width: "300px", marginTop: "1rem" }}>
+              <strong style={{ color: "black" }}> BETALNING: </strong>Är
+              föremålen/lösöret av högre värde än kostnaderna för arbetet så
+              kommer vi att betala dig som kund för att få{" "}
+              <a
+                href="/tomma-dodsbo"
+                style={{ color: "black" }}
+                title="tömma dödsbo"
+              >
+                tömma dödsboet
+              </a>
+              . Eller så kan det även bli att vi drar av summan mot det ni skall
+              betala oss.
+            </p>
           </div>
-          <p style={{ width: "300px", marginTop: "1rem" }}>
-            <strong style={{ color: "black" }}> BETALNING: </strong>Är
-            föremålen/lösöret av högre värde än kostnaderna för arbetet så
-            kommer vi att betala dig som kund för att få{" "}
-            <a
-              href="/tomma-dodsbo"
-              style={{ color: "black" }}
-              title="tömma dödsbo"
-            >
-              tömma dödsboet
-            </a>
-            . Eller så kan det även bli att vi drar av summan mot det ni skall
-            betala oss.
-          </p>
+
+          <div className="ddddd">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/10/20/18/36/money-1756279_1280.jpg"
+              style={{
+                height: "200px",
+                width: "200px",
+                objectFit: "cover",
+                marginTop: "3rem",
+                borderRadius: "50%",
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+              }}
+              alt="vem köper dödsbon"
+            />
+          </div>
         </section>
       </div>
     </div>
