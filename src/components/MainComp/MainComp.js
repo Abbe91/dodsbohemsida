@@ -65,14 +65,6 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
               >
                 Auktoriserad firma som hanterar{" "}
                 <a
-                  href="/tomma-dodsbo"
-                  title="tömma dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  dödsbon
-                </a>
-                , bohag,{" "}
-                <a
                   href="/uppkop-av-dodsbo"
                   title="uppköp av dödsbo, bohag och hushåll"
                   style={{ color: "inherit" }}
@@ -127,7 +119,23 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
                 >
                   städning
                 </a>{" "}
-                av dödsbon och hushåll.
+                av{" "}
+                <a
+                  href="/tomma-dodsbo"
+                  title="tömma dödsbo"
+                  style={{ color: "inherit" }}
+                >
+                  dödsbon
+                </a>{" "}
+                och{" "}
+                <a
+                  href="/tomma-bohag"
+                  title="tömma bohag"
+                  style={{ color: "inherit" }}
+                >
+                  bohag
+                </a>
+                .
               </p>
             </div>
           )}
