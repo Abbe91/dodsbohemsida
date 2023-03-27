@@ -22,9 +22,9 @@ const Koperdodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Uppköp dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, röjning, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
+      "Sälj ditt dödsbo i Göteborg till oss - Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon | Dödsbo Jouren",
     metaContent:
-      "Köper dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, röjning, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
+      "Att sälja ett dödsbo kan vara en känslomässigt utmanande och svår process, men vi är här för att hjälpa till. Som ett erfaret och pålitligt företag för dödsbo köp i Göteborg erbjuder vi en smidig och enkel lösning för att sälja dödsboet. Vi köper alla typer av dödsbo och vi strävar efter att ge dig en rättvis värdering och kontant betalning för dödsboet.nVi har en lång erfarenhet av att köpa dödsbon i Göteborg och vi förstår de olika utmaningar som kan uppstå. Vårt team av professionella och kunniga experter är här för att göra hela processen enkel, stressfri och så smidig som möjligt för dig. Vi arbetar snabbt och effektivt för att ge dig den bästa möjliga upplevelsen och garanterar en professionell och pålitlig transaktion. När du väljer oss som din partner för dödsbo köp i Göteborg, kan du lita på att vi kommer att behandla dig och ditt dödsbo med omsorg och respekt.",
     query: "Köper dödsbo Göteborg",
     formTitle: "Köper dödsbo Göteborg",
     subTitle2:

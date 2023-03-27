@@ -22,9 +22,9 @@ const DodsboGoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
+      "Värdering och avveckling av dödsbo i Göteborg - Få professionell hjälp idag | Dödsbo Jouren",
     metaContent:
-      "Dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
+      "Låt oss hjälpa dig med att avveckla ett dödsbo i Göteborg på ett professionellt och tryggt sätt. Vi erbjuder expertvärdering, snabb hantering och personlig service för en smidig process. Kontakta oss idag för att få hjälp | Dödsbo Jouren",
     query: "Dödsbo Göteborg",
     formTitle: "Dödsbo Göteborg",
     subTitle2:

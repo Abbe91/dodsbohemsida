@@ -21,10 +21,9 @@ const Dodsbokopes = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Dödsbo Köpes. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo",
+    metaTitle: "Dödsbo köpes - Få snabb och rättvis hantering | Dödsbo Jouren",
     metaContent:
-      "Dödsbo Köpes. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo",
+      "Vi köper dödsbo och erbjuder enkel och smidig hantering. Vår erfarna personal ger dig ett rättvist och konkurrenskraftigt pris för dödsboet och ser till att hela processen går snabbt och effektivt. Kontakta oss idag för att få hjälp | Dödsbo Jouren",
     query: "Dödsbo Köpes",
     formTitle: "Dödsbo Köpes",
     subTitle2:

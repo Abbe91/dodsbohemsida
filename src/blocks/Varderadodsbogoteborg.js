@@ -20,9 +20,9 @@ const Varderadodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdera dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i i Göteborg",
+      "Värdera dödsbo Göteborg. Expertvärdering av dödsbo i Göteborg. Få rätt pris och snabb hantering - Dödsbo Jouren",
     metaContent:
-      "Värdera dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i i Göteborg",
+      "När det gäller att värdera dödsbo i Göteborg är det viktigt att du väljer en pålitlig och erfaren partner som kan garantera en rättvis och korrekt värdering. Vi är experter på att värdera dödsbo och vårt team har gedigen erfarenhet av att hantera alla typer av dödsbo, oavsett storlek eller omfattning. Vi garanterar en snabb och smidig hantering av hela processen, från värdering till avveckling, för att göra det enklare för dig. Vi erbjuder också en personlig service för att säkerställa att du känner dig trygg och nöjd med hela processen. Vårt mål är att göra det enklare för dig och ta bort så mycket stress som möjligt när det gäller att hantera ett dödsbo.",
     query: "Värdera dödsbo Göteborg",
     formTitle: "Värdera dödsbo Göteborg",
     subTitle2:

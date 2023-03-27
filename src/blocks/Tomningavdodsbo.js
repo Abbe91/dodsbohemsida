@@ -22,9 +22,9 @@ const Tomningavdodsbo = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning av dödsbo, bortforsling, sanering, flytt och städ",
+      "Tömning av dödsbo - Vi tar hand om allt från sortering till avfallshantering och ger dig en smidig och stressfri process | Dödsbo Jouren",
     metaContent:
-      "Tömning av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning av dödsbo, bortforsling, sanering, flytt och städ",
+      "När det kommer till tömning av dödsbo kan det vara en stressig och överväldigande process. Därför finns vi här för att hjälpa dig. Vi tar hand om allt från sortering och packning till avfallshantering och återvinning för att ge dig en smidig och stressfri process. Vårt professionella team arbetar effektivt och diskret för att säkerställa att allt hanteras på ett tryggt och pålitligt sätt. Kontakta oss idag för en tillförlitlig och effektiv tömning av dödsbo | Dödsbo Jouren",
     query: "Tömning av dödsbo",
     formTitle: "Tömning av dödsbo",
     subTitle2:

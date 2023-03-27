@@ -22,9 +22,9 @@ const Saljadodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Göteborg",
+      "Sälja dödsbo Göteborg? Få hjälp av proffs för en snabb och smidig process av dödsboet - Dödsbo Jouren",
     metaContent:
-      "Sälja dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Göteborg",
+      "Vill du sälja ett dödsbo i Göteborg? Vi erbjuder professionell hjälp och en smidig process för att du ska kunna sälja dödsboet snabbt och till rätt pris. Vårt erfarna team hanterar allt från värdering, avveckling och uppköp. Kontakta oss idag för en trygg och pålitlig försäljning av dödsboet | Dödsbo Jouren",
     query: "Sälja dödsbo Göteborg",
     formTitle: "Sälja dödsbo Göteborg",
     subTitle2:
