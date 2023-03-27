@@ -373,12 +373,28 @@ const GratisKollen = () => {
             </div>
           </section>
         </div>
+        <textarea
+          placeholder="Beskriv lite kort..."
+          style={{
+            border: "none",
+            borderRadius: "5px",
+            width: "80%",
+            height: "3rem",
+            textAlign: "center",
+            background: "transparent",
+            border: "1px solid black",
+            marginBottom: "1rem"
+          }}
+          name="beskriv"
+          onChange={handleLeadsFormChange}
+        ></textarea>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             flexDirection: "row",
-            alignItems: "center"
+            alignItems: "center",
+            margin: "1rem 1rem"
           }}
         >
           <button
@@ -457,21 +473,7 @@ const GratisKollen = () => {
             <option value="Foretag">Företag</option>
           </select> */}
         </div>
-        <textarea
-          placeholder="Beskriv lite kort..."
-          style={{
-            border: "none",
-            borderRadius: "5px",
-            width: "80%",
-            height: "3rem",
-            textAlign: "center",
-            background: "transparent",
-            border: "1px solid black",
-            margin: "1rem 0"
-          }}
-          name="beskriv"
-          onChange={handleLeadsFormChange}
-        ></textarea>
+
         <input
           type={"url"}
           style={{ display: "none" }}
