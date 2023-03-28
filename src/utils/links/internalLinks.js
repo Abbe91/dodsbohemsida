@@ -219,28 +219,28 @@ export const popularLinks = [
     title: "Städa dödsbo Mölndal"
   },
   {
-    path: "bortforsling-dodsbo-stenungssund",
-    title: "Bortforsling dödsbo Stenungssund"
+    path: "bortforsling-dodsbo-stenungsund",
+    title: "Bortforsling dödsbo Stenungsund"
   },
   {
-    path: "roja-dodsbo-stenungssund",
-    title: "Röja dödsbo Stenungssund"
+    path: "roja-dodsbo-stenungsund",
+    title: "Röja dödsbo Stenungsund"
   },
   {
-    path: "kopa-dodsbo-stenungssund",
-    title: "Köpa dödsbo Stenungssund"
+    path: "kopa-dodsbo-stenungsund",
+    title: "Köpa dödsbo Stenungsund"
   },
   {
-    path: "salja-dodsbo-stenungssund",
-    title: "Sälja dödsbo Stenungssund"
+    path: "salja-dodsbo-stenungsund",
+    title: "Sälja dödsbo Stenungsund"
   },
   {
-    path: "tomma-dodsbo-stenungssund",
-    title: "Tömma dödsbo Stenungssund"
+    path: "tomma-dodsbo-stenungsund",
+    title: "Tömma dödsbo Stenungsund"
   },
   {
-    path: "vardera-dodsbo-stenungssund",
-    title: "Värdera dödsbo Stenungssund"
+    path: "vardera-dodsbo-stenungsund",
+    title: "Värdera dödsbo Stenungsund"
   },
   {
     path: "tommer-lagenheter-boras",

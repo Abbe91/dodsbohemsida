@@ -659,7 +659,7 @@ const App = () => {
               }
             />
             <Route
-              path="/bortforsling-dodsbo-stenungssund"
+              path="/bortforsling-dodsbo-stenungsund"
               element={
                 <Bortforslingdodsbostenungssund
                   videoText={contentData?.videoText}
@@ -667,31 +667,31 @@ const App = () => {
               }
             />
             <Route
-              path="/roja-dodsbo-stenungssund"
+              path="/roja-dodsbo-stenungsund"
               element={
                 <Rojadodsbostenungsund videoText={contentData?.videoText} />
               }
             />
             <Route
-              path="/kopa-dodsbo-stenungssund"
+              path="/kopa-dodsbo-stenungsund"
               element={
                 <Kopadodsbostenungssund videoText={contentData?.videoText} />
               }
             />
             <Route
-              path="/salja-dodsbo-stenungssund"
+              path="/salja-dodsbo-stenungsund"
               element={
                 <Saljadodsbostenungssund videoText={contentData?.videoText} />
               }
             />
             <Route
-              path="/tomma-dodsbo-stenungssund"
+              path="/tomma-dodsbo-stenungsund"
               element={
                 <Tommadodsbostenungssund videoText={contentData?.videoText} />
               }
             />
             <Route
-              path="/vardera-dodsbo-stenungssund"
+              path="/vardera-dodsbo-stenungsund"
               element={
                 <Varderadodsbostenungssund videoText={contentData?.videoText} />
               }

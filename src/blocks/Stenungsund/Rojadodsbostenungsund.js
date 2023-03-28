@@ -17,7 +17,7 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Rojadodsbostenungsund = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Röja dödsbo Stenungssund";
+  const mainquery = "Röja dödsbo Stenungsund";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
@@ -34,7 +34,7 @@ const Rojadodsbostenungsund = ({ videoText }) => {
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungssund";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Stenungsund";
   const element = useSelector(getElement);
   useEffect(() => {
     document
