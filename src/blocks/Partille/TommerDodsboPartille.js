@@ -7,34 +7,32 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Tommadodsbomolndal = ({ videoText }) => {
+const TommerDodsboPartille = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömma dödsbo Mölndal";
+  const mainquery = "Tömma dödsbo i Partille";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Mölndal - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
+      "Tömning av dödsbo i Partille - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Mölndal. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Mölndal, kontakta oss",
-    query: "Tömma dödsbo Mölndal",
-    formTitle: "Tömma dödsbo Mölndal",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Partille. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Partille, kontakta oss",
+    query: "Tömma dödsbo Partille",
+    formTitle: "Tömma dödsbo Partille",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Mölndal",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning i Partille",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning och tömning av dödsbo i Mölndal";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag i Partille";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -80,7 +78,7 @@ const Tommadodsbomolndal = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder city={"Mölndal"} />
+        <Erbjuder city={"Partille"} />
       </div>
 
       <div className="booking-lottie">
@@ -117,4 +115,4 @@ const Tommadodsbomolndal = ({ videoText }) => {
   );
 };
 
-export default Tommadodsbomolndal;
+export default TommerDodsboPartille;

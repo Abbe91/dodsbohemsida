@@ -204,6 +204,9 @@ const App = () => {
   const Stadadodsbogoteborg = lazy(() =>
     import("./blocks/Goteborg/Stadadodsbogoteborg")
   );
+  const TommerDodsboPartille = lazy(() =>
+    import("./blocks/Partille/TommerDodsboPartille")
+  );
   const Bortforslingdodsbopartille = lazy(() =>
     import("./blocks/Partille/Bortforslingdodsbopartille")
   );
@@ -503,7 +506,6 @@ const App = () => {
                 <Varderadodsboalingsas videoText={contentData?.videoText} />
               }
             />
-
             <Route
               path="/tomma-dodsbo-alingsas"
               element={
@@ -704,7 +706,12 @@ const App = () => {
                 />
               }
             />
-
+            <Route
+              path="/tommer-dodsbo-partille"
+              element={
+                <TommerDodsboPartille videoText={contentData?.videoText} />
+              }
+            />
             <Route
               path="/salja-dodsbo-partille"
               element={
@@ -1031,7 +1038,6 @@ const App = () => {
                 <Varderadodsbokungsbacka videoText={contentData?.videoText} />
               }
             />
-
             <Route
               path="dodsbo-firma-kungsbacka"
               element={

@@ -17,24 +17,24 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const Tommadodsbofrolunda = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "tömma dödsbo Frölunda";
+  const mainquery = "tömma dödsbo Västra Frölunda";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömma dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Frölunda",
+      "Tömning av dödsbo i Västra Frölunda - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
     metaContent:
-      "Tömma dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Frölunda",
-    query: "Tömma dödsbo Frölunda",
-    formTitle: "Tömma dödsbo Frölunda",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Västra Frölunda. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Västra Frölunda, kontakta oss",
+    query: "Tömma dödsbo Västra Frölunda",
+    formTitle: "Tömma dödsbo Västra Frölunda",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Frölunda",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Västra Frölunda",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, bortforsling, sanering, luktsanering, flytt, städ, försäljning och tömning av dödsbo i Frölunda";
+    "uppköp, bortforsling, sanering, luktsanering, flytt, städ, försäljning och tömning av dödsbo i Västra Frölunda";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -81,7 +81,7 @@ const Tommadodsbofrolunda = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder city={"Frölunda"} />
+        <Erbjuder city={"Västra Frölunda"} />
       </div>
 
       <div className="booking-lottie">

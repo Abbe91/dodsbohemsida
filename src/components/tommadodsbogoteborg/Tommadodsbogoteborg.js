@@ -18,9 +18,9 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömma dödsbo Göteborg. Behöver du hjälp med att tömma dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att tömma dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+      "Tömning av dödsbo i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
     metaContent:
-      "Behöver du hjälp med att tömma dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att tömma dödsbo. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Göteborg. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Göteborg, kontakta oss",
     query: "Tömma dödsbo Göteborg",
     formTitle: "Tömma dödsbo Göteborg",
     subTitle2:
