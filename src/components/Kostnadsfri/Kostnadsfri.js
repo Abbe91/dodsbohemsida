@@ -38,14 +38,14 @@ const Kostnadsfri = ({ vad, text }) => {
   return (
     <div className="kostandri-cont">
       <div>
-        <h1>Kostnadsfri {vad}</h1>
-        <p>
+        <h2>Kostnadsfri {vad}</h2>
+        <p style={{ fontSize: "0.9rem", lineHeight: "22px" }}>
           För att vi skall kunna ge dig ett så ärligt pris som möjligt för ditt
           bohag, dödsbo, lösöre eller våra tjänster så erbjuder vi en
           kostnadsfri värdering av ditt dödsbo eller bohag.
         </p>
         <form ref={form}>
-          <h2 style={{ marginBottom: "0.5rem" }}>Vill du veta mer?</h2>
+          <h4 style={{ marginBottom: "0.5rem" }}>Vill du veta mer?</h4>
           <input
             type="email"
             required
@@ -57,7 +57,7 @@ const Kostnadsfri = ({ vad, text }) => {
           <button
             type="submit"
             onClick={handleSubmit}
-            style={{ background: "#a2cfbc", color: "black" }}
+            style={{ background: "black", color: "white", fontWeight: "bold" }}
           >
             {sending
               ? "skickar..."

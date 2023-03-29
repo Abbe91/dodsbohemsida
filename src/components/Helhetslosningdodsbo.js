@@ -20,6 +20,7 @@ const useStyles = makeStyles({
   },
   paragraph: {
     lineHeight: "28px",
+    fontSize: "0.9rem",
     margin: "0 auto",
     "@media screen and (min-width: 800px)": {
       width: "400px"
@@ -34,12 +35,13 @@ const useStyles = makeStyles({
     flexDirection: "column"
   },
   btn: {
-    background: "#a2cfbc",
+    background: "#bbe3f7",
     color: "black",
     border: "none",
     height: "2rem",
     borderRadius: "5px",
-    marginTop: "0.3rem"
+    marginTop: "0.3rem",
+    fontWeight: "bold"
   },
   input: {
     height: "2rem",
@@ -83,7 +85,7 @@ const Helhetslosningdodsbo = () => {
   return (
     <div className={classes.root}>
       <section className={classes.sec1}>
-        <h2 className={classes.title}>HELHETSLÖSNING FÖR DÖDSBO</h2>
+        <h2 className={classes.title}>Helhetslösning för dödsbo</h2>
         <p className={classes.paragraph}>
           Ett dödsbo är mer krävande än vad man tror. Idag ställs det ju många
           krav på sortering och avfall av dödsbon. Vi på Dödsbo Jouren tar hela
@@ -105,7 +107,9 @@ const Helhetslosningdodsbo = () => {
       </section>
       <section className={classes.sec2}>
         <form className={classes.form} ref={form}>
-          <h2 className={classes.title}>Helhetslösning för dödsbo</h2>
+          <h4 className={classes.title}>
+            Behöver du hjälp med hela processen?
+          </h4>
           <input
             type={"text"}
             placeholder="Ditt namn"
