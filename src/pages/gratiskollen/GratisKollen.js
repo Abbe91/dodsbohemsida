@@ -275,6 +275,22 @@ const GratisKollen = () => {
             </Stepper>
           </div>
         )}
+        <p
+          style={{
+            fontSize: "0.7rem",
+            margin: "2rem auto",
+            lineHeight: "20px",
+
+            maxWidth: "90%"
+          }}
+        >
+          Vi på <strong>Dödsbo Jouren</strong> har lång erfarenhet av alla typer
+          av flyttar och städningar och vi sanerar dödsbon och hushåll för att
+          ge dig en trygg och ren miljö. Vi erbjuder också värdering av dödsbon
+          och köper upp lösöre för att underlätta processen för dig. Vårt team
+          av experter är alltid redo att hjälpa till med att skapa en smidig och
+          stressfri lösning för alla dina behov.
+        </p>
       </div>
     </div>
   );
