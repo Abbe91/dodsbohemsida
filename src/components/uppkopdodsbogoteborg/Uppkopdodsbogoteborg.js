@@ -19,10 +19,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Uppköp dödsbo Göteborg. Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+      "Vi köper upp dödsbon i Göteborg. Vill du sälj ett dödsbo i Göteborg? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
     query: "Uppköp dödsbo Göteborg",
     metaContent:
-      "Behöver du hjälp med uppköp av dödsbo i Göteborg? Då är vi på Dödsbo Jouren det självklara valet för att köpa dödsbo i Göteborg. Vi är en firma som verkligen kan allt kring dödsbo hantering.",
+      "Vi köper upp dödsbon i Göteborg. Sälj dödsbo i Göteborg till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Göteborg. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg.",

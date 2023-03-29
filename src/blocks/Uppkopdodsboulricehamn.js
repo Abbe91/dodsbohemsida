@@ -17,14 +17,14 @@ import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
 const Uppkopdodsboulricehamn = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömma dödsbo Ulricehamn";
+  const mainquery = "Uppköp dödsbo Ulricehamn";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "uppköp dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+      "Vi köper upp dödsbon i Ulricehamn. Vill du sälj ett dödsbo i Ulricehamn? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
     metaContent:
-      "Uppköp dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+      "Vi köper upp dödsbon i Ulricehamn. Sälj dödsbo i Ulricehamn till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Ulricehamn. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
     query: "Uppköp dödsbo Ulricehamn",
     formTitle: "Uppköp dödsbo Ulricehamn",
     subTitle2:
