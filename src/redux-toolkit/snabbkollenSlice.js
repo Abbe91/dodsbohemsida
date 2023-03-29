@@ -5,7 +5,11 @@ const initialState = {
   kontaktSatt: "",
   beskrivning: "",
   contacts: "",
-  namn: ""
+  namn: "",
+  nummer: "",
+  email: "",
+  area: "",
+  when: ""
 };
 
 const snabbkollenSlice = createSlice({
@@ -29,6 +33,18 @@ const snabbkollenSlice = createSlice({
     },
     setNamn: (state = initialState, { payload }) => {
       state.namn = payload;
+    },
+    setNummer: (state = initialState, { payload }) => {
+      state.nummer = payload;
+    },
+    setEmail: (state = initialState, { payload }) => {
+      state.email = payload;
+    },
+    setArea: (state = initialState, { payload }) => {
+      state.area = payload;
+    },
+    setWhen: (state = initialState, { payload }) => {
+      state.when = payload;
     }
   }
 });
@@ -38,7 +54,11 @@ export const {
   setKontaktsatt,
   setBeskrivning,
   setContacts,
-  setNamn
+  setNamn,
+  setNummer,
+  setEmail,
+  setArea,
+  setWhen
 } = snabbkollenSlice.actions;
 export const getSnabbkollenData = (state) => state.snabbkollen;
 export default snabbkollenSlice.reducer;

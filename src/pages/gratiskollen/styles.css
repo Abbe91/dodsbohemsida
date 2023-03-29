@@ -1,101 +1,22 @@
-.gratiskollen form {
-  padding: 1rem;
+.root {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
   background: #bbe3f7;
-  opacity: 0.95;
-  height: 760px;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  color: #64748b;
+  text-align: center;
 }
-.gratiskollen form input[type="text"] {
-  /* width: 80%;
-  height: 2.4rem; */
-  border: none;
-  background: transparent;
-  border: 1px solid black;
-  width: 80%;
-  border-radius: 5px;
-  height: 2.2rem;
-  margin: 0.3rem 0;
-  font-size: 16px;
-}
-.gratiskollen form input[type="email"] {
-  /* width: 80%;
-  height: 2.4rem; */
-  border: none;
-  background: transparent;
-  border: 1px solid black;
-  width: 80%;
-  font-size: 16px;
-  border-radius: 5px;
-  height: 2.2rem;
-  margin: 0.3rem 0;
-}
-.gratiskollen form div {
+.container {
+  margin: 3rem auto;
+  max-width: 600px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-.gratiskollen input::placeholder {
-  text-align: center;
-}
-.gratiskollen textarea:focus,
-input:focus {
-  outline: none;
-}
-.gratiskollen select {
-  background: transparent;
-  border: 1px solid black;
-  margin-top: 0.2rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  padding: 0.3rem;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
-}
-.gratiskollen label {
-  font-size: 0.9rem;
-  color: black;
-  font-weight: bold;
-}
-
-.gratiskollen .main-form-btn {
-  width: 80%;
-  background: #a2cfbc;
-  color: black;
-  border: none;
-  height: 2.2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.gratis-kollen-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  transition: all 0.3s linear;
+  justify-content: space-evenly;
 }
-
-.gratiskollen .main-circle {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  border: 2px solid black;
-  transition: all 0.3s linear;
-  cursor: pointer;
-}
-.gratiskollen .form-policy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s linear;
+.gratis-kollen-header p {
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setBohagstyp } from "../../redux-toolkit/snabbkollenSlice";
-const Steptwo = () => {
+const Steptwo = ({ title, htag }) => {
   const dispatch = useDispatch();
   const handleClick = (e) => {
     dispatch(setBohagstyp(e.target.innerText));
@@ -19,12 +19,14 @@ const Steptwo = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          marginTop: "2rem"
+          marginTop: htag ? "0" : "2rem"
         }}
       >
-        <h3 className="poppins">Snabbhjälpen</h3>
+        {!htag && <h3 className="poppins">Snabbhjälpen</h3>}
+        {htag && <h2 className="poppins">Vad är det för typ?</h2>}
+
         <p style={{ marginBottom: "0.5rem", fontSize: "0.85rem" }}>
-          Välj det som matchar.
+          {title ? title : "Välj det som matchar."}
         </p>
         <section>
           <div

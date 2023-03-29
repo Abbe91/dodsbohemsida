@@ -3,613 +3,279 @@ import emailjs from "@emailjs/browser";
 import "./styles.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
-import { AiFillCheckCircle } from "react-icons/ai";
-let services = [];
-
+import Steptwo from "../../components/MainComp/Steptwo";
+import StepThreeGratiskollen from "./StepThreeGratiskollen";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
+import GratisKollenKontakt from "./GratisKollenKontakt";
+import { useDispatch } from "react-redux";
+import { setServices } from "../../redux-toolkit/snabbkollenSlice";
+import GratisKollenConfirmation from "./GratisKollenConfirmation";
+const steps = ["Tjänster", "Typ", "Info", "Kontakt"];
 const GratisKollen = () => {
-  const form = useRef();
-  const [sending, setsending] = useState(false);
-  const [sent, setsent] = useState(false);
-  const [accept, setAccept] = useState(false);
-  const customerData = useSelector(getCustomerData);
+  const dispatch = useDispatch();
   const [bliUppringd, setbliUppringd] = useState(false);
   const [faehmail, setfaehmail] = useState(false);
-  const [tjanster, settjanster] = useState({
-    vardera: false,
-    tomma: false,
-    stada: false,
-    bortforsling: false,
-    sanera: false,
-    salja: false
-  });
-  const [leadsData, setleadsData] = useState({
-    email: "",
-    beskriv: "",
-    telefon: "",
-    path: window.location.pathname,
-    typ: "",
-    services: services,
-    leadId: Math.floor(Math.random() * 10000000000000)
-  });
-
-  const handleLeadsFormChange = (e) => {
-    setleadsData({ ...leadsData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = () => {
-    setsending(true);
-    emailjs
-      .sendForm(
-        "service_k835y1d",
-        "template_vky05mk",
-        form.current,
-        process.env.REACT_APP_EMAILJS_2
-      )
-      .then(
-        (result) => {
-          if (result.text === "OK") {
-            setsending(false);
-            setsent(true);
-            setTimeout(() => {
-              window.location.href = "/";
-            }, 2000);
-          }
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  const [activeStep, setActiveStep] = useState(0);
 
   const handleClick = (e) => {
     e.preventDefault();
+    dispatch(setServices(e.target.innerText));
     if (e.target.innerText === "Bli uppringd") setbliUppringd(!bliUppringd);
     if (e.target.innerText === "Få e-mail") setfaehmail(!faehmail);
     e.target.style.background = "#D6CA98";
     e.target.style.color = "black";
   };
 
-  const handleTypclick = (e) => {
-    e.target.style.background = "#D6CA98";
-    e.target.style.color = "black";
-    setleadsData({ ...leadsData, typ: e.currentTarget.innerText });
-  };
+  const handledbClick = () => {};
 
   return (
-    <div className="gratiskollen">
-      <form ref={form} id="main-comp-cont">
-        <input
-          style={{ display: "none" }}
-          type={"text"}
-          name="tjanster"
-          value={leadsData?.services?.map((el) => el)}
-        />
-        <div
-          style={{
-            dislay: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            marginBottom: "1rem",
-            letterSpacing: "1px"
-          }}
-        >
-          <p
-            style={{
-              fontSize: "1.3rem",
-              color: "black",
-              marginRight: "0.25rem",
-              fontWeight: "bold"
-            }}
-          >
-            Gratiskollen
-          </p>
-          <img
-            src="https://www.svgrepo.com/show/421244/house-photoshopsupply-shape-3.svg"
-            alt="house"
-            style={{ height: "25px", width: "25px", marginRight: "0.25rem" }}
-            loading="lazy"
-          />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "1rem"
-          }}
-        >
-          <p
-            style={{
-              color: "black",
-              borderBottom: "1px solid black",
-              marginBottom: "0.3rem"
-            }}
-          >
-            Välj en tjänst eller flera
-          </p>
-          <section style={{ display: "flex" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0.8rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  settjanster({ ...tjanster, vardera: !tjanster.vardera });
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                }}
-              >
-                {tjanster.vardera && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Värdering
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0.3rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  settjanster({ ...tjanster, tomma: !tjanster.tomma });
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                }}
-              >
-                {tjanster.tomma && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Tömma
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0.3rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  settjanster({ ...tjanster, stada: !tjanster.stada });
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                }}
-              >
-                {tjanster.stada && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Städa
-              </p>
-            </div>
-          </section>
-          <section style={{ display: "flex" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0.25rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                  settjanster({
-                    ...tjanster,
-                    bortforsling: !tjanster.bortforsling
-                  });
-                }}
-              >
-                {tjanster.bortforsling && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Bortforsling
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0.3rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  settjanster({ ...tjanster, sanera: !tjanster.sanera });
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                }}
-              >
-                {tjanster.sanera && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Sanera
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                margin: "0.5rem 0rem",
-                transition: "all 0.3s linear"
-              }}
-            >
-              <div
-                className="main-circle"
-                onClick={(e) => {
-                  settjanster({ ...tjanster, salja: !tjanster.salja });
-                  services.push(
-                    e.currentTarget.parentElement.childNodes[1].innerText
-                  );
-                }}
-                style={{
-                  marginLeft: "0.5rem"
-                }}
-              >
-                {tjanster.salja && (
-                  <AiFillCheckCircle
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      color: "black"
-                    }}
-                  />
-                )}
-              </div>
-              <p
-                style={{
-                  marginLeft: "0.2rem",
-                  fontSize: "0.7rem",
-                  fontWeight: "700",
-                  color: "black"
-                }}
-              >
-                Sälja
-              </p>
-            </div>
-          </section>
-        </div>
-        <textarea
-          placeholder="Beskriv lite kort..."
-          style={{
-            border: "none",
-            borderRadius: "5px",
-            width: "80%",
-            height: "3rem",
-            textAlign: "center",
-            background: "transparent",
-            border: "1px solid black",
-            marginBottom: "1rem"
-          }}
-          name="beskriv"
-          onChange={handleLeadsFormChange}
-        ></textarea>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "row",
-            alignItems: "center",
-            margin: "1rem 1rem"
-          }}
-        >
-          <button
-            style={{
-              background: "black",
-              border: "none",
-              width: "4.2rem",
-              height: "2.2rem",
-              borderRadius: "5px",
-              marginLeft: "0.3rem",
-              marginBottom: "0.3rem",
-              fontWeight: "bold",
-              fontSize: "0.75rem",
-              color: "white"
-            }}
-            onClick={handleTypclick}
-          >
-            Dödsbo
-          </button>
-          <button
-            style={{
-              background: "black",
-              border: "none",
-              width: "4.2rem",
-              height: "2.2rem",
-              borderRadius: "5px",
-              marginLeft: "0.3rem",
-              marginBottom: "0.3rem",
-              fontWeight: "bold",
-              fontSize: "0.75rem",
-              color: "white"
-            }}
-            onClick={handleTypclick}
-          >
-            Hushåll
-          </button>
-          <button
-            style={{
-              background: "black",
-              border: "none",
-              width: "4.2rem",
-              height: "2.2rem",
-              borderRadius: "5px",
-              marginLeft: "0.3rem",
-              marginBottom: "0.3rem",
-              fontWeight: "bold",
-              fontSize: "0.75rem",
-              color: "white"
-            }}
-            onClick={handleTypclick}
-          >
-            Kontor
-          </button>
-          <button
-            style={{
-              background: "black",
-              border: "none",
-              width: "4.2rem",
-              height: "2.2rem",
-              borderRadius: "5px",
-              marginLeft: "0.3rem",
-              marginBottom: "0.3rem",
-              fontWeight: "bold",
-              fontSize: "0.75rem",
-              color: "white"
-            }}
-            onClick={handleTypclick}
-          >
-            Annat
-          </button>
-          {/* <label htmlFor="typ">Typ</label>
-          <select name="typ" onChange={handleLeadsFormChange}>
-            <option value="Dödsbo">Dödsbo</option>
-            <option value="Bohag">Bohag/Hushåll</option>
-            <option value="Kontor">Kontor</option>
-            <option value="Foretag">Företag</option>
-          </select> */}
-        </div>
-
-        <input
-          type={"url"}
-          style={{ display: "none" }}
-          value={window.location.pathname}
-          name="path"
-        />
-
-        <div style={{ marginBottom: "1rem" }}>
-          <section>
-            <p style={{ marginBottom: "0.3rem", color: "black" }}>
-              Hur vill du få återkoppling?
-            </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <button
-                style={{
-                  background: "black",
-                  border: "none",
-                  width: "6.2rem",
-                  height: "2.2rem",
-                  borderRadius: "5px",
-                  marginLeft: "0.3rem",
-                  marginBottom: "0.3rem",
-                  fontWeight: "bold",
-                  fontSize: "0.75rem",
-                  color: "white"
-                }}
-                onClick={handleClick}
-              >
-                Bli uppringd
-              </button>
-              <button
-                style={{
-                  background: "black",
-                  border: "none",
-                  width: "6.2rem",
-                  height: "2.2rem",
-                  borderRadius: "5px",
-                  marginLeft: "0.3rem",
-                  marginBottom: "0.3rem",
-                  fontWeight: "bold",
-                  fontSize: "0.75rem",
-                  color: "white"
-                }}
-                onClick={handleClick}
-              >
-                Få e-mail
-              </button>
-            </div>
-          </section>
-        </div>
-        {bliUppringd && (
-          <input
-            style={{ display: bliUppringd ? "block" : "none" }}
-            type="text"
-            placeholder="Ditt nummer"
-            required
-            name="telefon"
-            onChange={handleLeadsFormChange}
-          />
-        )}
-        {faehmail && (
-          <input
-            style={{ display: faehmail ? "block" : "none" }}
-            type="email"
-            placeholder="Din email"
-            required
-            name="email"
-            onChange={handleLeadsFormChange}
-          />
-        )}
-
-        <a
-          href={`tel:${customerData.phone}`}
-          className="main-form-btn"
-          style={{ marginTop: "1rem" }}
-        >
-          {customerData.phone}
-        </a>
-
-        <button
-          type="submit"
-          className="main-form-btn"
-          onClick={handleSubmit}
-          style={{
-            opacity: accept ? "1" : "0.6"
-          }}
-        >
-          {sending ? "skickar..." : sent ? "Tack för din förfrågan" : "Skicka"}
-        </button>
-
-        <div className="form-policy">
-          <p style={{ fontSize: "0.75rem", width: "90%", margin: "1rem 0" }}>
-            Genom att använda detta formulär accepterar du att{" "}
-            <strong style={{ marginRight: "0.15rem" }}>
-              {customerData.business}
-            </strong>
-            lagrar och hanterar dina uppgifter. Uppgifterna i fråga kommer att
-            användas för att återkoppla till dig som kund/besökare.
-          </p>
-          <div
+    <div className="root" style={{ background: activeStep === 4 && "white" }}>
+      <div className="container">
+        {activeStep !== 4 && (
+          <section
             style={{
               display: "flex",
               alignItems: "center",
-              flexDirection: "row",
-              margin: ".5rem 0",
-              transition: "all 0.3s linear"
+              justifyContent: "center"
             }}
           >
-            <div
-              className="main-circle"
-              onClick={() => setAccept(!accept)}
-              style={{ border: accept && "none" }}
-            >
-              {accept && (
-                <AiFillCheckCircle
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    color: "black"
-                  }}
-                />
-              )}
-            </div>
-            <p
+            <img
+              src="https://www.svgrepo.com/show/452786/house.svg"
+              alt="imgae 2"
+              style={{ width: "100px", height: "120px" }}
+            />
+          </section>
+        )}
+
+        {activeStep == 1 && (
+          <Steptwo
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            steps={steps}
+            title={"Välj en eller flera av det som matchar."}
+            htag={"h1"}
+          />
+        )}
+        {activeStep == 2 && (
+          <StepThreeGratiskollen
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            step={steps}
+          />
+        )}
+        {activeStep == 3 && (
+          <GratisKollenKontakt
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            step={steps}
+          />
+        )}
+        {activeStep == 4 && <GratisKollenConfirmation />}
+        {activeStep === 0 && (
+          <div>
+            <section
               style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.7rem",
-                fontWeight: "700",
-                color: "black"
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                textAlign: "center"
               }}
             >
-              Jag godkänner
-            </p>
+              <h2 className="poppins" style={{ marginBottom: "0.2rem" }}>
+                Gratiskollen
+              </h2>
+              <p
+                style={{
+                  marginBottom: "0.75rem",
+                  fontSize: "0.85rem"
+                }}
+              >
+                Vilka eller vilken tjänst behöver du hjälp med?
+              </p>
+              <section>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
+                  }}
+                >
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Tömma
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Värdera
+                  </button>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
+                  }}
+                >
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Städa
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Flytta
+                  </button>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center"
+                  }}
+                >
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Uppköp
+                  </button>
+                  <button
+                    style={{
+                      background: "black",
+                      border: "none",
+                      width: "6.2rem",
+                      height: "2.2rem",
+                      borderRadius: "5px",
+                      marginLeft: "0.3rem",
+                      marginBottom: "0.3rem",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      color: "white"
+                    }}
+                    onClick={handleClick}
+                    onDoubleClick={handledbClick}
+                  >
+                    Bortforsling
+                  </button>
+                </div>
+              </section>
+            </section>
           </div>
-        </div>
-      </form>
+        )}
+        {activeStep !== 4 && (
+          <button
+            className="nasta-steg"
+            style={{
+              width: activeStep === 2 || 3 ? "255px" : "12.7rem",
+              height: "2.4rem",
+              margin: "0.4rem auto",
+              background: "transparent",
+              fontWeight: "bold",
+              fontSize: "0.9rem",
+              border: "1px solid black",
+              borderRadius: "5px",
+              color: "black"
+            }}
+            onClick={() => setActiveStep(activeStep + 1)}
+          >
+            {activeStep === 3 ? "Skicka" : "Nästa steg"}
+          </button>
+        )}
+
+        {activeStep === 3 && (
+          <p
+            style={{
+              fontSize: "0.75rem",
+              maxWidth: "80%",
+              margin: "0.2rem auto"
+            }}
+          >
+            Genom att använda detta formulär accepterar du att{" "}
+            <strong>Dödsbo Jouren</strong> hanterar dina uppgifter för att
+            återkoppla till dig som kund/besökare.
+          </p>
+        )}
+        {activeStep !== 4 && (
+          <div className="stepperr">
+            <Stepper activeStep={activeStep} style={{ background: "#bbe3f7" }}>
+              {steps.map((step) => {
+                return (
+                  <Step key={step}>
+                    <StepLabel>{step}</StepLabel>
+                  </Step>
+                );
+              })}
+            </Stepper>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
