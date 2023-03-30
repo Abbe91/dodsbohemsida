@@ -191,6 +191,14 @@ button {
   .ddddd {
     display: block;
   }
+  .main-comp-divider-comp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .faq-root {
+    max-width: 1150px;
+  }
 }
 .besok-img {
   width: 250px;

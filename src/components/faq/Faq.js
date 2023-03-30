@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
 const Faq = ({ city }) => {
   const classes = useStyles();
   return (
-    <div style={{ margin: "1rem auto" }}>
-      <h2 style={{ margin: "1.5rem auto", textAlign: "center" }}>
+    <div style={{ margin: "2rem auto" }} className="faq-root">
+      <h2 style={{ margin: "1.5rem 0", marginLeft: "0.5rem" }}>
         Vanliga frågor
       </h2>
       <div className={classes.root}>

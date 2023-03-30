@@ -14,6 +14,7 @@ import { setServices } from "../../redux-toolkit/snabbkollenSlice";
 import LottieHouse from "../../LottieAnimation/LottieHouse";
 import lottieanimation from "../../utils/animation/hus.json";
 import Faq from "../faq/Faq";
+import Divider from "./Divider";
 const MainComp = ({ subTitle, subTitle5, text2, city }) => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -404,6 +405,7 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
         <LottieHouse lotti={lottieanimation} height={200} width={300} />
       </div>
       <Arbetsprocessen />
+      <Divider />
       <Faq city={city} />
       <section className="content-new-container">
         <div
