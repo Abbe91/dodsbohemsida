@@ -1,8 +1,5 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import "./styles.css";
-import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
-import { useSelector } from "react-redux";
 import Steptwo from "../../components/MainComp/Steptwo";
 import StepThreeGratiskollen from "./StepThreeGratiskollen";
 import { Stepper, Step, StepLabel } from "@material-ui/core";
@@ -47,7 +44,7 @@ const GratisKollen = () => {
           </section>
         )}
 
-        {activeStep == 1 && (
+        {activeStep === 1 && (
           <Steptwo
             activeStep={activeStep}
             setActiveStep={setActiveStep}
@@ -56,21 +53,21 @@ const GratisKollen = () => {
             htag={"h1"}
           />
         )}
-        {activeStep == 2 && (
+        {activeStep === 2 && (
           <StepThreeGratiskollen
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             step={steps}
           />
         )}
-        {activeStep == 3 && (
+        {activeStep === 3 && (
           <GratisKollenKontakt
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             step={steps}
           />
         )}
-        {activeStep == 4 && <GratisKollenConfirmation />}
+        {activeStep === 4 && <GratisKollenConfirmation />}
         {activeStep === 0 && (
           <div>
             <section

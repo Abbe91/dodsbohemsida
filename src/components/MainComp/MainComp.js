@@ -13,7 +13,8 @@ import { useDispatch } from "react-redux";
 import { setServices } from "../../redux-toolkit/snabbkollenSlice";
 import LottieHouse from "../../LottieAnimation/LottieHouse";
 import lottieanimation from "../../utils/animation/hus.json";
-const MainComp = ({ subTitle, subTitle5, text2 }) => {
+import Faq from "../faq/Faq";
+const MainComp = ({ subTitle, subTitle5, text2, city }) => {
   const dispatch = useDispatch();
   const location = useLocation();
   const form = useRef();
@@ -403,6 +404,7 @@ const MainComp = ({ subTitle, subTitle5, text2 }) => {
         <LottieHouse lotti={lottieanimation} height={200} width={300} />
       </div>
       <Arbetsprocessen />
+      <Faq city={city} />
       <section className="content-new-container">
         <div
           style={{

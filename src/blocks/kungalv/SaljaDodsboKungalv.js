@@ -53,6 +53,7 @@ const SaljaDodsboKungalv = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
+          city={"Kungälv"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}

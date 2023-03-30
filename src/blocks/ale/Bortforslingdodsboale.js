@@ -54,6 +54,7 @@ const Bortforslingdodsboale = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
+          city={"Ale"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}

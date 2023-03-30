@@ -54,6 +54,7 @@ const Kopadodsbomolndal = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
+          city={"Mölndal"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}

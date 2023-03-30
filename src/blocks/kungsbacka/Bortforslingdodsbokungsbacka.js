@@ -52,6 +52,7 @@ const Bortforslingdodsbokungsbacka = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
+          city={"Kungsbacka"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}

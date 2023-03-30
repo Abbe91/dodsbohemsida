@@ -53,6 +53,7 @@ const Bortforslingdodsboulricehamn = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
+          city={"Ulricehamn"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}
