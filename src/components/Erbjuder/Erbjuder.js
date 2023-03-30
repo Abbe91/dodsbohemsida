@@ -69,7 +69,7 @@ const Erbjuder = ({ city }) => {
         <h4>Köper dödsbon {city ? `i ${city}` : ""}</h4>
         <p>
           Vi på Dödsbo Jouren är specialiserade på att köpa dödsbo{" "}
-          {city ? `i ${city}` : ""}
+          {city ? `i ${city} ` : ""}
           och vi köper alla typer av dödsbon. Vi förstår att hantering av ett
           dödsbo kan vara en svår och känslig uppgift och att det kan vara
           överväldigande att hantera all egendom. Vi erbjuder en enkel och
