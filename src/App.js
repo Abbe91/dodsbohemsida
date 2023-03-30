@@ -375,7 +375,18 @@ const App = () => {
   );
   const Login = lazy(() => import("./pages/Login"));
   //
-
+  const Tommerdodsbonlerum = lazy(() =>
+    import("./blocks/lerum/Tommerdodsbonlerum")
+  );
+  const Koperdodsbonlerum = lazy(() =>
+    import("./blocks/lerum/Koperdodsbonlerum")
+  );
+  const Koperdodsbouddevalla = lazy(() =>
+    import("./blocks/uddevalla/Koperdodsbouddevalla")
+  );
+  const Tommerdodsbouddevalla = lazy(() =>
+    import("./blocks/uddevalla/Tommerdodsbouddevalla")
+  );
   const contentData = useSelector(getContentData);
   return (
     <div className="App">
@@ -476,6 +487,28 @@ const App = () => {
               path="koper-dodsbo-goteborg"
               element={
                 <Koperdodsbogoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="koper-dodsbo-lerum"
+              element={<Koperdodsbonlerum videoText={contentData?.videoText} />}
+            />
+            <Route
+              path="tommer-dodsbo-lerum"
+              element={
+                <Tommerdodsbonlerum videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="koper-dodsbo-uddevalla"
+              element={
+                <Koperdodsbouddevalla videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tommer-dodsbo-uddevalla"
+              element={
+                <Tommerdodsbouddevalla videoText={contentData?.videoText} />
               }
             />
             <Route

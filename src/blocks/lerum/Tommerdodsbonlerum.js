@@ -15,27 +15,26 @@ import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Koperdodsbokungsbacka = ({ videoText }) => {
+const Tommerdodsbonlerum = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Köper dödsbo Kungsbacka";
+  const mainquery = "Tömmer dödsbo Lerum";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper upp dödsbon i Kungsbacka. Vill du sälj ett dödsbo i Kungsbacka? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
-    query: "Uppköp dödsbo Kungsbacka",
+      "Tömning av dödsbo i Lerum - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
     metaContent:
-      "Vi köper upp dödsbon i Kungsbacka. Sälj dödsbo i Kungsbacka till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Kungsbacka. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
-    query: "Köper dödsbo Kungsbacka",
-    formTitle: "Köper dödsbo Kungsbacka",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Lerum. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Lerum, kontakta oss",
+    query: "Tömmer dödsbo Lerum",
+    formTitle: "Tömmer dödsbo Lerum",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Kungsbacka",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Lerum",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och uppköp av dödsbo i Kungasbacka";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städning städning och tömning av dödsbo i Lerum";
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -54,7 +53,7 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
-          city={"Kungsbacka"}
+          city={"Lerum"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}
@@ -82,7 +81,7 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder city={"Kungsbacka"} />
+        <Erbjuder city={"Lerum"} />
       </div>
 
       <div className="booking-lottie">
@@ -119,4 +118,4 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
   );
 };
 
-export default Koperdodsbokungsbacka;
+export default Tommerdodsbonlerum;

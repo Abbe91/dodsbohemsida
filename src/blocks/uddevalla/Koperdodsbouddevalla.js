@@ -15,21 +15,21 @@ import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
-const Koperdodsbokungsbacka = ({ videoText }) => {
+const Koperdodsbouddevalla = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Köper dödsbo Kungsbacka";
+  const mainquery = "Köper dödsbo Uddevalla";
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper upp dödsbon i Kungsbacka. Vill du sälj ett dödsbo i Kungsbacka? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
-    query: "Uppköp dödsbo Kungsbacka",
+      "Vi köper upp dödsbon i Uddevalla. Vill du sälj ett dödsbo i Uddevalla? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
+    query: "Uppköp dödsbo Uddevalla",
     metaContent:
-      "Vi köper upp dödsbon i Kungsbacka. Sälj dödsbo i Kungsbacka till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Kungsbacka. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
-    query: "Köper dödsbo Kungsbacka",
-    formTitle: "Köper dödsbo Kungsbacka",
+      "Vi köper upp dödsbon i Uddevalla. Sälj dödsbo i Uddevalla till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Uddevalla. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
+    query: "Köper dödsbo Uddevalla",
+    formTitle: "Köper dödsbo Uddevalla",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Kungsbacka",
+      "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Uddevalla",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
@@ -54,7 +54,7 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
       </div>
       <div className="Hem">
         <MainComp
-          city={"Kungsbacka"}
+          city={"Uddevalla"}
           query={content.query}
           formTitle={content.formTitle}
           icon={<BsHouseDoor />}
@@ -82,7 +82,7 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder city={"Kungsbacka"} />
+        <Erbjuder city={"Uddevalla"} />
       </div>
 
       <div className="booking-lottie">
@@ -119,4 +119,4 @@ const Koperdodsbokungsbacka = ({ videoText }) => {
   );
 };
 
-export default Koperdodsbokungsbacka;
+export default Koperdodsbouddevalla;
