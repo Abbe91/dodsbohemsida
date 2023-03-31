@@ -8,7 +8,7 @@ const Erbjuder = ({ city }) => {
         <h4>Tömma dödsbo {city ? `i ${city}` : ""}</h4>
         <p>
           Om du behöver hjälp med att tömma ett dödsbo eller hushåll
-          {city ? `i ${city}` : ""}, kan du lita på vårt professionella och
+          {city ? ` i ${city}` : ""}, kan du lita på vårt professionella och
           pålitliga team. Vi erbjuder en komplett service för att underlätta för
           dig i en svår tid. Vi tar hand om allt från sortering och bortforsling
           av möbler och prylar till städning av bostaden efteråt. Vårt mål är
