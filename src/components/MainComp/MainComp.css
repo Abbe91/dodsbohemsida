@@ -1,5 +1,5 @@
 .mainComp {
-  height: 500px;
+  height: 540px;
   background: #bbe3f7;
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ input:focus {
 }
 @media screen and (max-width: 672px) {
   .mainComp {
-    height: 520px;
+    height: 580px;
     display: flex;
     flex-direction: column;
     justify-content: center;
