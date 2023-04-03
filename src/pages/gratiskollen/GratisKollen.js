@@ -227,6 +227,50 @@ const GratisKollen = () => {
                       Bortforsling
                     </button>
                   </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center"
+                    }}
+                  >
+                    <button
+                      style={{
+                        background: "black",
+                        border: "none",
+                        width: "6.2rem",
+                        height: "2.2rem",
+                        borderRadius: "5px",
+                        marginLeft: "0.3rem",
+                        marginBottom: "0.3rem",
+                        fontWeight: "bold",
+                        fontSize: "0.75rem",
+                        color: "white"
+                      }}
+                      onClick={handleClick}
+                      onDoubleClick={handledbClick}
+                    >
+                      Återvinning
+                    </button>
+                    <button
+                      style={{
+                        background: "black",
+                        border: "none",
+                        width: "6.2rem",
+                        height: "2.2rem",
+                        borderRadius: "5px",
+                        marginLeft: "0.3rem",
+                        marginBottom: "0.3rem",
+                        fontWeight: "bold",
+                        fontSize: "0.75rem",
+                        color: "white"
+                      }}
+                      onClick={handleClick}
+                      onDoubleClick={handledbClick}
+                    >
+                      Sophämtning
+                    </button>
+                  </div>
                 </section>
               </section>
             </div>
