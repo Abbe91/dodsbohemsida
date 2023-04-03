@@ -1,6 +1,16 @@
 import React from "react";
 import Nav from "../../components/Nav/Nav";
-const btns = ["Grovavfall", "Fordon", "Metaller", "Farligt avfall"];
+const btns = [
+  "Avfall",
+  " Elektronikskrot",
+  "Metaller",
+  "Farligt avfall",
+  "Grovsopor",
+  "Glas",
+  "Plast",
+  "Papper",
+  "Trä"
+];
 const Atervinning = () => {
   const handleClick = () => {
     window.location.href = "/dodsbojouren/gratiskollen";
