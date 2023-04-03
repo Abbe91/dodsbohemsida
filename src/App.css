@@ -52,7 +52,9 @@ body {
   font-family: "Poppins", sans-serif;
   background: #f8fafc;
 }
-
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -248,4 +250,15 @@ button {
 .height {
   height: 2.6rem;
   width: 205px;
+}
+.atv-btn {
+  width: 12rem;
+  height: 2.2rem;
+  border: none;
+  background: #bbe3f7;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: black;
 }

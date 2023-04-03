@@ -387,6 +387,9 @@ const App = () => {
   const Tommerdodsbouddevalla = lazy(() =>
     import("./blocks/uddevalla/Tommerdodsbouddevalla")
   );
+
+  // new info pages
+  const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
   const contentData = useSelector(getContentData);
   return (
     <div className="App">
@@ -407,6 +410,7 @@ const App = () => {
               path="/"
               element={<Home videoText={contentData?.videoText} />}
             />
+            <Route path="/atervinning" element={<Atervinning />} />
             <Route
               path="/dodsbojouren/gratiskollen"
               element={<GratisKollen />}
