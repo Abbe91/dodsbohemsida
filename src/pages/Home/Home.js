@@ -9,7 +9,7 @@ import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -18,12 +18,11 @@ const Home = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "dödsbo eller hushåll";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Få professionell hjälp med flytt, städning och tömning av dödsbo - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar. Dödsbo Jouren vi hjälper dig med dödsbo, städning, flytt, tömning, bortforsling av dödsbo och hushåll.",
     metaContent:
-      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning.",
+      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
     query: "",
     formTitle: "Tömma dödsbo",
     subTitle2:
@@ -31,12 +30,29 @@ const Home = ({ videoText }) => {
     subTitle3: `Behöver du hjälp med ditt ${mainquery}?`
   });
   const customerData = useSelector(getCustomerData);
-
   const services =
     "uppköp, bortforsling, sanering, flytt, städning och försäljning av dödsbon och hushåll.";
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+    description:
+      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+    image:
+      "https://images.pexels.com/photos/14667295/pexels-photo-14667295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
