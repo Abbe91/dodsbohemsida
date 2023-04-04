@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav/Nav";
 const btns = [
   "Avfall",
@@ -12,11 +13,43 @@ const btns = [
   "Trä"
 ];
 const Atervinning = () => {
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    headline:
+      "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt en guide för återvinning.",
+    description:
+      "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering.",
+    image:
+      "https://images.pexels.com/photos/3951625/pexels-photo-3951625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const handleClick = () => {
     window.location.href = "/dodsbojouren/gratiskollen";
   };
   return (
-    <>
+    <section>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          {
+            "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt guide för återvinning."
+          }
+        </title>
+        <meta
+          name="description"
+          content={
+            "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering."
+          }
+        />
+      </Helmet>
       <div className="Nav">
         <Nav />
       </div>
@@ -316,7 +349,7 @@ const Atervinning = () => {
         </button>
         <div style={{ height: "500px" }}></div>
       </div>
-    </>
+    </section>
   );
 };
 
