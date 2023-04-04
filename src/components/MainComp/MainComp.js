@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./MainComp.css";
-import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -15,6 +14,7 @@ import LottieHouse from "../../LottieAnimation/LottieHouse";
 import lottieanimation from "../../utils/animation/hus.json";
 import Faq from "../faq/Faq";
 import Divider from "./Divider";
+
 const MainComp = ({ subTitle, subTitle5, text2, city }) => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -52,95 +52,103 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
 
   return (
     <section className="root">
+      <div className="main-top-main-small">
+        <h4
+          style={{
+            marginBottom: "0.5rem",
+            background: "white",
+            padding: "0.5rem",
+            borderRadius: "3px"
+          }}
+        >
+          {/* {subTitle} */}
+          Vi förenklar din vardag!
+        </h4>
+      </div>
       <div className="mainComp">
         <section style={{ maxWidth: "600px" }}>
-          {activeStep !== 3 && (
-            <div>
-              <h3 style={{ marginBottom: "0.5rem" }}>{subTitle}</h3>
-
-              <p
-                style={{
-                  maxWidth: "80%",
-                  margin: "0 auto",
-                  fontSize: "0.9rem"
-                }}
-              >
-                Auktoriserad firma som hanterar{" "}
-                <a
-                  href="/uppkop-av-dodsbo"
-                  title="uppköp av dödsbo, bohag och hushåll"
-                  style={{ color: "inherit" }}
-                >
-                  uppköp
-                </a>
-                ,{" "}
-                <a
-                  href="/salja-dodsbo"
-                  title="försäljninglösöre, dödsbo, bohag och hushåll"
-                  style={{ color: "inherit" }}
-                >
-                  försäljning
-                </a>
-                ,{" "}
-                <a
-                  href="/tomma-dodsbo"
-                  title="tömma dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  tömning
-                </a>
-                ,{" "}
-                <a
-                  href="/bortforsling-dodsbo"
-                  title="bortforsling av möbler och dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  bortforsling
-                </a>
-                ,{" "}
-                <a
-                  href="/sanera-dodsbo"
-                  title="sanering av dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  sanering
-                </a>
-                ,{" "}
-                <a
-                  href="/bohagsflytt"
-                  title="bohagsflytt"
-                  style={{ color: "inherit" }}
-                >
-                  flytt
-                </a>{" "}
-                och{" "}
-                <a
-                  href="/stadning-av-dodsbo"
-                  title="städning av dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  städning
-                </a>{" "}
-                av{" "}
-                <a
-                  href="/tomma-dodsbo"
-                  title="tömma dödsbo"
-                  style={{ color: "inherit" }}
-                >
-                  dödsbon
-                </a>{" "}
-                och{" "}
-                <a
-                  href="/tomma-bohag"
-                  title="tömma bohag"
-                  style={{ color: "inherit" }}
-                >
-                  bohag
-                </a>
-                .
-              </p>
-            </div>
-          )}
+          <h4>Detta kan vi hjälpa dig med</h4>
+          <p
+            style={{
+              maxWidth: "80%",
+              margin: "0 auto",
+              fontSize: "0.9rem"
+            }}
+          >
+            Återvinning och avfallshantering.{" "}
+            <a
+              href="/uppkop-av-dodsbo"
+              title="uppköp av dödsbo, bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              Uppköp
+            </a>
+            ,{" "}
+            <a
+              href="/vardera-dodsbo"
+              title="värdering av dödsbo, bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              värdering
+            </a>
+            ,{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              tömning
+            </a>
+            ,{" "}
+            <a
+              href="/bortforsling-dodsbo"
+              title="bortforsling av möbler och dödsbo"
+              style={{ color: "inherit" }}
+            >
+              bortforsling
+            </a>
+            ,{" "}
+            <a
+              href="/sanera-dodsbo"
+              title="sanering av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              sanering
+            </a>
+            ,{" "}
+            <a
+              href="/bohagsflytt"
+              title="bohagsflytt"
+              style={{ color: "inherit" }}
+            >
+              flytt
+            </a>{" "}
+            och{" "}
+            <a
+              href="/stadning-av-dodsbo"
+              title="städning av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              städning
+            </a>{" "}
+            av{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              dödsbon
+            </a>{" "}
+            och{" "}
+            <a
+              href="/tomma-bohag"
+              title="tömma bohag"
+              style={{ color: "inherit" }}
+            >
+              bohag
+            </a>
+            .
+          </p>
           {activeStep == 1 && (
             <Steptwo
               activeStep={activeStep}

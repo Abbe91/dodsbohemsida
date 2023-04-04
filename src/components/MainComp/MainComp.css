@@ -108,6 +108,21 @@ input:focus {
   margin: 0.5rem auto;
   font-size: 0.9rem;
 }
+
+.main-top-main-small {
+  background: url("https://offerta.se/images/campaign/brf-campaign.jpg")
+    no-repeat;
+  background-position: center;
+  height: 160px;
+  width: 100%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 @media screen and (max-width: 672px) {
   .mainComp {
     height: 580px;
@@ -161,5 +176,10 @@ input:focus {
   .main-content-container p {
     font-size: 1rem;
     line-height: 19px;
+  }
+}
+@media screen and (min-width: 440px) {
+  .main-top-main-small {
+    display: none;
   }
 }
