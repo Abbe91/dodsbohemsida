@@ -15,7 +15,7 @@ const btns = [
 const Atervinning = () => {
   const articleStructuredData = {
     "@context": "https://schema.org",
-    "@type": "HowTo",
+    "@type": "Article",
     headline:
       "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt en guide för återvinning.",
     description:
