@@ -1,395 +1,374 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Partners from "./components/Partners";
 import { getContentData } from "./redux-toolkit/content/contentSlice";
-import { collection, getDocs } from "firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
-import { setNewLead } from "./redux-toolkit/leads/leadsSlice";
 import ProtectedRoute from "./pages/ProtectedRoute";
+const GratisKollen = lazy(() => import("./pages/gratiskollen/GratisKollen"));
+const Uppkopdodsbogoteborg = lazy(() =>
+  import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
+);
+const ServicesIconsComp = lazy(() => import("./components/ServicesIconsComp"));
+const Error = lazy(() => import("./pages/Error/Error"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Footer = lazy(() => import("./components/Footer/Footer"));
+const Tommadodsbogoteborg = lazy(() =>
+  import("./components/tommadodsbogoteborg/Tommadodsbogoteborg")
+);
+const Tommabohag = lazy(() => import("./components/Tommabohag"));
+const Varderadodsbogoteborg = lazy(() =>
+  import("./blocks/Varderadodsbogoteborg")
+);
+const Saljadodsbogoteborg = lazy(() => import("./blocks/Saljadodsbogoteborg"));
+const Bortforslingdodsbogoteborg = lazy(() =>
+  import("./blocks/Bortforslingdodsbogoteborg")
+);
+const Bortforslingdodsboulricehamn = lazy(() =>
+  import("./blocks/Bortforslingdodsboulricehamn")
+);
+const Varderadodsboulricehamn = lazy(() =>
+  import("./blocks/Varderadodsboulricehamn")
+);
+const Hjalpdodsboulricehamn = lazy(() =>
+  import("./blocks/Hjalpdodsboulricehamn")
+);
+const Saljadodsboulricehamn = lazy(() =>
+  import("./blocks/Saljadodsboulricehamn")
+);
+const Tommadodsboulricehamn = lazy(() =>
+  import("./blocks/Tommadodsboulricehamn")
+);
+const Bortforslingavdodsbogoteborg = lazy(() =>
+  import("./blocks/Goteborg/Bortforslingavdodsbogoteborg")
+);
+const Uppkopdodsboulricehamn = lazy(() =>
+  import("./blocks/Uppkopdodsboulricehamn")
+);
+const Hjalpdodsbogoteborg = lazy(() => import("./blocks/Hjalpadodsbogoteborg"));
+const Besok = lazy(() => import("./components/Besok"));
+const BortforslingDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/BortforslingDodsboKungalv")
+);
+const HjalpDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/HjalpDodsboKungalv")
+);
+const SaljaDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/SaljaDodsboKungalv")
+);
+const TommaDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/TommaDodsboKungalv")
+);
+const VarderaDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/VarderaDodsboKungalv")
+);
+const UppkopDodsboKungalv = lazy(() =>
+  import("./blocks/kungalv/UppkopDodsboKungalv")
+);
+const Bortforslingdodsboale = lazy(() =>
+  import("./blocks/ale/Bortforslingdodsboale")
+);
+const Hjalpdodsboale = lazy(() => import("./blocks/ale/Hjalpdodsboale"));
+const Saljadosboale = lazy(() => import("./blocks/ale/Saljadosboale"));
+const Tommadodsboale = lazy(() => import("./blocks/ale/Tommadodsboale"));
+const Uppkopdodsboale = lazy(() => import("./blocks/ale/Uppkopdodsboale"));
+const Varderadodsboale = lazy(() => import("./blocks/ale/Varderadodsboale"));
+const DodsboGoteborg = lazy(() => import("./blocks/DodsboGoteborg"));
+const Bortforslingdodsbofrolunda = lazy(() =>
+  import("./blocks/frolunda/Bortforslingdodsbofrolunda")
+);
+const Saljadodsbofrolunda = lazy(() =>
+  import("./blocks/frolunda/Saljadodsbofrolunda")
+);
+const Tommadodsbofrolunda = lazy(() =>
+  import("./blocks/frolunda/Tommadodsbofrolunda")
+);
+const Uppkopdodsbofrolunda = lazy(() =>
+  import("./blocks/frolunda/Uppkopdodsbofrolunda")
+);
+const Varderadodsbofrolunda = lazy(() =>
+  import("./blocks/frolunda/Varderadodsbofrolunda")
+);
+const Bortforslinghisingen = lazy(() =>
+  import("./blocks/Hisingen/Bortforslinghisingen")
+);
+const Saljadodsbohisingen = lazy(() =>
+  import("./blocks/Hisingen/Saljadodsbohisingen")
+);
+const Tommadodsbohisingen = lazy(() =>
+  import("./blocks/Hisingen/Tommadodsbohisingen")
+);
+const Uppkopdodsbohisingen = lazy(() =>
+  import("./blocks/Hisingen/Uppkopdodsbohisingen")
+);
+const Varderadodsbohisingen = lazy(() =>
+  import("./blocks/Hisingen/Varderadodsbohisingen")
+);
+const ExternaLankar = lazy(() =>
+  import("./components/externalLinks/ExternaLankar")
+);
+const Dodsboanmalan = lazy(() => import("./pages/InfoPages/Dodsboanmalan"));
+const Dodsbodelagare = lazy(() => import("./pages/InfoPages/Dodsbodelagare"));
+const Dodsboet = lazy(() => import("./pages/InfoPages/Dodsboet"));
+const SaljaDodsbo = lazy(() => import("./pages/InfoPages/SaljaDodsbo"));
+//
+const DodsboUppkopare = lazy(() => import("./blocks/Goteborg/DodsboUppkopare"));
+const Dodsbouppkoparegoteborg = lazy(() =>
+  import("./blocks/Goteborg/Dodsbouppkoparegoteborg")
+);
+const Tommerdodsbo = lazy(() => import("./blocks/Goteborg/Tommerdodsbo"));
+const Dodsbofirma = lazy(() => import("./blocks/Goteborg/Dodsbofirma"));
+//
+const Uppkopavbohag = lazy(() => import("./blocks/Goteborg/Uppkopavbohag"));
+const Tommadodsbo = lazy(() => import("./blocks/Goteborg/Tommadodsbo"));
+const Foretagsomkoperbohag = lazy(() =>
+  import("./blocks/Goteborg/Foretagsomkoperbohag")
+);
+const Stadningavdodsbo = lazy(() => import("./blocks/Stadningavdodsbo"));
+//
+const Oppetider = lazy(() => import("./components/Oppetider"));
+const Recensioner = lazy(() => import("./components/Recensioner"));
+const Seo = lazy(() => import("./components/SEO/Seo"));
+const Arbetsprocessen = lazy(() => import("./components/Arbetsprocessen"));
+const ImagesServicesComponent = lazy(() =>
+  import("./components/ImagesServicesComponent")
+);
+const Dodsbokopes = lazy(() => import("./blocks/Dodsbokopes"));
+const Tomningavdodsbo = lazy(() => import("./blocks/Tomningavdodsbo"));
+const Helhetslosningdodsbo = lazy(() =>
+  import("./components/Helhetslosningdodsbo")
+);
+const UppkopAvDodsbo = lazy(() => import("./blocks/Goteborg/UppkopAvDodsbo"));
+const Bortforslingdodsbokungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Bortforslingdodsbokungsbacka")
+);
+const Dodsbofirmakungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Dodsbofirmakungsbacka")
+);
+const HamtardodsboKungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/HamtardodsboKungsbacka")
+);
+const Koperdodsbokungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Koperdodsbokungsbacka")
+);
+const Saljadodsbokungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Saljadodsbokungsbacka")
+);
+const TommadodsboKungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/TommadodsboKungsbacka")
+);
+const Tommerdodsbokungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Tommerdodsbokungsbacka")
+);
+const Bortforslingdodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Bortforslingdodsbomolndal")
+);
+const Dodsbofirmamolndal = lazy(() =>
+  import("./blocks/Molndal/Dodsbofirmamolndal")
+);
+const Kopadodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Kopadodsbomolndal")
+);
+const Rojadodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Rojadodsbomolndal")
+);
+const Saljadodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Saljadodsbomolndal")
+);
+const Stadadodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Stadadodsbomolndal")
+);
+const Tommadodsbomolndal = lazy(() =>
+  import("./blocks/Molndal/Tommadodsbomolndal")
+);
+const Rojadodsbogoteborg = lazy(() =>
+  import("./blocks/Goteborg/Rojadodsbogoteborg")
+);
+const Stadadodsbogoteborg = lazy(() =>
+  import("./blocks/Goteborg/Stadadodsbogoteborg")
+);
+const TommerDodsboPartille = lazy(() =>
+  import("./blocks/Partille/TommerDodsboPartille")
+);
+const Bortforslingdodsbopartille = lazy(() =>
+  import("./blocks/Partille/Bortforslingdodsbopartille")
+);
+const Kopadodsbopartille = lazy(() =>
+  import("./blocks/Partille/Kopadodsbopartille")
+);
+const Rojerdodsbopartille = lazy(() =>
+  import("./blocks/Partille/Rojerdodsbopartille")
+);
+const Saljadodsbopartille = lazy(() =>
+  import("./blocks/Partille/Saljadodsbopartille")
+);
+const Stadadodsbopartille = lazy(() =>
+  import("./blocks/Partille/Stadadodsbopartille")
+);
+const Uppkopdodsbopartille = lazy(() =>
+  import("./blocks/Partille/Uppkopdodsbopartille")
+);
+const Varderadodsbokungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/Varderadodsbokungsbacka")
+);
+const Bortforslingdodsbostenungssund = lazy(() =>
+  import("./blocks/Stenungsund/Bortforslingdodsbostenungssund")
+);
+const Kopadodsbostenungssund = lazy(() =>
+  import("./blocks/Stenungsund/Kopadodsbostenungssund")
+);
+const Rojadodsbostenungsund = lazy(() =>
+  import("./blocks/Stenungsund/Rojadodsbostenungsund")
+);
+const Saljadodsbostenungssund = lazy(() =>
+  import("./blocks/Stenungsund/Saljadodsbostenungssund")
+);
+const Tommadodsbostenungssund = lazy(() =>
+  import("./blocks/Stenungsund/Tommadodsbostenungssund")
+);
+const Varderadodsbostenungssund = lazy(() =>
+  import("./blocks/Stenungsund/Varderadodsbostenungssund")
+);
+const Bortforslingdodsbotrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Bortforslingdodsbotrollhattan")
+);
+const Dodsbokopestrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Dodsbokopestrollhattan")
+);
+const Dodsbotrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Dodsbotrollhattan")
+);
+const Flyttstadningtrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Flyttstadningtrollhattan")
+);
+const Saljadodsbotrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Saljadodsbotrollhattan")
+);
+const Stadningavdodsbotrollhatttan = lazy(() =>
+  import("./blocks/Trollhattan/Stadningavdodsbotrollhatttan")
+);
+const Tommadodsbotrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Tommadodsbotrollhattan")
+);
+const Varderadodsbotrollhattan = lazy(() =>
+  import("./blocks/Trollhattan/Varderadodsbotrollhattan")
+);
+const Bortforslingdodsboboras = lazy(() =>
+  import("./blocks/boras/Bortforslingdodsboboras")
+);
+const Dodsbofirmaboras = lazy(() => import("./blocks/boras/Dodsbofirmaboras"));
+const Dodsbotomningboras = lazy(() =>
+  import("./blocks/boras/Dodsbotomningboras")
+);
+const Flyttstadningdodsboboras = lazy(() =>
+  import("./blocks/boras/Flyttstadningdodsboboras")
+);
+const Kopadodsboboras = lazy(() => import("./blocks/boras/Kopadodsboboras"));
+const Rojadodsboboras = lazy(() => import("./blocks/boras/Rojadodsboboras"));
+const Saljadodsboboras = lazy(() => import("./blocks/boras/Saljadodsboboras"));
+const Slutstadningdodsboboras = lazy(() =>
+  import("./blocks/boras/Slutstadningdodsboboras")
+);
+const Tommadodsboboras = lazy(() => import("./blocks/boras/Tommadodsboboras"));
+const Tommerlagenheterboras = lazy(() =>
+  import("./blocks/boras/Tommerlagenheterboras")
+);
+const Uppkopdodsboboras = lazy(() =>
+  import("./blocks/boras/Uppkopdodsboboras")
+);
+const Varderadodsboboras = lazy(() =>
+  import("./blocks/boras/Varderadodsboboras")
+);
+const Flyttstadningavbohag = lazy(() =>
+  import("./blocks/flyttstadning/Flyttstadningavbohag")
+);
+const Varderingavdodsbo = lazy(() =>
+  import("./pages/InfoPages/Varderingavdodsbo")
+);
+const Flyttstadning = lazy(() =>
+  import("./blocks/flyttstadning/Flyttstadning")
+);
+const Flyttstadninggoteborg = lazy(() =>
+  import("./blocks/flyttstadning/Flyttstadninggoteborg")
+);
+const Flyttstadningkungalv = lazy(() =>
+  import("./blocks/flyttstadning/Flyttstadningkungalv")
+);
+const Koperdodsboalingsas = lazy(() =>
+  import("./blocks/alingsas/Koperdodsboalingsas")
+);
+const Stadardodsboalingsas = lazy(() =>
+  import("./blocks/alingsas/Stadardodsboalingsas")
+);
+const Tommadodsboalingsas = lazy(() =>
+  import("./blocks/alingsas/Tommadodsboalingsas")
+);
+const Varderadodsboalingsas = lazy(() =>
+  import("./blocks/alingsas/Varderadodsboalingsas")
+);
+const Bohagsflytt = lazy(() => import("./blocks/flytt/Bohagsflytt"));
+const Varderadodsbo = lazy(() => import("./components/Varderadodsbo"));
+const Bortforslingdodsbo = lazy(() =>
+  import("./components/Bortforslingdodsbo")
+);
+const Saneradodsbo = lazy(() => import("./components/Saneradodsbo"));
+const Koperdodsbogoteborg = lazy(() =>
+  import("./blocks/Goteborg/Koperdodsbogoteborg")
+);
+const Flytta = lazy(() => import("./components/Flytta"));
+const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
+const BookingModal = lazy(() => import("./components/BookingModal"));
+const Tommahusgoteborg = lazy(() =>
+  import("./blocks/Goteborg/Tommahusgoteborg")
+);
+const Tommalagenhetgoteborg = lazy(() =>
+  import("./blocks/Goteborg/Tommalagenhetgoteborg")
+);
+const TommaHusKungsbacka = lazy(() =>
+  import("./blocks/kungsbacka/TommaHusKungsbacka")
+);
+
+const Tommerhem = lazy(() => import("./blocks/Goteborg/Tommerhem"));
+const TommerHushall = lazy(() => import("./blocks/Goteborg/TommerHushall"));
+const Tommerhushallgoteborg = lazy(() =>
+  import("./blocks/Goteborg/Tommerhushallgoteborg")
+);
+const Tommerhemgoteborg = lazy(() =>
+  import("./blocks/Goteborg/Tommerhemgoteborg")
+);
+const Bortforsling = lazy(() => import("./blocks/Goteborg/Bortforsling"));
+const Billigflyttfirmagoteborg = lazy(() =>
+  import("./blocks/flytt/Billigflyttfirmagoteborg")
+);
+const Flyttfirmakungalv = lazy(() =>
+  import("./blocks/flytt/Flyttfirmakungalv")
+);
+const Flyttfirmaoffert = lazy(() => import("./blocks/flytt/Flyttfirmaoffert"));
+const Flyttfirmaboras = lazy(() => import("./blocks/flytt/Flyttfirmaboras"));
+const Flyttfirmagoteborg = lazy(() =>
+  import("./blocks/flytt/Flyttfirmagoteborg")
+);
+const Login = lazy(() => import("./pages/Login"));
+//
+const Tommerdodsbonlerum = lazy(() =>
+  import("./blocks/lerum/Tommerdodsbonlerum")
+);
+const Koperdodsbonlerum = lazy(() =>
+  import("./blocks/lerum/Koperdodsbonlerum")
+);
+const Koperdodsbouddevalla = lazy(() =>
+  import("./blocks/uddevalla/Koperdodsbouddevalla")
+);
+const Tommerdodsbouddevalla = lazy(() =>
+  import("./blocks/uddevalla/Tommerdodsbouddevalla")
+);
+// new info pages
+const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
 
 const App = () => {
-  const dispatch = useDispatch();
-  // lazy imports
-  const GratisKollen = lazy(() => import("./pages/gratiskollen/GratisKollen"));
-  const Uppkopdodsbogoteborg = lazy(() =>
-    import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
-  );
-  const ServicesIconsComp = lazy(() =>
-    import("./components/ServicesIconsComp")
-  );
-  const Error = lazy(() => import("./pages/Error/Error"));
-  const Home = lazy(() => import("./pages/Home/Home"));
-  const Footer = lazy(() => import("./components/Footer/Footer"));
-  const Tommadodsbogoteborg = lazy(() =>
-    import("./components/tommadodsbogoteborg/Tommadodsbogoteborg")
-  );
-  const Tommabohag = lazy(() => import("./components/Tommabohag"));
-  const Varderadodsbogoteborg = lazy(() =>
-    import("./blocks/Varderadodsbogoteborg")
-  );
-  const Saljadodsbogoteborg = lazy(() =>
-    import("./blocks/Saljadodsbogoteborg")
-  );
-  const Bortforslingdodsbogoteborg = lazy(() =>
-    import("./blocks/Bortforslingdodsbogoteborg")
-  );
-  const Bortforslingdodsboulricehamn = lazy(() =>
-    import("./blocks/Bortforslingdodsboulricehamn")
-  );
-  const Varderadodsboulricehamn = lazy(() =>
-    import("./blocks/Varderadodsboulricehamn")
-  );
-  const Hjalpdodsboulricehamn = lazy(() =>
-    import("./blocks/Hjalpdodsboulricehamn")
-  );
-  const Saljadodsboulricehamn = lazy(() =>
-    import("./blocks/Saljadodsboulricehamn")
-  );
-  const Tommadodsboulricehamn = lazy(() =>
-    import("./blocks/Tommadodsboulricehamn")
-  );
-  const Bortforslingavdodsbogoteborg = lazy(() =>
-    import("./blocks/Goteborg/Bortforslingavdodsbogoteborg")
-  );
-  const Uppkopdodsboulricehamn = lazy(() =>
-    import("./blocks/Uppkopdodsboulricehamn")
-  );
-  const Hjalpdodsbogoteborg = lazy(() =>
-    import("./blocks/Hjalpadodsbogoteborg")
-  );
-  const Besok = lazy(() => import("./components/Besok"));
-  const BortforslingDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/BortforslingDodsboKungalv")
-  );
-  const HjalpDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/HjalpDodsboKungalv")
-  );
-  const SaljaDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/SaljaDodsboKungalv")
-  );
-  const TommaDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/TommaDodsboKungalv")
-  );
-  const VarderaDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/VarderaDodsboKungalv")
-  );
-  const UppkopDodsboKungalv = lazy(() =>
-    import("./blocks/kungalv/UppkopDodsboKungalv")
-  );
-  const Bortforslingdodsboale = lazy(() =>
-    import("./blocks/ale/Bortforslingdodsboale")
-  );
-  const Hjalpdodsboale = lazy(() => import("./blocks/ale/Hjalpdodsboale"));
-  const Saljadosboale = lazy(() => import("./blocks/ale/Saljadosboale"));
-  const Tommadodsboale = lazy(() => import("./blocks/ale/Tommadodsboale"));
-  const Uppkopdodsboale = lazy(() => import("./blocks/ale/Uppkopdodsboale"));
-  const Varderadodsboale = lazy(() => import("./blocks/ale/Varderadodsboale"));
-  const DodsboGoteborg = lazy(() => import("./blocks/DodsboGoteborg"));
-  const Bortforslingdodsbofrolunda = lazy(() =>
-    import("./blocks/frolunda/Bortforslingdodsbofrolunda")
-  );
-  const Saljadodsbofrolunda = lazy(() =>
-    import("./blocks/frolunda/Saljadodsbofrolunda")
-  );
-  const Tommadodsbofrolunda = lazy(() =>
-    import("./blocks/frolunda/Tommadodsbofrolunda")
-  );
-  const Uppkopdodsbofrolunda = lazy(() =>
-    import("./blocks/frolunda/Uppkopdodsbofrolunda")
-  );
-  const Varderadodsbofrolunda = lazy(() =>
-    import("./blocks/frolunda/Varderadodsbofrolunda")
-  );
-  const Bortforslinghisingen = lazy(() =>
-    import("./blocks/Hisingen/Bortforslinghisingen")
-  );
-  const Saljadodsbohisingen = lazy(() =>
-    import("./blocks/Hisingen/Saljadodsbohisingen")
-  );
-  const Tommadodsbohisingen = lazy(() =>
-    import("./blocks/Hisingen/Tommadodsbohisingen")
-  );
-  const Uppkopdodsbohisingen = lazy(() =>
-    import("./blocks/Hisingen/Uppkopdodsbohisingen")
-  );
-  const Varderadodsbohisingen = lazy(() =>
-    import("./blocks/Hisingen/Varderadodsbohisingen")
-  );
-  const ExternaLankar = lazy(() =>
-    import("./components/externalLinks/ExternaLankar")
-  );
-  const Dodsboanmalan = lazy(() => import("./pages/InfoPages/Dodsboanmalan"));
-  const Dodsbodelagare = lazy(() => import("./pages/InfoPages/Dodsbodelagare"));
-  const Dodsboet = lazy(() => import("./pages/InfoPages/Dodsboet"));
-  const SaljaDodsbo = lazy(() => import("./pages/InfoPages/SaljaDodsbo"));
-  //
-  const DodsboUppkopare = lazy(() =>
-    import("./blocks/Goteborg/DodsboUppkopare")
-  );
-  const Dodsbouppkoparegoteborg = lazy(() =>
-    import("./blocks/Goteborg/Dodsbouppkoparegoteborg")
-  );
-  const Tommerdodsbo = lazy(() => import("./blocks/Goteborg/Tommerdodsbo"));
-  const Dodsbofirma = lazy(() => import("./blocks/Goteborg/Dodsbofirma"));
-  //
-  const Uppkopavbohag = lazy(() => import("./blocks/Goteborg/Uppkopavbohag"));
-  const Tommadodsbo = lazy(() => import("./blocks/Goteborg/Tommadodsbo"));
-  const Foretagsomkoperbohag = lazy(() =>
-    import("./blocks/Goteborg/Foretagsomkoperbohag")
-  );
-  const Stadningavdodsbo = lazy(() => import("./blocks/Stadningavdodsbo"));
-  //
-  const Oppetider = lazy(() => import("./components/Oppetider"));
-  const Recensioner = lazy(() => import("./components/Recensioner"));
-  const Seo = lazy(() => import("./components/SEO/Seo"));
-  const Arbetsprocessen = lazy(() => import("./components/Arbetsprocessen"));
-  const ImagesServicesComponent = lazy(() =>
-    import("./components/ImagesServicesComponent")
-  );
-  const Dodsbokopes = lazy(() => import("./blocks/Dodsbokopes"));
-  const Tomningavdodsbo = lazy(() => import("./blocks/Tomningavdodsbo"));
-  const Helhetslosningdodsbo = lazy(() =>
-    import("./components/Helhetslosningdodsbo")
-  );
-  const UppkopAvDodsbo = lazy(() => import("./blocks/Goteborg/UppkopAvDodsbo"));
-  const Bortforslingdodsbokungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Bortforslingdodsbokungsbacka")
-  );
-  const Dodsbofirmakungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Dodsbofirmakungsbacka")
-  );
-  const HamtardodsboKungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/HamtardodsboKungsbacka")
-  );
-  const Koperdodsbokungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Koperdodsbokungsbacka")
-  );
-  const Saljadodsbokungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Saljadodsbokungsbacka")
-  );
-  const TommadodsboKungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/TommadodsboKungsbacka")
-  );
-  const Tommerdodsbokungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Tommerdodsbokungsbacka")
-  );
-  const Bortforslingdodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Bortforslingdodsbomolndal")
-  );
-  const Dodsbofirmamolndal = lazy(() =>
-    import("./blocks/Molndal/Dodsbofirmamolndal")
-  );
-  const Kopadodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Kopadodsbomolndal")
-  );
-  const Rojadodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Rojadodsbomolndal")
-  );
-  const Saljadodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Saljadodsbomolndal")
-  );
-  const Stadadodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Stadadodsbomolndal")
-  );
-  const Tommadodsbomolndal = lazy(() =>
-    import("./blocks/Molndal/Tommadodsbomolndal")
-  );
-  const Rojadodsbogoteborg = lazy(() =>
-    import("./blocks/Goteborg/Rojadodsbogoteborg")
-  );
-  const Stadadodsbogoteborg = lazy(() =>
-    import("./blocks/Goteborg/Stadadodsbogoteborg")
-  );
-  const TommerDodsboPartille = lazy(() =>
-    import("./blocks/Partille/TommerDodsboPartille")
-  );
-  const Bortforslingdodsbopartille = lazy(() =>
-    import("./blocks/Partille/Bortforslingdodsbopartille")
-  );
-  const Kopadodsbopartille = lazy(() =>
-    import("./blocks/Partille/Kopadodsbopartille")
-  );
-  const Rojerdodsbopartille = lazy(() =>
-    import("./blocks/Partille/Rojerdodsbopartille")
-  );
-  const Saljadodsbopartille = lazy(() =>
-    import("./blocks/Partille/Saljadodsbopartille")
-  );
-  const Stadadodsbopartille = lazy(() =>
-    import("./blocks/Partille/Stadadodsbopartille")
-  );
-  const Uppkopdodsbopartille = lazy(() =>
-    import("./blocks/Partille/Uppkopdodsbopartille")
-  );
-  const Varderadodsbokungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/Varderadodsbokungsbacka")
-  );
-  const Bortforslingdodsbostenungssund = lazy(() =>
-    import("./blocks/Stenungsund/Bortforslingdodsbostenungssund")
-  );
-  const Kopadodsbostenungssund = lazy(() =>
-    import("./blocks/Stenungsund/Kopadodsbostenungssund")
-  );
-  const Rojadodsbostenungsund = lazy(() =>
-    import("./blocks/Stenungsund/Rojadodsbostenungsund")
-  );
-  const Saljadodsbostenungssund = lazy(() =>
-    import("./blocks/Stenungsund/Saljadodsbostenungssund")
-  );
-  const Tommadodsbostenungssund = lazy(() =>
-    import("./blocks/Stenungsund/Tommadodsbostenungssund")
-  );
-  const Varderadodsbostenungssund = lazy(() =>
-    import("./blocks/Stenungsund/Varderadodsbostenungssund")
-  );
-  const Bortforslingdodsbotrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Bortforslingdodsbotrollhattan")
-  );
-  const Dodsbokopestrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Dodsbokopestrollhattan")
-  );
-  const Dodsbotrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Dodsbotrollhattan")
-  );
-  const Flyttstadningtrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Flyttstadningtrollhattan")
-  );
-  const Saljadodsbotrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Saljadodsbotrollhattan")
-  );
-  const Stadningavdodsbotrollhatttan = lazy(() =>
-    import("./blocks/Trollhattan/Stadningavdodsbotrollhatttan")
-  );
-  const Tommadodsbotrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Tommadodsbotrollhattan")
-  );
-  const Varderadodsbotrollhattan = lazy(() =>
-    import("./blocks/Trollhattan/Varderadodsbotrollhattan")
-  );
-  const Bortforslingdodsboboras = lazy(() =>
-    import("./blocks/boras/Bortforslingdodsboboras")
-  );
-  const Dodsbofirmaboras = lazy(() =>
-    import("./blocks/boras/Dodsbofirmaboras")
-  );
-  const Dodsbotomningboras = lazy(() =>
-    import("./blocks/boras/Dodsbotomningboras")
-  );
-  const Flyttstadningdodsboboras = lazy(() =>
-    import("./blocks/boras/Flyttstadningdodsboboras")
-  );
-  const Kopadodsboboras = lazy(() => import("./blocks/boras/Kopadodsboboras"));
-  const Rojadodsboboras = lazy(() => import("./blocks/boras/Rojadodsboboras"));
-  const Saljadodsboboras = lazy(() =>
-    import("./blocks/boras/Saljadodsboboras")
-  );
-  const Slutstadningdodsboboras = lazy(() =>
-    import("./blocks/boras/Slutstadningdodsboboras")
-  );
-  const Tommadodsboboras = lazy(() =>
-    import("./blocks/boras/Tommadodsboboras")
-  );
-  const Tommerlagenheterboras = lazy(() =>
-    import("./blocks/boras/Tommerlagenheterboras")
-  );
-  const Uppkopdodsboboras = lazy(() =>
-    import("./blocks/boras/Uppkopdodsboboras")
-  );
-  const Varderadodsboboras = lazy(() =>
-    import("./blocks/boras/Varderadodsboboras")
-  );
-  const Flyttstadningavbohag = lazy(() =>
-    import("./blocks/flyttstadning/Flyttstadningavbohag")
-  );
-  const Varderingavdodsbo = lazy(() =>
-    import("./pages/InfoPages/Varderingavdodsbo")
-  );
-  const Flyttstadning = lazy(() =>
-    import("./blocks/flyttstadning/Flyttstadning")
-  );
-  const Flyttstadninggoteborg = lazy(() =>
-    import("./blocks/flyttstadning/Flyttstadninggoteborg")
-  );
-  const Flyttstadningkungalv = lazy(() =>
-    import("./blocks/flyttstadning/Flyttstadningkungalv")
-  );
-  const Koperdodsboalingsas = lazy(() =>
-    import("./blocks/alingsas/Koperdodsboalingsas")
-  );
-  const Stadardodsboalingsas = lazy(() =>
-    import("./blocks/alingsas/Stadardodsboalingsas")
-  );
-  const Tommadodsboalingsas = lazy(() =>
-    import("./blocks/alingsas/Tommadodsboalingsas")
-  );
-  const Varderadodsboalingsas = lazy(() =>
-    import("./blocks/alingsas/Varderadodsboalingsas")
-  );
-  const Bohagsflytt = lazy(() => import("./blocks/flytt/Bohagsflytt"));
-  const Varderadodsbo = lazy(() => import("./components/Varderadodsbo"));
-  const Bortforslingdodsbo = lazy(() =>
-    import("./components/Bortforslingdodsbo")
-  );
-  const Saneradodsbo = lazy(() => import("./components/Saneradodsbo"));
-  const Koperdodsbogoteborg = lazy(() =>
-    import("./blocks/Goteborg/Koperdodsbogoteborg")
-  );
-  const Flytta = lazy(() => import("./components/Flytta"));
-  const SaljaDodsbon = lazy(() => import("./components/SaljaDodsbo"));
-  const BookingModal = lazy(() => import("./components/BookingModal"));
-  const Tommahusgoteborg = lazy(() =>
-    import("./blocks/Goteborg/Tommahusgoteborg")
-  );
-  const Tommalagenhetgoteborg = lazy(() =>
-    import("./blocks/Goteborg/Tommalagenhetgoteborg")
-  );
-  const TommaHusKungsbacka = lazy(() =>
-    import("./blocks/kungsbacka/TommaHusKungsbacka")
-  );
-
-  const Tommerhem = lazy(() => import("./blocks/Goteborg/Tommerhem"));
-  const TommerHushall = lazy(() => import("./blocks/Goteborg/TommerHushall"));
-  const Tommerhushallgoteborg = lazy(() =>
-    import("./blocks/Goteborg/Tommerhushallgoteborg")
-  );
-  const Tommerhemgoteborg = lazy(() =>
-    import("./blocks/Goteborg/Tommerhemgoteborg")
-  );
-  const Bortforsling = lazy(() => import("./blocks/Goteborg/Bortforsling"));
-  const Billigflyttfirmagoteborg = lazy(() =>
-    import("./blocks/flytt/Billigflyttfirmagoteborg")
-  );
-  const Flyttfirmakungalv = lazy(() =>
-    import("./blocks/flytt/Flyttfirmakungalv")
-  );
-  const Flyttfirmaoffert = lazy(() =>
-    import("./blocks/flytt/Flyttfirmaoffert")
-  );
-  const Flyttfirmaboras = lazy(() => import("./blocks/flytt/Flyttfirmaboras"));
-  const Flyttfirmagoteborg = lazy(() =>
-    import("./blocks/flytt/Flyttfirmagoteborg")
-  );
-  const Login = lazy(() => import("./pages/Login"));
-  //
-  const Tommerdodsbonlerum = lazy(() =>
-    import("./blocks/lerum/Tommerdodsbonlerum")
-  );
-  const Koperdodsbonlerum = lazy(() =>
-    import("./blocks/lerum/Koperdodsbonlerum")
-  );
-  const Koperdodsbouddevalla = lazy(() =>
-    import("./blocks/uddevalla/Koperdodsbouddevalla")
-  );
-  const Tommerdodsbouddevalla = lazy(() =>
-    import("./blocks/uddevalla/Tommerdodsbouddevalla")
-  );
-
-  // new info pages
-  const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
   const contentData = useSelector(getContentData);
   return (
     <div className="App">
