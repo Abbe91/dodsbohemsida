@@ -59,9 +59,9 @@ const Dodsbokopes = ({ videoText }) => {
   }, [element]);
   return (
     <div>
-      {/* <script type="application/ld+json">
+      <script type="application/ld+json">
         {JSON.stringify(articleStructuredData)}
-      </script> */}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

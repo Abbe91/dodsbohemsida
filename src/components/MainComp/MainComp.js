@@ -49,26 +49,9 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
     e.target.style.background = "black";
     e.target.style.color = "white";
   };
-  const articleStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
-    description:
-      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
-    image:
-      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
-    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
-    author: {
-      "@type": "Person",
-      name: "Louie Stokk"
-    }
-  };
+
   return (
     <section className="root">
-      <script type="application/ld+json">
-        {JSON.stringify(articleStructuredData)}
-      </script>
       <div className="main-top-main-small">
         <h4
           style={{
