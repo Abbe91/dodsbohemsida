@@ -22,10 +22,9 @@ const Stadadodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Städa dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
+      "Städa dödsbo Göteborg. Effektivt och pålitligt städning av dödsbo i Göteborg - Vi tar hand om det åt dig",
     metaContent:
-      "Städa dödsbo Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
-    query: "Städa dödsbo Göteborg",
+      "Vi erbjuder professionella, effektiv och pålitlig städning av dödsbo i Göteborg. Vi förstår att det kan vara en svår och känslig tid för våra kunder, därför tar vi hand om allt åt dig. Från avlägsnande av möbler och skräp till djuprengöring av utrymmen, vi garanterar att dödsboet lämnas i toppskick. Kontakta oss idag för att boka en städning av ett dödsbo i Göteborg.",
     formTitle: "Städa dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Göteborg",
@@ -35,6 +34,22 @@ const Stadadodsbogoteborg = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, röjning, bortforsling, sanering, luktsanering, flytt, städa, försäljning och städning av dödsbo i Göteborg";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+    description:
+      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Stadadodsbogoteborg = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
