@@ -18,9 +18,9 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
+      "Tömning av dödsbo i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon i Göteborg med omnejd | Dödsbo Jouren",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Göteborg. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Göteborg, kontakta oss",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Göteborg. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo i Göteborg och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet i Göteborg. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Göteborg, kontakta oss",
     query: "Tömma dödsbo Göteborg",
     formTitle: "Tömma dödsbo Göteborg",
     subTitle2:
@@ -37,9 +37,9 @@ const Tommadodsbogoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering i Göteborg.",
     description:
-      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Behöver du hjälp med flytt, städning eller tömning av dödsbo i Göteborg? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -50,9 +50,11 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   };
   return (
     <div>
-      <script type="application/ld+json">
-        {JSON.stringify(articleStructuredData)}
-      </script>
+      <div>
+        <script type="application/ld+json">
+          {JSON.stringify(articleStructuredData)}
+        </script>
+      </div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

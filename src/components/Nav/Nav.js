@@ -81,21 +81,21 @@ const Nav = () => {
                   style={{
                     background: "transparent",
                     border: "navajowhite",
-                    color: "white",
+                    color: "black",
                     fontSize: "0.9rem",
                     fontWeight: 700,
                     marginRight: " 0.75rem",
                     opacity: 0.8
                   }}
                 >
-                  <Link to={link.path} style={{ color: "white" }}>
+                  <Link to={link.path} style={{ color: "black" }}>
                     {link.label}
                   </Link>
                 </button>
               );
             } else {
               return (
-                <div key={link.id}>
+                <div key={link.id} style={{ color: "black" }}>
                   <button type="button" onClick={handleClick}>
                     {link.label}
                   </button>

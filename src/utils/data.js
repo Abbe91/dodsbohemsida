@@ -8,36 +8,44 @@ import { AiOutlineCreditCard } from "react-icons/ai";
 export const navlinks = [
   {
     id: 1,
-    label: "Hem"
+    label: "Hem",
+    path: "/"
   },
 
   {
     id: 2,
-    label: "Om oss"
+    label: "Tömma",
+    path: "/tomma-bohag"
   },
   {
     id: 3,
-    label: "Tjänster"
+    label: "Värdering",
+    path: "/vardera-dodsbo"
   },
   {
     id: 4,
-    label: "Dödsboanmälan",
-    path: "/dodsboanmalan"
+    label: "Städ",
+    path: "/stadning-av-dodsbo"
   },
   {
     id: 5,
-    label: "Dödsbodelägare",
-    path: "/dodsbodelagare"
+    label: "Flytt",
+    path: "/bohagsflytt"
   },
   {
     id: 6,
-    label: "Dödsboet",
-    path: "/dodsboet"
+    label: "Uppköp",
+    path: "/uppkop-av-dodsbo"
   },
   {
     id: 7,
-    label: "Sälja dödsbo",
-    path: "/salja-dodsbo"
+    label: "Bortforsling",
+    path: "/bortforsling-dodsbo"
+  },
+  {
+    id: 7,
+    label: "Återvinning",
+    path: "/atervinning"
   }
 ];
 export const erbjuder = [
