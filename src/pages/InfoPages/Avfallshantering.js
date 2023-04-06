@@ -34,7 +34,7 @@ const Avfallshantering = () => {
       "Vi kan hjälpa dig med all typ av avfallshantering, oavsett om det handlar om att hantering av avfall så som papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering.",
     image:
       "https://images.pexels.com/photos/3951625/pexels-photo-3951625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
       name: "Louie Stokk"
@@ -45,9 +45,11 @@ const Avfallshantering = () => {
   };
   return (
     <section>
-      <script type="application/ld+json">
-        {JSON.stringify(articleStructuredData)}
-      </script>
+      <div>
+        <script type="application/ld+json">
+          {JSON.stringify(articleStructuredData)}
+        </script>
+      </div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>

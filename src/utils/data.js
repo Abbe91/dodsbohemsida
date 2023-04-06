@@ -43,12 +43,12 @@ export const navlinks = [
     path: "/bortforsling-dodsbo"
   },
   {
-    id: 7,
+    id: 8,
     label: "Återvinning",
     path: "/atervinning"
   },
   {
-    id: 7,
+    id: 9,
     label: "Avfallshantering",
     path: "/avfallshantering"
   }
