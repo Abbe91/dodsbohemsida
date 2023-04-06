@@ -367,7 +367,9 @@ const Tommerdodsbouddevalla = lazy(() =>
 );
 // new info pages
 const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
-
+const Avfallshantering = lazy(() =>
+  import("./pages/InfoPages/Avfallshantering")
+);
 const App = () => {
   const contentData = useSelector(getContentData);
   return (
@@ -390,6 +392,7 @@ const App = () => {
               element={<Home videoText={contentData?.videoText} />}
             />
             <Route path="/atervinning" element={<Atervinning />} />
+            <Route path="/avfallshantering" element={<Avfallshantering />} />
             <Route
               path="/dodsbojouren/gratiskollen"
               element={<GratisKollen />}
