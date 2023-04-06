@@ -85,7 +85,8 @@ const Nav = () => {
                     fontSize: "0.9rem",
                     fontWeight: 700,
                     marginRight: " 0.75rem",
-                    opacity: 0.8
+                    opacity: 0.8,
+                    letterSpacing: "1px"
                   }}
                 >
                   <Link to={link.path} style={{ color: "black" }}>

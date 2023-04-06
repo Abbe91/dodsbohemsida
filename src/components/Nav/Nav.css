@@ -12,6 +12,7 @@ nav {
 }
 nav .nav-logo {
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 .nav-menu {
   position: fixed;
