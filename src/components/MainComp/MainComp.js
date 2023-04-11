@@ -377,7 +377,7 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
             </button>
           )}
           <div className="stepperr">
-            <Stepper activeStep={activeStep} style={{ background: "#bbe3f7" }}>
+            <Stepper activeStep={activeStep} style={{ background: "white" }}>
               {steps.map((step) => {
                 return (
                   <Step key={step}>
