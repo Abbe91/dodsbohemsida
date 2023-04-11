@@ -7,6 +7,7 @@
   align-items: center;
   text-align: center;
   position: relative;
+  background-color: rgb(187, 227, 247);
 }
 
 .roboto {
@@ -178,7 +179,7 @@ input:focus {
     line-height: 19px;
   }
 }
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 672px) {
   .main-top-main-small {
     display: none;
   }
