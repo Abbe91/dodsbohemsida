@@ -18,7 +18,7 @@ const AboutUs = ({ query, oss, om }) => {
           width: "100%"
         }}
       >
-        <h2 style={{ color: "black", marginTop: "1rem" }}>{query}</h2>
+        <h2 style={{ color: "white", marginTop: "1rem" }}>{query}</h2>
         <p
           style={{
             margin: "0.75rem auto",
@@ -43,20 +43,20 @@ const AboutUs = ({ query, oss, om }) => {
           När du behöver hjälp med att sälja ditt dödsbo,{" "}
           <a
             href="/tomma-dodsbo"
-            style={{ color: "gray" }}
+            style={{ color: "white" }}
             title="tömma dödsbo"
           >
             tömma dödsbo
           </a>
           , städa dödsbo eller att vi köper från{" "}
-          <a href="/dodsboet" style={{ color: "gray" }} title="dödsboet">
+          <a href="/dodsboet" style={{ color: "white" }} title="dödsboet">
             dödsboet
           </a>{" "}
           så kan du kontakta oss. Vi ger dig kostnadsfri{" "}
           <a
             href="/vardering-av-dodsbo"
             title="värdering av dödsbo"
-            style={{ color: "gray" }}
+            style={{ color: "white" }}
           >
             värdering
           </a>{" "}
@@ -64,7 +64,7 @@ const AboutUs = ({ query, oss, om }) => {
           att låta oss{" "}
           <a
             href="/uppkop-av-dodsbo"
-            style={{ color: "gray" }}
+            style={{ color: "white" }}
             title="uppköp av dödsbo"
           >
             köpa ditt dödsbo
@@ -72,7 +72,7 @@ const AboutUs = ({ query, oss, om }) => {
           kan du även få hjälp av oss med att{" "}
           <a
             href="/tomma-dodsbo"
-            style={{ color: "gray" }}
+            style={{ color: "white" }}
             title="tömma dödsbo"
           >
             tömma dödsboet

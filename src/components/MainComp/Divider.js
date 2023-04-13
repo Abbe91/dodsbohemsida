@@ -2,7 +2,7 @@ import React from "react";
 
 const Divider = () => {
   return (
-    <div style={{ margin: "3rem 0" }} className="main-comp-divider-comp">
+    <div style={{ marginBottom: "3rem" }} className="main-comp-divider-comp">
       <img
         style={{
           borderRadius: "5px",

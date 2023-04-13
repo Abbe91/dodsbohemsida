@@ -20,7 +20,7 @@ const Tommadodsbogoteborg = ({ videoText }) => {
     metaTitle:
       "Tömning av dödsbo i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon i Göteborg med omnejd | Dödsbo Jouren",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Göteborg. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo i Göteborg och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet i Göteborg. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Göteborg, kontakta oss",
+      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Göteborg. Vi tömmer alla typer av dödsbon i Göteborg och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet i Göteborg. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Göteborg, kontakta oss",
     query: "Tömma dödsbo Göteborg",
     formTitle: "Tömma dödsbo Göteborg",
     subTitle2:
@@ -59,6 +59,15 @@ const Tommadodsbogoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-goteborg"
+        />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

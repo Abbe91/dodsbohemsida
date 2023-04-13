@@ -30,44 +30,10 @@ const Nav = () => {
 
   return (
     <>
-      <section className="top-nav" style={{ margin: "0.5rem 0" }}>
-        <div className="user-contact">
-          <div>
-            <p style={{ color: "black" }}>
-              <strong>Ring oss</strong>
-            </p>
-          </div>
-          <div>
-            <a href={`tel:${customerData.phone}`} onClick={clickToCall}>
-              <Button
-                variant="contained"
-                style={{ background: "#bbe3f7", color: "black" }}
-              >
-                <AiTwotonePhone />
-              </Button>
-              {/* <p>{customerData.phone}</p> */}
-            </a>
-            <a href={"/dodsbojouren/gratiskollen"}>
-              <Button
-                variant="contained"
-                style={{
-                  background: "#bbe3f7",
-                  color: "black",
-                  height: "1.6rem",
-                  fontSize: "0.75rem",
-                  fontWeight: "bold"
-                }}
-              >
-                Gratiskollen
-              </Button>
-              {/* <p>{customerData.phone}</p> */}
-            </a>
-          </div>
-        </div>
-      </section>
       <nav>
         <div className="nav-logo" onClick={() => (window.location.href = "/")}>
-          <h2 className="logo">{customerData.business}</h2>
+          <h2 className="logo">Dödsbo</h2>
+          <h2 className="logo">Jouren</h2>
         </div>
         <div className="navbar" onClick={() => setShowNav(!showNav)}>
           <AiOutlineBars />

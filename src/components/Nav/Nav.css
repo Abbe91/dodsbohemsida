@@ -13,6 +13,10 @@ nav {
 nav .nav-logo {
   margin-left: 0.5rem;
   cursor: pointer;
+  background: #e3c148;
+  color: white;
+  padding: 0.3rem;
+  box-shadow: rgba(245, 244, 244, 0.2) 0px 2px 8px 0px;
 }
 .nav-menu {
   position: fixed;
@@ -49,7 +53,7 @@ nav .nav-logo {
 }
 nav .navbar {
   margin-right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 .nav-logo img {

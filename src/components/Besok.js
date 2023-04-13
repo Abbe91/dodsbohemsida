@@ -6,8 +6,9 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     padding: "2rem",
-    background: "#bbe3f7",
+    background: "#e3c148",
     justifyContent: "space-evenly",
+    color: "white",
     alignItems: "center",
     textAlign: "center",
     "@media screen and (max-width: 800px)": {
@@ -29,7 +30,7 @@ const Besok = () => {
   return (
     <div className={classes.root}>
       <section style={{ margin: "1rem 0" }}>
-        <h2 style={{ color: "black" }}>Kostnadsfri värdering</h2>
+        <h2 style={{ color: "white" }}>Kostnadsfri värdering</h2>
         <div
           style={{
             margin: "0.7rem auto",
@@ -43,7 +44,7 @@ const Besok = () => {
           <a
             href="/vardering-av-dodsbo"
             title="värdering av dödsbo"
-            style={{ color: "black" }}
+            style={{ color: "white" }}
           >
             värdering av dödsbo
           </a>{" "}
@@ -56,7 +57,7 @@ const Besok = () => {
           Efter att vi har{" "}
           <a
             href="/tomma-dodsbo"
-            style={{ color: "black" }}
+            style={{ color: "white" }}
             title="tömma dödsbo"
           >
             tömma dödsboet
@@ -65,7 +66,7 @@ const Besok = () => {
           <a
             href="/flyttstadning-av-bohag"
             title="flyttstädning av bohag"
-            style={{ color: "black" }}
+            style={{ color: "white" }}
           >
             flyttstädning av bohaget
           </a>{" "}

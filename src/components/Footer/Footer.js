@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="footer" style={{ height: "300px" }}>
         <div>
           <h3 style={{ marginBottom: "0.7rem" }}>Dödsbo Jouren</h3>
-          <a href={`tel:${customerData.phone}`} style={{ color: "black" }}>
+          <a href={`tel:${customerData.phone}`} style={{ color: "white" }}>
             <AiTwotonePhone style={{ marginBottom: "0.2rem" }} />
             <p>{customerData.phone}</p>
           </a>
@@ -51,8 +51,8 @@ const Footer = () => {
       </div>
       <div
         style={{
-          background: "#bbe3f7",
-          color: "black",
+          background: "#e3c148",
+          color: "white",
           height: "300px",
           textAlign: "center",
           display: "flex",

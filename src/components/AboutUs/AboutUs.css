@@ -1,10 +1,12 @@
 .aboutUs {
   display: flex;
   flex-direction: column;
+  background: rgb(227, 193, 72);
+  margin: 1rem 0.5rem;
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  color: black;
+  color: white;
   transition: all 0.3s linear;
 }
 .aboutUs h1 {

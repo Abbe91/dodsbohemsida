@@ -8,8 +8,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
     width: "100%",
     padding: "2rem",
+    color: "white",
     // flexWrap: "wrap",
-    background: "#bbe3f7"
+    background: "#e3c148"
     // "@media screen and (max-width: 1000px)": {
     //   flexDirection: "column"
     // }
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
     width: "2.6rem",
     height: "2.6rem",
     margin: "0 auto",
-    border: "1px solid black",
+    border: "1px solid white",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
@@ -29,10 +30,10 @@ const useStyles = makeStyles({
 const Arbetsprocessen = () => {
   const classes = useStyles();
   return (
-    <div style={{ background: "#bbe3f7" }}>
+    <div style={{ background: "#e3c148", color: "white" }}>
       <h2
         style={{
-          color: "black",
+          color: "white",
           textAlign: "center",
           paddingTop: "2rem"
         }}
@@ -54,13 +55,13 @@ const Arbetsprocessen = () => {
               <p>1</p>
             </div>
             <p style={{ width: "300px", marginTop: "0.5rem" }}>
-              <strong style={{ color: "black" }}> VÄRDERING:</strong> Vi
+              <strong style={{ color: "white" }}> VÄRDERING:</strong> Vi
               erbjuder en kostnadsfri värdering av hemmets föremål, dödsboet
               eller bohaget. Detta är för att kunna ge er ett fast pris för
               själva{" "}
               <a
                 href="/tomma-dodsbo"
-                style={{ color: "black" }}
+                style={{ color: "white" }}
                 title="tömma dödsbo"
               >
                 tömningen av dödsboet
@@ -98,11 +99,11 @@ const Arbetsprocessen = () => {
               <p>2</p>
             </div>
             <p style={{ width: "300px", marginTop: "1rem" }}>
-              <strong style={{ color: "black" }}>
+              <strong style={{ color: "white" }}>
                 Tömning & Bortforsling:
               </strong>{" "}
               Vi kommer den dagen vi bestämt tillsammans för att börja sortera i{" "}
-              <a href="/dodsboet" style={{ color: "black" }} title="dödsboet">
+              <a href="/dodsboet" style={{ color: "white" }} title="dödsboet">
                 dödsboet
               </a>{" "}
               eller bohaget. När vi sorterat klart börjar vi forsla bort det som
@@ -140,12 +141,12 @@ const Arbetsprocessen = () => {
               <p>3</p>
             </div>
             <p style={{ width: "300px", marginTop: "1rem" }}>
-              <strong style={{ color: "black" }}> STÄDNING:</strong> Behöver du
+              <strong style={{ color: "white" }}> STÄDNING:</strong> Behöver du
               även hjälp med att få dödsboet eller bohaget{" "}
               <a
                 href="/stadning-av-dodsbo"
                 title="städning av dödsbo"
-                style={{ color: "black" }}
+                style={{ color: "white" }}
               >
                 städat
               </a>{" "}
@@ -181,12 +182,12 @@ const Arbetsprocessen = () => {
               <p>4</p>
             </div>
             <p style={{ width: "300px", marginTop: "1rem" }}>
-              <strong style={{ color: "black" }}> BETALNING: </strong>Är
+              <strong style={{ color: "white" }}> BETALNING: </strong>Är
               föremålen/lösöret av högre värde än kostnaderna för arbetet så
               kommer vi att betala dig som kund för att få{" "}
               <a
                 href="/tomma-dodsbo"
-                style={{ color: "black" }}
+                style={{ color: "white" }}
                 title="tömma dödsbo"
               >
                 tömma dödsboet

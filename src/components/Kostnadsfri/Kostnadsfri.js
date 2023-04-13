@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Kostnadsfri.css";
 import emailjs from "@emailjs/browser";
-import video from "../../utils/dodsbo.mp4";
+
 const Kostnadsfri = ({ vad, text }) => {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -29,15 +29,10 @@ const Kostnadsfri = ({ vad, text }) => {
         }
       );
   };
-  useEffect(() => {
-    if (window.innerWidth >= 900) {
-      document.querySelector("video").autoplay = true;
-      document.querySelector("video").loop = true;
-    }
-  }, []);
+
   return (
-    <div className="kostandri-cont">
-      <div>
+    <div className="kostandri-cont" style={{ background: "#e3c148" }}>
+      <div style={{ background: "#e3c148", color: "white" }}>
         <h2>Kostnadsfri {vad}</h2>
         <p style={{ fontSize: "0.9rem", lineHeight: "22px" }}>
           För att vi skall kunna ge dig ett så ärligt pris som möjligt för ditt
@@ -57,7 +52,11 @@ const Kostnadsfri = ({ vad, text }) => {
           <button
             type="submit"
             onClick={handleSubmit}
-            style={{ background: "black", color: "white", fontWeight: "bold" }}
+            style={{
+              background: "white",
+              color: "#e3c148",
+              fontWeight: "bold"
+            }}
           >
             {sending
               ? "skickar..."
@@ -67,11 +66,6 @@ const Kostnadsfri = ({ vad, text }) => {
           </button>
         </form>
       </div>
-      <section className="video-wrapper">
-        <video>
-          <source src={video} type="video/mp4"></source>
-        </video>
-      </section>
     </div>
   );
 };

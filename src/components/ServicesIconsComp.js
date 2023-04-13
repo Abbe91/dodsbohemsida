@@ -51,8 +51,8 @@ const useStyles = makeStyles({
     flexWrap: "wrap"
   },
   btn: {
-    background: "#bbe3f7",
-    color: "black",
+    background: "#e3c148",
+    color: "white",
     border: "none",
     fontSize: "0.7rem",
     width: "6.5rem",
@@ -111,7 +111,7 @@ const ServicesIconsComp = () => {
                   href={service.path}
                   title={service.title}
                   className={classes.btn}
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   {service.title}
                 </a>

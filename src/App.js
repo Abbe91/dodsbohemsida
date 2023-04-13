@@ -8,10 +8,10 @@ import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
 import ProtectedRoute from "./pages/ProtectedRoute";
-const GratisKollen = lazy(() => import("./pages/gratiskollen/GratisKollen"));
 const Uppkopdodsbogoteborg = lazy(() =>
   import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
 );
+const ForFragan = lazy(() => import("./components/ForFragan"));
 const ServicesIconsComp = lazy(() => import("./components/ServicesIconsComp"));
 const Error = lazy(() => import("./pages/Error/Error"));
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -392,11 +392,9 @@ const App = () => {
               element={<Home videoText={contentData?.videoText} />}
             />
             <Route path="/atervinning" element={<Atervinning />} />
+            <Route path="/forfragan" element={<ForFragan />} />
             <Route path="/avfallshantering" element={<Avfallshantering />} />
-            <Route
-              path="/dodsbojouren/gratiskollen"
-              element={<GratisKollen />}
-            />
+
             <Route path="/login" element={<Login />} />
             <Route path="/boka" element={<BookingModal />} />
             <Route
@@ -1145,7 +1143,6 @@ const App = () => {
             />
             <Route path="*" element={<Error />} />
           </Routes>
-          <Helhetslosningdodsbo />
           <Partners />
           <ImagesServicesComponent />
           <Besok />

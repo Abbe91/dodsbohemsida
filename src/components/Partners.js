@@ -14,27 +14,27 @@ const Partners = () => {
             våra samarbetspartners finns:
           </p>
           <li
-            style={{ color: "#a2cfbc", fontWeight: "bold", margin: "0.5rem 0" }}
+            style={{ color: "#e3c148", fontWeight: "bold", margin: "0.5rem 0" }}
           >
             - Begravningsbyrå
           </li>
           <li
-            style={{ color: "#a2cfbc", fontWeight: "bold", margin: "0.5rem 0" }}
+            style={{ color: "#e3c148", fontWeight: "bold", margin: "0.5rem 0" }}
           >
             - Auktionsverk
           </li>
           <li
-            style={{ color: "#a2cfbc", fontWeight: "bold", margin: "0.5rem 0" }}
+            style={{ color: "#e3c148", fontWeight: "bold", margin: "0.5rem 0" }}
           >
             - Onlineauktioner
           </li>
           <li
-            style={{ color: "#a2cfbc", fontWeight: "bold", margin: "0.5rem 0" }}
+            style={{ color: "#e3c148", fontWeight: "bold", margin: "0.5rem 0" }}
           >
             - Mäklare
           </li>
           <li
-            style={{ color: "#a2cfbc", fontWeight: "bold", margin: "0.5rem 0" }}
+            style={{ color: "#e3c148", fontWeight: "bold", margin: "0.5rem 0" }}
           >
             - Hjälporganisationer
           </li>
