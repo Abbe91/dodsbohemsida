@@ -230,7 +230,7 @@ const ForFragan = () => {
                     border: "1px solid black",
                     maxWidth: "96%"
                   }}
-                  placeholder="Beskriv det du behöver få hjälp med. Detaljera gärna lite mer, detta hälper oss att ge dig en bättre svar och återkoppling. "
+                  placeholder="Beskriv det du behöver få hjälp med. Detaljera gärna lite mer, detta hälper oss att ge dig ett bättre svar och återkoppling. "
                 ></textarea>
               </div>
             )}
