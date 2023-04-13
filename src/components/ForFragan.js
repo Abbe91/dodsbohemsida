@@ -21,6 +21,7 @@ const ForFragan = () => {
   const [url, seturl] = useState("");
   const [activeStep, setActiveStep] = useState(0);
   const form = useRef();
+
   const handleSubmit = () => {
     emailjs
       .sendForm(
@@ -87,7 +88,14 @@ const ForFragan = () => {
             readOnly
             type="text"
             name="beskriv"
-            value={data.beskrivning}
+            value={data?.beskrivning}
+            style={{ display: "none" }}
+          />
+          <input
+            readOnly
+            type="text"
+            name="tjanster"
+            value={data?.services?.[0]}
             style={{ display: "none" }}
           />
           <label htmlFor="email">Email</label>
@@ -108,7 +116,7 @@ const ForFragan = () => {
             name="typ"
             style={{ height: "2rem", marginBottom: "1rem" }}
           />
-          <label htmlFor="tid">När skall uppdraget utföras?</label>
+          <label htmlFor="date">När skall uppdraget utföras?</label>
           <select
             style={{
               background: "transparent",
