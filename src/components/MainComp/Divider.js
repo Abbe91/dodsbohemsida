@@ -28,22 +28,6 @@ const Divider = () => {
           Vårt team är välutbildat och erfaret, och vi arbetar snabbt och
           effektivt för att underlätta för våra kunder under en tuff tid.
         </p>
-        <button
-          onClick={() => (window.location.href = "/dodsbojouren/gratiskollen")}
-          style={{
-            background: "transparent",
-            color: "black",
-            border: "1px solid black",
-            fontWeight: "bold",
-            width: "10rem",
-            fontSize: "0.9rem",
-            height: "2.8rem",
-            borderRadius: "20px",
-            marginLeft: "0.5rem"
-          }}
-        >
-          Gratiskollen
-        </button>
       </section>
     </div>
   );
