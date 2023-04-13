@@ -78,6 +78,7 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
               right: "2%",
               background: "#e3c148",
               border: "none",
+              color: "black",
               height: "2.2rem",
               borderRadius: "3px",
               top: "30%",
