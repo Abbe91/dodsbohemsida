@@ -51,6 +51,11 @@ export const navlinks = [
     id: 9,
     label: "Avfallshantering",
     path: "/avfallshantering"
+  },
+  {
+    id: 10,
+    label: "Återvinningsstation",
+    path: "/atervinningsstation"
   }
 ];
 export const erbjuder = [

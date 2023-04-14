@@ -8,6 +8,9 @@ import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
 import ProtectedRoute from "./pages/ProtectedRoute";
+const Atervinningsstation = lazy(() =>
+  import("./pages/InfoPages/Atervinningsstation")
+);
 const Uppkopdodsbogoteborg = lazy(() =>
   import("./components/uppkopdodsbogoteborg/Uppkopdodsbogoteborg")
 );
@@ -392,6 +395,10 @@ const App = () => {
               element={<Home videoText={contentData?.videoText} />}
             />
             <Route path="/atervinning" element={<Atervinning />} />
+            <Route
+              path="/atervinningsstation"
+              element={<Atervinningsstation />}
+            />
             <Route path="/forfragan" element={<ForFragan />} />
             <Route path="/avfallshantering" element={<Avfallshantering />} />
 
