@@ -113,7 +113,6 @@ const Atervinningsstation = () => {
             </button>
           </article>
         </section>
-
         <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
           Upptäck enkelt närliggande återvinningsstationer med vår omfattande
           guide. Hitta platsinformation, öppettider och kontaktuppgifter för
@@ -167,7 +166,6 @@ const Atervinningsstation = () => {
             återvinningen.
           </p>
         </div>
-
         <div style={{ marginTop: "2rem" }}>
           <h3 style={{ marginLeft: "0.5rem" }}>
             Guide om hur man återvinner på återvinningsstationer.

@@ -64,41 +64,39 @@ const MapComponent = () => {
   return (
     <div>
       <section>
-        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>
-          <GoogleMap
-            zoom={7}
-            defaultCenter={mapCenter}
-            center={mapCenter}
-            options={mapOptions}
-            mapContainerStyle={{
-              width: "100%",
-              height: "340px"
-            }}
-            onLoad={(map) => setMap(map)}
-          >
-            {avsCoords.map((el, ind) => {
-              return (
-                <Marker
-                  onClick={(e) => setShowInfoWindow(ind)}
-                  position={{
-                    lat: el.lat,
-                    lng: el.lng
-                  }}
-                  key={ind}
-                >
-                  {showInfoWindow === ind && (
-                    <InfoWindow>
-                      <div>
-                        <p>{el.title}</p>
-                        <p>{el.adess}</p>
-                      </div>
-                    </InfoWindow>
-                  )}
-                </Marker>
-              );
-            })}
-          </GoogleMap>
-        </LoadScript>
+        <GoogleMap
+          zoom={7}
+          defaultCenter={mapCenter}
+          center={mapCenter}
+          options={mapOptions}
+          mapContainerStyle={{
+            width: "100%",
+            height: "340px"
+          }}
+          onLoad={(map) => setMap(map)}
+        >
+          {avsCoords.map((el, ind) => {
+            return (
+              <Marker
+                onClick={(e) => setShowInfoWindow(ind)}
+                position={{
+                  lat: el.lat,
+                  lng: el.lng
+                }}
+                key={ind}
+              >
+                {showInfoWindow === ind && (
+                  <InfoWindow>
+                    <div>
+                      <p>{el.title}</p>
+                      <p>{el.adess}</p>
+                    </div>
+                  </InfoWindow>
+                )}
+              </Marker>
+            );
+          })}
+        </GoogleMap>
       </section>
     </div>
   );
