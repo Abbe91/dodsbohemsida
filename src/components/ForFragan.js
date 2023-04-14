@@ -6,7 +6,6 @@ import { Stepper, Step, StepLabel, makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { setBeskrivning } from "../redux-toolkit/snabbkollenSlice";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import Autocomplete from "react-google-autocomplete";
 const steps = ["Uppdraget", "Kontaktinfo"];
 const useStyles = makeStyles({
   root: {
@@ -14,12 +13,10 @@ const useStyles = makeStyles({
     "& .MuiStepIcon-completed": { color: "green" }
   }
 });
-
 const ForFragan = () => {
   const dispatch = useDispatch();
   const data = useSelector(getSnabbkollenData);
   const classes = useStyles();
-  const [url, seturl] = useState("");
   const [activeStep, setActiveStep] = useState(0);
   const [leadOrt, setLeadOrt] = useState(undefined);
   const form = useRef();
@@ -95,13 +92,6 @@ const ForFragan = () => {
           <input
             readOnly
             type="text"
-            name="typ"
-            value={leadOrt}
-            style={{ display: "none" }}
-          />
-          <input
-            readOnly
-            type="text"
             name="tjanster"
             value={data?.services?.[0]}
             style={{ display: "none" }}
@@ -119,14 +109,10 @@ const ForFragan = () => {
             style={{ marginBottom: "1rem", height: "2rem" }}
           />
           <label htmlFor="ort">I vilken ort skall uppdraget utföras?</label>
-          <Autocomplete
-            value={leadOrt && leadOrt}
-            style={{ height: "2rem", marginBottom: "1rem" }}
-            apiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}
-            onPlaceSelected={(place) => {
-              console.log(place?.formatted_address);
-              setLeadOrt(place?.formatted_address);
-            }}
+          <input
+            type="text"
+            name="typ"
+            style={{ marginBottom: "1rem", height: "2rem" }}
           />
           <label htmlFor="date">När skall uppdraget utföras?</label>
           <select
