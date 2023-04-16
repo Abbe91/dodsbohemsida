@@ -4,13 +4,51 @@ import Nav from "../../components/Nav/Nav";
 import MapComponent from "../../components/MapComponent";
 const btns = ["Återvinningsstationer Göteborg"];
 const Atervinningsstation = () => {
+  const avsCoords = [
+    {
+      title: "Återvinningsstation Bangatan 54",
+      adess: "Bangatan 54, Göteborg",
+      lat: 57.6934656,
+      lng: 11.9361714
+    },
+    {
+      title: "Återvinningsstation Rymdtorget",
+      adess: "Tellusgatan 1, Göteborg",
+      lat: 57.75720726853309,
+      lng: 12.073707393843375
+    },
+    {
+      title: "Återvinningsstation Askim",
+      adess: "Askims Backaväg 1, Göteborg",
+      lat: 57.63645060565052,
+      lng: 11.940457984068464
+    },
+    {
+      title: "Återvinningsstation Lilla Arödsgatan",
+      adess: "Lilla Arödsgatan 3A, Hisingen",
+      lat: 57.73655503560304,
+      lng: 11.957445526303436
+    },
+    {
+      title: "Munkegärde återvinningscentral",
+      adess: "Energivägen, 442 41 Kungälv",
+      lat: 57.888563733052266,
+      lng: 11.976983439937447
+    },
+    {
+      title: "Återvinningsstation Borås",
+      adess: "Skaraborgsvägen 33E, Borås",
+      lat: 57.73040980917139,
+      lng: 12.938222484191192
+    }
+  ];
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Hitta platsinformation, öppettider och kontaktuppgifter för återvinningsstationer i din närhet.",
+      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Hitta platsinformation för återvinningsstationer i din närhet.",
     description:
-      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation, öppetider och kontaktuppgifter. Hitta platsinformation, öppettider och kontaktuppgifter för återvinningsstationer i din närhet. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling eller återvinning? Vi finns här för att hjälpa till.",
+      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
     image:
       "https://www.nodra.se/wp-content/uploads/2015/09/%C3%A5tervinningsstation_webb-1-1140x380.jpg",
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
@@ -105,8 +143,7 @@ const Atervinningsstation = () => {
                 maxWidth: "80%"
               }}
             >
-              Här listar vi återvinningsstationer med platsinformation,
-              öppetider och kontaktuppgifter.
+              Hitta återvinningsstationer i din närhet.
             </h3>
             <button className="atv-btn" onClick={handleClick}>
               Hjälp med slänga sopor?
@@ -115,13 +152,13 @@ const Atervinningsstation = () => {
         </section>
         <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
           Upptäck enkelt närliggande återvinningsstationer med vår omfattande
-          guide. Hitta platsinformation, öppettider och kontaktuppgifter för
-          återvinningsstationer i din närhet. Med våra användarvänliga verktyg
-          kan du enkelt bidra till en renare miljö. Behöver du hjälp med
-          bortforsling av skräp? Vi finns här för att hjälpa till.
+          guide. Hitta platsinformation för återvinningsstationer i din närhet.
+          Med våra användarvänliga verktyg kan du enkelt bidra till en renare
+          miljö. Behöver du hjälp med bortforsling av skräp? Vi finns här för
+          att hjälpa till.
         </p>
         <hr></hr>
-        <MapComponent />
+        <MapComponent avsCoords={avsCoords} />
         <hr></hr>
         <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
           Återvinning har blivit allt viktigare i dagens samhälle och för att

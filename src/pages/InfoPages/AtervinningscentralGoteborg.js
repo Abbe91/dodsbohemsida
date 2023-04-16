@@ -1,17 +1,76 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav/Nav";
+import MapComponent from "../../components/MapComponent";
 const btns = ["Återvinningscentral Göteborg"];
-const Atervinningscentral = () => {
+const AtervinningscentralGoteborg = () => {
+  const atervinningsCoords = [
+    {
+      title: "Alelyckans Återvinningscentral",
+      adess: "Kämpegatan 2, 415 02 Göteborg",
+      lat: 57.743957,
+      lng: 11.91332,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    },
+    {
+      title: "Hisingens Återvinningscentral",
+      adess: "Broholmen 504, 417 27 Göteborg",
+      lat: 57.73564,
+      lng: 11.963797,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    },
+    {
+      title: "Kvibergs Återvinningscentral",
+      adess: "Ulvgatan 2, 415 34 Göteborg",
+      lat: 57.746537,
+      lng: 12.001834,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    },
+    {
+      title: "Kville Bil & Metallåtervinning",
+      adess: "Tunbytorpsgatan 1, 417 05 Göteborg",
+      lat: 57.712715,
+      lng: 11.95854,
+      tele: "031-55 55 44",
+      tider: "Mån-Fre: 07:00-17:00, Lör: 10:00-14:00"
+    },
+    {
+      title: "Redbergsvägens Återvinningscentral",
+      adess: "Redbergsvägen 30, 416 65 Göteborg",
+      lat: 57.70099,
+      lng: 11.965623,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    },
+    {
+      title: "Torslanda Återvinningscentral",
+      adess: "Återvinningsvägen 5, 423 37 Torslanda",
+      lat: 57.720854,
+      lng: 11.742284,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    },
+    {
+      title: "Tuve Återvinningscentral",
+      adess: "Slättadamm 2, 417 49 Göteborg",
+      lat: 57.74702,
+      lng: 12.045469,
+      tele: "031-365 48 00",
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+    }
+  ];
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i din närhet.",
+      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i Göteborg i din närhet.",
     description:
-      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
+      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
     image:
-      "https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png",
+      "https://resources.mynewsdesk.com/image/upload/ar_16:9,c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_1782/zcrnjzduli84zkpvbcod",
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
@@ -31,24 +90,24 @@ const Atervinningscentral = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i din närhet."
+            "Upptäck enkelt närliggande återvinningscentrali Göteborg med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i Göteborg i din närhet."
           }
         </title>
         <meta
           name="description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
           }
         />
         <meta
           property="og:description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
           }
         />
         <meta
           property="og:image"
-          content="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
+          content="https://resources.mynewsdesk.com/image/upload/ar_16:9,c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_1782/zcrnjzduli84zkpvbcod"
         />
       </Helmet>
       <div className="Nav">
@@ -56,8 +115,8 @@ const Atervinningscentral = () => {
       </div>
       <div style={{ margin: "1rem 0.5rem", width: "100%" }}>
         <p style={{ fontSize: "0.9rem" }}>
-          Alla återvinningscentraler med kontaktuppgifter, öppetider, adress och
-          navigation.
+          Alla återvinningscentraler i Göteborg med kontaktuppgifter, öppetider
+          och adress.
         </p>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {btns.map((btn, i) => {
@@ -92,11 +151,11 @@ const Atervinningscentral = () => {
             marginLeft: "0.5rem"
           }}
         >
-          Återvinningscentral
+          Återvinningscentral Göteborg
         </h1>
         <section style={{ position: "relative" }}>
           <img
-            src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
+            src="https://resources.mynewsdesk.com/image/upload/ar_16:9,c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_1782/zcrnjzduli84zkpvbcod"
             alt="återvinning"
             loading="lazy"
             style={{ width: "100%", height: "230px", objectFit: "cover" }}
@@ -109,7 +168,7 @@ const Atervinningscentral = () => {
                 maxWidth: "80%"
               }}
             >
-              Hitta en återvinningscentral i din närhet.
+              Hitta en återvinningscentral i Göteborg som är nära dig.
             </h3>
             <button className="atv-btn" onClick={handleClick}>
               Hjälp med återvinning?
@@ -117,33 +176,54 @@ const Atervinningscentral = () => {
           </article>
         </section>
         <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
-          Upptäck enkelt närliggande återvinningscentral med vår omfattande
-          guide. Här listar vi återvinningscentral med platsinformation,
-          öppetider och kontaktinformation. Med våra användarvänliga verktyg kan
-          du enkelt bidra till en renare miljö. Behöver du hjälp med
-          bortforsling, återvinning eller avfallshantering? Vi finns här för att
-          hjälpa till.
+          Upptäck enkelt närliggande återvinningscentral i Göteborg med vår
+          omfattande guide. Här listar vi återvinningscentral i Göteborg med
+          platsinformation, öppetider och kontaktinformation. Med våra
+          användarvänliga verktyg kan du enkelt bidra till en renare miljö.
+          Behöver du hjälp med bortforsling, återvinning eller avfallshantering?
+          Vi finns här för att hjälpa till.
         </p>
 
+        <hr></hr>
+        <MapComponent avsCoords={atervinningsCoords} />
         <hr></hr>
         <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
           Återvinning har blivit allt viktigare i dagens samhälle och för att
           göra det enklare för privatpersoner och företag att återvinna. På en
-          återvinningscentral kan man återvinna material såsom papper, plast,
-          glas, metall, elektronik, farligt avfall och trädgårdsavfall. Andra
-          återvinningsbara material inkluderar möbler, kläder, batterier och
-          lampor. På en återvinningscentral kan man även lämna farligt avfall
-          såsom färg, lösningsmedel, kemikalier och batterier. Genom att lämna
-          avfall på en återvinningscentral kan man bidra till att minska mängden
-          avfall som hamnar på soptippen och istället se till att material
-          återvinns och används på nytt.
+          återvinningscentral i Göteborg kan man återvinna material såsom
+          papper, plast, glas, metall, elektronik, farligt avfall och
+          trädgårdsavfall. Andra återvinningsbara material inkluderar möbler,
+          kläder, batterier och lampor. På en återvinningscentral i Göteborg kan
+          man även lämna farligt avfall såsom färg, lösningsmedel, kemikalier
+          och batterier. Genom att lämna avfall på en återvinningscentral i
+          Göteborg kan man bidra till att minska mängden avfall som hamnar på
+          soptippen och istället se till att material återvinns och används på
+          nytt.
         </p>
         <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>Fakta: Återvinningscentral</h3>
+          <h3 style={{ marginLeft: "0.5rem" }}>
+            Alla Återvinningscentraler i Göteborg
+          </h3>
+          <ul style={{ marginLeft: "0.5rem" }}>
+            {atervinningsCoords?.map((el, i) => {
+              return (
+                <li key={i} style={{ margin: "0.5rem 0" }}>
+                  <h4>{el.title}</h4>
+                  <p>{el.tider}</p>
+                  <p>{el.adess}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div style={{ marginTop: "2rem" }}>
+          <h3 style={{ marginLeft: "0.5rem" }}>
+            Fakta: Återvinningscentral i Göteborg
+          </h3>
           <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
-            En återvinningscentral är en plats där privatpersoner och företag
-            kan lämna avfall för återvinning eller avhämtning för
-            avfallshantering. I Sverige finns återvinningscentraler i nästan
+            En återvinningscentral i Göteborg är en plats där privatpersoner och
+            företag kan lämna avfall för återvinning eller avhämtning för
+            avfallshantering. I Göteborg finns återvinningscentraler i nästan
             alla kommuner och städer, och de är viktiga för att minska mängden
             avfall som hamnar på soptipparna. På återvinningscentraler kan man
             lämna material såsom papper, plast, glas, metall, elektronik,
@@ -164,14 +244,15 @@ const Atervinningscentral = () => {
         </div>
         <div style={{ marginTop: "2rem" }}>
           <h3 style={{ marginLeft: "0.5rem" }}>
-            Guide: Vad kan man slänga eller återvinna på en återvinningscentral?
+            Guide: Vad kan man slänga eller återvinna på en återvinningscentral
+            i Göteborg?
           </h3>
           <ul style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}>
             <p>
-              På en återvinningscentral i Sverige kan man vanligtvis lämna olika
-              typer av avfall och material för återvinning eller avhämtning för
-              avfallshantering. Här är några exempel på vad man vanligtvis kan
-              slänga och återvinna på en återvinningscentral:
+              På en återvinningscentral i Göteborg kan man vanligtvis lämna
+              olika typer av avfall och material för återvinning eller
+              avhämtning för avfallshantering. Här är några exempel på vad man
+              vanligtvis kan slänga och återvinna på en återvinningscentral:
             </p>
             <li>
               <strong>1.</strong> Papper, kartong, tidningar och reklamblad
@@ -206,9 +287,9 @@ const Atervinningscentral = () => {
           </ul>
           <p style={{ fontSize: "0.85rem", margin: "0.5rem 0.5rem" }}>
             Det är viktigt att sortera avfallet och följa de regler och
-            riktlinjer som gäller på återvinningscentralen för att underlätta
-            återvinning och hantering av avfallet. Det kan finnas regionala
-            skillnader och olika krav på vad som kan lämnas på
+            riktlinjer som gäller på återvinningscentralen i Göteborg för att
+            underlätta återvinning och hantering av avfallet. Det kan finnas
+            regionala skillnader och olika krav på vad som kan lämnas på
             återvinningscentralen, så det är alltid bäst att kolla med din
             kommun eller återvinningscentralen själva för att se vad som gäller
             på just din plats.
@@ -252,8 +333,8 @@ const Atervinningscentral = () => {
         </div>
         <div style={{ marginTop: "2rem" }}>
           <h3 style={{ marginLeft: "0.5rem" }}>
-            GUIDE: såhär återvinner du på en återvinningscentral på bästa sättet
-            för att värna om miljön
+            GUIDE: såhär återvinner du på en återvinningscentral i Göteborg på
+            bästa sättet för att värna om miljön
           </h3>
           <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
             Att återvinna på bästa sättet är en viktig del av att ta hand om vår
@@ -372,4 +453,4 @@ const Atervinningscentral = () => {
   );
 };
 
-export default Atervinningscentral;
+export default AtervinningscentralGoteborg;
