@@ -21,10 +21,9 @@ const Varderadodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Borås. Din auktoriserade hanterare av dödsbo, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Borås",
+    metaTitle: "Vi värderar dödsbo i Borås: Professionell och pålitlig service",
     metaContent:
-      "Värdera dödsbo Borås. Din auktoriserade hanterare av dödsbo, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Borås",
+      "Värdera dödsbo Borås - Behöver du hjälp med att värdera dödsbo i Borås? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Borås",
     formTitle: "Värdera dödsbo Borås",
     subTitle2:
@@ -35,6 +34,20 @@ const Varderadodsboboras = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och värdeirng av dödsb i Borås";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Vi värderar dödsbo i Borås: Professionell och pålitlig service",
+    description:
+      "Värdera dödsbo Borås - Behöver du hjälp med att värdera dödsbo i Borås? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -44,6 +57,9 @@ const Varderadodsboboras = ({ videoText }) => {
 
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

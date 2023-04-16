@@ -21,8 +21,9 @@ const Varderadodsbohisingen = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Värdera dödsbo Hisingen",
-    metaContent: "Värdera dödsbo Hisingen",
+    metaTitle: "Värdera dödsbo Hisingen. Få rätt pris och snabb hantering",
+    metaContent:
+      "Värdera dödsbo Hisingen - Behöver du hjälp med att värdera dödsbo i Hisingen? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Hisingen",
     formTitle: "Värdera dödsbo Hisingen",
     subTitle2:
@@ -33,6 +34,22 @@ const Varderadodsbohisingen = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Värdera dödsbo Hisingen. Få rätt pris och snabb hantering",
+    description:
+      "Värdera dödsbo Hisingen - Behöver du hjälp med att värdera dödsbo i Hisingen? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
+
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -42,6 +59,9 @@ const Varderadodsbohisingen = ({ videoText }) => {
 
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

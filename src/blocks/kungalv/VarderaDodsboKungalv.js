@@ -21,10 +21,9 @@ const VarderaDodsboKungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungälv",
+    metaTitle: "Värdera dödsbo Kungälv. Få rätt pris och snabb hantering",
     metaContent:
-      "Värdera dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungälv",
+      "Värdera dödsbo Kungälv - Behöver du hjälp med att värdera dödsbo i Kungälv? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Kungälv",
     formTitle: "Värdera dödsbo Kungälv",
     subTitle2:
@@ -35,6 +34,20 @@ const VarderaDodsboKungalv = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och värdering av dödsbo i Kungälv";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Värdera dödsbo Kungälv. Få rätt pris och snabb hantering",
+    description:
+      "Värdera dödsbo Kungälv - Behöver du hjälp med att värdera dödsbo i Kungälv? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +56,9 @@ const VarderaDodsboKungalv = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

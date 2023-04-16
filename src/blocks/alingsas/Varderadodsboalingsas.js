@@ -7,11 +7,10 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -19,12 +18,11 @@ const Varderadodsboalingsas = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Värdera dödsbo Alingsås";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdera dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning,  bortforsling, sanering, flytt, städning, tömning och värdering av dödsbo i Alingsås",
+      "Vi värderar dödsbo i Alingsås: Professionell och pålitlig service",
     metaContent:
-      "Värdera dödsbo Alingsås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning,  bortforsling, sanering, flytt, städning, tömning och värdering av dödsbo i Alingsås",
+      "Värdera dödsbo Alingsås - Behöver du hjälp med att värdera dödsbo i Alingsås? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Alingsås",
     formTitle: "Värdera dödsbo Alingsås",
     subTitle2:
@@ -35,6 +33,21 @@ const Varderadodsboalingsas = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, försäljning, städning, tömning och värdering av dödsbo  i Alingsås";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Vi värderar dödsbo i Alingsås: Professionell och pålitlig service",
+    description:
+      "Värdera dödsbo Alingsås - Behöver du hjälp med att värdera dödsbo i Alingsås? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +56,9 @@ const Varderadodsboalingsas = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

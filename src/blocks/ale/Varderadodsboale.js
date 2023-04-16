@@ -21,10 +21,9 @@ const Varderadodsboale = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Ale",
+    metaTitle: "Vi värderar dödsbo i Ale: Professionell och pålitlig service",
     metaContent:
-      "Värdera dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Ale",
+      "Värdera dödsbo Ale - Behöver du hjälp med att värdera dödsbo i Ale? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Ale",
     formTitle: "Värdera dödsbo Ale",
     subTitle2:
@@ -35,6 +34,21 @@ const Varderadodsboale = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och värdering av dödsbo i Ale";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Vi värderar dödsbo i Ale: Professionell och pålitlig service",
+    description:
+      "Värdera dödsbo Ale - Behöver du hjälp med att värdera dödsbo i Ale? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +57,9 @@ const Varderadodsboale = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

@@ -19,10 +19,9 @@ const Varderadodsbogoteborg = ({ videoText }) => {
   const mainquery = "värdera dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Göteborg. Expertvärdering av dödsbo i Göteborg. Få rätt pris och snabb hantering - Dödsbo Jouren",
+    metaTitle: "Värdera dödsbo Göteborg. Få rätt pris och snabb hantering",
     metaContent:
-      "När det gäller att värdera dödsbo i Göteborg är det viktigt att du väljer en pålitlig och erfaren partner som kan garantera en rättvis och korrekt värdering. Vi är experter på att värdera dödsbo och vårt team har gedigen erfarenhet av att hantera alla typer av dödsbo, oavsett storlek eller omfattning. Vi garanterar en snabb och smidig hantering av hela processen, från värdering till avveckling, för att göra det enklare för dig. Vi erbjuder också en personlig service för att säkerställa att du känner dig trygg och nöjd med hela processen. Vårt mål är att göra det enklare för dig och ta bort så mycket stress som möjligt när det gäller att hantera ett dödsbo.",
+      "Värdera dödsbo Göteborg - Behöver du hjälp med att värdera dödsbo i Göteborg? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Göteborg",
     formTitle: "Värdera dödsbo Göteborg",
     subTitle2:
@@ -36,10 +35,9 @@ const Varderadodsbogoteborg = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll i Göteborg samt återvinning och avfallshantering",
+    headline: "Värdera dödsbo Göteborg. Få rätt pris och snabb hantering",
     description:
-      "Behöver du hjälp med flytt, städning,tömning eller värdering av dödsbo i Göteborg? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushålli Göteborg. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Värdera dödsbo Göteborg - Behöver du hjälp med att värdera dödsbo i Göteborg? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -64,6 +62,11 @@ const Varderadodsbogoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:image"
+          content="https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

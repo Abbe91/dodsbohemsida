@@ -22,9 +22,9 @@ const Varderadodsbofrolunda = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdera dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Frölunda",
+      "Vi värderar dödsbo i Frölunda: Professionell och pålitlig service",
     metaContent:
-      "Värdera dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Frölunda",
+      "Värdera dödsbo Frölunda - Behöver du hjälp med att värdera dödsbo i Frölunda? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Frölunda",
     formTitle: "Värdera dödsbo Frölunda",
     subTitle2:
