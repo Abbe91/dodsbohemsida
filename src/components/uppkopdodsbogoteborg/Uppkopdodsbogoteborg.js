@@ -19,10 +19,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper upp dödsbon i Göteborg. Vill du sälj ett dödsbo i Göteborg? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
+      "Uppköp av dödsbo i Göteborg. Vi köper upp dödsbon i Göteborg, hela eller delar av dödsbon till rättvist pris.",
     query: "Uppköp dödsbo Göteborg",
     metaContent:
-      "Vi köper upp dödsbon i Göteborg. Sälj dödsbo i Göteborg till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Göteborg. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
+      "Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi köper hela eller delar av dödsbon i Göteborg.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg.",
@@ -36,9 +36,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling, värdering och uppköp av dödsbo och hushåll i Göteborg samt vi hjälper till med återvinning och avfallshantering",
+      "Uppköp av dödsbo i Göteborg. Vi köper upp dödsbon i Göteborg, hela eller delar av dödsbon till rättvist pris.",
+    query: "Uppköp dödsbo Göteborg",
     description:
-      "Behöver du hjälp med flytt, städning, tömning eller uppköp av  dödsbo i Göteborg? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi köper hela eller delar av dödsbon i Göteborg. ",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),

@@ -20,9 +20,9 @@ const Tommerhemgoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömmer hem i Göteborg. Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter i Göteborg. Dödsbo Jouren tar hand om hela hem och även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+      "Tömmer hem i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     metaContent:
-      "Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter i Göteborg. Dödsbo Jouren tar hand om hela hem och även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med att tömma ett hem i Göteborg? Då är vi på Dödsbo Jouren det självklara valet.",
+      "Behöver du hjälp med att tömma ett hem i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer hem Göteborg",
     formTitle: "Tömmer hem Göteborg",
     subTitle2:

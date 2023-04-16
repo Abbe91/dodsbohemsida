@@ -22,9 +22,9 @@ const Tommadodsboulricehamn = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Ulricehamn - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
+      "Tömma dödsbo i Ulricehamn - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Ulricehamn. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med hjälp med att vi tömmmer ert dödsbo i Ulricehamn, kontakta oss",
+      "Behöver du hjälp med att tömma ett dödsbo i Ulricehamn? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Ulricehamn",
     formTitle: "Tömma dödsbo Ulricehamn",
     subTitle2:
@@ -35,6 +35,21 @@ const Tommadodsboulricehamn = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Tömma dödsbo i Ulricehamn - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    description:
+      "Behöver du hjälp med att tömma ett dödsbo i Ulricehamn? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Tommadodsboulricehamn = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

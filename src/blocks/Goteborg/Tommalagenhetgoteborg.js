@@ -22,9 +22,9 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi tömmer, flyttar och städar dödsbon, förråd, hus, lägenhet eller helt vanlig flytt m.m. Dödsbo Jouren tar hand om hela dödsbon och hushåll, även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+      "Tömning av lägenheter i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
     metaContent:
-      "Vi tömmer, flyttar och städar dödsbon, förråd, hus, lägenhet eller helt vanlig flytt m.m. Dödsbo Jouren tar hand om hela dödsbon och hushåll, även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med att tömma ett hus i Göteborg? Då är vi på Dödsbo Jouren det självklara valet.",
+      "Behöver du hjälp med att tömma en lägenhet i Göteborg? Då är vi på Dödsbo Jouren det självklara valet. Vi tömmer lägenheter i Göteborg med omnejd.",
     query: "Tömma lägenhet i Göteborg",
     formTitle: "Tömma lägenhet i Göteborg",
     subTitle2:
@@ -35,6 +35,21 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Tömning av lägenheter i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    description:
+      "Behöver du hjälp med att tömma en lägenhet i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

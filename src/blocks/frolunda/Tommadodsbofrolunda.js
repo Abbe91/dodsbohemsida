@@ -22,9 +22,9 @@ const Tommadodsbofrolunda = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Västra Frölunda - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
+      "Tömning av dödsbo i Västra Frölunda - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Västra Frölunda. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Västra Frölunda, kontakta oss",
+      "Behöver du hjälp med att tömma ett dödsbo i Västra Frölunda? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Västra Frölunda",
     formTitle: "Tömma dödsbo Västra Frölunda",
     subTitle2:

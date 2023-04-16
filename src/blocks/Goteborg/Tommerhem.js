@@ -20,9 +20,9 @@ const Tommerhem = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömmer hem. Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter, kontor och företag. Dödsbo Jouren tar hand om hela hem även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+      "Tömning av hem och hushåll - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     metaContent:
-      "Vi tömmer, flyttar och städar hem, förråd, hus, lägenheter, kontor och företag. Dödsbo Jouren tar hand om hela hem och även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med att tömma ett hem i? Då är vi på Dödsbo Jouren det självklara valet. Tömmer hem.",
+      "Behöver du hjälp med att tömma ett hem? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer hem",
     formTitle: "Tömmer hem",
     subTitle2:

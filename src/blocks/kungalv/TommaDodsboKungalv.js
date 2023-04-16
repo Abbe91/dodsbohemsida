@@ -20,9 +20,9 @@ const TommaDodsboKungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Kungälv - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon | Dödsbo Jouren",
+      "Tömning av dödsbo i Kungälv - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon",
     metaContent:
-      "Vi på Dödsbo Jouren är här för att hjälpa till med hela processen för tömning av dödsbo i Kungälv. Vi erbjuder en professionell och pålitlig service för att hjälpa till att tömma dödsboet och ta hand om allt från sortering och packning till transport och avyttring av möbler och andra tillhörigheter. Vi strävar efter att göra hela processen så enkel och stressfri som möjligt för dig och dina nära och kära. Vårt team av erfarna och kunniga experter är utrustade för att hantera alla typer av dödsbo och vi tar hand om allt från mindre lägenheter till större hus och fastigheter. Vi ser till att alla tillhörigheter hanteras på ett säkert och ansvarsfullt sätt och vi erbjuder även avfallshantering och städning efter tömningen av dödsboet. Så om du behöver hjälp med att vi tömmmer ert dödsbo i Kungälv, kontakta oss",
+      "Behöver du hjälp med att tömma ett dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Kungälv",
     formTitle: "Tömma dödsbo Kungälv",
     subTitle2:
@@ -38,9 +38,9 @@ const TommaDodsboKungalv = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Tömma dödsbo i Kungälv. Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering i Kungälv",
+      "Tömning av dödsbo i Kungälv - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon",
     description:
-      "Behöver du hjälp med tömning av ett dödsbo i Kungälv? Välkommen till  Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll i Kungälv. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering i Kungälv",
+      "Behöver du hjälp med att tömma ett dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
