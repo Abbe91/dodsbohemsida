@@ -41,7 +41,7 @@ const Avfallshantering = () => {
     }
   };
   const handleClick = () => {
-    window.location.href = "/dodsbojouren/gratiskollen";
+    window.location.href = "/";
   };
   return (
     <section>
