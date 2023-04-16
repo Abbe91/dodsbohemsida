@@ -22,9 +22,9 @@ const Flyttstadninggoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttstädning i Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Göteborg",
+      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Kungälv.",
     metaContent:
-      "Flyttstädning i Göteborg. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Göteborg",
+      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Kungälv.",
     query: "Flyttstädning i Göteborg",
     formTitle: "Flyttstädning i Göteborg",
     subTitle2:
@@ -35,6 +35,21 @@ const Flyttstadninggoteborg = ({ videoText }) => {
 
   const services =
     "uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Göteborg";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Flyttstädning i Göteborg: Spara tid och pengar med en pålitlig städfirma",
+    description:
+      "Flyttstädning i Göteborg. Professionell flyttstädning - Så får du ett skinande rent hem",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -44,6 +59,9 @@ const Flyttstadninggoteborg = ({ videoText }) => {
 
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

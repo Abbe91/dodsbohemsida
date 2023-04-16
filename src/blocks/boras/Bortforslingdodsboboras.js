@@ -24,7 +24,7 @@ const Bortforslingdodsboboras = ({ videoText }) => {
     metaTitle:
       "Effektiv bortforsling av dödsbo i Borås - Låt oss sköta bortforslingen av ert dödsbo i Borås",
     metaContent:
-      "När det gäller bortforsling av dödsbo i Borås kan det vara en överväldigande och tidskrävande process. Därför erbjuder vi en smidig och professionell lösning för att ta hand om allt åt dig. Vårt erfarna team hanterar allt från sortering och packning till transport och avfallshantering för att ge dig en stressfri process. Vi tar hand om möbler, inventarier och andra tillhörigheter och ser till att de hanteras på ett tryggt och pålitligt sätt. Vi arbetar också hårt för att minimera mängden avfall genom återvinning och återanvändning, vilket bidrar till en mer hållbar och miljövänlig lösning. Vi arbetar också med snabbhet och effektivitet för att minimera störningar och ge dig en smidig och professionell bortforsling av dödsbo i Borås. Så om du behöver hjälp med att bortforsla ett dödsbo i Borås, kontakta oss idag.",
+      "När det gäller bortforsling av dödsbo i Borås kan det vara en överväldigande och tidskrävande process. Så om du behöver hjälp med att bortforsla ett dödsbo i Borås, kontakta oss idag.",
     query: "Bortforsling dödsbo Borås",
     formTitle: "Bortforsling dödsbo Borås",
     subTitle2:

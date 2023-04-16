@@ -19,14 +19,13 @@ const Bortforsling = ({ videoText }) => {
   const mainquery = "Bortforsling av hushåll och dödsbon";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Bortforsling av hushåll och dödsbon. Vi gör bortforslingar, flyttar och städar hushåll, dödsbon, förråd, hus, lägenhet, garage, vind, kontor och företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade. Bortforsling av hushåll och dödsbon.",
+    metaTitle: "Professionell bortforsling - Rensa ditt hem utan stress",
     metaContent:
-      "Bortforsling av hushåll och dödsbon. Vi gör bortforslingar, flyttar och städar hushåll, dödsbo, förråd, hus, lägenhet, garage, vind, kontor eller företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med bortforsling av möbler mm från ditt hushåll eller dödsbo? Då är vi på Dödsbo Jouren det självklara valet. Bortforsling av hushåll och dödsbon.",
+      "Få bort det som inte längre behövs med hjälp av vår professionella bortforslingstjänst. Vi tar hand om allt åt dig, från sortering till avyttring.",
     query: "Bortforsling av hushåll och dödsbon",
     formTitle: "Bortforsling av hushåll och dödsbon",
     subTitle2:
-      "Vi gör bortforslingar, flyttar och städar hushåll, dödsbon, förråd, hus, lägenhet, garage, vind, kontor och företag. Dödsbo Jouren tar hand om hela hushåll och även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+      "Behöver du rensa ut gamla saker? Anlita oss för en enkel och prisvärd bortforsling",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);

@@ -21,10 +21,9 @@ const Flyttstadningkungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Flyttstädning i Kungälv. uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Kungälv",
+    metaTitle: "Skinande ren och prisvärd flyttstädning i Kungälv.",
     metaContent:
-      "Flyttstädning i Kungälv. uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Kungälv",
+      "Flyttstädning i Kungälv. Skinande ren och prisvärd flyttstädning i Kungälv.",
     query: "Flyttstädning i Kungälv",
     formTitle: "Flyttstädning i Kungälv",
     subTitle2:
@@ -35,6 +34,20 @@ const Flyttstadningkungalv = ({ videoText }) => {
 
   const services =
     "uppköp av dödsbo, tömning, bortforsling, sanering, luktsanering, flytt, försäljning av dödsbo och flyttstädning i Kungälv";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Skinande ren och prisvärd flyttstädning i Kungälv.",
+    description:
+      "Flyttstädning i Kungälv. Skinande ren och prisvärd flyttstädning i Kungälv.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -44,6 +57,9 @@ const Flyttstadningkungalv = ({ videoText }) => {
 
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

@@ -21,9 +21,9 @@ const Billigflyttfirmagoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg.",
     metaContent:
-      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg.",
     query: "Billig flyttfirma Göteborg",
     formTitle: "Billig flyttfirma Göteborg",
     subTitle2:
@@ -34,14 +34,33 @@ const Billigflyttfirmagoteborg = ({ videoText }) => {
 
   const services =
     "tömning, bortforsling, sanering, uppköp av lösöre, städning och flytt av bohag, dödsbo och kontor.";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg.",
+    description:
+      "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
       .querySelector(`.${element}`)
       .scrollIntoView({ behavior: "smooth" });
   }, [element]);
+
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

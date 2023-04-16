@@ -21,10 +21,9 @@ const Flyttstadning = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Flyttstädning. Din auktoriserade hanterare av flyttstädning, dödsbo, uppköp av lösöre, försäljning av bohag, tömning av bohag, bortforsling av dödsbo och bohag, sanering och flytt",
+    metaTitle: "Flyttstädning: Spara tid och pengar med en pålitlig städfirma",
     metaContent:
-      "Flyttstädning. Din auktoriserade hanterare av flyttstädning, dödsbo, uppköp av lösöre, försäljning av bohag, tömning av bohag, bortforsling av dödsbo och bohag, sanering och flytt",
+      "Flyttstädning. Professionell flyttstädning - Så får du ett skinande rent hem",
     query: "Flyttstädning",
     formTitle: "Flyttstädning",
     subTitle2:
@@ -35,6 +34,20 @@ const Flyttstadning = ({ videoText }) => {
 
   const services =
     "uppköp av lösöre, tömning av dödsbo & bohag, bortforsling, sanering, luktsanering, flytt, flyttstädning, försäljning av dödsbo och bohag.";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Flyttstädning: Spara tid och pengar med en pålitlig städfirma",
+    description:
+      "Flyttstädning. Professionell flyttstädning - Så får du ett skinande rent hem",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +56,9 @@ const Flyttstadning = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

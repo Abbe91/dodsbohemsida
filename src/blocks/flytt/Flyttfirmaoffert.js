@@ -21,9 +21,9 @@ const Flyttfirmaoffert = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt.",
     metaContent:
-      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt.",
     query: "Flyttfirma Offert",
     formTitle: "Flyttfirma Offert",
     subTitle2:

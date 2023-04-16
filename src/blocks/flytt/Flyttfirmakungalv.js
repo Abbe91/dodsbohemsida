@@ -21,9 +21,9 @@ const Flyttfirmakungalv = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.",
     metaContent:
-      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv. Vi forslar bort och tömmer även hus, lägenheter och kontor",
+      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.r",
     query: "Flyttfirma Kungälv",
     formTitle: "Flyttfirma Kungälv",
     subTitle2:
@@ -34,6 +34,21 @@ const Flyttfirmakungalv = ({ videoText }) => {
 
   const services =
     "tömning, bortforsling, sanering, uppköp av lösöre, städning och flytt av bohag, dödsbo och kontor.";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Billig flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv.",
+    description:
+      "Billig flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -42,6 +57,9 @@ const Flyttfirmakungalv = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

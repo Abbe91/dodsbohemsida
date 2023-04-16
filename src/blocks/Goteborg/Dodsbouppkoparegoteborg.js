@@ -22,9 +22,9 @@ const Dodsbouppkoparegoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi är din pålitliga dödsbo uppköpare i Göteborg - Få en rättvis värdering och snabbt kontantköp av dödsbo från ett erfaret och pålitligt team | Dödsbo Jouren",
+      "Vi är din pålitliga dödsbo uppköpare i Göteborg - Få en rättvis värdering och snabbt kontantköp",
     metaContent:
-      "När det gäller att sälja ett dödsbo kan det vara en utmanande och känslomässigt krävande process. Som din pålitliga dödsbo uppköpare i Göteborg strävar vi efter att göra denna process smidigare och enklare för dig. Vi erbjuder en rättvis värdering av dödsboet och köper upp det snabbt och kontant från dig, vilket ger dig en enkel och stressfri lösning. Vi är ett erfaret och pålitligt team som har arbetat med många olika typer av dödsbon i Göteborg, vilket ger oss en djup förståelse för de behov och utmaningar som kan uppstå. Vi arbetar snabbt och effektivt för att ge dig den bästa möjliga upplevelsen och garanterar en smidig och professionell transaktion. När du väljer oss som ditt dödsbo uppköpare i Göteborg kan du lita på att vi hanterar allt med omsorg och respekt. Vi förstår att varje dödsbo är unikt och vi strävar efter att ge en personlig service som tar hänsyn till dina önskemål och behov.",
+      "Vi är din pålitliga dödsbo uppköpare i Göteborg - Få en rättvis värdering och snabbt kontantköp av ditt dödsbo i Göteborg.",
     query: "Dödsbo uppköpare Göteborg",
     formTitle: "Dödsbo uppköpare Göteborg",
     subTitle2:
