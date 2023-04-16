@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { AiTwotonePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
-import { RiMapPinLine } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
 
@@ -16,6 +16,18 @@ const Footer = () => {
           <a href={`tel:${customerData.phone}`} style={{ color: "white" }}>
             <AiTwotonePhone style={{ marginBottom: "0.2rem" }} />
             <p>{customerData.phone}</p>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100091387485178"
+            title="Dödsbo Jouren Facebook"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "1rem",
+              fontSize: "1.4rem"
+            }}
+          >
+            <FaFacebook />
           </a>
         </div>
 

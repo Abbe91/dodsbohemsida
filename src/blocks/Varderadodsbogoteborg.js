@@ -67,6 +67,10 @@ const Varderadodsbogoteborg = ({ videoText }) => {
           property="og:image"
           content="https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg"
         />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

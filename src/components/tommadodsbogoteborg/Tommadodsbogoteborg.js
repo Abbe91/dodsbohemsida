@@ -67,6 +67,10 @@ const Tommadodsbogoteborg = ({ videoText }) => {
           property="og:image"
           content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
         />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-dodsbo-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />
