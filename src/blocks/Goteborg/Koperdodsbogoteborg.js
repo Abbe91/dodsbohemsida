@@ -22,9 +22,9 @@ const Koperdodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon | Dödsbo Jouren",
+      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
     metaContent:
-      "Att sälja ett dödsbo kan vara en känslomässigt utmanande och svår process, men vi är här för att hjälpa till. Som ett erfaret och pålitligt företag för dödsbo köp i Göteborg erbjuder vi en smidig och enkel lösning för att sälja dödsboet. Vi köper alla typer av dödsbo och vi strävar efter att ge dig en rättvis värdering och kontant betalning för dödsboet.nVi har en lång erfarenhet av att köpa dödsbon i Göteborg och vi förstår de olika utmaningar som kan uppstå. Vårt team av professionella och kunniga experter är här för att göra hela processen enkel, stressfri och så smidig som möjligt för dig. Vi arbetar snabbt och effektivt för att ge dig den bästa möjliga upplevelsen och garanterar en professionell och pålitlig transaktion. När du väljer oss som din partner för dödsbo köp i Göteborg, kan du lita på att vi kommer att behandla dig och ditt dödsbo med omsorg och respekt.",
+      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
     query: "Köper dödsbo Göteborg",
     formTitle: "Köper dödsbo Göteborg",
     subTitle2:
@@ -35,6 +35,22 @@ const Koperdodsbogoteborg = ({ videoText }) => {
 
   const services =
     "röjning, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning av dödsbo och bohag samt uppköp av dödsbo i Göteborg.";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
+    description:
+      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +59,9 @@ const Koperdodsbogoteborg = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

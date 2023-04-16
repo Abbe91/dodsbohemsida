@@ -22,11 +22,10 @@ const Dodsbokopestrollhattan = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper upp dödsbon i Trollhättan. Vill du sälj ett dödsbo i Trollhättan? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
+      "Vi köper upp dödsbon i Trollhättan. Vi köper hela eller delar av dödsbon till rättvist pris.",
     query: "Uppköp dödsbo Trollhättan",
     metaContent:
-      "Vi köper upp dödsbon i Trollhättan. Sälj dödsbo i Trollhättan till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Trollhättan. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av dödsboet, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper dödsboet till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
-    query: "Dödsbo köpes Trollhättan",
+      "Uppköp av dödsbo i Trollhättan. Sälj dödsbo i Trollhättan till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Trollhättan.",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Trollhättan",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
@@ -35,6 +34,22 @@ const Dodsbokopestrollhattan = ({ videoText }) => {
 
   const services =
     "tömning, bortforsling, sanering, luktsanering, flytt, städning, försäljning, och uppköp av dödsbo i Trollhättan";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Vi köper upp dödsbon i Trollhättan. Vi köper hela eller delar av dödsbon till rättvist pris.",
+    description:
+      "Uppköp av dödsbo i Trollhättan. Sälj dödsbo i Trollhättan till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Trollhättan.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Dodsbokopestrollhattan = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

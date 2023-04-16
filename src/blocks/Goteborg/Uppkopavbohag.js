@@ -22,9 +22,9 @@ const Uppkopavbohag = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Uppköp av dödsbon och hushåll. Vill du sälj ett bohag? Vi köper hela eller delar av bohag till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av bohag | bohag Jouren",
+      "Uppköp av bohag. Vi köper hela eller delar av bohag till rättvist pris.",
     metaContent:
-      "Uppköp av dödsbon och hushåll. Sälj bohag till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av bohag. Med oss får du en smidig och snabb lösning för avyttring av hela eller delar av bohaget, oavsett om det rör sig om fastigheter, möbler eller andra tillgångar. Med vår erfarenhet och expertis kan du vara säker på att få en rättvis värdering och ett konkurrenskraftigt pris. Vi tar hand om allt från värdering och sortering av tillgångar till betalning och dokumentation, vilket gör hela processen stressfri och enkel för dig. Fördelen med att välja vår tjänst är att vi köper bohaget till ett bra pris samtidigt som du slipper hantera allt själv. Kontakta oss idag för att diskutera dina behov och få en skräddarsydd lösning som passar just dig och din situation.",
+      "Uppköp av bohag och dödsbon. Sälj bohag till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av bohag.",
     query: "Uppköp av bohag",
     formTitle: "Uppköp av bohag",
     subTitle2:
@@ -35,6 +35,21 @@ const Uppkopavbohag = ({ videoText }) => {
 
   const services =
     "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och uppköp av bohag";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Uppköp av bohag. Vill du sälj ett bohag? Vi köper hela eller delar av bohag till rättvist pris",
+    description:
+      "Uppköp av bohag. Sälj bohag till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av bohag i Borås.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Uppkopavbohag = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>

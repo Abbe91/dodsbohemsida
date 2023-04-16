@@ -20,7 +20,7 @@ const Uppkopdodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Uppköp av dödsbo i Borås. Vill du sälj ett dödsbo i Borås? Vi köper hela eller delar av dödsbon till rättvist pris. Vårt professionella team kan erbjuda en snabb och smidig lösning för avyttring av dödsbo | Dödsbo Jouren",
+      "Uppköp av dödsbo i Borås. Vill du sälj ett dödsbo i Borås? Vi köper hela eller delar av dödsbon till rättvist pris.",
     query: "Uppköp dödsbo Borås",
     metaContent:
       "Uppköp av dödsbo i Borås. Sälj dödsbo i Borås till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Borås.",
@@ -34,6 +34,21 @@ const Uppkopdodsboboras = ({ videoText }) => {
 
   const services =
     "tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och uppköp av dödsbo i Borås";
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Uppköp av dödsbo i Borås. Vill du sälj ett dödsbo i Borås? Vi köper hela eller delar av dödsbon till rättvist pris",
+    description:
+      "Uppköp av dödsbo i Borås. Sälj dödsbo i Borås till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Borås.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -43,6 +58,9 @@ const Uppkopdodsboboras = ({ videoText }) => {
 
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
