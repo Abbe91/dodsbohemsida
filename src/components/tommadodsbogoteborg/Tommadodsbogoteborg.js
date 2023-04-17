@@ -20,7 +20,7 @@ const Tommadodsbogoteborg = ({ videoText }) => {
     metaTitle:
       "Säker och smidig tömning av dödsbo i Göteborg - Professionell service för en stressfri process",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Göteborg? Vår erfarna personal garanterar en prsivärd, smidig och säker process.",
+      "Behöver du hjälp med att tömma ett dödsbo i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process.",
     formTitle: "Tömma dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",

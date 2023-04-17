@@ -7,11 +7,10 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -19,7 +18,6 @@ const Koperdodsbonlerum = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Köper dödsbo Lerum";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Uppköp av dödsbo i Lerum. Vill du sälj ett dödsbo i Lerum? Vi köper hela eller delar av dödsbon till rättvist pris.",
@@ -66,6 +64,10 @@ const Koperdodsbonlerum = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/koper-dodsbo-lerum"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

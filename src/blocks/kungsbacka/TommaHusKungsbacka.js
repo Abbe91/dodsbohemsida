@@ -21,10 +21,9 @@ const TommaHusKungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Vi tömmer, flyttar och städar dödsbon, förråd, hus, lägenhet eller helt vanlig flytt m.m. Dödsbo Jouren tar hand om hela dödsbon och hushåll, även delar av hem om någon flyttat till ett serviceboende eller liknade.",
+    metaTitle: "Tömma hus i Kungsbacka - Prisvärt & Pålitligt",
     metaContent:
-      "Vi tömmer, flyttar och städar dödsbon, förråd, hus, lägenhet eller helt vanlig flytt m.m. Dödsbo Jouren tar hand om hela dödsbon och hushåll, även delar av hem om någon flyttat till ett serviceboende eller liknade. Behöver du hjälp med att tömma ett hus i Kungsbacka? Då är vi på Dödsbo Jouren det självklara valet.",
+      "Behöver du hjälp med att Tömma hus i Kungsbacka? Vi på Dödsbo Jouren hjälper dig med att tömma ert hus i Kungsbacka.",
     query: "Tömma hus i Kungsbacka",
     formTitle: "Tömma hus i Kungsbacka",
     subTitle2:
@@ -47,6 +46,10 @@ const TommaHusKungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-hus/tomma-hus-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

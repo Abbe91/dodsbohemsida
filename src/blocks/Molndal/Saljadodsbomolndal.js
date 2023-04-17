@@ -22,9 +22,9 @@ const Saljadodsbomolndal = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo Mölndal",
+      "Sälj dödsbo i Mölndal smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare",
     metaContent:
-      "Sälja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo Mölndal",
+      "Sälj dödsbo i Mölndal till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
     query: "Sälja dödsbo Mölndal",
     formTitle: "Sälja dödsbo Mölndal",
     subTitle2:
@@ -47,6 +47,10 @@ const Saljadodsbomolndal = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-molndal"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

@@ -22,9 +22,9 @@ const Saljadodsbokungsbacka = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Kungsbacka",
+      "Sälj dödsbo i Kungsbacka smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare.",
     metaContent:
-      "Sälja dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Kungsbacka",
+      "Sälj dödsbo i Kungsbacka till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
     query: "Sälja dödsbo Kungsbacka",
     formTitle: "Sälja dödsbo Kungsbacka",
     subTitle2:
@@ -47,6 +47,10 @@ const Saljadodsbokungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

@@ -22,9 +22,9 @@ const Dodsbofirmakungsbacka = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Dödsbo firma Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Dödsbo firma i Kungsbacka - Professionell och pålitlig hjälp med bortforsling av dödsbon.",
     metaContent:
-      "Dödsbo firma Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
+      "Dödsbo firma i Kungsbacka - Få professionell hjälp med värdering, försäljning och bortforsling av dödsbo i Kungsbacka.",
     query: "Dödsbo firma Kungsbacka",
     formTitle: "Dödsbo firma Kungsbacka",
     subTitle2:
@@ -47,6 +47,10 @@ const Dodsbofirmakungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsbo-firma-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

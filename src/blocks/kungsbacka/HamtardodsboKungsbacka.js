@@ -21,10 +21,9 @@ const HamtardodsboKungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Hämtar dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och hämtar dödsbo i Kungsbacka",
+    metaTitle: "Hämtar dödsbo Kungsbacka. Snabbt & Prisvärt",
     metaContent:
-      "Hämtar dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och hämtar dödsbo i Kungsbacka",
+      "Hämtar dödsbo Kungsbacka. Vi hälper dig med att hämta dödsbon i Kungsbacka.",
     query: "Hämtar dödsbo Kungsbacka",
     formTitle: "Hämtar dödsbo Kungsbacka",
     subTitle2:
@@ -47,6 +46,10 @@ const HamtardodsboKungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/hamtar-dodsbo-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

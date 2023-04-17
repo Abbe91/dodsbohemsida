@@ -21,10 +21,9 @@ const Kopadodsbopartille = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Köper dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städ och uppköp av dödsbo i Partille",
+    metaTitle: "Köper dödsbo Partille. Få bra betalt för ditt dödsbo!",
     metaContent:
-      "Köper dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städ och uppköp av dödsbo i Partille",
+      "Köper dödsbo Partille. Vi gör uppköp av dödsbo i Partille och betalar bra för ditt dödsbo. Ring oss idag!",
     query: "Köper dödsbo Partille",
     formTitle: "Köper dödsbo Partille",
     subTitle2:
@@ -47,6 +46,10 @@ const Kopadodsbopartille = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/uppkop-dodsbo-partille"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

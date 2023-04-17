@@ -21,10 +21,8 @@ const Hjalpdodsboulricehamn = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Hjälp dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
-    metaContent:
-      "Hjälp dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+    metaTitle: "Snabb och smidig hjälp med dödsbo i Ulricehamn",
+    metaContent: "Snabb och smidig hjälp med dödsbo i Ulricehamn",
     query: "Hjälp dödsbo Ulricehamn",
     formTitle: "Hjälp dödsbo Ulricehamn",
     subTitle2:
@@ -47,6 +45,10 @@ const Hjalpdodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/hjalp-dodsbo-ulricehamn"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

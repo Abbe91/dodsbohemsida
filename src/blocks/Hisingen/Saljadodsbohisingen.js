@@ -24,7 +24,7 @@ const Saljadodsbohisingen = ({ videoText }) => {
     metaTitle:
       "Sälja dödsbo Hisingen. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Hisingen",
     metaContent:
-      "Sälja dödsbo Hisingen. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Hisingen",
+      "Sälj dödsbo i Hisingen till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
     query: "Sälja dödsbo Hisingen",
     formTitle: "Sälja dödsbo Hisingen",
     subTitle2:

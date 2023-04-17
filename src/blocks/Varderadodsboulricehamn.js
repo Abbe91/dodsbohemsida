@@ -21,10 +21,9 @@ const Varderadodsboulricehamn = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+    metaTitle: "Värdera dödsbo Ulricehamn. Få rätt pris och snabb hantering",
     metaContent:
-      "Värdera dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+      "Värdera dödsbo Ulricehamn - Behöver du hjälp med att värdera dödsbo i Ulricehamn? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Ulricehamn",
     formTitle: "Värdera dödsbo Ulricehamn",
     subTitle2:
@@ -47,6 +46,10 @@ const Varderadodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo-ulricehamn"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

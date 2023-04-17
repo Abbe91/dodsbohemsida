@@ -21,10 +21,9 @@ const DodsboGoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdering och avveckling av dödsbo i Göteborg - Få professionell hjälp idag | Dödsbo Jouren",
+    metaTitle: "Dödsbo Göteborg. Värdering och avveckling av dödsbo i Göteborg",
     metaContent:
-      "Låt oss hjälpa dig med att avveckla ett dödsbo i Göteborg på ett professionellt och tryggt sätt. Vi erbjuder expertvärdering, snabb hantering och personlig service för en smidig process. Kontakta oss idag för att få hjälp | Dödsbo Jouren",
+      "Dödsbo Göteborg. Värdering och avveckling av dödsbo i Göteborg Kontakta oss idag för att få hjälp.",
     query: "Dödsbo Göteborg",
     formTitle: "Dödsbo Göteborg",
     subTitle2:
@@ -47,6 +46,7 @@ const DodsboGoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link rel="canonical" href="https://dodsbojouren.com/dodsbo-goteborg" />
       </Helmet>
       <div className="Nav">
         <Nav />

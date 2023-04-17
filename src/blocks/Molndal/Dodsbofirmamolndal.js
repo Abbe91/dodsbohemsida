@@ -21,10 +21,9 @@ const Dodsbofirmamolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Dödsbo firma Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Mölndal",
+    metaTitle: "Dödsbo firma Mölndal. Pålitligt & Proffsigt!",
     metaContent:
-      "Dödsbo firma Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Mölndal",
+      "Dödsbo firma Mölndal. Vi gör uppköp, värdering och tömning av dödsbo i Mölndal",
     query: "Dödsbo firma Mölndal",
     formTitle: "Dödsbo firma Mölndal",
     subTitle2:
@@ -47,6 +46,10 @@ const Dodsbofirmamolndal = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsbo-firma-molndal"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

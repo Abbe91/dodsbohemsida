@@ -7,11 +7,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
@@ -19,7 +18,6 @@ const Tommadodsboulricehamn = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Tömma dödsbo Ulricehamn";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
       "Tömma dödsbo i Ulricehamn - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
@@ -65,6 +63,10 @@ const Tommadodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-dodsbo-ulricehamn"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

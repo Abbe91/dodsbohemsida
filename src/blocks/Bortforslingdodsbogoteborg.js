@@ -22,9 +22,9 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Effektiv bortforsling av dödsbo i Göteborg - Vi tar hand om allt från sortering och packning till avfallshantering och återvinning för att ge dig en smidig och stressfri process. Låt oss sköta bortforslingen av ert dödsbo i Göteborg | Dödsbo Jouren",
+      "Bortforsling av dödsbo i Göteborg - pålitlig och professionell hjälp för en smidig hantering",
     metaContent:
-      "När det gäller bortforsling av dödsbo i Göteborg kan det vara en överväldigande och tidskrävande process. Därför erbjuder vi en smidig och professionell lösning för att ta hand om allt åt dig. Vårt erfarna team hanterar allt från sortering och packning till transport och avfallshantering för att ge dig en stressfri process. Vi tar hand om möbler, inventarier och andra tillhörigheter och ser till att de hanteras på ett tryggt och pålitligt sätt. Vi arbetar också hårt för att minimera mängden avfall genom återvinning och återanvändning, vilket bidrar till en mer hållbar och miljövänlig lösning. Vi arbetar också med snabbhet och effektivitet för att minimera störningar och ge dig en smidig och professionell bortforsling av dödsbo i Göteborg. Så om du behöver hjälp med att bortforsla ett dödsbo i Göteborg, kontakta oss idag.",
+      "Behöver du hjälp med bortforsling av dödsbo i Göteborg? Kontakta oss idag för en trygg och effektiv lösning.",
     formTitle: "Bortforsling dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ och bortforsling av dödsbo i Göteborg",
@@ -39,9 +39,10 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+      "Bortforsling av dödsbo i Göteborg - pålitlig och professionell hjälp för en smidig hantering",
     description:
-      "Behöver du hjälp med flytt, städning, tömning eller bortforsling av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Behöver du hjälp med bortforsling av dödsbo i Göteborg? Kontakta oss idag för en trygg och effektiv lösning.",
+    formTitle: "Bortforsling dödsbo Göteborg",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -66,6 +67,10 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/bortforsling-dodsbo-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

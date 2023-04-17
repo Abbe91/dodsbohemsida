@@ -7,11 +7,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
@@ -19,11 +18,10 @@ const Dodsbokopes = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "dödsbo köpes";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle: "Dödsbo köpes - Få snabb och rättvis hantering | Dödsbo Jouren",
     metaContent:
-      "Vi köper dödsbo och erbjuder enkel och smidig hantering. Vår erfarna personal ger dig ett rättvist och konkurrenskraftigt pris för dödsboet och ser till att hela processen går snabbt och effektivt. Kontakta oss idag för att få hjälp | Dödsbo Jouren",
+      "Vi köper dödsbo och erbjuder enkel och smidig hantering. Vår erfarna personal ger dig ett rättvist och konkurrenskraftigt pris för dödsboet.",
     query: "Dödsbo Köpes",
     formTitle: "Dödsbo Köpes",
     subTitle2:
@@ -66,6 +64,7 @@ const Dodsbokopes = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link rel="canonical" href="https://dodsbojouren.com/dodsbo-kopes" />
       </Helmet>
       <div className="Nav">
         <Nav />

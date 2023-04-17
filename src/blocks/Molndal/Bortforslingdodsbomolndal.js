@@ -21,10 +21,9 @@ const Bortforslingdodsbomolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Effektiv bortforsling av dödsbo i Mölndal - Vi tar hand om allt från sortering och packning till avfallshantering och återvinning för att ge dig en smidig och stressfri process. Låt oss sköta bortforslingen av ert dödsbo i Mölndal | Dödsbo Jouren",
+    metaTitle: "Effektiv bortforsling av dödsbo i Mölndal - Dödsbo Jouren",
     metaContent:
-      "När det gäller bortforsling av dödsbo i Mölndal kan det vara en överväldigande och tidskrävande process. Därför erbjuder vi en smidig och professionell lösning för att ta hand om allt åt dig. Vårt erfarna team hanterar allt från sortering och packning till transport och avfallshantering för att ge dig en stressfri process. Vi tar hand om möbler, inventarier och andra tillhörigheter och ser till att de hanteras på ett tryggt och pålitligt sätt. Vi arbetar också hårt för att minimera mängden avfall genom återvinning och återanvändning, vilket bidrar till en mer hållbar och miljövänlig lösning. Vi arbetar också med snabbhet och effektivitet för att minimera störningar och ge dig en smidig och professionell bortforsling av dödsbo i Mölndal. Så om du behöver hjälp med att bortforsla ett dödsbo i Mölndal, kontakta oss idag.",
+      "Behöver du hjålp med bortforsling av dödsbo i Mölndal? Vi erbjuder en smidig och professionell lösning för att ta hand om bortforsling av dödsbo i Mölndal.",
     query: "Bortforsling dödsbo Mölndal",
     formTitle: "Bortforsling dödsbo Mölndal",
     subTitle2:
@@ -47,6 +46,10 @@ const Bortforslingdodsbomolndal = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/bortforsling-dodsbo-molndal"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

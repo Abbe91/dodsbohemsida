@@ -65,6 +65,10 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-lagenhet/tomma-lagenhet-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

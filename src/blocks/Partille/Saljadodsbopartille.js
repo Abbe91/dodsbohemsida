@@ -22,8 +22,9 @@ const Saljadodsbopartille = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Partille. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städ och försäljning av dödsbo i Partille",
-    metaContent: "Sälja dödsbo Partille",
+      "Sälj dödsbo i Partille smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare",
+    metaContent:
+      "Sälj dödsbo i Partille till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare.",
     query: "Sälja dödsbo Partille",
     formTitle: "Sälja dödsbo Partille",
     subTitle2:
@@ -46,6 +47,10 @@ const Saljadodsbopartille = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-partille"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

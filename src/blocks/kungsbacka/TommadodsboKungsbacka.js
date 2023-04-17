@@ -22,9 +22,9 @@ const TommadodsboKungsbacka = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömma dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Kungsbacka",
+      "Säker och smidig tömning av dödsbo i Kungsbacka - Professionell service för en stressfri process",
     metaContent:
-      "Tömma dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Kungsbacka",
+      "Behöver du hjälp med att tömma ett dödsbo i Kungsbacka? Vår erfarna personal garanterar en prisvärd, smidig och säker process.",
     query: "Tömma dödsbo Kungsbacka",
     formTitle: "Tömma dödsbo Kungsbacka",
     subTitle2:
@@ -39,9 +39,9 @@ const TommadodsboKungsbacka = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Tömma dödsbo i Kungsbacka. Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering i Kungsbacka",
+      "Tömma dödsbo i Kungsbacka. Säker och smidig tömning av dödsbo i Kungsbacka - Professionell service för en stressfri process",
     description:
-      "Behöver du hjälp med tömning av ett dödsbo i Kungsbacka? Välkommen till  Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll i Kungsbacka. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering i Kungsbacka",
+      "Behöver du hjälp med att tömma ett dödsbo i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -65,6 +65,10 @@ const TommadodsboKungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-dodsbo-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

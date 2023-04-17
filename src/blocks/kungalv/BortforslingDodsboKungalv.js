@@ -22,9 +22,9 @@ const BortforslingDodsboKungalv = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Effektiv bortforsling av dödsbo i Kungälv - Vi tar hand om allt från sortering och packning till avfallshantering och återvinning för att ge dig en smidig och stressfri process. Låt oss sköta bortforslingen av ert dödsbo i Kungälv | Dödsbo Jouren",
+      "Effektiv bortforsling av dödsbo i Kungälv - smidig och stressfri process",
     metaContent:
-      "När det gäller bortforsling av dödsbo i Kungälv kan det vara en överväldigande och tidskrävande process. Därför erbjuder vi en smidig och professionell lösning för att ta hand om allt åt dig. Vårt erfarna team hanterar allt från sortering och packning till transport och avfallshantering för att ge dig en stressfri process. Vi tar hand om möbler, inventarier och andra tillhörigheter och ser till att de hanteras på ett tryggt och pålitligt sätt. Vi arbetar också hårt för att minimera mängden avfall genom återvinning och återanvändning, vilket bidrar till en mer hållbar och miljövänlig lösning. Vi arbetar också med snabbhet och effektivitet för att minimera störningar och ge dig en smidig och professionell bortforsling av dödsbo i Kungälv. Så om du behöver hjälp med att bortforsla ett dödsbo i Kungälv, kontakta oss idag.",
+      "Behöver du hjälp med bortforsling av ett dödsbo i Kungälv? Kontakta oss idag för en smidig och stressfri lösning för bortforsling av dödsbo i Kungälv.",
     query: "Bortforsling dödsbo Kungälv",
     formTitle: "Bortforsling dödsbo Kungälv",
     subTitle2:
@@ -47,6 +47,10 @@ const BortforslingDodsboKungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/bortforsling-dodsbo-kungalv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

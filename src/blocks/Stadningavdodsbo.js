@@ -21,10 +21,9 @@ const Stadningavdodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Professionell städning av dödsbo - Vi tar hand om allt från städning och sanering till avfallshantering och ger dig en ren och säker bostad | Dödsbo Jouren",
+    metaTitle: "Professionell städning av dödsbo - Prisvärt & Rent",
     metaContent:
-      "När det gäller städning av dödsbo kan vi ta hand om hela processen åt dig. Vår erfarna personal utför en grundlig städning inklusive sanering och avfallshantering för att ge dig en ren och säker bostad. Vi ser till att allt hanteras professionellt och diskret, och tar hänsyn till dina önskemål och behov. Kontakta oss idag för en trygg och pålitlig städning av dödsbo | Dödsbo Jouren",
+      "Städning av dödsbo. Professionell städning av dödsbo - Prisvärt & Rent",
     query: "Städning av dödsbo",
     formTitle: "Städning av dödsbo",
     subTitle2:
@@ -47,6 +46,10 @@ const Stadningavdodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/stadning-av-dodsbo"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

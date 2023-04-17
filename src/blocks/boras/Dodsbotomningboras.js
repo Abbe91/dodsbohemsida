@@ -21,10 +21,9 @@ const Dodsbotomningboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Dödsbo tömning Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Borås",
+    metaTitle: "Dödsbo tömning Borås. Prisvärt, Snabbt och Pålitligt.",
     metaContent:
-      "Dödsbo tömning Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Borås",
+      "Dödsbo tömning Borås. Din auktoriserade firma som utför tömningar av dödsbon i Borås",
     query: "Dödsbo tömning Borås",
     formTitle: "Dödsbo tömning Borås",
     subTitle2:
@@ -48,6 +47,10 @@ const Dodsbotomningboras = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsbo-tomning-boras"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

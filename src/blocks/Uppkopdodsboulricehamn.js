@@ -21,10 +21,9 @@ const Uppkopdodsboulricehamn = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Uppköp av dödsbo i Ulricehamn. Vill du sälj ett dödsbo i Ulricehamn? Vi köper hela eller delar av dödsbon till rättvist pris.",
+    metaTitle: "Uppköp av dödsbo i Ulricehamn. Vi betalar bra!.",
     metaContent:
-      "Uppköp av dödsbo i Ulricehamn. Sälj dödsbo i Ulricehamn till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Ulricehamn.",
+      "Uppköp av dödsbo i Ulricehamn. Vi köper hela eller delar av dödsbon i Ulricehamn.",
     query: "Uppköp dödsbo Ulricehamn",
     formTitle: "Uppköp dödsbo Ulricehamn",
     subTitle2:
@@ -65,6 +64,10 @@ const Uppkopdodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/uppkop-dodsbo-ulricehamn"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

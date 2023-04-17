@@ -22,9 +22,9 @@ const SaljaDodsboKungalv = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Kungälv",
+      "Sälj dödsbo i Kungälv smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare",
     metaContent:
-      "Sälja dödsbo Kungälv. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Kungälv",
+      "Sälj dödsbo i Kungälv till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
     query: "Sälja dödsbo Kungälv",
     formTitle: "Sälja dödsbo Kungälv",
     subTitle2:
@@ -47,6 +47,10 @@ const SaljaDodsboKungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-kungalv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

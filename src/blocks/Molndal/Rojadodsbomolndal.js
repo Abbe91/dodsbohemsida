@@ -21,10 +21,9 @@ const Rojadodsbomolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Röja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Mölndal",
+    metaTitle: "Röja dödsbo Mölndal. Snabbt & Prisvärt!",
     metaContent:
-      "Röja dödsbo Mölndal. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och röjning av dödsbo i Mölndal",
+      "Röja dödsbo Mölndal. Vi röjer dödsbo i Mölndal och ger dig en snabb och effektiv service.",
     query: "Röja dödsbo Mölndal",
     formTitle: "Röja dödsbo Mölndal",
     subTitle2:
@@ -47,6 +46,10 @@ const Rojadodsbomolndal = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/roja-dodsbo-molndal"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

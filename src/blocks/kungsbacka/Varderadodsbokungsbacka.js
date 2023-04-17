@@ -21,10 +21,9 @@ const Varderadodsbokungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
+    metaTitle: "Värdera dödsbo Kungsbacka. Få rätt pris och snabb hantering",
     metaContent:
-      "Värdera dödsbo Kungsbacka. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Kungsbacka",
+      "Värdera dödsbo Kungsbacka - Behöver du hjälp med att värdera dödsbo i Kungsbacka? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Kungsbacka",
     formTitle: "Värdera dödsbo Kungsbacka",
     subTitle2:
@@ -47,6 +46,10 @@ const Varderadodsbokungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo-kungsbacka"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

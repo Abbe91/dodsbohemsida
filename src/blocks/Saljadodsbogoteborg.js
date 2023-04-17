@@ -22,9 +22,9 @@ const Saljadodsbogoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Göteborg? Få hjälp av proffs för en snabb och smidig process av dödsboet - Dödsbo Jouren",
+      "Sälja dödsbo Göteborg? Få hjälp av proffs för en snabb och smidig process!",
     metaContent:
-      "Vill du sälja ett dödsbo i Göteborg? Vi erbjuder professionell hjälp och en smidig process för att du ska kunna sälja dödsboet snabbt och till rätt pris. Vårt erfarna team hanterar allt från värdering, avveckling och uppköp. Kontakta oss idag för en trygg och pålitlig försäljning av dödsboet | Dödsbo Jouren",
+      "Vill du sälja ett dödsbo i Göteborg? Professionell hjälp och en smidig process för att du ska kunna sälja dödsboet snabbt och till rätt pris.",
     query: "Sälja dödsbo Göteborg",
     formTitle: "Sälja dödsbo Göteborg",
     subTitle2:
@@ -47,6 +47,10 @@ const Saljadodsbogoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

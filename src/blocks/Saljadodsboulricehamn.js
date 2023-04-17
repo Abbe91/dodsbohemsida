@@ -22,9 +22,9 @@ const Saljadodsboulricehamn = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+      "Sälja dödsbo Ulricehamn? Få hjälp av proffs för en snabb och smidig process!",
     metaContent:
-      "Sälja dödsbo Ulricehamn. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ulricehamn",
+      "Vill du sälja ett dödsbo i Ulricehamn? Professionell hjälp och en smidig process för att du ska kunna sälja dödsboet snabbt och till rätt pris.",
     query: "Sälja dödsbo Ulricehamn",
     formTitle: "Sälja dödsbo Ulricehamn",
     subTitle2:
@@ -47,6 +47,10 @@ const Saljadodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-ulricehamn"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

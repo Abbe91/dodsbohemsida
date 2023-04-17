@@ -48,6 +48,10 @@ const Tommadodsbohisingen = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-dodsbo-hisingen"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />
