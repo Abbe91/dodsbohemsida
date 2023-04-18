@@ -18,12 +18,11 @@ const Flyttfirmagoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Flyttfirma Göteborg";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg.",
+      "Spara tid och stress med vår flyttfirma i Göteborg - Boka din flytt idag!",
     metaContent:
-      "Flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg.",
+      "Behöver du hjälp med en flytt i Göteborg? Kontakta oss idag för att boka din flytt och få en kostnadsfri offert!",
     query: "Flyttfirma Göteborg",
     formTitle: "Flyttfirma Göteborg",
     subTitle2:
@@ -64,6 +63,10 @@ const Flyttfirmagoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttfirma/flyttfirma-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

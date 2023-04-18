@@ -22,7 +22,7 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
     metaTitle:
       "Tömning av dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer dödsbo Uddevalla",
     formTitle: "Tömmer dödsbo Uddevalla",
     subTitle2:
@@ -39,7 +39,7 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
     headline:
       "Tömning av dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -63,6 +63,10 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tommer-dodsbo-uddevalla"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

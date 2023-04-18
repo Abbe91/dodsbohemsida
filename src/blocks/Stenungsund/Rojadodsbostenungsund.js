@@ -7,11 +7,10 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -19,12 +18,10 @@ const Rojadodsbostenungsund = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Röja dödsbo Stenungsund";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Röja dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning och röjning av dödsbo i Stenungsund",
+    metaTitle: "Röja dödsbo Stenungsund. Snabbt & Prisvärt!",
     metaContent:
-      "Röja dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning och röjning av dödsbo i Stenungsund",
+      "Röja dödsbo Stenungsund. Vi röjer dödsbo i Stenungsund och ger dig en snabb och effektiv service.",
     query: "Röja dödsbo Stenungsund",
     formTitle: "Röja dödsbo Stenungsund",
     subTitle2:
@@ -47,6 +44,10 @@ const Rojadodsbostenungsund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/roja-dodsbo-stenungsund"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

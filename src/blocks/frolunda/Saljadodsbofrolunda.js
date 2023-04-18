@@ -22,9 +22,9 @@ const Saljadodsbofrolunda = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Frölunda",
+      "Sälj dödsbo i Frölunda smidigt och tryggt - Vi tar hand om allt!",
     metaContent:
-      "Sälja dödsbo Frölunda. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Frölunda",
+      "Behöver du hjälp att sälja ett dödsbo i Frölunda? Kontakta oss idag för kostnadsfri värdering och professionell rådgivning",
     query: "Sälja dödsbo Frölunda",
     formTitle: "Sälja dödsbo Frölunda",
     subTitle2:
@@ -48,6 +48,10 @@ const Saljadodsbofrolunda = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-frolunda"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

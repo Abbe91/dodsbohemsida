@@ -21,10 +21,9 @@ const Flyttfirmaboras = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås.",
+      "Spara tid och stress med vår flyttfirma i Borås - Boka din flytt idag!",
     metaContent:
-      "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås.",
-    query: "Flyttfirma Borås",
+      "Behöver du hjälp med en flytt i Borås? Kontakta oss idag för att boka din flytt och få en kostnadsfri offert!",
     formTitle: "Flyttfirma Borås",
     subTitle2:
       "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås.",
@@ -63,6 +62,10 @@ const Flyttfirmaboras = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttfirma/flyttfirma-boras"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

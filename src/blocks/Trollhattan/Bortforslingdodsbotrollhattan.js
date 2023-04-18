@@ -7,11 +7,10 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -19,12 +18,11 @@ const Bortforslingdodsbotrollhattan = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Bortforsling av dödsbo Trollhättan";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Effektiv bortforsling av dödsbo i Trollhättan - Vi tar hand om allt från sortering och packning till avfallshantering och återvinning för att ge dig en smidig och stressfri process. Låt oss sköta bortforslingen av ert dödsbo i Trollhättan | Dödsbo Jouren",
+      "Effektiv bortforsling av dödsbo i Trollhättan - smidig och stressfri process",
     metaContent:
-      "När det gäller bortforsling av dödsbo i Trollhättan kan det vara en överväldigande och tidskrävande process. Därför erbjuder vi en smidig och professionell lösning för att ta hand om allt åt dig. Vårt erfarna team hanterar allt från sortering och packning till transport och avfallshantering för att ge dig en stressfri process. Vi tar hand om möbler, inventarier och andra tillhörigheter och ser till att de hanteras på ett tryggt och pålitligt sätt. Vi arbetar också hårt för att minimera mängden avfall genom återvinning och återanvändning, vilket bidrar till en mer hållbar och miljövänlig lösning. Vi arbetar också med snabbhet och effektivitet för att minimera störningar och ge dig en smidig och professionell bortforsling av dödsbo i Trollhättan. Så om du behöver hjälp med att bortforsla ett dödsbo i Trollhättan, kontakta oss idag.",
+      "Behöver du hjälp med bortforsling av ett dödsbo i Trollhättan? Kontakta oss idag för en smidig och stressfri lösning för bortforsling av dödsbo i Trollhättan.",
     query: "Bortforsling av dödsbo Trollhättan",
     formTitle: "Bortforsling av dödsbo Trollhättan",
     subTitle2:
@@ -47,6 +45,10 @@ const Bortforslingdodsbotrollhattan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/bortforsling-dodsbo-trollhattan"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

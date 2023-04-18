@@ -22,9 +22,9 @@ const Saljadodsbohisingen = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Hisingen. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och sälja dödsbo i Hisingen",
+      "Sälj dödsbo i Hisingen smidigt och tryggt - Vi tar hand om allt!",
     metaContent:
-      "Sälj dödsbo i Hisingen till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
+      "Behöver du hjälp att sälja ett dödsbo i Hisingen? Kontakta oss idag för kostnadsfri värdering och professionell rådgivning",
     query: "Sälja dödsbo Hisingen",
     formTitle: "Sälja dödsbo Hisingen",
     subTitle2:
@@ -48,6 +48,10 @@ const Saljadodsbohisingen = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-hisingen"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

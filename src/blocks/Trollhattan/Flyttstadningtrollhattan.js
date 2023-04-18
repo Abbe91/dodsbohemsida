@@ -7,11 +7,10 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../../redux-toolkit/news/newsSlice";
 import LottieBooking from "../../LottieAnimation/LottieBooking";
 import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
@@ -19,12 +18,11 @@ const Flyttstadningtrollhattan = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Flyttstädning Trollhättan";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttstädning Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Trollhättan",
+      "Spara tid och stress med professionell flyttstädning i Trollhättan - Boka idag!",
     metaContent:
-      "Flyttstädning Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning i Trollhättan",
+      "Behöver du hjälp med flyttstädning i Trollhättan? Effektivt och prisvärt - Boka nu för en stressfri flytt",
     query: "Flyttstädning Trollhättan",
     formTitle: "Flyttstädning Trollhättan",
     subTitle2:
@@ -47,6 +45,10 @@ const Flyttstadningtrollhattan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttstadning-trollhattan"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

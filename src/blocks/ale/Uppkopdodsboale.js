@@ -43,7 +43,7 @@ const Uppkopdodsboale = ({ videoText }) => {
     headline:
       "Få rättvist betalt för dödsboet. Vi köper dödsbon i Ale. Kontakta oss för en gratis värdering idag!",
     description:
-      "Köper dödsbon i Ale - Få snabbt och enkelt betalt för dödsboet - Vi köper upp dödsbon i Alingsås på ett tryggt sätt",
+      "Köper dödsbon i Ale - Få snabbt och enkelt betalt för dödsboet - Vi köper upp dödsbon i Ale på ett tryggt sätt",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),

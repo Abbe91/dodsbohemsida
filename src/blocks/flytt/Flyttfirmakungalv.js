@@ -21,9 +21,9 @@ const Flyttfirmakungalv = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.",
+      "Spara tid och stress med vår flyttfirma i Kungälv - Boka din flytt idag!",
     metaContent:
-      "Flyttfirma Kungälv. Din auktoriserade flyttfirma i Kungälv. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Kungälv.r",
+      "Behöver du hjälp med en flytt i Kungälv? Kontakta oss idag för att boka din flytt och få en kostnadsfri offert!",
     query: "Flyttfirma Kungälv",
     formTitle: "Flyttfirma Kungälv",
     subTitle2:
@@ -64,6 +64,10 @@ const Flyttfirmakungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttfirma/flyttfirma-kungalv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

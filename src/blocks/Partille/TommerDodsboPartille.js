@@ -22,7 +22,7 @@ const TommerDodsboPartille = ({ videoText }) => {
     metaTitle:
       "Tömning av dödsbo i Partille - Låt oss ta hand om hela processen åt dig med vår prisvärda och pålitliga service",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Partille? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Partille",
     formTitle: "Tömma dödsbo Partille",
     subTitle2:

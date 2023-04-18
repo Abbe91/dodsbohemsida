@@ -22,9 +22,9 @@ const Flyttstadninggoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Kungälv.",
+      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Göteborg.",
     metaContent:
-      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Kungälv.",
+      "Flyttstädning i Göteborg. Skinande ren och prisvärd flyttstädning i Göteborg.",
     query: "Flyttstädning i Göteborg",
     formTitle: "Flyttstädning i Göteborg",
     subTitle2:
@@ -66,6 +66,10 @@ const Flyttstadninggoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttstadning-i-goteborg"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

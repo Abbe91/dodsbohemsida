@@ -22,7 +22,7 @@ const Kopadodsbostenungssund = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Vi köper upp dödsbon i Stenungsund. Snabb och smidig lösning för avyttring av dödsbon",
+      "Vi köper upp dödsbon i Stenungsund. Snabb och smidig lösning för avyttring av dödsbon.",
     query: "Uppköp dödsbo Stenungsund",
     metaContent:
       "Vi köper upp dödsbon i Stenungsund. Sälj dödsbo i Stenungsund till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Stenungsund.",
@@ -66,6 +66,10 @@ const Kopadodsbostenungssund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/kopa-dodsbo-stenungsund"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

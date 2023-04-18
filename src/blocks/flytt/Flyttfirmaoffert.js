@@ -21,9 +21,9 @@ const Flyttfirmaoffert = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt.",
+      "Få en kostnadsfri offert från en pålitlig flyttfirma - Boka din flytt idag!",
     metaContent:
-      "Offert för flytt av bohag, hushåll eller kontor. Din auktoriserade flyttfirma. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt.",
+      "Behöver du en pålitlig flyttfirma för din kommande flytt? Kontakta oss idag för att få en kostnadsfri offert på våra flyttjänster. ",
     query: "Flyttfirma Offert",
     formTitle: "Flyttfirma Offert",
     subTitle2:
@@ -46,6 +46,10 @@ const Flyttfirmaoffert = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttfirma/flyttfirma-offert"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

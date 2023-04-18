@@ -22,9 +22,9 @@ const Tommadodsbostenungssund = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Stenungsund - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+      "Tömning av dödsbo i Stenungsund - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga Stenungsund.",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Stenungsund? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Stenungsund",
     formTitle: "Tömma dödsbo Stenungsund",
     subTitle2:
@@ -66,6 +66,10 @@ const Tommadodsbostenungssund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-dodsbo-stenungsund"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

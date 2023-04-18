@@ -22,9 +22,9 @@ const Stadningavdodsbotrollhatttan = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Städning av dödsbo Trollhättan.Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Trollhättan",
+      "Professionell städning av dödsbo i Trollhättan - Effektiv och Diskret | Kontakta oss idag!",
     metaContent:
-      "Städning av dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Trollhättan",
+      "Behöver du hjälp med städning av dödsbo i Trollhättan? Kontakta oss idag för en kostnadsfri offert och låt oss ta hand om städningen åt dig",
     query: "Städning av dödsbo Trollhättan",
     formTitle: "Städning av dödsbo Trollhättan",
     subTitle2:
@@ -47,6 +47,10 @@ const Stadningavdodsbotrollhatttan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/stadning-av-dodsbo-trollhattan"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

@@ -21,10 +21,9 @@ const Varderadodsbostenungssund = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Värdera dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Stenungsund",
+    metaTitle: "Värdera dödsbo Stenungsund. Få rätt pris och snabb hantering",
     metaContent:
-      "Värdera dödsbo Stenungsund. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Stenungsund",
+      "Värdera dödsbo Stenungsund - Behöver du hjälp med att värdera dödsbo i Stenungsund? Vi erbjuder professionell och pålitlig service för en rättvis värdering.",
     query: "Värdera dödsbo Stenungsund",
     formTitle: "Värdera dödsbo Stenungsund",
     subTitle2:
@@ -47,6 +46,10 @@ const Varderadodsbostenungssund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo-stenungsund"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

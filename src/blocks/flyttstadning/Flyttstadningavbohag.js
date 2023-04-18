@@ -22,8 +22,9 @@ const Flyttstadningavbohag = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Flyttstädning av bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av bohag",
-    metaContent: "Flyttstädning av bohag",
+      "Flyttstädning av bohag - Professionellt och Prisvärt | Boka idag!",
+    metaContent:
+      "Behöver du hjälp med flyttstädning av bohag inför en flytt? Låt oss hjälpa dig att få en stressfri flytt - Kontakta oss idag för en offert!",
     query:
       "Flyttstädning av bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och flyttstädning av bohag",
     formTitle: "Flyttstädning av bohag",
@@ -66,6 +67,10 @@ const Flyttstadningavbohag = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/flyttstadning-av-bohag"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

@@ -22,9 +22,9 @@ const Saljadodsbotrollhattan = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Trollhättan",
+      "Sälj dödsbo i Trollhättan smidigt och tryggt - Vi tar hand om allt!",
     metaContent:
-      "Sälja dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, bortforsling, sanering, flytt, städning och försäljning av dödsbo i Trollhättan",
+      "Behöver du hjälp att sälja ett dödsbo i Trollhättan? Kontakta oss idag för kostnadsfri värdering och professionell rådgivning",
     query: "Sälja dödsbo Trollhättan",
     formTitle: "Sälja dödsbo Trollhättan",
     subTitle2:
@@ -47,6 +47,10 @@ const Saljadodsbotrollhattan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/salja-dodsbo-trollhattan"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

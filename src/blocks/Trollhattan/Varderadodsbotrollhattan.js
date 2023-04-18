@@ -22,9 +22,9 @@ const Varderadodsbotrollhattan = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdera dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Trollhättan",
+      "Värdera dödsbo i Trollhättan - Få en Rättvis och Marknadsmässig Värdering.",
     metaContent:
-      "Värdera dödsbo Trollhättan. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i Trollhättan",
+      "Behöver du hjälp med att värdera ett dödsbo i Trollhättan? Kontakta oss idag för en kostnadsfri värdering och få en tydlig bild av värdet på boets tillgångar.",
     query: "Värdera dödsbo Trollhättan",
     formTitle: "Värdera dödsbo Trollhättan",
     subTitle2:
@@ -47,6 +47,10 @@ const Varderadodsbotrollhattan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo-trollhattan"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />
