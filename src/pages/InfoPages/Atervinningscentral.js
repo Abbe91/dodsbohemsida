@@ -7,9 +7,9 @@ const Atervinningscentral = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i din närhet.",
+      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide!",
     description:
-      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
+      "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation.",
     image:
       "https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png",
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
@@ -31,24 +31,29 @@ const Atervinningscentral = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i din närhet."
+            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide!"
           }
         </title>
         <meta
           name="description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation."
           }
         />
         <meta
           property="og:description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. Här listar vi återvinningscentral med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral med vår omfattande guide. "
           }
         />
         <meta
           property="og:image"
           content="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/atervinningscentral"
         />
       </Helmet>
       <div className="Nav">

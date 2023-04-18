@@ -22,9 +22,9 @@ const Varderingavdodsbo = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdering av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och värdering av dödsbo",
+      "Värdering av dödsbo - Få rättvist pris på tillgångar och en smidig försäljning",
     metaContent:
-      "Värdering av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städ och värdering av dödsbo",
+      "Värdering av dödsbo - Få rättvist pris på tillgångar och en smidig försäljning..",
     query: "Värdering av dödsbo",
     formTitle: "Värdering av dödsbo",
     subTitle2:
@@ -47,6 +47,11 @@ const Varderingavdodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/vardering-av-dodsbo"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

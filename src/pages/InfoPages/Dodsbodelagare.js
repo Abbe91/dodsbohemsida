@@ -31,13 +31,17 @@ const Dodsbodelagare = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Dödsbodelägare, Dödsbo säljes, Städning av dödsbo, Företag köper
-          bohag, Tömning av dödsbo, Boupptäckning
+          Dödsbodelägarens guide till en smidig fördelning - Experttips och
+          rådgivning
         </title>
         <meta
           name="description"
-          content="Dödsbodelägare, Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning"
+          content="Som dödsbodelägare kan fördelningen av tillgångar och skulder vara en utmaning. Låt våra experter hjälpa dig att navigera genom hela processen."
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsbodelagare"
         />
       </Helmet>
       <section className={classes.content}>

@@ -66,9 +66,9 @@ const AtervinningscentralGoteborg = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i Göteborg i din närhet.",
+      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide.",
     description:
-      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
+      "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation.",
     image:
       "https://resources.mynewsdesk.com/image/upload/ar_16:9,c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_1782/zcrnjzduli84zkpvbcod",
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
@@ -90,24 +90,29 @@ const AtervinningscentralGoteborg = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Upptäck enkelt närliggande återvinningscentrali Göteborg med vår omfattande guide. Hitta platsinformation, öppetider och kontaktuppgifter för återvinningscentral i Göteborg i din närhet."
+            "Upptäck enkelt närliggande återvinningscentrali Göteborg med vår omfattande guide."
           }
         </title>
         <meta
           name="description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation."
           }
         />
         <meta
           property="og:description"
           content={
-            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningscentral i Göteborg med vår omfattande guide. Här listar vi återvinningscentral i Göteborg med platsinformation, öppetider och kontaktinformation."
           }
         />
         <meta
           property="og:image"
           content="https://resources.mynewsdesk.com/image/upload/ar_16:9,c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_1782/zcrnjzduli84zkpvbcod"
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/atervinningscentral-goteborg"
         />
       </Helmet>
       <div className="Nav">

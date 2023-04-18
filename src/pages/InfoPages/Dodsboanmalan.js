@@ -32,13 +32,17 @@ const Dodsboanmalan = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning
+          Så här gör du en smidig dödsboanmälan - Enkel guide och tips från
+          experterna
         </title>
         <meta
           name="description"
-          content="Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning"
+          content="Behöver du hjälp med att göra en dödsboanmälan? Låt våra experter guida dig genom hela processen."
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsboanmalan"
         />
       </Helmet>
       <section className={classes.content}>

@@ -31,13 +31,17 @@ const Dodsboet = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning
+          Dödsboet - En komplett guide till värdering, försäljning och
+          bortforsling
         </title>
         <meta
           name="description"
-          content="Dödsboet, Dödsboanmälan, Dödsbo säljes, Städning av dödsbo, Företag köper bohag,
-          Tömning av dödsbo, Boupptäckning"
+          content="Dödsboet - En komplett guide till värdering, försäljning och bortforsling"
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsboet"
         />
       </Helmet>
       <section className={classes.content}>

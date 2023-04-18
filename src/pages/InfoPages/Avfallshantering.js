@@ -29,9 +29,9 @@ const Avfallshantering = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Här vi har samlat allt du behöver veta om avfallshantering och avfallshanteringstjänster samt en guide för avfallshantering.",
+      "Här vi har samlat allt du behöver veta om avfallshantering samt en guide för avfallshantering.",
     description:
-      "Vi kan hjälpa dig med all typ av avfallshantering, oavsett om det handlar om att hantering av avfall så som papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering.",
+      "Vi kan hjälpa dig med all typ av avfallshantering, oavsett om det handlar om att hantering av avfall så som papper, plast, metall eller annat avfall.",
     image:
       "https://images.pexels.com/photos/3951625/pexels-photo-3951625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -54,14 +54,19 @@ const Avfallshantering = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Här vi har samlat allt du behöver veta om avfallshantering och avfallshanteringstjänster samt guide för avfallshantering."
+            "Här vi har samlat allt du behöver veta om avfallshantering och samt guide för avfallshantering."
           }
         </title>
         <meta
           name="description"
           content={
-            "Vi kan hjälpa dig med all typ av avfallshantering, oavsett om det handlar om att hantera avfall så som papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering."
+            "Vi kan hjälpa dig med all typ av avfallshantering, oavsett om det handlar om att hantera avfall så som papper, plast, metall eller annat avfall."
           }
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/avfallshantering"
         />
       </Helmet>
       <div className="Nav">

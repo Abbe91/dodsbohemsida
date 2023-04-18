@@ -19,7 +19,7 @@ const Atervinning = () => {
     headline:
       "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt en guide för återvinning.",
     description:
-      "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering.",
+      "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall.",
     image:
       "https://images.pexels.com/photos/3951625/pexels-photo-3951625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -46,8 +46,13 @@ const Atervinning = () => {
         <meta
           name="description"
           content={
-            "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall. Vår målsättning är att hjälpa våra kunder att minska sin miljöpåverkan och samtidigt spara pengar på avfallshantering."
+            "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall."
           }
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/atervinning"
         />
       </Helmet>
       <div className="Nav">

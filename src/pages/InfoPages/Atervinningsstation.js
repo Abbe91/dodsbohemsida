@@ -46,9 +46,9 @@ const Atervinningsstation = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Hitta platsinformation för återvinningsstationer i din närhet.",
+      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide.",
     description:
-      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling, återvinning eller avfallshantering? Vi finns här för att hjälpa till.",
+      "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation.",
     image:
       "https://www.nodra.se/wp-content/uploads/2015/09/%C3%A5tervinningsstation_webb-1-1140x380.jpg",
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
@@ -69,24 +69,29 @@ const Atervinningsstation = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Hitta platsinformation, öppettider och kontaktuppgifter för återvinningsstationer i din närhet."
+            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide."
           }
         </title>
         <meta
           name="description"
           content={
-            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation, öppetider och kontaktuppgifter. Hitta platsinformation, öppettider och kontaktuppgifter för återvinningsstationer i din närhet. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling eller återvinning? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation, öppetider och kontaktuppgifter."
           }
         />
         <meta
           property="og:description"
           content={
-            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation, öppetider och kontaktuppgifter. Hitta platsinformation, öppettider och kontaktuppgifter för återvinningsstationer i din närhet. Med våra användarvänliga verktyg kan du enkelt bidra till en renare miljö. Behöver du hjälp med bortforsling eller återvinning? Vi finns här för att hjälpa till."
+            "Upptäck enkelt närliggande återvinningsstationer med vår omfattande guide. Här listar vi återvinningsstationer med platsinformation, öppetider och kontaktuppgifter."
           }
         />
         <meta
           property="og:image"
           content="https://www.nodra.se/wp-content/uploads/2015/09/%C3%A5tervinningsstation_webb-1-1140x380.jpg"
+        />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/atervinningsstation"
         />
       </Helmet>
       <div className="Nav">
