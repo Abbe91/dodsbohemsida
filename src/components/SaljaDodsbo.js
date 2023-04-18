@@ -20,9 +20,9 @@ const SaljaDodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, sanering, flytt, städ, bortforsling, värdering och försäljning av dödsbo.",
+      "Sälj dödsbo stressfritt - Vår professionella tjänst erbjuder högsta möjliga pris",
     metaContent:
-      "Sälja dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, sanering, flytt, städ, bortforsling, värdering och försäljning av dödsbo.",
+      "Sälj dödsbo stressfritt med vår professionella tjänst. Vi erbjuder högsta möjliga pris för dödsbo baserat på en noggrann värdering.",
     query: "Sälja dödsbo",
     formTitle: "Sälja dödsbo",
     subTitle2:

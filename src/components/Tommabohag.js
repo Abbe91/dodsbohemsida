@@ -21,9 +21,9 @@ const Tommabohag = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömma bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, sanering, flytt, städ, bortforsling, värdering och försäljning av dödsbo.",
+      "Säker och effektiv bohagstömning - Vi tar hand om allt från början till slut",
     metaContent:
-      "Tömma bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, tömning, sanering, flytt, städ, bortforsling, värdering och försäljning av dödsbo.",
+      "Tömma bohag. Behöver du hjälp med att tömma ett bohag? Kontakta oss för en stressfri och smidig tömning av ert bohag,",
     query: "Tömma bohag",
     formTitle: "Tömma bohag",
     subTitle2:
@@ -46,6 +46,11 @@ const Tommabohag = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/tomma-bohag"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

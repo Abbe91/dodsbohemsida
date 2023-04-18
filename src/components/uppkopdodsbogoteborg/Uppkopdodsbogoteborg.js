@@ -18,11 +18,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const mainquery = "uppköp dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Uppköp av dödsbo i Göteborg. Vi köper upp dödsbon i Göteborg, hela eller delar av dödsbon till rättvist pris.",
+    metaTitle: "Uppköp av dödsbo i Göteborg. Få högsta möjliga pris!",
     query: "Uppköp dödsbo Göteborg",
     metaContent:
-      "Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi köper hela eller delar av dödsbon i Göteborg.",
+      "Uppköp av dödsbo i Göteborg. Kontakta oss idag för att få högsta möjliga pris för dödsbo i Göteborg.",
     formTitle: "Uppköp dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg.",
@@ -35,11 +34,10 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Uppköp av dödsbo i Göteborg. Vi köper upp dödsbon i Göteborg, hela eller delar av dödsbon till rättvist pris.",
+    headline: "Uppköp av dödsbo i Göteborg. Få högsta möjliga pris!",
     query: "Uppköp dödsbo Göteborg",
     description:
-      "Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi köper hela eller delar av dödsbon i Göteborg. ",
+      "Uppköp av dödsbo i Göteborg. Kontakta oss idag för att få högsta möjliga pris för dödsbo i Göteborg.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -59,6 +57,7 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
         <meta name="description" content={content.metaContent} />
         <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/uppkop-dodsbo-goteborg"
         />

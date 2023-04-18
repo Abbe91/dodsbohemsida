@@ -45,6 +45,11 @@ const Saneradodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/sanera-dodsbo"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

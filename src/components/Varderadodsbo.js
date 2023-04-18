@@ -21,9 +21,9 @@ const Varderadodsbo = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Värdera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
+      "Högsta värdering för dödsbo - Vår expertis och erfarenhet garanterar rättvist pris",
     metaContent:
-      "Värdera dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ, bortforsling och värdering av dödsbo.",
+      "Få det bästa värdet för dödsbo med vår professionella värderingstjänst. Kontakta oss idag för en stressfri och smidig värdering av dödsbo.",
     query: "Värdera dödsbo",
     formTitle: "Värdera dödsbo",
     subTitle2:
@@ -39,9 +39,9 @@ const Varderadodsbo = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+      "Högsta värdering för dödsbo - Vår expertis och erfarenhet garanterar rättvist pris",
     description:
-      "Behöver du hjälp med flytt, städning, tömning eller värdering av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Få det bästa värdet för dödsbo med vår professionella värderingstjänst. Kontakta oss idag för en stressfri och smidig värdering av dödsbo.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -66,6 +66,11 @@ const Varderadodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/vardera-dodsbo"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

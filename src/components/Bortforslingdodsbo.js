@@ -10,7 +10,7 @@ import Erbjuder from "../components/Erbjuder/Erbjuder";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
@@ -18,12 +18,10 @@ const Bortforslingdodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "bortforsling dödsbo";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Bortforsling dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ värdering och bortforsling av dödsbo",
+    metaTitle: "Smidig bortforsling av dödsbo - Låt oss ta hand om allt",
     metaContent:
-      "Bortforsling dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ värdering och bortforsling av dödsbo",
+      "Behöver du hjälp med bortforslingen av dödsbo i Ale. Kontakta oss idag för en pålitlig bortforsling av dödsbo i Ale.",
     query: "Bortforsling dödsbo",
     formTitle: "Bortforsling dödsbo",
     subTitle2:
@@ -46,6 +44,11 @@ const Bortforslingdodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <link
+          hrefLang="sv"
+          rel="canonical"
+          href="https://dodsbojouren.com/bortforsling-dodsbo"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

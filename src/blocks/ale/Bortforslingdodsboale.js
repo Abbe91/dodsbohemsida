@@ -21,9 +21,9 @@ const Bortforslingdodsboale = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Effektiv bortforsling av dödsbo i Ale - Låt oss sköta bortforslingen av ert dödsbo i Ale | Dödsbo Jouren",
-    metaContent: ".",
+    metaTitle: "Smidig bortforsling av dödsbo i Ale - Låt oss ta hand om allt",
+    metaContent:
+      "Behöver du hjälp med bortforslingen av dödsbo i Ale. Kontakta oss idag för en pålitlig bortforsling av dödsbo i Ale.",
     query: "Bortforsling dödsbo Ale",
     formTitle: "Bortforsling dödsbo Ale",
     subTitle2:
@@ -48,6 +48,7 @@ const Bortforslingdodsboale = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/bortforsling-dodsbo-ale"
         />

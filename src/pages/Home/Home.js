@@ -20,9 +20,9 @@ const Home = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Få professionell hjälp med flytt, städning, värdering, uppköp, och tömning av dödsbo och hushåll. Återvinning och avfallshantering",
+      "Få professionell hjälp med tömning, städning och uppköp av dödsbon och hushåll.",
     metaContent:
-      "Behöver du hjälp med flytt, städning eller tömning av dödsbo eller hushåll? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Få professionell hjälp med tömning, städning och uppköp av dödsbon - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar.",
     query: "",
     formTitle: "Tömma dödsbo",
     subTitle2:
