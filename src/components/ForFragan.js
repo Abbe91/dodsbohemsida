@@ -247,7 +247,11 @@ const ForFragan = () => {
                 <input
                   type="checkbox"
                   name="accept"
-                  style={{ marginRight: "0.5rem" }}
+                  style={{
+                    marginRight: "0.5rem",
+                    width: "16px",
+                    height: "16px"
+                  }}
                 />
                 <label style={{ fontSize: "0.7rem" }} htmlFor="accept">
                   Jag godkänner att Dödsbo Jouren lagrar mina personuppgifter
