@@ -53,7 +53,7 @@ const Recensioner = () => {
   return (
     <div className={classes.root}>
       <section className={classes.contentContainer}>
-        <h1 style={{ margin: "1rem 0" }}>Längst erfarenhet</h1>
+        <h2 style={{ margin: "1rem 0" }}>Längst erfarenhet</h2>
         <p style={{ lineHeight: "26px", marginBottom: "1rem" }}>
           Vi på Dödsbo Jouren är det självklara valet för hantering av bohag och
           dödsbo med över 50 års erfarenhet tillsammans är vi helt övetygade om

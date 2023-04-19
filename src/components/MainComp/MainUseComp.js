@@ -66,9 +66,9 @@ const MainUseComp = () => {
   return (
     <div className="mainComp">
       <section style={{ maxWidth: "600px", marginBottom: "2rem" }}>
-        <h1 style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}>
+        <h2 style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}>
           Detta kan vi hjälpa dig med
-        </h1>
+        </h2>
         <p
           style={{
             maxWidth: "90%",
