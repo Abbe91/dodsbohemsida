@@ -19,8 +19,7 @@ const Tommerhemgoteborg = ({ videoText }) => {
   const mainquery = "Tömmer hem Göteborg";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömmer hem i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömmer hem i Göteborg - professionella och pålitliga service.",
     metaContent:
       "Behöver du hjälp med att tömma ett hem i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer hem Göteborg",
@@ -46,6 +45,7 @@ const Tommerhemgoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-hem-goteborg"
         />

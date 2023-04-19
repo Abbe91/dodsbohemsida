@@ -22,9 +22,9 @@ const Foretagsomkoperbohag = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Företag som köper bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
+      "Företag som köper bohag - Få en gratis värdering av ditt bohag!",
     metaContent:
-      "Företag som köper bohag. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo i Göteborg",
+      "Företag som köper bohag - Få en gratis värdering av ditt bohag och sälj till det bästa priset",
     query: "Företag som köper bohag",
     formTitle: "Företag som köper bohag",
     subTitle2:
@@ -48,6 +48,7 @@ const Foretagsomkoperbohag = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/foretag-som-koper-bohag"
         />

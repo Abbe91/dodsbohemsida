@@ -22,7 +22,7 @@ const Tommadodsboalingsas = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömma dödsbo i Alingsås - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+      "Tömma dödsbo i Alingsås - Professionella och pålitliga service.",
     metaContent:
       "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Alingsås",
@@ -39,8 +39,7 @@ const Tommadodsboalingsas = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömma dödsbo i Alingsås - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    headline: "Tömma dödsbo i Alingsås - Professionella och pålitliga service.",
     description:
       "Behöver du hjälp med att tömma ett dödsbo i Alingsås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
@@ -67,6 +66,7 @@ const Tommadodsboalingsas = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-alingsas"
         />

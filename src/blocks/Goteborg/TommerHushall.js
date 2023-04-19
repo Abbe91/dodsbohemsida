@@ -44,7 +44,11 @@ const TommerHushall = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
-        <link rel="canonical" href="https://dodsbojouren.com/tommer-hushall" />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tommer-hushall"
+          hrefLang="sv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

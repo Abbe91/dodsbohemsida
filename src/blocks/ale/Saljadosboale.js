@@ -22,9 +22,9 @@ const Saljadosboale = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Sälja dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och stäning av dödsbo i Ale",
+      "Sälj dödsbo i Ale smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare",
     metaContent:
-      "Sälja dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städning av dödsbo i Ale",
+      "Sälj dödsbo i Ale till högsta möjliga pris med hjälp av våra professionella och pålitliga tjänst för försäljning av dödsbon.",
     query: "Sälja dödsbo Ale",
     formTitle: "Sälja dödsbo Ale",
     subTitle2:
@@ -48,6 +48,7 @@ const Saljadosboale = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/salja-dodsbo-ale"
         />

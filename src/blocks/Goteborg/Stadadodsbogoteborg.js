@@ -39,9 +39,9 @@ const Stadadodsbogoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Dödsbo Jouren vi hjälper dig med städning, flytt, tömning, bortforsling och värdering av dödsbo och hushåll samt återvinning och avfallshantering",
+      "Städa dödsbo Göteborg. Effektivt och pålitligt städning av dödsbo i Göteborg",
     description:
-      "Behöver du hjälp med flytt, städning eller tömning av dödsbo? Välkommen till vår Dödsbo Jouren där vi erbjuder allt från bortforsling och värdering till uppköp av dödsbo och hushåll. Vi tar hand om både små och stora projekt, från kontor och lägenheter till fastigheter och hus. Kontakta oss idag för en smidig och stressfri lösning. Vi hjälper även till med återvinning och avfallshantering",
+      "Vi erbjuder professionella, effektiv och pålitlig städning av dödsbo i Göteborg. Kontakta oss idag för att boka en städning av ett dödsbo i Göteborg.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
@@ -66,6 +66,7 @@ const Stadadodsbogoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/stada-dodsbo-goteborg"
         />

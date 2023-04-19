@@ -21,8 +21,7 @@ const Koperdodsbogoteborg = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
+    metaTitle: "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering.",
     metaContent:
       "Vi köper ditt dödsbo i Göteborg. Få en rättvis värdering och kontant betalning från ett erfaret och pålitligt team som köper alla typer av dödsbon",
     query: "Köper dödsbo Göteborg",
@@ -67,6 +66,7 @@ const Koperdodsbogoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/koper-dodsbo-goteborg"
         />

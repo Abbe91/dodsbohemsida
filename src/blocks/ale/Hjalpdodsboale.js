@@ -21,10 +21,8 @@ const Hjalpdodsboale = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Hjälp dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ale",
-    metaContent:
-      "Hjälp dödsbo Ale. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ i Ale",
+    metaTitle: "Hjälp dödsbo Ale. Snabb & smidig hjälp med dödsbon.",
+    metaContent: "Hjälp dödsbo Ale. Snabb & smidig hjälp med dödsbon.",
     query: "Hjälp dödsbo Ale",
     formTitle: "Hjälp dödsbo Ale",
     subTitle2:
@@ -48,6 +46,7 @@ const Hjalpdodsboale = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/hjalp-dodsbo-ale"
         />

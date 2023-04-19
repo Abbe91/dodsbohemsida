@@ -20,7 +20,7 @@ const Tommerhem = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av hem och hushåll - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+      "Tömning av hem och hushåll - Professionella och pålitliga service.",
     metaContent:
       "Behöver du hjälp med att tömma ett hem? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer hem",
@@ -45,7 +45,11 @@ const Tommerhem = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
-        <link rel="canonical" href="https://dodsbojouren.com/tommer-hem" />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tommer-hem"
+          hrefLang="sv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

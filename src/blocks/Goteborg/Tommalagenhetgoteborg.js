@@ -22,7 +22,7 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av lägenheter i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+      "Tömning av lägenheter i Göteborg - Professionella och pålitliga service",
     metaContent:
       "Behöver du hjälp med att tömma en lägenhet i Göteborg? Då är vi på Dödsbo Jouren det självklara valet. Vi tömmer lägenheter i Göteborg med omnejd.",
     query: "Tömma lägenhet i Göteborg",
@@ -39,7 +39,7 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Tömning av lägenheter i Göteborg - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+      "Tömning av lägenheter i Göteborg - Professionella och pålitliga service",
     description:
       "Behöver du hjälp med att tömma en lägenhet i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
@@ -66,6 +66,7 @@ const Tommalagenhetgoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-lagenhet/tomma-lagenhet-goteborg"
         />

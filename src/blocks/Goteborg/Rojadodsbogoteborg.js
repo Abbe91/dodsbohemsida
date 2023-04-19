@@ -47,6 +47,7 @@ const Rojadodsbogoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/roja-dodsbo-goteborg"
         />

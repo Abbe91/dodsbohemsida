@@ -21,10 +21,9 @@ const UppkopAvDodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Uppköp av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo.",
+    metaTitle: "Uppköp av dödsbo. Pålitligt uppköp av ert dödsbo!",
     metaContent:
-      "Uppköp av dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och uppköp av dödsbo.",
+      "Uppköp av dödsbo. Pålitligt uppköp av ert dödsbo! Vi betalar bra för dödsbon och lösöre.",
     query: "Uppköp av dödsbo",
     formTitle: "Uppköp av dödsbo",
     subTitle2:
@@ -39,7 +38,7 @@ const UppkopAvDodsbo = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Uppköp av dödsbo. Vill du sälj ett dödsbo? Vi köper hela eller delar av dödsbon till rättvist pris",
+      "Uppköp av dödsbo. Vi köper hela eller delar av dödsbon till rättvist pris",
     description:
       "Uppköp av dödsbo. Sälj dödsbo till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Borås.",
     image:
@@ -66,6 +65,7 @@ const UppkopAvDodsbo = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/uppkop-av-dodsbo"
         />

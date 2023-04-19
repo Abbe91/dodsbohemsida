@@ -21,10 +21,8 @@ const Tommerdodsbo = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömmer dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Göteborg",
-    metaContent:
-      "Tömmer dödsbo. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Göteborg",
+    metaTitle: "Tömmer dödsbo. Snabb % Pålitligt tömning!",
+    metaContent: "Tömmer dödsbo. Snabb % Pålitligt tömning av dödsbon!",
     query: "Tömmer dödsbo",
     formTitle: "Tömmer dödsbo",
     subTitle2:
@@ -47,7 +45,11 @@ const Tommerdodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
-        <link rel="canonical" href="https://dodsbojouren.com/tommerdodsbo" />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/tommerdodsbo"
+          hrefLang="sv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />
