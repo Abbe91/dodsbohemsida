@@ -7,12 +7,6 @@ import { AiOutlineCreditCard } from "react-icons/ai";
 
 export const navlinks = [
   {
-    id: 1,
-    label: "Hem",
-    path: "/"
-  },
-
-  {
     id: 2,
     label: "Tömma",
     path: "/tomma-bohag"
