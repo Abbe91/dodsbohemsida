@@ -21,8 +21,7 @@ const UppkopDodsboKungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Uppköp av dödsbon i Kungälv. Vi köper hela eller delar av dödsbon till rättvist pris",
+    metaTitle: "Uppköp av dödsbo i Kungälv. Få högsta möjliga pris!",
     query: "Uppköp dödsbo Kungälv",
     metaContent:
       "Uppköp av dödsbo i Kungälv. Sälj dödsbo i Kungälv till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Kungälv.",
@@ -39,13 +38,12 @@ const UppkopDodsboKungalv = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Uppköp av dödsbo i Kungälv. Vill du sälj ett dödsbo i Kungälv? Vi köper hela eller delar av dödsbon till rättvist pris",
+    headline: "Uppköp av dödsbo i Kungälv. Få högsta möjliga pris!",
     description:
       "Uppköp av dödsbo i Kungälv. Sälj dödsbo i Kungälv till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Kungälv.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
-    datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
+    datePublished: new Date("2023-06-21T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
       name: "Louie Stokk"
@@ -66,7 +64,13 @@ const UppkopDodsboKungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/uppkop-dodsbo-kungalv"
         />
