@@ -8,6 +8,10 @@ import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
 import ProtectedRoute from "./pages/ProtectedRoute";
+
+const KoperDodsbonGoteborg = lazy(() =>
+  import("./blocks/Goteborg/KoperDodsbonGoteborg")
+);
 const AtervinningscentralGoteborg = lazy(() =>
   import("./pages/InfoPages/AtervinningscentralGoteborg")
 );
@@ -374,6 +378,9 @@ const Koperdodsbouddevalla = lazy(() =>
 const Tommerdodsbouddevalla = lazy(() =>
   import("./blocks/uddevalla/Tommerdodsbouddevalla")
 );
+const TommerDodsboGoteborg = lazy(() =>
+  import("./blocks/Goteborg/TommerDodsboGoteborg")
+);
 // new info pages
 const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
 const Avfallshantering = lazy(() =>
@@ -469,6 +476,12 @@ const App = () => {
               element={<Tommerhemgoteborg videoText={contentData?.videoText} />}
             />
             <Route
+              path="/koper-dodsbon-goteborg"
+              element={
+                <KoperDodsbonGoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
               path="/tommer-hushall"
               element={<TommerHushall videoText={contentData?.videoText} />}
             />
@@ -492,6 +505,12 @@ const App = () => {
               path="koper-dodsbo-goteborg"
               element={
                 <Koperdodsbogoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tommer-dodsbo-goteborg"
+              element={
+                <TommerDodsboGoteborg videoText={contentData?.videoText} />
               }
             />
             <Route
