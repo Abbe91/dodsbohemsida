@@ -17,10 +17,9 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Säker och smidig tömning av dödsbo i Göteborg - Professionell service för en stressfri process",
+    metaTitle: "Tömma dödsbo i Göteborg - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process.",
+      "Behöver du hjälp med att tömma dödsbo i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process för att tömma dödsbo i Göteborg.",
     formTitle: "Tömma dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
@@ -35,13 +34,12 @@ const Tommadodsbogoteborg = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Säker och smidig tömning av dödsbo i Göteborg - Professionell service för en stressfri process",
+    headline: "Tömma dödsbo i Göteborg - Effektiv och pålitlig service",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Göteborg? Vår erfarna personal garanterar en prsivärd, smidig och säker process.",
+      "Behöver du hjälp med att tömma dödsbo i Göteborg? Vår erfarna personal garanterar en prisvärd, smidig och säker process för att tömma dödsbo i Göteborg.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
-    datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
+    datePublished: new Date("2023-04-24T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
       name: "Louie Stokk"

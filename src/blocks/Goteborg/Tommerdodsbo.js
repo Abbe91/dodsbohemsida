@@ -7,7 +7,6 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Tips from "../../components/Tips/Tips";
 import Nav from "../../components/Nav/Nav";
 import Erbjuder from "../../components/Erbjuder/Erbjuder";
-import Nyheter from "../../components/Nyheter/Nyheter";
 import { getElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
@@ -19,20 +18,33 @@ const Tommerdodsbo = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Tömmer dödsbo";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Tömmer dödsbo. Snabb % Pålitligt tömning!",
-    metaContent: "Tömmer dödsbo. Snabb % Pålitligt tömning av dödsbon!",
+    metaTitle: "Tömmer dödsbo. Snabb & Pålitligt!",
+    metaContent: "Tömmer dödsbo. Snabb & Pålitligt tömning av dödsbon!",
     query: "Tömmer dödsbo",
     formTitle: "Tömmer dödsbo",
     subTitle2:
-      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Göteborg",
+      "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och tömning av dödsbon.",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
   });
   const customerData = useSelector(getCustomerData);
 
   const services =
-    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och tömning av dödsbo i Göteborg";
+    "uppköp, tömning, bortforsling, sanering, luktsanering, flytt, städ, försäljning och tömning av dödsbon.";
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Tömmer dödsbo. Snabb & Pålitligt!",
+    description: "Tömmer dödsbo. Snabb & Pålitligt tömning av dödsbon!",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-04-24T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
   const element = useSelector(getElement);
   useEffect(() => {
     document
@@ -41,13 +53,21 @@ const Tommerdodsbo = ({ videoText }) => {
   }, [element]);
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+        />
         <link
           rel="canonical"
-          href="https://dodsbojouren.com/tommerdodsbo"
+          href="https://dodsbojouren.com/tommer-dodsbo"
           hrefLang="sv"
         />
       </Helmet>
@@ -83,7 +103,7 @@ const Tommerdodsbo = ({ videoText }) => {
         </div>
       )}
       <div className="Tjänster">
-        <Erbjuder city={"Göteborg"} />
+        <Erbjuder city={""} />
       </div>
 
       <div className="booking-lottie">

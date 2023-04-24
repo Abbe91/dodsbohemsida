@@ -126,7 +126,7 @@ const ForFragan = () => {
           >
             <option value={"Flexibel"}>Flexibel</option>
             <option value={"inom 2 veckor"}>Inom 2 veckor</option>
-            <option value={"inom 1-2 veckor"}>Inom 1-2 månader</option>
+            <option value={"inom 1-2 månader"}>Inom 1-2 månader</option>
             <option value={"Omgående"}>Omgående</option>
           </select>
         </form>

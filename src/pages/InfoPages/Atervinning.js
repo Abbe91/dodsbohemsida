@@ -17,7 +17,7 @@ const Atervinning = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt en guide för återvinning.",
+      "Din guide för återvinning - Här vi har samlat allt du behöver veta om återvinning.",
     description:
       "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall.",
     image:
@@ -40,7 +40,7 @@ const Atervinning = () => {
         <meta charSet="utf-8" />
         <title>
           {
-            "Här vi har samlat allt du behöver veta om återvinning och återvinningstjänster samt guide för återvinning."
+            "Din guide för återvinning - Här vi har samlat allt du behöver veta om återvinning."
           }
         </title>
         <meta
@@ -53,6 +53,16 @@ const Atervinning = () => {
           hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/atervinning"
+        />
+        <meta
+          property="og:description"
+          content={
+            "Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar om att återvinna papper, plast, metall eller annat avfall."
+          }
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3951625/pexels-photo-3951625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         />
       </Helmet>
       <div className="Nav">

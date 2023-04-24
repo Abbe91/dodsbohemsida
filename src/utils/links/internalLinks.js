@@ -366,7 +366,7 @@ export const fleromrodenLinks = [
     title: "Dödsbo uppköpare Göteborg"
   },
   {
-    path: "tommerdodsbo",
+    path: "tommer-dodsbo",
     title: "Tömmer dödsbo"
   },
   {

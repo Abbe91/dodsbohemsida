@@ -1017,7 +1017,7 @@ const App = () => {
               }
             />
             <Route
-              path="tommerdodsbo"
+              path="tommer-dodsbo"
               element={<Tommerdodsbo videoText={contentData?.videoText} />}
             />
             <Route
