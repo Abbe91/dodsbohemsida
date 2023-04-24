@@ -47,7 +47,9 @@ const Saljadodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/salja-dodsbo-ulricehamn"
         />

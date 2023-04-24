@@ -19,10 +19,9 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
   const mainquery = "Tömmer dödsbo Uddevalla";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömning av dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömmer dödsbo i Uddevalla - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Tömmer dödsbo i Uddevalla. Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer dödsbo Uddevalla",
     formTitle: "Tömmer dödsbo Uddevalla",
     subTitle2:
@@ -37,7 +36,7 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Tömning av dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+      "Tömmer dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
     description:
       "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
@@ -63,7 +62,9 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-uddevalla"
         />

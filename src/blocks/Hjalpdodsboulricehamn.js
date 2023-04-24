@@ -7,11 +7,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
-import { getNewsData, getBingNews } from "../redux-toolkit/news/newsSlice";
+import { getNewsData } from "../redux-toolkit/news/newsSlice";
 import LottieBooking from "../LottieAnimation/LottieBooking";
 import booking from "../utils/animation/booking.json";
 import BookingModal from "../components/BookingModal";
@@ -19,7 +18,7 @@ const Hjalpdodsboulricehamn = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "hjälp dödsbo Ulricehamn";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
+
   const [content, setContent] = useState({
     metaTitle: "Snabb och smidig hjälp med dödsbo i Ulricehamn",
     metaContent: "Snabb och smidig hjälp med dödsbo i Ulricehamn",
@@ -45,7 +44,9 @@ const Hjalpdodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/hjalp-dodsbo-ulricehamn"
         />
@@ -88,7 +89,7 @@ const Hjalpdodsboulricehamn = ({ videoText }) => {
 
       <div className="booking-lottie">
         <div className="booking-content">
-          <h2>Hjälp {mainquery}?</h2>
+          <h2>{mainquery}</h2>
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
             dig som kund med att {mainquery}. Besöket/genomgången tar ca 45min

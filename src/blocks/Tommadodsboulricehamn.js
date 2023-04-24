@@ -19,8 +19,7 @@ const Tommadodsboulricehamn = ({ videoText }) => {
   const mainquery = "Tömma dödsbo Ulricehamn";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömma dödsbo i Ulricehamn - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömma dödsbo i Ulricehamn - Professionellt & Pålitligt.",
     metaContent:
       "Behöver du hjälp med att tömma ett dödsbo i Ulricehamn? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Ulricehamn",
@@ -63,7 +62,9 @@ const Tommadodsboulricehamn = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-ulricehamn"
         />

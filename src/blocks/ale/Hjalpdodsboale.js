@@ -45,6 +45,7 @@ const Hjalpdodsboale = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
           hrefLang="sv"
           rel="canonical"
@@ -89,7 +90,7 @@ const Hjalpdodsboale = ({ videoText }) => {
 
       <div className="booking-lottie">
         <div className="booking-content">
-          <h2>Hjälp {mainquery}?</h2>
+          <h2>{mainquery}?</h2>
           <h4>
             Vi erbjuder helt kostnadfritt besök/genomgång för att kunna hjälpa
             dig som kund med att {mainquery}. Besöket/genomgången tar ca 45min

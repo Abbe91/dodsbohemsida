@@ -64,7 +64,12 @@ const Dodsbokopes = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
-        <link rel="canonical" href="https://dodsbojouren.com/dodsbo-kopes" />
+        <meta property="og:description" content={content.metaContent} />
+        <link
+          rel="canonical"
+          href="https://dodsbojouren.com/dodsbo-kopes"
+          hrefLang="sv"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

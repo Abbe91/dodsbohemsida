@@ -19,13 +19,11 @@ const Koperdodsbouddevalla = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "Köper dödsbo Uddevalla";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Vi köper upp dödsbon i Uddevalla. Snabb och smidig lösning för avyttring av dödsbon",
-    query: "Uppköp dödsbo Uddevalla",
+    metaTitle: "Köper dödsbon i Uddevalla. Snabb och smidigt!",
+    query: "Köper dödsbo Uddevalla",
     metaContent:
-      "Vi köper upp dödsbon i Uddevalla.. Sälj dödsbo i Uddevalla till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Uddevalla.",
+      "Vi köper dödsbon i Uddevalla.. Sälj dödsbo i Uddevalla till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Uddevalla.",
     query: "Köper dödsbo Uddevalla",
     formTitle: "Köper dödsbo Uddevalla",
     subTitle2:
@@ -41,9 +39,9 @@ const Koperdodsbouddevalla = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Vi köper upp dödsbon i Uddevalla. Snabb och smidig lösning för avyttring av dödsbon",
+      "Vi köper dödsbon i Uddevalla. Snabb och smidig lösning för avyttring av dödsbon",
     description:
-      "Vi köper upp dödsbon i Uddevalla.. Sälj dödsbo i Uddevalla till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Uddevalla.",
+      "Vi köper dödsbon i Uddevalla.. Sälj dödsbo i Uddevalla till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Uddevalla.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
@@ -67,7 +65,9 @@ const Koperdodsbouddevalla = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/koper-dodsbo-uddevalla"
         />
