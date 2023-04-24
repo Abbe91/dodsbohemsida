@@ -8,7 +8,9 @@ import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
 import ProtectedRoute from "./pages/ProtectedRoute";
-
+const DodsboKopesGoteborg = lazy(() =>
+  import("./blocks//Goteborg/DodsboKopesGoteborg")
+);
 const KoperDodsbonGoteborg = lazy(() =>
   import("./blocks/Goteborg/KoperDodsbonGoteborg")
 );
@@ -479,6 +481,12 @@ const App = () => {
               path="/koper-dodsbon-goteborg"
               element={
                 <KoperDodsbonGoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/dodsbo-kopes-goteborg"
+              element={
+                <DodsboKopesGoteborg videoText={contentData?.videoText} />
               }
             />
             <Route
