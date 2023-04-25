@@ -58,7 +58,7 @@ const TommerDodsboGoteborg = ({ videoText }) => {
         <meta name="description" content={content.metaContent} />
         <meta
           property="og:url"
-          content="https://dodsbojouren.com/tomma-dodsbo-goteborg"
+          content="https://dodsbojouren.com/tommer-dodsbo-goteborg"
         />
         <meta property="og:description" content={content.metaContent} />
         <meta
