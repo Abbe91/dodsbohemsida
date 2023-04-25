@@ -21,10 +21,9 @@ const Tommerdodsbonlerum = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömmer dödsbo i Lerum - Låt oss ta hand om hela processen åt dig med vår prisvärda och pålitliga service",
+    metaTitle: "Tömmer dödsbo i Lerum - prisvärda och pålitliga service",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Lerum? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Vi tömmer dödsbo i Lerum. Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer dödsbo Lerum",
     formTitle: "Tömmer dödsbo Lerum",
     subTitle2:
@@ -42,7 +41,7 @@ const Tommerdodsbonlerum = ({ videoText }) => {
     headline:
       "Tömmer dödsbo i Lerum - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Lerum? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Vi tömmer dödsbo i Lerum? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
@@ -66,7 +65,13 @@ const Tommerdodsbonlerum = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tommer-dodsbo-lerum"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-lerum"
         />

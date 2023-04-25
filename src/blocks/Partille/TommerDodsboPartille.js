@@ -16,15 +16,14 @@ import booking from "../../utils/animation/booking.json";
 import BookingModal from "../../components/BookingModal";
 const TommerDodsboPartille = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mainquery = "Tömma dödsbo i Partille";
+  const mainquery = "Tömmer dödsbo i Partille";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömning av dödsbo i Partille - Låt oss ta hand om hela processen åt dig med vår prisvärda och pålitliga service",
+    metaTitle: "Tömmer dödsbo i Partille - prisvärda och pålitliga service",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Partille? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
-    query: "Tömma dödsbo Partille",
-    formTitle: "Tömma dödsbo Partille",
+      "Vi tömmer dödsbo i Partille? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+    query: "Tömmer dödsbo Partille",
+    formTitle: "Tömmer dödsbo Partille",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning i Partille",
     subTitle3: `Behöver du professionell hjälp med ${mainquery}`
@@ -37,10 +36,9 @@ const TommerDodsboPartille = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömma dödsbo i Partille - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    headline: "Tömmer dödsbo i Partille - prisvärda och pålitliga service",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Partille? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Vi tömmer dödsbo i Partille? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
@@ -64,6 +62,11 @@ const TommerDodsboPartille = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tommer-dodsbo-partille"
+        />
         <link
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-partille"

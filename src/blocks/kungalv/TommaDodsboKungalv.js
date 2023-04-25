@@ -19,10 +19,9 @@ const TommaDodsboKungalv = ({ videoText }) => {
   const mainquery = "tömma dödsbo Kungälv";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömning av dödsbo i Kungälv - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon",
+    metaTitle: "Tömma dödsbo i Kungälv - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process för att tömma dödsbo i Kungälv.",
     query: "Tömma dödsbo Kungälv",
     formTitle: "Tömma dödsbo Kungälv",
     subTitle2:
@@ -37,13 +36,12 @@ const TommaDodsboKungalv = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömning av dödsbo i Kungälv - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service för tömning av dödsbon",
+    headline: "Tömma dödsbo i Kungälv - Effektiv och pålitlig service!",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma dödsbo i Kungälv? Vår erfarna personal garanterar en prisvärd, smidig och säker process för att tömma dödsbo i Kungälv.",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
-    datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
+    datePublished: new Date("2023-06-25T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
       name: "Louie Stokk"
@@ -65,7 +63,17 @@ const TommaDodsboKungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-kungalv"
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-kungalv"
         />

@@ -21,8 +21,7 @@ const Tommadodsbohisingen = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömning av dödsbo i Hisingen - Låt oss ta hand om hela processen åt dig med vår prisvärda och pålitliga service",
+    metaTitle: "Tömma dödsbo i Hisingen - prisvärda och pålitliga service!",
     metaContent:
       "Behöver du hjälp med att tömma ett dödsbo i Hisingen? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Hisingen",
@@ -48,9 +47,14 @@ const Tommadodsbohisingen = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-hisingen"
+        />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-hisingen"
         />
       </Helmet>
       <div className="Nav">

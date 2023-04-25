@@ -21,8 +21,7 @@ const SaljaDodsboKungalv = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Sälj dödsbo i Kungälv smidigt och enkelt - Få högsta möjliga pris med våra erfarna köpare",
+    metaTitle: "Sälj dödsbo i Kungälv - Få högsta möjliga pris!",
     metaContent:
       "Sälj dödsbo i Kungälv till högsta möjliga pris med hjälp av våra professionella och pålitliga köpare. Vi tar hand om allt smidigt och effektivt.",
     query: "Sälja dödsbo Kungälv",
@@ -47,10 +46,15 @@ const SaljaDodsboKungalv = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
         <link
           hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/salja-dodsbo-kungalv"
+        />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/salja-dodsbo-kungalv"
         />
       </Helmet>
       <div className="Nav">

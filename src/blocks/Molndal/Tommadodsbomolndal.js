@@ -21,8 +21,7 @@ const Tommadodsbomolndal = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömning av dödsbo i Mölndal - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömma dödsbo i Mölndal - professionella och pålitliga service.",
     metaContent:
       "Behöver du hjälp med att tömma ett dödsbo i Mölndal? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Mölndal",
@@ -66,7 +65,13 @@ const Tommadodsbomolndal = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-molndal"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-molndal"
         />
