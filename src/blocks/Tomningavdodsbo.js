@@ -48,6 +48,7 @@ const Tomningavdodsbo = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomning-av-dodsbo"
         />

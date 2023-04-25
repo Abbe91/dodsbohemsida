@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainComp from "../../components/MainComp/MainComp";
 import { BsHouseDoor } from "react-icons/bs";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
@@ -33,8 +33,27 @@ const Home = ({ videoText }) => {
   const services =
     "uppköp, bortforsling, sanering, flytt, städning och försäljning av dödsbon och hushåll.";
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Få professionell hjälp med tömning, städning och uppköp av dödsbon och hushåll.",
+    description:
+      "Få professionell hjälp med tömning, städning och uppköp av dödsbon - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar.",
+    image:
+      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
+    datePublished: new Date("2023-04-25T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Louie Stokk"
+    }
+  };
+
   return (
     <div>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
@@ -45,6 +64,7 @@ const Home = ({ videoText }) => {
           property="og:image"
           content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
         />
+        <link hrefLang="sv" rel="canonical" href="https://dodsbojouren.com" />
       </Helmet>
       <div className="Nav">
         <Nav />
