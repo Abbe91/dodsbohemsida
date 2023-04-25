@@ -20,10 +20,10 @@ const Home = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
     metaTitle:
-      "Få professionell hjälp med tömning, städning och uppköp av dödsbon och hushåll.",
+      "Få hjälp med tömning, städning och uppköp av dödsbon och hushåll.",
     metaContent:
       "Få professionell hjälp med tömning, städning och uppköp av dödsbon - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar.",
-    query: "",
+    query: "dödsbo eller hushåll",
     formTitle: "Tömma dödsbo",
     subTitle2:
       "Din auktoriserade dödsbo hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
@@ -35,25 +35,50 @@ const Home = ({ videoText }) => {
 
   const articleStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline:
-      "Få professionell hjälp med tömning, städning och uppköp av dödsbon och hushåll.",
-    description:
-      "Få professionell hjälp med tömning, städning och uppköp av dödsbon - Vi erbjuder allt från värdering till försäljning och bortforsling av hushållsartiklar.",
-    image:
-      "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
-    datePublished: new Date("2023-04-25T09:25:01.340Z").toISOString(),
-    author: {
-      "@type": "Person",
-      name: "Louie Stokk"
-    }
+    "@type": "RecyclingCenter",
+    name: "Dödsbo Jouren",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Hisingsgatan 10",
+      addressLocality: "Göteborg",
+      addressRegion: "Sweden",
+      postalCode: "41702",
+      addressCountry: "SE"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "57.71659765082482",
+      longitude: "11.94740491088092"
+    },
+    url: "www.dodsbojouren.com",
+    telephone: "+46317539060",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        opens: "08:00",
+        closes: "18:00"
+      }
+    ],
+    priceRange: "1000kr-20000kr",
+    image: [
+      "https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+    ]
   };
-
   return (
     <div>
       <script type="application/ld+json">
         {JSON.stringify(articleStructuredData)}
       </script>
+
       <Helmet>
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
