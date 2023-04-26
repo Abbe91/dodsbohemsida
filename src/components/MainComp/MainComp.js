@@ -186,6 +186,7 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
             display: "flex",
             flexDirection: "column"
           }}
+          id="wecando"
         >
           <h4 style={{ marginLeft: "0.5rem" }}>Vad kan vi göra</h4>
           <p

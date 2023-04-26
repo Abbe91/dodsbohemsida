@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import TableOfConent from "../toc/TableOfConent";
 export const items = [
   {
     title: "Bortforsling",
@@ -63,159 +64,166 @@ export const items = [
   }
 ];
 const MainUseComp = () => {
+  const [showInneHall, setshowInneHall] = useState(false);
   return (
-    <div className="mainComp">
-      <section style={{ maxWidth: "600px", marginBottom: "2rem" }}>
-        <h2 style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}>
-          Detta kan vi hjälpa dig med
-        </h2>
-        <p
+    <>
+      <div className="mainComp" style={{ height: showInneHall && "1500px" }}>
+        <section style={{ maxWidth: "600px", marginBottom: "2rem" }}>
+          <h2 style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}>
+            Detta kan vi hjälpa dig med
+          </h2>
+          <p
+            style={{
+              maxWidth: "90%",
+              margin: "0 auto",
+              fontSize: "1rem",
+              letterSpacing: "1px"
+            }}
+          >
+            <a
+              href="/atervinning"
+              title="återvinning"
+              style={{ color: "inherit" }}
+            >
+              Återvinning
+            </a>{" "}
+            och{" "}
+            <a
+              href="/avfallshantering"
+              title="avfallshantering"
+              style={{ color: "inherit" }}
+            >
+              Avfallshantering
+            </a>
+            .{" "}
+            <a
+              href="/uppkop-av-dodsbo"
+              title="uppköp av dödsbo, bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              Uppköp
+            </a>
+            ,{" "}
+            <a
+              href="/vardera-dodsbo"
+              title="värdering av dödsbo, bohag och hushåll"
+              style={{ color: "inherit" }}
+            >
+              värdering
+            </a>
+            ,{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              tömning
+            </a>
+            ,{" "}
+            <a
+              href="/bortforsling-dodsbo"
+              title="bortforsling av möbler och dödsbo"
+              style={{ color: "inherit" }}
+            >
+              bortforsling
+            </a>
+            ,{" "}
+            <a
+              href="/sanera-dodsbo"
+              title="sanering av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              sanering
+            </a>
+            ,{" "}
+            <a
+              href="/bohagsflytt"
+              title="bohagsflytt"
+              style={{ color: "inherit" }}
+            >
+              flytt
+            </a>{" "}
+            och{" "}
+            <a
+              href="/stadning-av-dodsbo"
+              title="städning av dödsbo"
+              style={{ color: "inherit" }}
+            >
+              städning
+            </a>{" "}
+            av{" "}
+            <a
+              href="/tomma-dodsbo"
+              title="tömma dödsbo"
+              style={{ color: "inherit" }}
+            >
+              dödsbon
+            </a>{" "}
+            och{" "}
+            <a
+              href="/tomma-bohag"
+              title="tömma bohag"
+              style={{ color: "inherit" }}
+            >
+              bohag
+            </a>
+            .
+          </p>
+        </section>
+        <section
           style={{
-            maxWidth: "90%",
-            margin: "0 auto",
-            fontSize: "1rem",
-            letterSpacing: "1px"
+            display: "flex",
+            maxWidth: "700px",
+            justifyContent: "center",
+            flexWrap: "wrap"
           }}
         >
-          <a
-            href="/atervinning"
-            title="återvinning"
-            style={{ color: "inherit" }}
-          >
-            Återvinning
-          </a>{" "}
-          och{" "}
-          <a
-            href="/avfallshantering"
-            title="avfallshantering"
-            style={{ color: "inherit" }}
-          >
-            Avfallshantering
-          </a>
-          .{" "}
-          <a
-            href="/uppkop-av-dodsbo"
-            title="uppköp av dödsbo, bohag och hushåll"
-            style={{ color: "inherit" }}
-          >
-            Uppköp
-          </a>
-          ,{" "}
-          <a
-            href="/vardera-dodsbo"
-            title="värdering av dödsbo, bohag och hushåll"
-            style={{ color: "inherit" }}
-          >
-            värdering
-          </a>
-          ,{" "}
-          <a
-            href="/tomma-dodsbo"
-            title="tömma dödsbo"
-            style={{ color: "inherit" }}
-          >
-            tömning
-          </a>
-          ,{" "}
-          <a
-            href="/bortforsling-dodsbo"
-            title="bortforsling av möbler och dödsbo"
-            style={{ color: "inherit" }}
-          >
-            bortforsling
-          </a>
-          ,{" "}
-          <a
-            href="/sanera-dodsbo"
-            title="sanering av dödsbo"
-            style={{ color: "inherit" }}
-          >
-            sanering
-          </a>
-          ,{" "}
-          <a
-            href="/bohagsflytt"
-            title="bohagsflytt"
-            style={{ color: "inherit" }}
-          >
-            flytt
-          </a>{" "}
-          och{" "}
-          <a
-            href="/stadning-av-dodsbo"
-            title="städning av dödsbo"
-            style={{ color: "inherit" }}
-          >
-            städning
-          </a>{" "}
-          av{" "}
-          <a
-            href="/tomma-dodsbo"
-            title="tömma dödsbo"
-            style={{ color: "inherit" }}
-          >
-            dödsbon
-          </a>{" "}
-          och{" "}
-          <a
-            href="/tomma-bohag"
-            title="tömma bohag"
-            style={{ color: "inherit" }}
-          >
-            bohag
-          </a>
-          .
-        </p>
-      </section>
-      <section
-        style={{
-          display: "flex",
-          maxWidth: "700px",
-          justifyContent: "center",
-          flexWrap: "wrap"
-        }}
-      >
-        {items?.map((el, i) => {
-          return (
-            <div
-              key={i}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                margin: "1.5rem 1.5rem"
-              }}
-            >
-              <img
-                src={el.srcImg}
-                alt={el.alt}
+          {items?.map((el, i) => {
+            return (
+              <div
+                key={i}
                 style={{
-                  height: "60px",
-                  width: "60px",
-                  background: "white",
-                  padding: "0.8rem",
-                  borderRadius: "50%"
-                }}
-              />
-              <a
-                href={el.srcPath}
-                title={el.alt}
-                style={{
-                  fontSize: "0.8rem",
-                  color: "white",
-                  maxWidth: "100px",
-                  marginTop: "0.3rem",
-                  fontWeight: "bold",
-                  letterSpacing: "0.5px"
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  margin: "1.5rem 1.5rem"
                 }}
               >
-                {el.title}
-              </a>
-            </div>
-          );
-        })}
-      </section>
-    </div>
+                <img
+                  src={el.srcImg}
+                  alt={el.alt}
+                  style={{
+                    height: "60px",
+                    width: "60px",
+                    background: "white",
+                    padding: "0.8rem",
+                    borderRadius: "50%"
+                  }}
+                />
+                <a
+                  href={el.srcPath}
+                  title={el.alt}
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "white",
+                    maxWidth: "100px",
+                    marginTop: "0.3rem",
+                    fontWeight: "bold",
+                    letterSpacing: "0.5px"
+                  }}
+                >
+                  {el.title}
+                </a>
+              </div>
+            );
+          })}
+        </section>
+        <TableOfConent
+          showInneHall={showInneHall}
+          setshowInneHall={setshowInneHall}
+        />
+      </div>
+    </>
   );
 };
 

@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 const Oppetider = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="oppetider">
       <Typography variant="h5" style={{ fontWeight: "bold" }}>
         Öppetider
       </Typography>

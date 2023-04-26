@@ -4,7 +4,7 @@ import "./Erbjuder.css";
 const Erbjuder = ({ city }) => {
   return (
     <div className="erbjuder" id="erbjuder-cont">
-      <div>
+      <div id="tomma">
         <h4>Tömma dödsbo {city ? `i ${city}` : ""}</h4>
         <p>
           Om du behöver hjälp med att tömma ett dödsbo eller hushåll
@@ -19,7 +19,7 @@ const Erbjuder = ({ city }) => {
           process.
         </p>
       </div>
-      <div>
+      <div id="stada-dodsbo">
         <h4>Städa dödsbo {city ? `i ${city}` : ""}</h4>
         <p>
           Behöver du hjälp med att städa ett dödsbo eller hushåll{" "}
@@ -34,7 +34,7 @@ const Erbjuder = ({ city }) => {
           ta det första steget mot en renare och mer organiserad bostad.
         </p>
       </div>
-      <div>
+      <div id="vardera-dodsbo">
         <h4>Värdera dödsbo {city ? `i ${city}` : ""} </h4>
         <p>
           Om du behöver värdera ett dödsbo eller lösöre {"  "}
@@ -49,7 +49,7 @@ const Erbjuder = ({ city }) => {
           steget mot en rättvis värdering av ditt dödsbo eller lösöre.
         </p>
       </div>
-      <div>
+      <div id="bortforsling-dodsbo">
         <h4>Bortforsling av dödsbo & möbler {city ? `i ${city}` : ""}</h4>
         <p>
           Om du behöver hjälp med att bortforsla dödsbo, hushåll och möbler{" "}
@@ -65,7 +65,7 @@ const Erbjuder = ({ city }) => {
           {city ? `i ${city}` : ""}.
         </p>
       </div>
-      <div>
+      <div id="uppkop-dodsbo">
         <h4>Köper dödsbon {city ? `i ${city}` : ""}</h4>
         <p>
           Vi på Dödsbo Jouren är specialiserade på att köpa dödsbo{" "}

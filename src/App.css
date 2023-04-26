@@ -263,3 +263,19 @@ button {
   font-size: 0.85rem;
   color: black;
 }
+.toc-root {
+  position: absolute;
+  bottom: 2%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.toc-root h3 {
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-right: 0.3rem;
+}
+.toc-links:hover {
+  border-bottom: 1px solid white;
+}

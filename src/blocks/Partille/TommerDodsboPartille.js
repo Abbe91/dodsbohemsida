@@ -68,6 +68,7 @@ const TommerDodsboPartille = ({ videoText }) => {
           content="https://dodsbojouren.com/tommer-dodsbo-partille"
         />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-partille"
         />

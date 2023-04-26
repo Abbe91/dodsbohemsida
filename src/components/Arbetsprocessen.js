@@ -50,7 +50,7 @@ const Arbetsprocessen = () => {
             justifyContent: "space-evenly"
           }}
         >
-          <div>
+          <div id="vardering">
             <div className={classes.rund}>
               <p>1</p>
             </div>
@@ -95,7 +95,11 @@ const Arbetsprocessen = () => {
           }}
         >
           <div>
-            <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
+            <div
+              className={classes.rund}
+              style={{ marginTop: "0.5rem" }}
+              id="bortforsling"
+            >
               <p>2</p>
             </div>
             <p style={{ width: "300px", marginTop: "1rem" }}>
@@ -137,7 +141,11 @@ const Arbetsprocessen = () => {
           }}
         >
           <div>
-            <div className={classes.rund} style={{ marginTop: "0.5rem" }}>
+            <div
+              className={classes.rund}
+              style={{ marginTop: "0.5rem" }}
+              id="stadning"
+            >
               <p>3</p>
             </div>
             <p style={{ width: "300px", marginTop: "1rem" }}>
@@ -177,7 +185,7 @@ const Arbetsprocessen = () => {
             justifyContent: "space-evenly"
           }}
         >
-          <div>
+          <div id="betalning">
             <div className={classes.rund}>
               <p>4</p>
             </div>
