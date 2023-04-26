@@ -23,7 +23,7 @@ const Varderadodsbo = ({ videoText }) => {
     metaTitle:
       "Högsta värdering för dödsbo - Vår expertis och erfarenhet garanterar rättvist pris",
     metaContent:
-      "Få det bästa värdet för dödsbo med vår professionella värderingstjänst. Kontakta oss idag för en stressfri och smidig värdering av dödsbo.",
+      "Värdera dödsbo. Få det bästa värdet för dödsbo med vår professionella värderingstjänst.",
     query: "Värdera dödsbo",
     formTitle: "Värdera dödsbo",
     subTitle2:
@@ -66,6 +66,11 @@ const Varderadodsbo = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/vardera-dodsbo"
+        />
         <link
           hrefLang="sv"
           rel="canonical"
