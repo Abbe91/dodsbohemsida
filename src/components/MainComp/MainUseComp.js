@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TableOfConent from "../toc/TableOfConent";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export const items = [
   {
     title: "Bortforsling",
@@ -189,15 +190,15 @@ const MainUseComp = () => {
                   margin: "1.5rem 1.5rem"
                 }}
               >
-                <img
-                  src={el.srcImg}
+                <LazyLoadImage
                   alt={el.alt}
+                  height={"60px"}
+                  src={el.srcImg} // use normal <img> attributes as props
+                  width={"60px"}
                   style={{
-                    height: "60px",
-                    width: "60px",
                     background: "white",
-                    padding: "0.8rem",
-                    borderRadius: "50%"
+                    borderRadius: "50%",
+                    padding: "0.8rem"
                   }}
                 />
                 <a

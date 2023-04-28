@@ -1,6 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 import dodsbokopes from "../utils/images/seoimages/dödsbo-köpes.jpg";
 import dodsbosaljes from "../utils/images/seoimages/dödsbo-säljes.jpg";
@@ -9,6 +7,7 @@ import foretagkoperbohag from "../utils/images/seoimages/företag-köper-bohag.j
 import stadningavdodsbo from "../utils/images/seoimages/städning-av-dödsbo.jpg";
 import tomningavdodsbo from "../utils/images/seoimages/tömning-av-dödsbo.jpg";
 import varderadodsbo from "../utils/images/värdera-dödsbo.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const useStyles = makeStyles({
   root: {
     background: "white",
@@ -69,13 +68,13 @@ const ImagesServicesComponent = () => {
     <div className={classes.root}>
       {images?.map((image, i) => (
         <div key={i} className={classes.imageContainer}>
-          <img
+          <LazyLoadImage
             src={image.url}
-            alt="dödsbo köpes, dödsbo säljes, dödsboanmälan,företag köper bohag, städning av dödsbo, tömning av dödsbo"
-            style={{ height: "200px", width: "200px", borderRadius: "5px" }}
+            alt={image.text}
+            height={"200px"}
+            width={"200px"}
             className={classes.images}
           />
-
           <a href={image.path} title={image.text}>
             <button className={classes.btn}>{image.text}</button>
           </a>
