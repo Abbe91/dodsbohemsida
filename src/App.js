@@ -1200,8 +1200,6 @@ const App = () => {
           <Recensioner />
           <Footer />
           <Links />
-          <ExternaLankar />
-          <Seo />
         </Router>
       </Suspense>
     </div>

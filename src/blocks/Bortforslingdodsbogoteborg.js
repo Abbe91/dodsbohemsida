@@ -7,7 +7,6 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Tips from "../components/Tips/Tips";
 import Nav from "../components/Nav/Nav";
 import Erbjuder from "../components/Erbjuder/Erbjuder";
-import Nyheter from "../components/Nyheter/Nyheter";
 import { getElement } from "../redux-toolkit/scrollElement/scrollElementSlice";
 import Kostnadsfri from "../components/Kostnadsfri/Kostnadsfri";
 import { Helmet } from "react-helmet-async";
@@ -19,12 +18,11 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const mainquery = "bortforsling dödsbo Göteborg";
   const newsData = useSelector(getNewsData);
-  const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Bortforsling av dödsbo i Göteborg - pålitlig och professionell hjälp för en smidig hantering",
+      "Bortforsling dödsbo i Göteborg - pålitlig och professionell hjälp",
     metaContent:
-      "Behöver du hjälp med bortforsling av dödsbo i Göteborg? Kontakta oss idag för en trygg och effektiv lösning.",
+      "Bortforsling dödsbo i Göteborg. Behöver du hjälp med bortforsling av dödsbo i Göteborg? Kontakta oss idag för en trygg och effektiv lösning.",
     formTitle: "Bortforsling dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, sanering, flytt, städ och bortforsling av dödsbo i Göteborg",
@@ -39,7 +37,7 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Bortforsling av dödsbo i Göteborg - pålitlig och professionell hjälp för en smidig hantering",
+      "Bortforsling dödsbo i Göteborg - pålitlig och professionell hjälp för en smidig hantering",
     description:
       "Behöver du hjälp med bortforsling av dödsbo i Göteborg? Kontakta oss idag för en trygg och effektiv lösning.",
     formTitle: "Bortforsling dödsbo Göteborg",
@@ -67,7 +65,17 @@ const Bortforslingdodsbogoteborg = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:image"
+          content="https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/bortforsling-dodsbo-goteborg"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/bortforsling-dodsbo-goteborg"
         />
