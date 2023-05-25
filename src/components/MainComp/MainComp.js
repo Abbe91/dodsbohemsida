@@ -1,17 +1,17 @@
-import React from "react";
+import React, { lazy } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MainComp.css";
-import Arbetsprocessen from "../Arbetsprocessen";
-import MainUseComp from "./MainUseComp";
-import Helhetslosningdodsbo from "../Helhetslosningdodsbo";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { useDispatch } from "react-redux";
 import Faq from "../faq/Faq";
-import Divider from "./Divider";
 import { MdArrowForwardIos } from "react-icons/md";
 import { setServices } from "../../redux-toolkit/snabbkollenSlice";
-const MainComp = ({ subTitle, subTitle5, text2, city, formTitle }) => {
+const MainComp = ({ subTitle5, text2, city, formTitle }) => {
+  const Divider = lazy(() => import("./Divider"));
+  const Arbetsprocessen = lazy(() => import("../Arbetsprocessen"));
+  const MainUseComp = lazy(() => import("./MainUseComp"));
+  const Helhetslosningdodsbo = lazy(() => import("../Helhetslosningdodsbo"));
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (

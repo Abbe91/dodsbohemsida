@@ -66,7 +66,7 @@ export const items = [
 ];
 const MainUseComp = ({ formTitle }) => {
   const [showInneHall, setshowInneHall] = useState(false);
-  console.log(formTitle);
+
   return (
     <>
       <div className="mainComp" style={{ height: showInneHall && "1500px" }}>
@@ -202,7 +202,7 @@ const MainUseComp = ({ formTitle }) => {
                 <LazyLoadImage
                   alt={el.alt}
                   height={"60px"}
-                  src={el.srcImg} // use normal <img> attributes as props
+                  src={el.srcImg}
                   width={"60px"}
                   style={{
                     background: "white",

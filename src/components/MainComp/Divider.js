@@ -10,7 +10,8 @@ const Divider = () => {
           marginBottom: "1rem"
         }}
         src="https://offerta.se/images/campaign/brf-campaign.jpg"
-        alt="lägenheter"
+        alt="tömma lägenheter"
+        title="tömma lägenheter"
       />
       <section>
         <h2 style={{ marginBottom: "0.5rem", marginLeft: "0.5rem" }}>

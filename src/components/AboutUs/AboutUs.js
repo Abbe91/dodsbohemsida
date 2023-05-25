@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./AboutUs.css";
 import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import { useSelector } from "react-redux";
-
-import { ArrowForwardIos, Close } from "@material-ui/icons";
 const AboutUs = ({ query, oss, om }) => {
   const customerData = useSelector(getCustomerData);
   const [readMore, setReadMore] = useState(false);
