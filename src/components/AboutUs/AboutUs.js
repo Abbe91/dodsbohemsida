@@ -18,9 +18,9 @@ const AboutUs = ({ query, oss, om }) => {
           width: "100%"
         }}
       >
-        <h1 style={{ color: "white", marginTop: "1rem", fontSize: "1.4rem" }}>
+        <h2 style={{ color: "white", marginTop: "1rem", fontSize: "1.4rem" }}>
           {query}
-        </h1>
+        </h2>
         <p
           style={{
             margin: "0.75rem auto",
