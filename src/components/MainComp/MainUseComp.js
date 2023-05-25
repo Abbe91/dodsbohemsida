@@ -64,13 +64,22 @@ export const items = [
     srcPath: "https://dodsbojouren.com/sanera-dodsbo"
   }
 ];
-const MainUseComp = () => {
+const MainUseComp = ({ formTitle }) => {
   const [showInneHall, setshowInneHall] = useState(false);
+  console.log(formTitle);
   return (
     <>
       <div className="mainComp" style={{ height: showInneHall && "1500px" }}>
         <section style={{ maxWidth: "600px", marginBottom: "2rem" }}>
-          <h2 style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}>
+          <h1
+            style={{
+              opacity: "0",
+              borderBottom: "1px solid white"
+            }}
+          >
+            {formTitle}
+          </h1>
+          <h2 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>
             Detta kan vi hjälpa dig med
           </h2>
           <p

@@ -11,10 +11,9 @@ import Faq from "../faq/Faq";
 import Divider from "./Divider";
 import { MdArrowForwardIos } from "react-icons/md";
 import { setServices } from "../../redux-toolkit/snabbkollenSlice";
-const MainComp = ({ subTitle, subTitle5, text2, city }) => {
+const MainComp = ({ subTitle, subTitle5, text2, city, formTitle }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   return (
     <section className="root">
       <div className="main-top-main-small">
@@ -89,7 +88,7 @@ const MainComp = ({ subTitle, subTitle5, text2, city }) => {
           </button>
         </div>
       </div>
-      <MainUseComp />
+      <MainUseComp formTitle={formTitle} />
       <Divider />
       <Arbetsprocessen />
       <Faq city={city} />

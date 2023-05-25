@@ -21,10 +21,9 @@ const Tommerlagenheterboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömmer lägenheter Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av lägenheter i Borås",
+    metaTitle: "Tömmer lägenheter Borås - Prisvärt & Pålitligt",
     metaContent:
-      "Tömmer lägenheter Borås. Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av lägenheter i Borås",
+      "Tömmer lägenheter Borås. Vi tömmer lägenhter i Borås med omnejd och hjälper dig även med städning och flytt.",
     query: "Tömmer lägenheter Borås",
     formTitle: "Tömmer lägenheter Borås",
     subTitle2:

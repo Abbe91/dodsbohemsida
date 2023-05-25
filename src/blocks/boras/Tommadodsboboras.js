@@ -21,8 +21,7 @@ const Tommadodsboboras = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömma dödsbo i Borås - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömma dödsbo i Borås - professionella & pålitliga service.",
     metaContent:
       "Behöver du hjälp med att tömma ett dödsbo i Borås? Vår erfarna personal garanterar en prsivärd, smidig och säker process",
     query: "Tömma dödsbo Borås",
@@ -44,8 +43,7 @@ const Tommadodsboboras = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömma dödsbo i Borås - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    headline: "Tömma dödsbo i Borås - professionella & pålitliga service",
     description:
       "Behöver du hjälp med att tömma ett dödsbo i Borås? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
     image:

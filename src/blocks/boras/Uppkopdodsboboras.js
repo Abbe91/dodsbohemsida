@@ -19,8 +19,7 @@ const Uppkopdodsboboras = ({ videoText }) => {
   const mainquery = "Uppköp dödsbo Borås";
   const newsData = useSelector(getNewsData);
   const [content, setContent] = useState({
-    metaTitle:
-      "Uppköp av dödsbo i Borås. Vill du sälj ett dödsbo i Borås? Vi köper hela eller delar av dödsbon till rättvist pris.",
+    metaTitle: "Uppköp av dödsbo i Borås. - sälj till rättvist pris.",
     query: "Uppköp dödsbo Borås",
     metaContent:
       "Uppköp av dödsbo i Borås. Sälj dödsbo i Borås till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Borås.",
@@ -37,8 +36,7 @@ const Uppkopdodsboboras = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Uppköp av dödsbo i Borås. Vill du sälj ett dödsbo i Borås? Vi köper hela eller delar av dödsbon till rättvist pris",
+    headline: "Uppköp av dödsbo i Borås - sälj till rättvist pris",
     description:
       "Uppköp av dödsbo i Borås. Sälj dödsbo i Borås till rättvist pris med vår professionella uppköpstjänst. Vi köper hela eller delar av dödsbon i Borås.",
     image:
