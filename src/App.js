@@ -383,6 +383,9 @@ const Tommerdodsbouddevalla = lazy(() =>
 const TommerDodsboGoteborg = lazy(() =>
   import("./blocks/Goteborg/TommerDodsboGoteborg")
 );
+const TommaDodsboKortedala = lazy(() =>
+  import("./blocks/kortedala//TommaDodsboKortedala")
+);
 // new info pages
 const Atervinning = lazy(() => import("./pages/InfoPages/Atervinning"));
 const Avfallshantering = lazy(() =>
@@ -519,6 +522,12 @@ const App = () => {
               path="tommer-dodsbo-goteborg"
               element={
                 <TommerDodsboGoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="tomma-dodsbo-kortedala"
+              element={
+                <TommaDodsboKortedala videoText={contentData?.videoText} />
               }
             />
             <Route

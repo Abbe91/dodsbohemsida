@@ -3,17 +3,13 @@ import "./Nav.css";
 import { navlinks } from "../../utils/data";
 import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { AiTwotonePhone } from "react-icons/ai";
-import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
-import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Links from "../externalLinks/Links";
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const customerData = useSelector(getCustomerData);
   const [showNav, setShowNav] = useState(false);
   const handleClick = (e) => {
     dispatch(addElement(e.currentTarget.innerText));
@@ -23,9 +19,6 @@ const Nav = () => {
     }
 
     setShowNav(false);
-  };
-  const clickToCall = () => {
-    const today = new Date();
   };
 
   return (
@@ -55,7 +48,11 @@ const Nav = () => {
                     letterSpacing: "1px"
                   }}
                 >
-                  <Link to={link.path} style={{ color: "black" }}>
+                  <Link
+                    to={link.path}
+                    style={{ color: "black" }}
+                    title={link.label}
+                  >
                     {link.label}
                   </Link>
                 </button>
