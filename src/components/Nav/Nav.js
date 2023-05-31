@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import { useAuth0 } from "@auth0/auth0-react";
 import { navlinks } from "../../utils/data";
 import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
@@ -11,6 +12,8 @@ import Links from "../externalLinks/Links";
 const Nav = () => {
   const dispatch = useDispatch();
   const [showNav, setShowNav] = useState(false);
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
   const handleClick = (e) => {
     dispatch(addElement(e.currentTarget.innerText));
     if (e.currentTarget.innerText === "Om oss") {
@@ -107,6 +110,59 @@ const Nav = () => {
               );
             }
           })}
+          {!isAuthenticated && (
+            <button
+              style={{
+                background: "#e3c148",
+                width: "6.5rem",
+                height: "1.8rem",
+                marginTop: "2rem",
+                borderRadius: "5px",
+                fontWeight: "bold"
+              }}
+              onClick={() => loginWithRedirect()}
+            >
+              Logga in
+            </button>
+          )}
+
+          {isAuthenticated && (
+            <button
+              style={{
+                background: "#e3c148",
+                width: "6.5rem",
+                height: "1.8rem",
+                marginTop: "2rem",
+                borderRadius: "5px",
+                fontWeight: "bold"
+              }}
+              onClick={() =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
+            >
+              Logga ut
+            </button>
+          )}
+          {isAuthenticated && (
+            <Link
+              to="/dashboard-main"
+              style={{
+                background: "#e3c148",
+                width: "7.5rem",
+                height: "2rem",
+                marginTop: "0.5rem",
+                borderRadius: "5px",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "black",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              Dashboard
+            </Link>
+          )}
           <Links />
         </div>
       </nav>

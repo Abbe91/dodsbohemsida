@@ -7,7 +7,8 @@ import { useSelector } from "react-redux";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
-import ProtectedRoute from "./pages/ProtectedRoute";
+const PrivatRoute = lazy(() => import("./pages/PrivatRoute"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 const DodsboKopesGoteborg = lazy(() =>
   import("./blocks//Goteborg/DodsboKopesGoteborg")
 );
@@ -57,9 +58,7 @@ const Saljadodsboulricehamn = lazy(() =>
 const Tommadodsboulricehamn = lazy(() =>
   import("./blocks/Tommadodsboulricehamn")
 );
-const Bortforslingavdodsbogoteborg = lazy(() =>
-  import("./blocks/Goteborg/Bortforslingavdodsbogoteborg")
-);
+
 const Uppkopdodsboulricehamn = lazy(() =>
   import("./blocks/Uppkopdodsboulricehamn")
 );
@@ -366,7 +365,6 @@ const Flyttfirmaboras = lazy(() => import("./blocks/flytt/Flyttfirmaboras"));
 const Flyttfirmagoteborg = lazy(() =>
   import("./blocks/flytt/Flyttfirmagoteborg")
 );
-const Login = lazy(() => import("./pages/Login"));
 //
 const Tommerdodsbonlerum = lazy(() =>
   import("./blocks/lerum/Tommerdodsbonlerum")
@@ -427,8 +425,6 @@ const App = () => {
             />
             <Route path="/forfragan" element={<ForFragan />} />
             <Route path="/avfallshantering" element={<Avfallshantering />} />
-
-            <Route path="/login" element={<Login />} />
             <Route path="/boka" element={<BookingModal />} />
             <Route
               path="flyttfirma/billig-flyttfirma-goteborg"
@@ -1090,14 +1086,7 @@ const App = () => {
               path="uppkop-av-dodsbo"
               element={<UppkopAvDodsbo videoText={contentData?.videoText} />}
             />
-            <Route
-              path="/dashboard"
-              element={
-                <ProtectedRoute>
-                  <Bortforslingavdodsbogoteborg />
-                </ProtectedRoute>
-              }
-            />
+
             <Route
               path="bortforsling-dodsbo-kungsbacka"
               element={
@@ -1196,6 +1185,14 @@ const App = () => {
               path="stada-dodsbo-goteborg"
               element={
                 <Stadadodsbogoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="/dashboard-main"
+              element={
+                <PrivatRoute>
+                  <Dashboard />
+                </PrivatRoute>
               }
             />
             <Route path="*" element={<Error />} />

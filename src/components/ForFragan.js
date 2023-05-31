@@ -6,6 +6,8 @@ import { Stepper, Step, StepLabel, makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { setBeskrivning } from "../redux-toolkit/snabbkollenSlice";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
 const steps = ["Uppdraget", "Kontaktinfo"];
 const useStyles = makeStyles({
   root: {
@@ -18,7 +20,23 @@ const ForFragan = () => {
   const data = useSelector(getSnabbkollenData);
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-  const [leadOrt, setLeadOrt] = useState(undefined);
+
+  const addLeadFirebase = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "newLead"), {
+        namn: document.querySelector?.("form")?.childNodes[1]?.value,
+        email: document.querySelector?.("form")?.childNodes[5]?.value,
+        nummer: document.querySelector?.("form")?.childNodes[7]?.value,
+        ort: document.querySelector?.("form")?.childNodes[9]?.value,
+        tidsram: document.querySelector?.("form")?.childNodes[11]?.value,
+        beskrivning: data.beskrivning,
+        service: data.services[0]
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  };
   const form = useRef();
   const handleSubmit = () => {
     emailjs
@@ -38,6 +56,7 @@ const ForFragan = () => {
           console.log(error.text);
         }
       );
+    addLeadFirebase();
   };
   const StepTwo = () => {
     return (
@@ -261,27 +280,51 @@ const ForFragan = () => {
             )}
             {activeStep !== 2 && (
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <button
-                  style={{
-                    marginTop: "1.5rem",
-                    marginBottom: "1.5rem",
-                    width: "6rem",
-                    height: "2.3rem",
-                    borderRadius: "15px",
-                    border: "none",
-                    background: "#FFD700",
-                    fontWeight: "bold",
-                    color: "black",
-                    letterSpacing: "0.5px",
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                  }}
-                  onClick={() => {
-                    setActiveStep(activeStep + 1);
-                    handleSubmit();
-                  }}
-                >
-                  {activeStep === 0 ? "Nästa" : "Skicka"}
-                </button>
+                {activeStep === 0 && (
+                  <button
+                    style={{
+                      marginTop: "1.5rem",
+                      marginBottom: "1.5rem",
+                      width: "6rem",
+                      height: "2.3rem",
+                      borderRadius: "15px",
+                      border: "none",
+                      background: "#FFD700",
+                      fontWeight: "bold",
+                      color: "black",
+                      letterSpacing: "0.5px",
+                      boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+                    }}
+                    onClick={() => {
+                      setActiveStep(activeStep + 1);
+                    }}
+                  >
+                    Nästa
+                  </button>
+                )}
+                {activeStep == 1 && (
+                  <button
+                    style={{
+                      marginTop: "1.5rem",
+                      marginBottom: "1.5rem",
+                      width: "6rem",
+                      height: "2.3rem",
+                      borderRadius: "15px",
+                      border: "none",
+                      background: "#FFD700",
+                      fontWeight: "bold",
+                      color: "black",
+                      letterSpacing: "0.5px",
+                      boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+                    }}
+                    onClick={() => {
+                      setActiveStep(activeStep + 1);
+                      handleSubmit();
+                    }}
+                  >
+                    Skicka
+                  </button>
+                )}
               </div>
             )}
           </section>

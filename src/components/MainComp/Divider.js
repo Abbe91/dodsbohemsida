@@ -8,7 +8,7 @@ const Divider = () => {
           objectFit: "contain",
           width: "340px",
           height: "300px",
-          margin: "0 0.5rem"
+          marginLeft: "0.5rem"
         }}
         src="https://svenskcykling.se/wp-content/uploads/2021/01/slide-2.jpg"
         alt="tömma lägenheter"

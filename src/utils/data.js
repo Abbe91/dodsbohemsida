@@ -8,7 +8,7 @@ import { AiOutlineCreditCard } from "react-icons/ai";
 export const navlinks = [
   {
     id: 2,
-    label: "Tömma",
+    label: "Tömning",
     path: "/tomma-bohag"
   },
   {
@@ -18,7 +18,7 @@ export const navlinks = [
   },
   {
     id: 4,
-    label: "Städ",
+    label: "Städning",
     path: "/stadning-av-dodsbo"
   },
   {
