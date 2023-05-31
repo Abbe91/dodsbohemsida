@@ -22,9 +22,9 @@ const Tommadodsbostenungssund = ({ videoText }) => {
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
     metaTitle:
-      "Tömning av dödsbo i Stenungsund - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga Stenungsund.",
+      "Tömning av dödsbo i Stenungsund - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Stenungsund? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Stenungsund? Vår personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Stenungsund",
     formTitle: "Tömma dödsbo Stenungsund",
     subTitle2:
@@ -39,10 +39,9 @@ const Tommadodsbostenungssund = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömma dödsbo i Stenungsund - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    headline: "Tömma dödsbo i Stenungsund - Effektiv och pålitlig service!",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Stenungsund? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Stenungsund? Vår personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
@@ -66,7 +65,13 @@ const Tommadodsbostenungssund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-stenungsund"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-stenungsund"
         />

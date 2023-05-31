@@ -61,6 +61,14 @@ const Uppkopdodsbogoteborg = ({ videoText }) => {
           rel="canonical"
           href="https://dodsbojouren.com/uppkop-dodsbo-goteborg"
         />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/uppkop-dodsbo-goteborg"
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
+        />
       </Helmet>
       <div className="Nav">
         <Nav />

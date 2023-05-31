@@ -5,11 +5,12 @@ const Divider = () => {
     <div style={{ marginBottom: "3rem" }} className="main-comp-divider-comp">
       <img
         style={{
-          borderRadius: "5px",
           objectFit: "contain",
-          marginBottom: "1rem"
+          width: "340px",
+          height: "300px",
+          margin: "0 0.5rem"
         }}
-        src="https://offerta.se/images/campaign/brf-campaign.jpg"
+        src="https://svenskcykling.se/wp-content/uploads/2021/01/slide-2.jpg"
         alt="tömma lägenheter"
         title="tömma lägenheter"
       />

@@ -21,7 +21,7 @@ const Bortforslingdodsbostenungssund = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle: "Bortforsling av dödsbo i Stenungsund - Effektivt & prisvärt",
+    metaTitle: "Bortforsling av dödsbo i Stenungsund - Effektivt & Prisvärt",
     metaContent:
       "Effektiv bortforsling av dödsbo i Stenungsund -  Låt oss sköta bortforslingen av ert dödsbo i Stenungsund.",
     query: "Bortforsling dödsbo Stenungsund",
@@ -46,7 +46,13 @@ const Bortforslingdodsbostenungssund = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/bortforsling-dodsbo-stenungsund"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/bortforsling-dodsbo-stenungsund"
         />

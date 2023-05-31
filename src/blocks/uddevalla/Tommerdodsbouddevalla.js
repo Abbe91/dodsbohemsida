@@ -21,7 +21,7 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
   const [content, setContent] = useState({
     metaTitle: "Tömmer dödsbo i Uddevalla - Effektiv och pålitlig service!",
     metaContent:
-      "Tömmer dödsbo i Uddevalla. Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Tömmer dödsbo i Uddevalla. Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer dödsbo Uddevalla",
     formTitle: "Tömmer dödsbo Uddevalla",
     subTitle2:
@@ -35,10 +35,9 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömmer dödsbo i Uddevalla - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    headline: "Tömmer dödsbo i Uddevalla - Effektiv och pålitlig service!",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Uddevalla? Vår personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -67,6 +66,14 @@ const Tommerdodsbouddevalla = ({ videoText }) => {
           hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-uddevalla"
+        />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tommer-dodsbo-uddevalla"
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
         />
       </Helmet>
       <div className="Nav">

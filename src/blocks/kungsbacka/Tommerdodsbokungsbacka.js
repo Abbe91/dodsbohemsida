@@ -21,10 +21,9 @@ const Tommerdodsbokungsbacka = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömmer dödsbo i Kungsbacka - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    metaTitle: "Tömmer dödsbo i Kungsbacka - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Kungsbacka? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Kungsbacka? Vår personal garanterar en prisvärd, smidig och säker process",
     query: "Tömmer dödsbo Kungsbacka",
     formTitle: "Tömmer dödsbo Kungsbacka",
     subTitle2:
@@ -39,10 +38,9 @@ const Tommerdodsbokungsbacka = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömmer dödsbo i Kungsbacka - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service",
+    headline: "Tömmer dödsbo i Kungsbacka - Effektiv och pålitlig service!",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Kungsbacka? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Kungsbacka? Vår personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -66,9 +64,19 @@ const Tommerdodsbokungsbacka = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tommer-dodsbo-kungsbacka"
+        />
         <link
+          hrefLang="sv"
           rel="canonical"
           href="https://dodsbojouren.com/tommer-dodsbo-kungsbacka"
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
         />
       </Helmet>
       <div className="Nav">

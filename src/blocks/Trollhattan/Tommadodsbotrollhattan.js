@@ -21,10 +21,9 @@ const Tommadodsbotrollhattan = ({ videoText }) => {
   const newsData = useSelector(getNewsData);
   const bingNews = useSelector(getBingNews);
   const [content, setContent] = useState({
-    metaTitle:
-      "Tömma dödsbo i Trollhättan - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    metaTitle: "Tömma dödsbo i Trollhättan - Effektiv och pålitlig service!",
     metaContent:
-      "Behöver du hjälp med att tömma ett dödsbo i Trollhättan? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Trollhättan? Vår personal garanterar en prisvärd, smidig och säker process",
     query: "Tömma dödsbo Trollhättan",
     formTitle: "Tömma dödsbo Trollhättan",
     subTitle2:
@@ -38,10 +37,9 @@ const Tommadodsbotrollhattan = ({ videoText }) => {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Tömma dödsbo i Trollhättan - Låt oss ta hand om hela processen åt dig med vår professionella och pålitliga service.",
+    headline: "Tömma dödsbo i Trollhättan - Effektiv och pålitlig service!",
     description:
-      "Behöver du hjälp med att tömma ett dödsbo i Trollhättan? Vår erfarna personal garanterar en prisvärd, smidig och säker process",
+      "Behöver du hjälp med att tömma ett dödsbo i Trollhättan? Vår personal garanterar en prisvärd, smidig och säker process",
     image:
       "https://xn--ddsbo-jua.com/wp-content/uploads/2019/07/family-room-382150_640.jpg",
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
@@ -65,9 +63,18 @@ const Tommadodsbotrollhattan = ({ videoText }) => {
         <meta charSet="utf-8" />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
+        <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/tomma-dodsbo-trollhattan"
+        />
         <link
           rel="canonical"
           href="https://dodsbojouren.com/tomma-dodsbo-trollhattan"
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3651376/pexels-photo-3651376.jpeg?auto=compress&cs=tinysrgb&w=1300"
         />
       </Helmet>
       <div className="Nav">

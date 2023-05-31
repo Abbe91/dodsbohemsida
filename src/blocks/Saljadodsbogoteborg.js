@@ -46,6 +46,10 @@ const Saljadodsbogoteborg = ({ videoText }) => {
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaContent} />
         <meta property="og:description" content={content.metaContent} />
+        <meta
+          property="og:url"
+          content="https://dodsbojouren.com/salja-dodsbo-goteborg"
+        />
         <link
           hrefLang="sv"
           rel="canonical"
