@@ -50,7 +50,7 @@ const Bortforslingavdodsbogoteborg = () => {
   const leadDataFireStore = useSelector(getLeads);
   const dispatch = useDispatch();
   const classes = useStyles();
-
+  const [addCustomer, setaddCustomer] = useState(false);
   const [searchQuery, setsearchQuery] = useState("");
   const fetchFirestoreData = async () => {
     await getDocs(collection(db, "newLead")).then((querySnapshot) => {
@@ -82,14 +82,48 @@ const Bortforslingavdodsbogoteborg = () => {
       )
     );
   };
+
   useEffect(() => {
     fetchFirestoreData();
   }, []);
 
   return (
     <div>
-      <div style={{ padding: "1rem" }}>
-        <h4>{leadDataFireStore.length} kunder</h4>
+      <div style={{ padding: "1rem", display: "flex", alignItems: "center" }}>
+        <h4>
+          {leadDataFireStore.filter((el) => el.status !== "remove")?.length}{" "}
+          kunder
+        </h4>
+        <button
+          onClick={() => setaddCustomer(!addCustomer)}
+          style={{
+            marginLeft: "1rem",
+            width: "7rem",
+            background: "#4B0082",
+            border: "none",
+            borderRadius: "5px",
+            color: "white",
+            height: "1.8rem",
+            fontWeight: "bold"
+          }}
+        >
+          Lägg till kund
+        </button>
+      </div>
+      <div
+        style={{
+          display: addCustomer ? "block" : "none"
+        }}
+      >
+        <form style={{ display: "flex", flexDirection: "column" }}>
+          <input type="text" placeholder="Namn" />
+          <input type="text" placeholder="Telefon" />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Ort" />
+          <input type="text" placeholder="Tidsram" />
+          <input type="text" placeholder="Tjänst" />
+          <input type="text" placeholder="Beskrivning" />
+        </form>
       </div>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         {leadsStates.map((el, i) => (
@@ -120,91 +154,95 @@ const Bortforslingavdodsbogoteborg = () => {
         />
       </div>
       <div>
-        {leadDataFireStore?.map((el, i) => {
-          return (
-            <div
-              key={i}
-              className={classes.card}
-              onClick={() => navigate(`/dashboard/leads/customer/${el.id}`)}
-            >
+        {leadDataFireStore
+          ?.filter((el) => el.status !== "remove")
+          ?.map((el, i) => {
+            return (
               <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "0.5rem"
-                }}
+                key={i}
+                className={classes.card}
+                onClick={() => navigate(`/dashboard/leads/customer/${el.id}`)}
               >
-                <h4
+                <div
                   style={{
-                    borderBottom: "1px solid black",
-                    maxWidth: "150px",
-                    color: "#4B0082",
-                    marginRight: "1rem"
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem"
                   }}
                 >
-                  {el.namn}
-                </h4>
-                <p>
-                  <strong>adID:</strong> {el.adID}
-                </p>
-              </div>
+                  <h4
+                    style={{
+                      borderBottom: "1px solid black",
+                      maxWidth: "150px",
+                      color: "#4B0082",
+                      marginRight: "1rem"
+                    }}
+                  >
+                    {el.namn}
+                  </h4>
+                  <p>
+                    <strong>adID:</strong> {el.adID}
+                  </p>
+                </div>
 
-              <p>
-                <strong>ort:</strong>
-                <span> {el.ort}</span>
-              </p>
-              <p>
-                <strong>tidsram:</strong> <span>{el.tidsram}</span>
-              </p>
-              <p>
-                <strong>tjänst:</strong> <span>{el.service}</span>
-              </p>
-              <p>
-                <strong>beskrivning:</strong>{" "}
-                <span style={{ fontSize: "0.8rem" }}>{el.beskrivning}</span>
-              </p>
-              {el.offertPris && (
                 <p>
-                  <strong>OFFERT:</strong>{" "}
-                  <strong style={{ color: "green" }}>{el.offertPris}KR</strong>
+                  <strong>ort:</strong>
+                  <span> {el.ort}</span>
                 </p>
-              )}
-              {el.offertKommentar && (
                 <p>
-                  {" "}
-                  <strong>Kommentar:</strong> {el.offertKommentar}
+                  <strong>tidsram:</strong> <span>{el.tidsram}</span>
                 </p>
-              )}
-              {el.AttFakturera && (
                 <p>
-                  <strong>Att Fakturera:</strong>{" "}
-                  <strong style={{ color: "green" }}>
-                    {el.AttFakturera}kr
-                  </strong>
+                  <strong>tjänst:</strong> <span>{el.service}</span>
                 </p>
-              )}
-              {el.lost && (
                 <p>
-                  <strong style={{ color: "red" }}>Lost: </strong>{" "}
-                  <strong style={{ color: "red" }}>true</strong>
+                  <strong>beskrivning:</strong>{" "}
+                  <span style={{ fontSize: "0.8rem" }}>{el.beskrivning}</span>
                 </p>
-              )}
-              {el.bokatBesokDag && (
-                <p>
-                  <strong>Bokat besök:</strong>{" "}
-                  <span style={{ color: "green" }}>{el.bokatBesokDag}</span>
-                </p>
-              )}
-              {el.underLevHarBetalt && (
-                <p>
-                  <strong>Reglerad faktura:</strong>{" "}
-                  <strong style={{ color: "green" }}>true</strong>
-                </p>
-              )}
-              {el.pending && <p style={{ color: "orange" }}>Pending</p>}
-            </div>
-          );
-        })}
+                {el.offertPris && (
+                  <p>
+                    <strong>OFFERT:</strong>{" "}
+                    <strong style={{ color: "green" }}>
+                      {el.offertPris}KR
+                    </strong>
+                  </p>
+                )}
+                {el.offertKommentar && (
+                  <p>
+                    {" "}
+                    <strong>Kommentar:</strong> {el.offertKommentar}
+                  </p>
+                )}
+                {el.AttFakturera && (
+                  <p>
+                    <strong>Att Fakturera:</strong>{" "}
+                    <strong style={{ color: "green" }}>
+                      {el.AttFakturera}kr
+                    </strong>
+                  </p>
+                )}
+                {el.lost && (
+                  <p>
+                    <strong style={{ color: "red" }}>Lost: </strong>{" "}
+                    <strong style={{ color: "red" }}>true</strong>
+                  </p>
+                )}
+                {el.bokatBesokDag && (
+                  <p>
+                    <strong>Bokat besök:</strong>{" "}
+                    <span style={{ color: "green" }}>{el.bokatBesokDag}</span>
+                  </p>
+                )}
+                {el.underLevHarBetalt && (
+                  <p>
+                    <strong>Reglerad faktura:</strong>{" "}
+                    <strong style={{ color: "green" }}>true</strong>
+                  </p>
+                )}
+                {el.pending && <p style={{ color: "orange" }}>Pending</p>}
+              </div>
+            );
+          })}
       </div>
     </div>
   );

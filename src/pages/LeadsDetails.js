@@ -240,7 +240,25 @@ const LeadsDetails = () => {
       console.log(error);
     }
   };
-
+  const removeCustomer = async (adId) => {
+    try {
+      const q = query(
+        collection(db, "newLead"),
+        where("adID", "==", Number(adId))
+      );
+      const querySnapshot = await getDocs(q);
+      let docId = "";
+      querySnapshot.forEach((doc) => (docId = doc.id));
+      const object = doc(db, "newLead", docId);
+      await updateDoc(object, {
+        status: status
+      });
+      console.log("updated");
+      setUpdated(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       {currentLead?.map((el, i) => {
@@ -278,6 +296,9 @@ const LeadsDetails = () => {
                 <option value={"vunnen"}>Affär</option>
                 <option value={"lost"}>Tappad</option>
                 <option value={"pending"}>Pending</option>
+                {user.email === "louiestokk@gmail.com" && (
+                  <option value={"remove"}>Remove</option>
+                )}
               </select>
               {status === "offert" && (
                 <div className={classes.offert}>
@@ -374,6 +395,12 @@ const LeadsDetails = () => {
                   {updated ? "uppdaterad" : "Uppdatera till pending"}
                 </button>
               )}
+              {status === "remove" && (
+                <button onClick={() => removeCustomer(el.adID)}>
+                  {" "}
+                  {updated ? "uppdaterad" : "Remove"}
+                </button>
+              )}
               {status === "besok" && (
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -419,7 +446,6 @@ const LeadsDetails = () => {
                 </div>
               )}
             </div>
-            <section className={classes.date}></section>
             <section style={{ padding: "1rem" }}>
               <p style={{ marginBottom: "0.75rem" }}>
                 <strong>id: </strong>{" "}
