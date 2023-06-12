@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Links from "./internalLinks/Links";
 import { Audio } from "react-loader-spinner";
 import SeoServiceComponent from "./components/SeoServiceComponent";
+const LeadsDetails = lazy(() => import("./pages/LeadsDetails"));
 const PrivatRoute = lazy(() => import("./pages/PrivatRoute"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const DodsboKopesGoteborg = lazy(() =>
@@ -1185,6 +1186,14 @@ const App = () => {
               path="stada-dodsbo-goteborg"
               element={
                 <Stadadodsbogoteborg videoText={contentData?.videoText} />
+              }
+            />
+            <Route
+              path="dashboard/leads/customer/:id"
+              element={
+                <PrivatRoute>
+                  <LeadsDetails />
+                </PrivatRoute>
               }
             />
             <Route

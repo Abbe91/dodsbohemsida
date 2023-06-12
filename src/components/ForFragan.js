@@ -20,7 +20,9 @@ const ForFragan = () => {
   const data = useSelector(getSnabbkollenData);
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-
+  const year = new Date().getFullYear();
+  const today = new Date().getDate();
+  const month = new Date().getMonth() + 1;
   const addLeadFirebase = async () => {
     try {
       const docRef = await addDoc(collection(db, "newLead"), {
@@ -30,7 +32,9 @@ const ForFragan = () => {
         ort: document.querySelector?.("form")?.childNodes[9]?.value,
         tidsram: document.querySelector?.("form")?.childNodes[11]?.value,
         beskrivning: data.beskrivning,
-        service: data.services[0]
+        service: data.services[0],
+        date: `${year}-${month}-${today}`,
+        adID: Number(Math.floor(Math.random() * 10000000))
       });
       console.log("Document written with ID: ", docRef.id);
     } catch (error) {
