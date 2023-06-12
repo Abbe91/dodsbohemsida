@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getLeads, setNewLead } from "../../redux-toolkit/leads/leadsSlice";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core";
@@ -52,6 +52,16 @@ const Bortforslingavdodsbogoteborg = () => {
   const classes = useStyles();
   const [addCustomer, setaddCustomer] = useState(false);
   const [searchQuery, setsearchQuery] = useState("");
+  const [addedCustomerData, setaddedCustomerData] = useState({
+    namn: "",
+    email: "",
+    nummer: "",
+    ort: "",
+    tidsram: "",
+    beskrivning: "",
+    service: "",
+    adID: Number(Math.floor(Math.random() * 1000000000))
+  });
   const fetchFirestoreData = async () => {
     await getDocs(collection(db, "newLead")).then((querySnapshot) => {
       const newData = querySnapshot.docs.map((doc) => ({
@@ -82,7 +92,22 @@ const Bortforslingavdodsbogoteborg = () => {
       )
     );
   };
+  const handleAddCustomerChange = (e) => {
+    setaddedCustomerData({
+      ...addedCustomerData,
+      [e.target.name]: e.target.value
+    });
+  };
 
+  const handleAddCustomerToFireBase = async (e) => {
+    e.preventDefault();
+    try {
+      const docRef = await addDoc(collection(db, "newLead"), addedCustomerData);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  };
   useEffect(() => {
     fetchFirestoreData();
   }, []);
@@ -115,14 +140,62 @@ const Bortforslingavdodsbogoteborg = () => {
           display: addCustomer ? "block" : "none"
         }}
       >
-        <form style={{ display: "flex", flexDirection: "column" }}>
-          <input type="text" placeholder="Namn" />
-          <input type="text" placeholder="Telefon" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Ort" />
-          <input type="text" placeholder="Tidsram" />
-          <input type="text" placeholder="Tjänst" />
-          <input type="text" placeholder="Beskrivning" />
+        <form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "1rem",
+            maxWidth: "60%"
+          }}
+        >
+          <input
+            type="text"
+            placeholder="namn"
+            name="namn"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="nummer"
+            name="nummer"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="email"
+            name="email"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="ort"
+            name="ort"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="tidsram"
+            name="tidsram"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="tjänst"
+            name="service"
+            onChange={handleAddCustomerChange}
+          />
+          <input
+            type="text"
+            placeholder="beskrivning"
+            name="beskrivning"
+            onChange={handleAddCustomerChange}
+          />
+          <button
+            onClick={handleAddCustomerToFireBase}
+            style={{ height: "2rem" }}
+          >
+            add customer
+          </button>
         </form>
       </div>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
