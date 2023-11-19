@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import CallIcon from '@material-ui/icons/Call';
 import { useAuth0 } from "@auth0/auth0-react";
 import { navlinks } from "../../utils/data";
 import { AiOutlineBars } from "react-icons/ai";
@@ -7,13 +8,15 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addElement } from "../../redux-toolkit/scrollElement/scrollElementSlice";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getCustomerData } from "../../redux-toolkit/customer/customerSlice";
 import Links from "../externalLinks/Links";
 
 const Nav = () => {
   const dispatch = useDispatch();
   const [showNav, setShowNav] = useState(false);
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
-
+  const customerData = useSelector(getCustomerData);
   const handleClick = (e) => {
     dispatch(addElement(e.currentTarget.innerText));
     if (e.currentTarget.innerText === "Om oss") {
@@ -31,9 +34,16 @@ const Nav = () => {
           <h2 className="logo">Dödsbo</h2>
           <h2 className="logo">Jouren</h2>
         </div>
+     
+       <a href={`tel:${customerData.phone}`} style={{display:'flex',alignItems:'center', color:'#eabb12'}}>
+       <CallIcon style={{fontSize:'1.2rem'}}/>
+       <p style={{marginLeft:'0.3rem',fontSize:'0.8rem'}}>Ring</p>
+          </a>
+    
         <div className="navbar" onClick={() => setShowNav(!showNav)}>
           <AiOutlineBars />
         </div>
+       
         <div className="nav-links">
           {navlinks.map((link) => {
             if (link.path) {

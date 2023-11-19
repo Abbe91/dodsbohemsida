@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   email: "info@dodsbo-jouren.se",
-  phone: "031-7539060",
+  phone: "0707-19 84 29",
   business: "Dödsbo Jouren",
-  adress: "Hisingsgatan 10",
-  zip: "417 03",
+  adress: "Landsvägsgatan 6",
+  zip: "413 04",
   city: "Göteborg",
   coords: { lat: 57.71674387891259, lng: 11.947577329191638 },
   weatherData: [],
