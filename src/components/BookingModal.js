@@ -41,8 +41,10 @@ const BookingModal = ({ modalOpen, setModalOpen }) => {
     setSending(true);
     emailjs
       .sendForm(
-        "service_k835y1d",
-        "template_vky05mk",
+        "service_zrzoy78",
+        "template_v5pxpfk",
+       // "service_k835y1d",
+        //"template_vky05mk",
         form.current,
         process.env.REACT_APP_EMAILJS_2
       )
