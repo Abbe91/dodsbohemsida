@@ -4,9 +4,9 @@ const initialState = {
   email: "info@dodsbo-jouren.se",
   phone: "0707-19 84 29",
   business: "Dödsbo Jouren",
-  adress: "Landsvägsgatan 6",
-  zip: "413 04",
-  city: "Göteborg",
+  adress: "Magasinsgatan 11",
+  zip: "47 132",
+  city: "Skärhamn",
   coords: { lat: 57.71674387891259, lng: 11.947577329191638 },
   weatherData: [],
   searchTerms: [
