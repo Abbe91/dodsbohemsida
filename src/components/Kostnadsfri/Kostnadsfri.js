@@ -11,8 +11,8 @@ const Kostnadsfri = ({ vad, text }) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_zrzoy78",
-        "template_v5pxpfk",
+        "service_qwj4wc3",
+        "template_gudl7ri",
         form.current,
         process.env.REACT_APP_EMAILJS_2
       )
