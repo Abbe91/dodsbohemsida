@@ -130,6 +130,7 @@ const ForFragan = () => {
             type="text"
             name="telefon"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            required
           />
           <label htmlFor="ort">I vilken ort skall uppdraget utföras?</label>
           <input
