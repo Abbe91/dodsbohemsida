@@ -328,7 +328,7 @@ const ForFragan = () => {
                         handleSubmit();
                       } else {
                         // Handle the case when the form is not valid
-                        console.log("Please fill out the required fields.");
+                        console.log("Vänligen fyll i de obligatoriska fälten, inklusive Telefon.");
                       }
                     }}
                   >
