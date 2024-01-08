@@ -88,7 +88,7 @@ const ForFragan = () => {
               fontSize: "1rem"
             }}
           >
-            Kontaktuppgifter
+            Kontaktuppgifter:
           </p>
         </div>
         <form
