@@ -323,8 +323,13 @@ const ForFragan = () => {
                       boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
                     }}
                     onClick={() => {
-                      setActiveStep(activeStep + 1);
-                      handleSubmit();
+                      if (form.current.checkValidity()) {
+                        setActiveStep(activeStep + 1);
+                        handleSubmit();
+                      } else {
+                        // Handle the case when the form is not valid
+                        console.log("Please fill out the required fields.");
+                      }
                     }}
                   >
                     Skicka
