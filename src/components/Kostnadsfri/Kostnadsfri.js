@@ -39,32 +39,6 @@ const Kostnadsfri = ({ vad, text }) => {
           bohag, dödsbo, lösöre eller våra tjänster så erbjuder vi en
           kostnadsfri värdering av ditt dödsbo eller bohag.
         </p>
-        <form ref={form}>
-          <h4 style={{ marginBottom: "0.5rem" }}>Vill du veta mer?</h4>
-          <input
-            type="email"
-            required
-            placeholder="Din email"
-            name="email"
-            style={{ margin: "0 0" }}
-          />
-          <input type="email" required placeholder="Ditt namn" name="namn" />
-          <button
-            type="submit"
-            onClick={handleSubmit}
-            style={{
-              background: "white",
-              color: "#e3c148",
-              fontWeight: "bold"
-            }}
-          >
-            {sending
-              ? "skickar..."
-              : sent
-              ? "Tack för din förfrågan"
-              : "Skicka"}
-          </button>
-        </form>
       </div>
     </div>
   );
