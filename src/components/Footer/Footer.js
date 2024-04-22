@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <section style={{ margin: "1rem 1rem" }}>
+        {/* <section style={{ margin: "1rem 1rem" }}>
           <h4 style={{ marginBottom: "0.5rem" }}>Våra kontor/butiker</h4>
           <div className="office">
             <div>
@@ -45,7 +45,7 @@ const Footer = () => {
               <p>52 338 Ulricehamn</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
       <div
         style={{
