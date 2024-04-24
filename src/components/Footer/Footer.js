@@ -35,7 +35,7 @@ const Footer = () => {
           <h4 style={{ marginBottom: "0.5rem" }}>Våra kontor/butiker</h4>
           <div className="office">
             <div>
-              <h5>Tjörn, Skärhamn</h5>
+              <h5>Dödsbo jourer</h5>
               <p>Magasinsgatan 11</p>
               <p>47 132 Skärhamn</p>
             </div>
