@@ -127,9 +127,11 @@ const ForFragan = () => {
           />
           <label htmlFor="telefon">Telefon</label>
           <input
-            type="text"
+            type="number"
             name="telefon"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" // Example pattern for a phone number like 123-456-7890
+            title="Please enter a valid phone number in the format 070-000-0000"
             required
           />
           <label htmlFor="ort">I vilken ort skall uppdraget utföras?</label>
