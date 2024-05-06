@@ -104,6 +104,9 @@ const ForFragan = () => {
             type="text"
             name="namn"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            pattern="[A-Za-zÅÄÖåäöéÉüÜ\s'-]+" // Allows letters, spaces, and common Swedish special characters
+            title="Please enter a valid name"
+            required
           />
           <input
             readOnly
@@ -124,7 +127,10 @@ const ForFragan = () => {
             type="email"
             name="email"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            title="Please enter a valid email address"
+            required
           />
+
           <label htmlFor="telefon">Telefon</label>
           <input
             type="number"
