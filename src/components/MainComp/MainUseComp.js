@@ -80,7 +80,7 @@ const MainUseComp = ({ formTitle }) => {
             {formTitle}
           </h1>
           <h2 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>
-            Detta kan vi hjälpa dig med
+            Detta kan vi hjälpa dig med..
           </h2>
           <p
             style={{

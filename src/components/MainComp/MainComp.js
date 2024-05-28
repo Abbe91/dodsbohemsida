@@ -27,7 +27,7 @@ const MainComp = ({ subTitle5, text2, city, formTitle }) => {
             maxWidth: "330px"
           }}
         >
-          Bästa alternativet för dig, miljön och plånboken!
+          Bästa alternativet för dig, miljön och plånboken
         </h4>
 
         <div

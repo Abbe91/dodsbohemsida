@@ -35,30 +35,16 @@ const Footer = () => {
           <h4 style={{ marginBottom: "0.5rem" }}>Våra kontor/butiker</h4>
           <div className="office">
             <div>
-              <h5>Göteborg</h5>
-              <p>Landsvägsgatan 6</p>
-              <p>413 04 Göteborg</p>
-            </div>
-            <div>
-              <h5>Tjörn, Skärhamn</h5>
+              <h5>Dödsbo jourer</h5>
               <p>Magasinsgatan 11</p>
               <p>47 132 Skärhamn</p>
             </div>
-            <div>
+            {/* <div>
               <h5>Ulricehamn</h5>
               <p>Bogesundsgatan 2</p>
               <p>52 338 Ulricehamn</p>
-            </div>
+            </div> */}
           </div>
-          <p
-            style={{
-              fontSize: "0.7rem",
-              letterSpacing: "1px",
-              margin: "0.2rem 0"
-            }}
-          >
-            Orgnummer: 559298-0303{" "}
-          </p>
         </section>
       </div>
       <div

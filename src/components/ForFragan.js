@@ -45,8 +45,8 @@ const ForFragan = () => {
   const handleSubmit = () => {
     emailjs
       .sendForm(
-        "service_k835y1d",
-        "template_vky05mk",
+        "service_qwj4wc3",
+        "template_gudl7ri",
         form.current,
         process.env.REACT_APP_EMAILJS_2
       )
@@ -88,7 +88,7 @@ const ForFragan = () => {
               fontSize: "1rem"
             }}
           >
-            Kontaktuppgifter
+            Kontaktuppgifter:
           </p>
         </div>
         <form
@@ -104,6 +104,9 @@ const ForFragan = () => {
             type="text"
             name="namn"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            pattern="[A-Za-zÅÄÖåäöéÉüÜ\s'-]+" // Allows letters, spaces, and common Swedish special characters
+            title="Please enter a valid name"
+            required
           />
           <input
             readOnly
@@ -124,12 +127,18 @@ const ForFragan = () => {
             type="email"
             name="email"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            title="Please enter a valid email address"
+            required
           />
+
           <label htmlFor="telefon">Telefon</label>
           <input
-            type="text"
+            type="number"
             name="telefon"
             style={{ marginBottom: "1rem", height: "2rem" }}
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" // Example pattern for a phone number like 123-456-7890
+            title="Please enter a valid phone number in the format 070-000-0000"
+            required
           />
           <label htmlFor="ort">I vilken ort skall uppdraget utföras?</label>
           <input
@@ -322,8 +331,13 @@ const ForFragan = () => {
                       boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
                     }}
                     onClick={() => {
-                      setActiveStep(activeStep + 1);
-                      handleSubmit();
+                      if (form.current.checkValidity()) {
+                        setActiveStep(activeStep + 1);
+                        handleSubmit();
+                      } else {
+                        // Handle the case when the form is not valid
+                        alert("Vänligen fyll i de obligatoriska fälten, inklusive Telefon.");
+                      }
                     }}
                   >
                     Skicka
