@@ -1,0 +1,193 @@
+.recycling-info {
+    font-size: 0.85rem;
+    background-color: #e3c148;
+    color: white;
+    padding: 1.5rem;
+    line-height: 1.6;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recycling-info-description {
+    font-size: 0.85rem;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.recycling-facts-container {
+    background-color: #e3c148;
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 1.5rem;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recycling-facts-container h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.recycling-guide-container {
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.recycling-guide-container h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recycling-guide-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.recycling-guide-container li {
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recycling-guide-container li strong {
+    color: #e3c148;
+    margin-right: 0.5rem;
+}
+
+.recycling-guide-container p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.recycling-tips-container {
+    background-color: #e3c148;
+    color: white;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.recycling-tips-container h3 {
+    font-size: 1.75rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recycling-tips-container p {
+    font-size: 0.85rem;
+    margin: 0.2rem 0.5rem;
+}
+
+.recycling-tips-container strong {
+    color: white;
+}
+
+.recycling-best-practices {
+    background-color: #f7f7f7;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.recycling-best-practices h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recycling-best-practices h4 {
+    font-size: 1.25rem;
+    color: #555;
+    margin: 0.2rem 0.5rem;
+}
+
+.recycling-best-practices p {
+    font-size: 0.85rem;
+    margin: 0.2rem 0.5rem;
+    color: #666;
+}
+
+.recycling-best-practices section {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recycling-best-practices section h4 {
+    margin-top: 0;
+}
+
+.recycling-best-practices section p {
+    margin-bottom: 0;
+}
+
+.recycling-best-practices strong {
+    color: #e3c148;
+}
+
+.recycling-services-description {
+    background-color: #e3c148;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.recycling-services-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.recycling-services-description p {
+    margin: 0.5rem 0;
+}
+
+.recycling-center-directory {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+}
+
+.recycling-center-directory p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.recycling-center-directory a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.recycling-center-directory a:last-child {
+    margin-right: 0;
+}
+
+.recycling-center-directory a:hover {
+    color: #007bff;
+    border-color: #007bff;
+}

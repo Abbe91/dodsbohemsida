@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav/Nav";
+import "./Atervinningscentral.css";
+
 const btns = ["Återvinningscentral Göteborg"];
 const Atervinningscentral = () => {
   const articleStructuredData = {
@@ -59,8 +61,8 @@ const Atervinningscentral = () => {
       <div className="Nav">
         <Nav />
       </div>
-      <div style={{ margin: "1rem 0.5rem", width: "100%" }}>
-        <p style={{ fontSize: "0.9rem" }}>
+      <div class="recycling-center-directory">
+        <p>
           Alla återvinningscentraler med kontaktuppgifter, öppetider, adress och
           navigation.
         </p>
@@ -72,7 +74,6 @@ const Atervinningscentral = () => {
                 key={i}
                 style={{
                   fontSize: "0.8rem",
-                  marginRight: "0.5rem",
                   borderBottom: "1px solid black"
                 }}
                 title="Återvinningscentral Göteborg"
@@ -93,27 +94,19 @@ const Atervinningscentral = () => {
           style={{
             fontSize: "1.6rem",
             marginTop: "1rem",
-            marginBottom: "0.5rem",
-            marginLeft: "0.5rem"
           }}
         >
           Återvinningscentral
         </h1>
-        <section style={{ position: "relative" }}>
+        <section class="recycling-center-section" style={{ position: "relative", height: "400px" }}>
           <img
             src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
             alt="återvinning"
             loading="lazy"
-            style={{ width: "100%", height: "230px", objectFit: "cover" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <article style={{ position: "absolute", top: "20%", left: "0.5rem" }}>
-            <h3
-              style={{
-                background: "white",
-                padding: "0.25rem",
-                maxWidth: "80%"
-              }}
-            >
+            <h3>
               Hitta en återvinningscentral i din närhet.
             </h3>
             <button className="atv-btn" onClick={handleClick}>
@@ -121,7 +114,7 @@ const Atervinningscentral = () => {
             </button>
           </article>
         </section>
-        <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+        <p class="recycling-info">
           Upptäck enkelt närliggande återvinningscentral med vår omfattande
           guide. Här listar vi återvinningscentral med platsinformation,
           öppetider och kontaktinformation. Med våra användarvänliga verktyg kan
@@ -130,8 +123,8 @@ const Atervinningscentral = () => {
           hjälpa till.
         </p>
 
-        <hr></hr>
-        <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+        {/* <hr></hr> */}
+        <p class="recycling-info-description" >
           Återvinning har blivit allt viktigare i dagens samhälle och för att
           göra det enklare för privatpersoner och företag att återvinna. På en
           återvinningscentral kan man återvinna material såsom papper, plast,
@@ -143,9 +136,9 @@ const Atervinningscentral = () => {
           avfall som hamnar på soptippen och istället se till att material
           återvinns och används på nytt.
         </p>
-        <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>Fakta: Återvinningscentral</h3>
-          <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+        <div class="recycling-facts-container">
+          <h3>Fakta: Återvinningscentral</h3>
+          <p>
             En återvinningscentral är en plats där privatpersoner och företag
             kan lämna avfall för återvinning eller avhämtning för
             avfallshantering. I Sverige finns återvinningscentraler i nästan
@@ -167,11 +160,11 @@ const Atervinningscentral = () => {
             framtid för oss alla.
           </p>
         </div>
-        <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>
+        <div class="recycling-guide-container">
+          <h3>
             Guide: Vad kan man slänga eller återvinna på en återvinningscentral?
           </h3>
-          <ul style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}>
+          <ul>
             <p>
               På en återvinningscentral i Sverige kan man vanligtvis lämna olika
               typer av avfall och material för återvinning eller avhämtning för
@@ -209,7 +202,7 @@ const Atervinningscentral = () => {
               material gräsklipp
             </li>
           </ul>
-          <p style={{ fontSize: "0.85rem", margin: "0.5rem 0.5rem" }}>
+          <p>
             Det är viktigt att sortera avfallet och följa de regler och
             riktlinjer som gäller på återvinningscentralen för att underlätta
             återvinning och hantering av avfallet. Det kan finnas regionala
@@ -219,11 +212,11 @@ const Atervinningscentral = () => {
             på just din plats.
           </p>
         </div>
-        <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>
+        <div class="recycling-tips-container">
+          <h3>
             Vad är viktigt att tänka på när man återvinner?
           </h3>
-          <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+          <p>
             <strong>Rengör och sortera rätt</strong>: För att återvinna på rätt
             sätt är det viktigt att sortera ditt avfall korrekt. Detta innebär
             att du bör separera olika typer av material och lägga dem i lämpliga
@@ -255,21 +248,21 @@ const Atervinningscentral = () => {
             sätt och bidra till en mer hållbar framtid.
           </p>
         </div>
-        <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>
+        <div class="recycling-best-practices">
+          <h3>
             GUIDE: såhär återvinner du på en återvinningscentral på bästa sättet
             för att värna om miljön
           </h3>
-          <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+          <p>
             Att återvinna på bästa sättet är en viktig del av att ta hand om vår
             planet och minska vår miljöpåverkan. Här är några tips för att
             återvinna på bästa sätt och värna om miljön:
           </p>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>
-              1. Sortera ditt avfall korrekt
+            <h4>
+              <strong>1.</strong> Sortera ditt avfall korrekt
             </h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <p>
               För att återvinna på rätt sätt är det viktigt att sortera ditt
               avfall korrekt. Detta innebär att du bör separera olika typer av
               material och lägga dem i lämpliga återvinningsbehållare. Det
@@ -279,10 +272,10 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>
-              2. Rengör och sortera rätt
+            <h4>
+            <strong>2.</strong> Rengör och sortera rätt
             </h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <p>
               För att säkerställa att ditt återvinningsmaterial kan användas på
               nytt är det viktigt att det är rent och utan restprodukter. Se
               till att du har rengjort dina återvinningsmaterial ordentligt och
@@ -292,8 +285,8 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>3. Återanvänd produkter</h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <h4><strong>3.</strong> Återanvänd produkter</h4>
+            <p>
               Att återanvända produkter är en annan effektiv metod för att
               minska avfallet och spara resurser. Du kan använda återanvändbara
               produkter som tygkassar, glasflaskor, matlådor, bestick och
@@ -303,8 +296,8 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>4. Sälja eller donera</h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <h4><strong>4.</strong>. Sälja eller donera</h4>
+            <p>
               Fundera på att sälja eller donera saker som fortfarande fungerar
               och kan ha ett andra liv istället för att kasta dem i soporna. Det
               kan vara möjligt att sälja eller donera elektronik, kläder och
@@ -314,10 +307,10 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>
-              5. Undvik engångsprodukter
+            <h4>
+            <strong>5.</strong> Undvik engångsprodukter
             </h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <p>
               Undvik att använda engångsprodukter som plastpåsar, engångsmuggar,
               engångsbestick och engångstallrikar. De är ofta svåra att
               återvinna och kan orsaka skada på miljön. Använd istället
@@ -325,10 +318,10 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>
-              6. Kontrollera lokala återvinningsprogram
+            <h4>
+            <strong>6.</strong> Kontrollera lokala återvinningsprogram
             </h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <p>
               Kolla med din kommun eller återvinningscentral vad som återvinns
               på din ort och var det finns insamlingsstationer. Det kan också
               vara möjligt att ha hämtning av återvinningsmaterial från ditt
@@ -338,18 +331,20 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4 style={{ margin: "0.2rem 0.5rem" }}>6. Välj återvunnet</h4>
-            <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+            <h4><strong>7.</strong> Välj återvunnet</h4>
+            <p>
               När du handlar, välj produkter som innehåller återvunnet material
               istället för nyproducerat material
             </p>
           </section>
         </div>
-        <div style={{ marginTop: "2rem" }}>
-          <h3 style={{ marginLeft: "0.5rem" }}>
+
+
+        <div class="recycling-services-description">
+          <h3>
             Hur kan vi hjälpa dig med återvinning?
           </h3>
-          <p style={{ fontSize: "0.85rem", margin: "0.2rem 0.5rem" }}>
+          <p>
             Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar
             om att återvinna papper, plast, metall eller annat avfall. Vår
             målsättning är att hjälpa våra kunder att minska sin miljöpåverkan
@@ -368,10 +363,10 @@ const Atervinningscentral = () => {
             er och göra en positiv skillnad för miljön.
           </p>
         </div>
-        <button className="atv-btn" onClick={handleClick}>
+        <button className="atv-btn" style={{display: "block", margin: "1.85rem auto 0rem auto", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px"}} onClick={handleClick}>
           Gör en gratis förfrågan
         </button>
-        <div style={{ height: "500px" }}></div>
+        {/* <div style={{ height: "500px" }}></div> */}
       </div>
     </section>
   );
