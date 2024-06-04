@@ -1,3 +1,13 @@
+section h1{
+    background-color: #e3c148;
+    margin-top: 1rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 .recycling-info {
     font-size: 0.85rem;
     background-color: #e3c148;

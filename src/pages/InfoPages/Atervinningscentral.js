@@ -72,10 +72,6 @@ const Atervinningscentral = () => {
               <a
                 href="/atervinningscentral-goteborg"
                 key={i}
-                style={{
-                  fontSize: "0.8rem",
-                  borderBottom: "1px solid black"
-                }}
                 title="Återvinningscentral Göteborg"
               >
                 {btn}
@@ -90,12 +86,7 @@ const Atervinningscentral = () => {
           flexDirection: "column"
         }}
       >
-        <h1
-          style={{
-            fontSize: "1.6rem",
-            marginTop: "1rem",
-          }}
-        >
+        <h1>
           Återvinningscentral
         </h1>
         <section class="recycling-center-section" style={{ position: "relative", height: "400px" }}>
