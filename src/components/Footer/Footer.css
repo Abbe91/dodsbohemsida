@@ -1,21 +1,40 @@
 .footer {
   background: #e3c148;
-  height: 10rem;
+  height: 19rem;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 }
-
 .footer a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+  justify-content: space-around;
+  font-size: 1.5rem;
   cursor: pointer;
   color: white;
 }
 .footer a p {
   font-size: 0.9rem;
+}
+.footer section {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: 32rem;
+    padding-top: .5rem; 
+  }
+  .footer a {
+    margin: 1rem;
+  } 
 }
