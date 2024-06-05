@@ -287,7 +287,7 @@ const Atervinningscentral = () => {
             </p>
           </section>
           <section>
-            <h4><strong>4.</strong>. Sälja eller donera</h4>
+            <h4><strong>4.</strong> Sälja eller donera</h4>
             <p>
               Fundera på att sälja eller donera saker som fortfarande fungerar
               och kan ha ett andra liv istället för att kasta dem i soporna. Det
