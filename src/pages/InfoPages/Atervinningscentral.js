@@ -17,8 +17,8 @@ const Atervinningscentral = () => {
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "Louie Stokk",
+    },
   };
   const handleClick = () => {
     window.location.href = "/";
@@ -66,7 +66,7 @@ const Atervinningscentral = () => {
           Alla återvinningscentraler med kontaktuppgifter, öppetider, adress och
           navigation.
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div class="recycling-center-directory-btn">
           {btns.map((btn, i) => {
             return (
               <a
@@ -80,27 +80,17 @@ const Atervinningscentral = () => {
           })}
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column"
-        }}
-      >
-        <h1>
-          Återvinningscentral
-        </h1>
-        <section class="recycling-center-section" style={{ position: "relative", height: "400px" }}>
+      <div class="flex-column-container">
+        <h1>Återvinningscentral</h1>
+        <section class="recycling-center-section">
           <img
             src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
             alt="återvinning"
             loading="lazy"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <article style={{ position: "absolute", top: "20%", left: "0.5rem" }}>
-            <h3>
-              Hitta en återvinningscentral i din närhet.
-            </h3>
-            <button className="atv-btn" onClick={handleClick}>
+          <article>
+            <h3>Hitta en återvinningscentral i din närhet.</h3>
+            <button class="recycling-center-section-btn" onClick={handleClick}>
               Hjälp med återvinning?
             </button>
           </article>
@@ -113,9 +103,7 @@ const Atervinningscentral = () => {
           bortforsling, återvinning eller avfallshantering? Vi finns här för att
           hjälpa till.
         </p>
-
-        {/* <hr></hr> */}
-        <p class="recycling-info-description" >
+        <p class="recycling-info-description">
           Återvinning har blivit allt viktigare i dagens samhälle och för att
           göra det enklare för privatpersoner och företag att återvinna. På en
           återvinningscentral kan man återvinna material såsom papper, plast,
@@ -155,44 +143,31 @@ const Atervinningscentral = () => {
           <h3>
             Guide: Vad kan man slänga eller återvinna på en återvinningscentral?
           </h3>
-          <ul>
+          <ol>
             <p>
               På en återvinningscentral i Sverige kan man vanligtvis lämna olika
               typer av avfall och material för återvinning eller avhämtning för
               avfallshantering. Här är några exempel på vad man vanligtvis kan
               slänga och återvinna på en återvinningscentral:
             </p>
+            <li>Papper, kartong, tidningar och reklamblad</li>
+            <li>Plastförpackningar, plastfilm, plastpåsar och plastflaskor</li>
+            <li>Glasflaskor och glasburkar</li>
             <li>
-              <strong>1.</strong> Papper, kartong, tidningar och reklamblad
+              Metallförpackningar, exempelvis konservburkar och dryckesburkar
             </li>
             <li>
-              <strong>2.</strong> Plastförpackningar, plastfilm, plastpåsar och
-              plastflaskor
+              Elektronik, exempelvis datorer, mobiltelefoner och TV-apparater
             </li>
             <li>
-              <strong>3.</strong> Glasflaskor och glasburkar
+              Farligt avfall, exempelvis färg, lösningsmedel, kemikalier och
+              batterier
             </li>
+            <li>Trädgårdsavfall, exempelvis löv, kvistar och gräsklipp</li>
             <li>
-              <strong>4.</strong> Metallförpackningar, exempelvis konservburkar
-              och dryckesburkar
+              Möbler, kläder och andra återvinningsbara material gräsklipp
             </li>
-            <li>
-              <strong>5.</strong> Elektronik, exempelvis datorer, mobiltelefoner
-              och TV-apparater
-            </li>
-            <li>
-              <strong>6.</strong> Farligt avfall, exempelvis färg,
-              lösningsmedel, kemikalier och batterier
-            </li>
-            <li>
-              <strong>7.</strong> Trädgårdsavfall, exempelvis löv, kvistar och
-              gräsklipp
-            </li>
-            <li>
-              <strong>8.</strong> Möbler, kläder och andra återvinningsbara
-              material gräsklipp
-            </li>
-          </ul>
+          </ol>
           <p>
             Det är viktigt att sortera avfallet och följa de regler och
             riktlinjer som gäller på återvinningscentralen för att underlätta
@@ -204,9 +179,7 @@ const Atervinningscentral = () => {
           </p>
         </div>
         <div class="recycling-tips-container">
-          <h3>
-            Vad är viktigt att tänka på när man återvinner?
-          </h3>
+          <h3>Vad är viktigt att tänka på när man återvinner?</h3>
           <p>
             <strong>Rengör och sortera rätt</strong>: För att återvinna på rätt
             sätt är det viktigt att sortera ditt avfall korrekt. Detta innebär
@@ -249,92 +222,96 @@ const Atervinningscentral = () => {
             planet och minska vår miljöpåverkan. Här är några tips för att
             återvinna på bästa sätt och värna om miljön:
           </p>
-          <section>
-            <h4>
-              <strong>1.</strong> Sortera ditt avfall korrekt
-            </h4>
-            <p>
-              För att återvinna på rätt sätt är det viktigt att sortera ditt
-              avfall korrekt. Detta innebär att du bör separera olika typer av
-              material och lägga dem i lämpliga återvinningsbehållare. Det
-              vanligaste materialet som återvinns är papper, plast, glas och
-              metall. Se till att du har dessa behållare tillgängliga på rätt
-              plats.
-            </p>
-          </section>
-          <section>
-            <h4>
-            <strong>2.</strong> Rengör och sortera rätt
-            </h4>
-            <p>
-              För att säkerställa att ditt återvinningsmaterial kan användas på
-              nytt är det viktigt att det är rent och utan restprodukter. Se
-              till att du har rengjort dina återvinningsmaterial ordentligt och
-              sortera dem enligt de olika materialen. Om du är osäker på hur du
-              ska sortera ditt avfall, kontakta din kommun eller
-              återvinningscentral för information.
-            </p>
-          </section>
-          <section>
-            <h4><strong>3.</strong> Återanvänd produkter</h4>
-            <p>
-              Att återanvända produkter är en annan effektiv metod för att
-              minska avfallet och spara resurser. Du kan använda återanvändbara
-              produkter som tygkassar, glasflaskor, matlådor, bestick och
-              tallrikar istället för att använda engångsprodukter. Detta kan
-              också leda till en minskning av dina utgifter för
-              hushållsartiklar.
-            </p>
-          </section>
-          <section>
-            <h4><strong>4.</strong> Sälja eller donera</h4>
-            <p>
-              Fundera på att sälja eller donera saker som fortfarande fungerar
-              och kan ha ett andra liv istället för att kasta dem i soporna. Det
-              kan vara möjligt att sälja eller donera elektronik, kläder och
-              möbler till organisationer eller second-hand-butiker. På så sätt
-              kan du inte bara minska avfallsmängderna utan också bidra till att
-              skapa en mer hållbar och cirkulär ekonomi.
-            </p>
-          </section>
-          <section>
-            <h4>
-            <strong>5.</strong> Undvik engångsprodukter
-            </h4>
-            <p>
-              Undvik att använda engångsprodukter som plastpåsar, engångsmuggar,
-              engångsbestick och engångstallrikar. De är ofta svåra att
-              återvinna och kan orsaka skada på miljön. Använd istället
-              återanvändbara alternativ.
-            </p>
-          </section>
-          <section>
-            <h4>
-            <strong>6.</strong> Kontrollera lokala återvinningsprogram
-            </h4>
-            <p>
-              Kolla med din kommun eller återvinningscentral vad som återvinns
-              på din ort och var det finns insamlingsstationer. Det kan också
-              vara möjligt att ha hämtning av återvinningsmaterial från ditt
-              hem. Genom att utnyttja de återvinningsmöjligheter som finns
-              tillgängliga i din kommun, kan du bidra till en mer hållbar
-              framtid.
-            </p>
-          </section>
-          <section>
-            <h4><strong>7.</strong> Välj återvunnet</h4>
-            <p>
-              När du handlar, välj produkter som innehåller återvunnet material
-              istället för nyproducerat material
-            </p>
-          </section>
+          <ol>
+            <section>
+              <h4>
+                <li>Sortera ditt avfall korrekt</li>
+              </h4>
+              <p>
+                För att återvinna på rätt sätt är det viktigt att sortera ditt
+                avfall korrekt. Detta innebär att du bör separera olika typer av
+                material och lägga dem i lämpliga återvinningsbehållare. Det
+                vanligaste materialet som återvinns är papper, plast, glas och
+                metall. Se till att du har dessa behållare tillgängliga på rätt
+                plats.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Rengör och sortera rätt</li>
+              </h4>
+              <p>
+                För att säkerställa att ditt återvinningsmaterial kan användas
+                på nytt är det viktigt att det är rent och utan restprodukter.
+                Se till att du har rengjort dina återvinningsmaterial ordentligt
+                och sortera dem enligt de olika materialen. Om du är osäker på
+                hur du ska sortera ditt avfall, kontakta din kommun eller
+                återvinningscentral för information.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Återanvänd produkter</li>
+              </h4>
+              <p>
+                Att återanvända produkter är en annan effektiv metod för att
+                minska avfallet och spara resurser. Du kan använda
+                återanvändbara produkter som tygkassar, glasflaskor, matlådor,
+                bestick och tallrikar istället för att använda engångsprodukter.
+                Detta kan också leda till en minskning av dina utgifter för
+                hushållsartiklar.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Sälja eller donera</li>
+              </h4>
+              <p>
+                Fundera på att sälja eller donera saker som fortfarande fungerar
+                och kan ha ett andra liv istället för att kasta dem i soporna.
+                Det kan vara möjligt att sälja eller donera elektronik, kläder
+                och möbler till organisationer eller second-hand-butiker. På så
+                sätt kan du inte bara minska avfallsmängderna utan också bidra
+                till att skapa en mer hållbar och cirkulär ekonomi.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Undvik engångsprodukter</li>
+              </h4>
+              <p>
+                Undvik att använda engångsprodukter som plastpåsar,
+                engångsmuggar, engångsbestick och engångstallrikar. De är ofta
+                svåra att återvinna och kan orsaka skada på miljön. Använd
+                istället återanvändbara alternativ.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Kontrollera lokala återvinningsprogram</li>
+              </h4>
+              <p>
+                Kolla med din kommun eller återvinningscentral vad som återvinns
+                på din ort och var det finns insamlingsstationer. Det kan också
+                vara möjligt att ha hämtning av återvinningsmaterial från ditt
+                hem. Genom att utnyttja de återvinningsmöjligheter som finns
+                tillgängliga i din kommun, kan du bidra till en mer hållbar
+                framtid.
+              </p>
+            </section>
+            <section>
+              <h4>
+                <li>Välj återvunnet</li>
+              </h4>
+              <p>
+                När du handlar, välj produkter som innehåller återvunnet
+                material istället för nyproducerat material
+              </p>
+            </section>
+          </ol>
         </div>
-
-
         <div class="recycling-services-description">
-          <h3>
-            Hur kan vi hjälpa dig med återvinning?
-          </h3>
+          <h3>Hur kan vi hjälpa dig med återvinning?</h3>
           <p>
             Vi kan hjälpa dig med all typ av återvinning, oavsett om det handlar
             om att återvinna papper, plast, metall eller annat avfall. Vår
@@ -354,10 +331,12 @@ const Atervinningscentral = () => {
             er och göra en positiv skillnad för miljön.
           </p>
         </div>
-        <button className="atv-btn" style={{display: "block", margin: "1.85rem auto 0rem auto", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px"}} onClick={handleClick}>
+        <button
+          class="recycling-services-description-btn"
+          onClick={handleClick}
+        >
           Gör en gratis förfrågan
         </button>
-        {/* <div style={{ height: "500px" }}></div> */}
       </div>
     </section>
   );
