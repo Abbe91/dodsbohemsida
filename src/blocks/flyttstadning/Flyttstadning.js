@@ -28,7 +28,7 @@ const Flyttstadning = ({ videoText }) => {
     formTitle: "Flyttstädning",
     subTitle2:
       "Din auktoriserade hanterare av flyttstädning, dödsbo, uppköp av lösöre, försäljning av bohag, tömning av bohag, bortforsling av dödsbo och bohag, sanering och flytt",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -45,8 +45,8 @@ const Flyttstadning = ({ videoText }) => {
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const element = useSelector(getElement);
   useEffect(() => {

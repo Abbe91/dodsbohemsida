@@ -9,38 +9,38 @@ const Atervinningsstation = () => {
       title: "Återvinningsstation Bangatan 54",
       adess: "Bangatan 54, Göteborg",
       lat: 57.6934656,
-      lng: 11.9361714
+      lng: 11.9361714,
     },
     {
       title: "Återvinningsstation Rymdtorget",
       adess: "Tellusgatan 1, Göteborg",
       lat: 57.75720726853309,
-      lng: 12.073707393843375
+      lng: 12.073707393843375,
     },
     {
       title: "Återvinningsstation Askim",
       adess: "Askims Backaväg 1, Göteborg",
       lat: 57.63645060565052,
-      lng: 11.940457984068464
+      lng: 11.940457984068464,
     },
     {
       title: "Återvinningsstation Lilla Arödsgatan",
       adess: "Lilla Arödsgatan 3A, Hisingen",
       lat: 57.73655503560304,
-      lng: 11.957445526303436
+      lng: 11.957445526303436,
     },
     {
       title: "Munkegärde återvinningscentral",
       adess: "Energivägen, 442 41 Kungälv",
       lat: 57.888563733052266,
-      lng: 11.976983439937447
+      lng: 11.976983439937447,
     },
     {
       title: "Återvinningsstation Borås",
       adess: "Skaraborgsvägen 33E, Borås",
       lat: 57.73040980917139,
-      lng: 12.938222484191192
-    }
+      lng: 12.938222484191192,
+    },
   ];
   const articleStructuredData = {
     "@context": "https://schema.org",
@@ -54,8 +54,8 @@ const Atervinningsstation = () => {
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const handleClick = () => {
     window.location.href = "/";
@@ -108,7 +108,7 @@ const Atervinningsstation = () => {
                 style={{
                   fontSize: "0.8rem",
                   marginRight: "0.5rem",
-                  borderBottom: "1px solid black"
+                  borderBottom: "1px solid black",
                 }}
               >
                 {btn}
@@ -120,7 +120,7 @@ const Atervinningsstation = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <h1
@@ -128,7 +128,7 @@ const Atervinningsstation = () => {
             fontSize: "1.6rem",
             marginTop: "1rem",
             marginBottom: "0.5rem",
-            marginLeft: "0.5rem"
+            marginLeft: "0.5rem",
           }}
         >
           Återvinningsstation
@@ -145,7 +145,7 @@ const Atervinningsstation = () => {
               style={{
                 background: "white",
                 padding: "0.25rem",
-                maxWidth: "80%"
+                maxWidth: "80%",
               }}
             >
               Hitta återvinningsstationer i din närhet.

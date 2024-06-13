@@ -26,7 +26,7 @@ const Varderadodsbogoteborg = ({ videoText }) => {
     formTitle: "Värdera dödsbo Göteborg",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt, städning och värdering av dödsbo i i Göteborg",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -43,8 +43,8 @@ const Varderadodsbogoteborg = ({ videoText }) => {
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
 
   const element = useSelector(getElement);

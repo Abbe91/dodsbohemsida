@@ -17,7 +17,7 @@ const Atervinningscentral = () => {
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk",
+      name: "DigitalTech",
     },
   };
   const handleClick = () => {
