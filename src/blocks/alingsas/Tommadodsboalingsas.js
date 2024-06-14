@@ -29,7 +29,7 @@ const Tommadodsboalingsas = ({ videoText }) => {
     formTitle: "Tömma dödsbo Alingsås",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning,  bortforsling, sanering, flytt, städning och tömning av dödsbo i Alingsås",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -47,8 +47,8 @@ const Tommadodsboalingsas = ({ videoText }) => {
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const element = useSelector(getElement);
   useEffect(() => {

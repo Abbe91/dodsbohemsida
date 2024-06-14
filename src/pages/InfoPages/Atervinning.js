@@ -10,7 +10,7 @@ const btns = [
   "Glas",
   "Plast",
   "Papper",
-  "Trä"
+  "Trä",
 ];
 const Atervinning = () => {
   const articleStructuredData = {
@@ -25,8 +25,8 @@ const Atervinning = () => {
     datePublished: new Date("2023-04-04T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const handleClick = () => {
     window.location.href = "/dodsbojouren/gratiskollen";
@@ -79,7 +79,7 @@ const Atervinning = () => {
                 style={{
                   fontSize: "0.8rem",
                   marginRight: "0.5rem",
-                  borderBottom: "1px solid black"
+                  borderBottom: "1px solid black",
                 }}
               >
                 {btn}
@@ -91,7 +91,7 @@ const Atervinning = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <h1
@@ -99,7 +99,7 @@ const Atervinning = () => {
             fontSize: "1.6rem",
             marginTop: "1rem",
             marginBottom: "0.5rem",
-            marginLeft: "0.5rem"
+            marginLeft: "0.5rem",
           }}
         >
           Återvinning
@@ -116,7 +116,7 @@ const Atervinning = () => {
               style={{
                 background: "white",
                 padding: "0.25rem",
-                maxWidth: "80%"
+                maxWidth: "80%",
               }}
             >
               Vi hjälper dig med all typ av återvinning!

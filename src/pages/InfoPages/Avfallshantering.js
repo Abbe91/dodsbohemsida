@@ -22,7 +22,7 @@ const btns = [
   "Returpapper",
   "Sanering",
   "Slamsugning",
-  "Träavfall"
+  "Träavfall",
 ];
 const Avfallshantering = () => {
   const articleStructuredData = {
@@ -37,8 +37,8 @@ const Avfallshantering = () => {
     datePublished: new Date("2023-06-04T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const handleClick = () => {
     window.location.href = "/";
@@ -83,7 +83,7 @@ const Avfallshantering = () => {
                 style={{
                   fontSize: "0.8rem",
                   marginRight: "0.5rem",
-                  borderBottom: "1px solid black"
+                  borderBottom: "1px solid black",
                 }}
               >
                 {btn}
@@ -95,7 +95,7 @@ const Avfallshantering = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <h1
@@ -103,7 +103,7 @@ const Avfallshantering = () => {
             fontSize: "1.6rem",
             marginTop: "1rem",
             marginBottom: "0.5rem",
-            marginLeft: "0.5rem"
+            marginLeft: "0.5rem",
           }}
         >
           Avfallshantering
@@ -120,7 +120,7 @@ const Avfallshantering = () => {
               style={{
                 background: "white",
                 padding: "0.25rem",
-                maxWidth: "80%"
+                maxWidth: "80%",
               }}
             >
               Vi hjälper dig med all typ av avfallshantering!

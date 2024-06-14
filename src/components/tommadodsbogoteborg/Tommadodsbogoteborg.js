@@ -24,7 +24,7 @@ const Tommadodsbogoteborg = ({ videoText }) => {
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, tömning, bortforsling, sanering, flytt och städ",
     subTitle3:
-      "Behöver du professionell hjälp med att tömma dödsbo eller bohag?"
+      "Behöver du professionell hjälp med att tömma dödsbo eller bohag?",
   });
   const customerData = useSelector(getCustomerData);
   const mainquery = "tömma dödsbo i Göteborg";
@@ -42,8 +42,8 @@ const Tommadodsbogoteborg = ({ videoText }) => {
     datePublished: new Date("2023-04-24T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   return (
     <div>

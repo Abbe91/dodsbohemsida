@@ -27,7 +27,7 @@ const Flyttfirmaboras = ({ videoText }) => {
     formTitle: "Flyttfirma Borås",
     subTitle2:
       "Flyttfirma Borås. Din auktoriserade flyttfirma i Borås. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Borås.",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -44,8 +44,8 @@ const Flyttfirmaboras = ({ videoText }) => {
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const element = useSelector(getElement);
   useEffect(() => {

@@ -28,7 +28,7 @@ const Billigflyttfirmagoteborg = ({ videoText }) => {
     formTitle: "Billig flyttfirma Göteborg",
     subTitle2:
       "Billig flyttfirma Göteborg. Din auktoriserade flyttfirma i Göteborg. Vi utför flyttar av lägenheter, flyttar av hus och kontorsflytt i Göteborg.",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -46,8 +46,8 @@ const Billigflyttfirmagoteborg = ({ videoText }) => {
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const element = useSelector(getElement);
   useEffect(() => {

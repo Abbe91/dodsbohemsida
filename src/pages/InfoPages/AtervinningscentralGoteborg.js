@@ -11,7 +11,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.743957,
       lng: 11.91332,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
     },
     {
       title: "Hisingens Återvinningscentral",
@@ -19,7 +19,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.73564,
       lng: 11.963797,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
     },
     {
       title: "Kvibergs Återvinningscentral",
@@ -27,7 +27,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.746537,
       lng: 12.001834,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
     },
     {
       title: "Kville Bil & Metallåtervinning",
@@ -35,7 +35,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.712715,
       lng: 11.95854,
       tele: "031-55 55 44",
-      tider: "Mån-Fre: 07:00-17:00, Lör: 10:00-14:00"
+      tider: "Mån-Fre: 07:00-17:00, Lör: 10:00-14:00",
     },
     {
       title: "Redbergsvägens Återvinningscentral",
@@ -43,7 +43,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.70099,
       lng: 11.965623,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
     },
     {
       title: "Torslanda Återvinningscentral",
@@ -51,7 +51,7 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.720854,
       lng: 11.742284,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
     },
     {
       title: "Tuve Återvinningscentral",
@@ -59,8 +59,8 @@ const AtervinningscentralGoteborg = () => {
       lat: 57.74702,
       lng: 12.045469,
       tele: "031-365 48 00",
-      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00"
-    }
+      tider: "Mån-Fre: 07:00-20:00, Lör-Sön: 09:00-18:00",
+    },
   ];
   const articleStructuredData = {
     "@context": "https://schema.org",
@@ -74,8 +74,8 @@ const AtervinningscentralGoteborg = () => {
     datePublished: new Date("2023-04-14T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const handleClick = () => {
     window.location.href = "/";
@@ -132,7 +132,7 @@ const AtervinningscentralGoteborg = () => {
                 style={{
                   fontSize: "0.8rem",
                   marginRight: "0.5rem",
-                  borderBottom: "1px solid black"
+                  borderBottom: "1px solid black",
                 }}
                 title="Återvinningscentral Göteborg"
               >
@@ -145,7 +145,7 @@ const AtervinningscentralGoteborg = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <h1
@@ -153,7 +153,7 @@ const AtervinningscentralGoteborg = () => {
             fontSize: "1.6rem",
             marginTop: "1rem",
             marginBottom: "0.5rem",
-            marginLeft: "0.5rem"
+            marginLeft: "0.5rem",
           }}
         >
           Återvinningscentral Göteborg
@@ -170,7 +170,7 @@ const AtervinningscentralGoteborg = () => {
               style={{
                 background: "white",
                 padding: "0.25rem",
-                maxWidth: "80%"
+                maxWidth: "80%",
               }}
             >
               Hitta en återvinningscentral i Göteborg som är nära dig.

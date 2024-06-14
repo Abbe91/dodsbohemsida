@@ -26,7 +26,7 @@ const TommaDodsboKortedala = ({ videoText }) => {
     formTitle: "Tömma dödsbo Kortedala",
     subTitle2:
       "Din auktoriserade hanterare av dödsbo, bohag, uppköp, försäljning, bortforsling, sanering, flytt, städning och tömning av dödsbo i Kortedala",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -44,8 +44,8 @@ const TommaDodsboKortedala = ({ videoText }) => {
     datePublished: new Date("2023-06-25T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
 
   const element = useSelector(getElement);

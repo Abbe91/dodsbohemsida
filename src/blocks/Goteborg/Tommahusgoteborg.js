@@ -29,7 +29,7 @@ const Tommahusgoteborg = ({ videoText }) => {
     formTitle: "Tömma hus i Göteborg",
     subTitle2:
       "Vi tömmer, flyttar och städar dödsbon, förråd, hus, lägenhet eller helt vanlig flytt, städning eller sanering.",
-    subTitle3: `Behöver du professionell hjälp med ${mainquery}`
+    subTitle3: `Behöver du professionell hjälp med ${mainquery}`,
   });
   const customerData = useSelector(getCustomerData);
 
@@ -48,8 +48,8 @@ const Tommahusgoteborg = ({ videoText }) => {
     datePublished: new Date("2023-06-16T09:25:01.340Z").toISOString(),
     author: {
       "@type": "Person",
-      name: "Louie Stokk"
-    }
+      name: "DigitalTech",
+    },
   };
   const element = useSelector(getElement);
   useEffect(() => {
