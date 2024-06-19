@@ -81,7 +81,7 @@ const Atervinningscentral = () => {
         </div>
       </div>
       <div class="flex-column-container">
-        <h1>Återvinningscentral</h1>
+        <h1 className="recycling-center-section-h1">Återvinningscentral</h1>
         <section class="recycling-center-section">
           <img
             src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
