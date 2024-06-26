@@ -124,8 +124,9 @@ const Atervinningsstation = () => {
         <section class="station-station-section">
           <img
             // this url for the image is not working anymore.
-            // i will replace it with from image on the atervinningscentral page.
+            // i will replace it with from image on the atervinningscentral.js page.
             // when you approve the changes i will remove this comment.
+            // this is the old url for the image.
             // src="https://www.nodra.se/wp-content/uploads/2015/09/%C3%A5tervinningsstation_webb-1-1140x380.jpg"
             src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
             alt="återvinning"
