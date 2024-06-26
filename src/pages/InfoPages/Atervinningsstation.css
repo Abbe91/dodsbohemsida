@@ -314,3 +314,9 @@
   background-color: #d4b036;
   transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+  .station-center-section h3 {
+      font-size: 1.25rem;
+  }
+}
