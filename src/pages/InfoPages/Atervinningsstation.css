@@ -1,4 +1,4 @@
-.station-station-directory {
+.station-directory {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -7,12 +7,12 @@
   width: 100%;
 }
 
-.station-station-directory p {
+.station-directory p {
   margin: 0;
   font-size: 0.9rem;
 }
 
-.station-station-directory a {
+.station-directory a {
   text-decoration: none;
   color: #333;
   font-size: 0.8rem;
@@ -20,16 +20,16 @@
   border-bottom: 1px solid #333;
 }
 
-.station-station-directory a:last-child {
+.station-directory a:last-child {
   margin-right: 0;
 }
 
-.station-station-directory a:hover {
+.station-directory a:hover {
   color: #007bff;
   border-color: #007bff;
 }
 
-.station-station-section-h1 {
+.station-section-h1 {
   background-color: #e3c148;
   margin-top: 1rem;
   color: white;
@@ -41,17 +41,17 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.station-station-directory-btn {
+.station-directory-btn {
   display: flex;
   flex-wrap: wrap;
 }
 
-.station-station-section {
+.station-section {
   position: relative;
   height: 400px;
 }
 
-.station-station-section-btn {
+.station-section-btn {
   background-color: #e3c148;
   color: white;
   padding: 0.5rem;
@@ -63,7 +63,7 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.station-station-section-btn:hover {
+.section-btn:hover {
   background-color: #d4b036;
   transform: scale(1.05);
 }
@@ -73,13 +73,13 @@
   flex-direction: column;
 }
 
-.station-station-section img {
+.station-section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.station-station-section article {
+.station-section article {
   position: absolute;
   top: 20%;
   left: 0.5rem;
@@ -89,7 +89,7 @@
   max-width: 90%;
 }
 
-.station-station-section h3 {
+.station-section h3 {
   font-size: 1.75rem;
   color: white;
   margin-bottom: 1rem;
@@ -316,7 +316,7 @@
 }
 
 @media (max-width: 600px) {
-  .station-center-section h3 {
+  .station-section h3 {
       font-size: 1.25rem;
   }
 }

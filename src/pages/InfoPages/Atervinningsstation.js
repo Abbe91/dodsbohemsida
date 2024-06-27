@@ -99,18 +99,14 @@ const Atervinningsstation = () => {
       <div className="Nav">
         <Nav />
       </div>
-      <div class="station-station-directory">
+      <div class="station-directory">
         <p>Hitta fler återvinningsstationer</p>
-        <div class="station-station-directory-btn">
+        <div class="station-directory-btn">
           {btns.map((btn, i) => {
             return (
               <a
                 href="https://goteborg.se/wps/portal/start/bygga-bo-och-leva-hallbart/avfall-och-atervinning/har-lamnar-hushall-avfall/atervinningsstationer/hitta-atervinningsstationer"
                 key={i}
-                // this anchor tag is not have title attribute
-                // i will add title attribute
-                // when you approve the changes i will remove this comment
-                // title="Återvinningsstationer Göteborg"
                 title="Återvinningsstationer Göteborg"
               >
                 {btn}
@@ -120,21 +116,16 @@ const Atervinningsstation = () => {
         </div>
       </div>
       <div class="flex-column-container-station">
-        <h1 className="station-station-section-h1">Återvinningsstation</h1>
-        <section class="station-station-section">
+        <h1 className="station-section-h1">Återvinningsstation</h1>
+        <section class="station-section">
           <img
-            // this url for the image is not working anymore.
-            // i will replace it with from image on the atervinningscentral.js page.
-            // when you approve the changes i will remove this comment.
-            // this is the old url for the image.
-            // src="https://www.nodra.se/wp-content/uploads/2015/09/%C3%A5tervinningsstation_webb-1-1140x380.jpg"
             src="https://www.molndal.se/images/18.728d086318002a9f8051a85a/1649772943682/Lindome_avc855x500daneck.png"
             alt="återvinning"
             loading="lazy"
           />
           <article>
             <h3>Hitta återvinningsstationer i din närhet.</h3>
-            <button class="station-station-section-btn" onClick={handleClick}>
+            <button class="station-section-btn" onClick={handleClick}>
               Hjälp med slänga sopor?
             </button>
           </article>
