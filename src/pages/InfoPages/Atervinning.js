@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav/Nav";
+import "./Atervinning.css";
+
 const btns = [
   "Avfall",
   " Elektronikskrot",
