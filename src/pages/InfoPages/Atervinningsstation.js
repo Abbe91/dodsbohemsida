@@ -137,9 +137,7 @@ const Atervinningsstation = () => {
           miljö. Behöver du hjälp med bortforsling av skräp? Vi finns här för
           att hjälpa till.
         </p>
-        <hr></hr>
         <MapComponent avsCoords={avsCoords} />
-        <hr></hr>
         <p class="station-info-description">
           Återvinning har blivit allt viktigare i dagens samhälle och för att
           göra det enklare för privatpersoner och företag att återvinna sina
