@@ -111,7 +111,7 @@ const AboutUs = ({ query, oss, om }) => {
                 margin: "0.2rem 0"
               }}
             >
-              556469-5194
+              559060-1554
             </p>
           </div>
         </div>
