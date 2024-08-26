@@ -66,8 +66,8 @@ const Footer = () => {
           <div className="office">
             <div>
               <h5>Dödsbo jourer</h5>
-              <p>Magasinsgatan 11</p>
-              <p>47 132 Skärhamn</p>
+              <p>Västra Hamngatan 6</p>
+              <p>411 17 Göteborg</p>
             </div>
             {/* <div>
               <h5>Ulricehamn</h5>
